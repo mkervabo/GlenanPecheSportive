@@ -25,7 +25,7 @@
         <div class="contest">
           <i class="fas fa-fish article-icon white"></i>
           <div class="contest-title white">Open des Glénan</div>
-          <div class="blue date">00/00/00 - 00/00/00</div>
+          <div class="white date">00/00/00 - 00/00/00</div>
           <div class="contest-description">
             En cette année 2020 nous vous convions au 10eme anniversaire de
             l'Open des Glenan. Blablabla c'est un concour de peche, blabla il y

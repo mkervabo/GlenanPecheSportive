@@ -70,6 +70,11 @@ body {
   left: 20px;
   height: 130px;
   z-index: 2;
+  transition: all 150ms;
+}
+
+.logo:hover {
+  height: 135px;
 }
 
 .reseau {

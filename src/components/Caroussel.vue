@@ -16,7 +16,8 @@ const banners = [
   require("../assets/banner/banner02.jpg"),
   require("../assets/banner/banner03.jpg"),
   require("../assets/banner/banner04.jpg"),
-  require("../assets/banner/banner05.jpg")
+  require("../assets/banner/banner05.jpg"),
+  require("../assets/banner/banner06.jpg")
 ];
 
 export default {
