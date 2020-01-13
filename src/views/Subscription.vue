@@ -178,9 +178,11 @@
         <div class="rules-content dark-olive">
           <div class="font">En poursuivant:</div>
           <br />
-          Je certifie que je dispose de tous les matériels de sécurité
-          obligatoires pour la catégorie de navigation correspondante à la
-          compétition
+          En continuant je certifie que je dispose de tous les matériels de
+          sécurité obligatoires pour la catégorie de navigation correspondante à
+          la compétition
+          <br />
+          <button>Enregistrer</button>
           <button>Imprimer</button>
         </div>
       </div>

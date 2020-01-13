@@ -2,56 +2,64 @@
   <div>
     <div class="section">
       <div class="label-form">
+        <label for="mr">Mr </label>
+        <input type="radio" id="mr" v-model="kind" />
+        <label for="mm">Mm</label>
+        <input type="radio" id="mm" v-model="kind" />
+      </div>
+      <div class="label-form">
         <label>Nom:</label>
-        <input v-model="nom" placeholder="nom" />
+        <input v-model="nom" />
       </div>
       <div class="label-form">
         <label>Prénom:</label>
-        <input v-model="prenom" placeholder="prenom" />
+        <input v-model="prenom" />
       </div>
       <div class="label-form">
         <label>Date de Naissance:</label>
-        <input class="jour" v-model="naissance_jour" placeholder="jour" />
-        <input class="mois" v-model="naissance_mois" placeholder="mois" />
-        <input class="année" v-model="naissance_année" placeholder="annee" />
+        <input class="jour" v-model="naissance_jour" placeholder="00" />
+        <input class="mois" v-model="naissance_mois" placeholder="00" />
+        <input class="année" v-model="naissance_année" placeholder="0000" />
       </div>
     </div>
     <div class="section">
       <div class="label-form">
         <label>Adresse:</label>
-        <input v-model="adresse" placeholder="adresse" />
+        <input v-model="adresse" />
       </div>
       <div class="label-form">
         <label>Code postal:</label>
-        <input v-model="postal" placeholder="code postal" />
+        <input v-model="postal" />
       </div>
       <div class="label-form">
         <label>Ville:</label>
-        <input v-model="ville" placeholder="ville" />
+        <input v-model="ville" />
       </div>
     </div>
 
     <div class="label-form">
       <label>Téléphone Portable:</label>
-      <input v-model="portable" placeholder="portable" />
+      <input v-model="portable" />
     </div>
     <div class="label-form">
       <label>Email</label>
-      <input v-model="email" placeholder="email" />
+      <input v-model="email" />
     </div>
     <div class="label-form">
       <label>Téléphone Fixe:</label>
-      <input v-model="fixe" placeholder="fixe" />
+      <input v-model="fixe" />
     </div>
     <div class="label-form">
       <label>Taille T-shirt:</label>
       <select v-model="selected">
         <option disabled value>Choisissez</option>
+        <option>XS</option>
         <option>S</option>
         <option>M</option>
         <option>L</option>
         <option>XL</option>
         <option>XXL</option>
+        <option>XXXL</option>
       </select>
     </div>
   </div>

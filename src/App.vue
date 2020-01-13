@@ -8,7 +8,9 @@
       <i class="fab fa-twitter-square icone blue"></i>
     </div>
     <header class="intro">
-      <img class="logo" src="./assets/logo.png" />
+      <a herf="/">
+        <img class="logo" src="./assets/logo.png" />
+      </a>
       <Caroussel />
       <NavBar />
     </header>

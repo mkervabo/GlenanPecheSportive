@@ -10,14 +10,14 @@
             Venez nous rencontrer lors du salon de Nantes. Ce sera l'occasion de
             discuter pêches et de s'inscrire à l'Open. N'oubliez pas de venir
             munie de votre
-            <a class="link">dossier d'inscription</a>.
+            <a href="/subscription" class="link">dossier d'inscription</a>.
           </div>
-          <a class="other-event event-description link"
+          <a href="/agenda" class="other-event event-description link"
             >Pour les autres evenements à venir c'est ici !</a
           >
           <div class="event-description">
-            Et pour avoir les infos en direct suiver nous sur notre page
-            <a class="link" src="https://www.facebook.com/glenanpechesportive/"
+            Et pour avoir les infos en direct suivez nous sur notre page
+            <a class="link" href="https://www.facebook.com/glenanpechesportive/"
               >facebook</a
             >.
           </div>
@@ -27,22 +27,24 @@
           <div class="contest-title white">Open des Glénan</div>
           <div class="blue date">00/00/00 - 00/00/00</div>
           <div class="contest-description">
-            En cette année 2020 nous vous convions au XX anniversaire de l'Open
-            des Glenan. Blablabla c'est un concour de peche, blabla il y a un
-            repas.
+            En cette année 2020 nous vous convions au 10eme anniversaire de
+            l'Open des Glenan. Blablabla c'est un concour de peche, blabla il y
+            a un repas.
           </div>
           <div class="contest-description">
-            Pour une description plus complete c'est <a class="link">ici</a>.
+            Pour une description plus complete c'est
+            <a href="/contest" class="link">ici</a>.
           </div>
           <div class="contest-description">
-            Pour vous inscrire c'est <a class="link">par là</a>.
+            Pour vous inscrire c'est
+            <a href="/subcription" class="link">par là</a>.
           </div>
         </div>
-        <div class="gallery">
+        <a href="gallery" class="gallery">
           <div class="gallery-filter">
             <a class="gallery-title orange">Galerie</a>
           </div>
-        </div>
+        </a>
         <div class="meteo">
           <i class="fas fa-cloud article-icon blue"></i>
           <div class="meteo-title blue">Météo des Glénan</div>
@@ -50,13 +52,13 @@
             Pour avoir plus d'infos sur les horaires de marées rendez-vous
             <a
               class="link"
-              scr="https://mareespeche.com/fr/bretagne-atlantique/concarneau"
+              href="https://mareespeche.com/fr/bretagne-atlantique/concarneau"
               >ici</a
             >.
           </div>
           <div class="meteo-info">
             Pour avoir une vision en direct de la météo sur l'archipel ce sera
-            <a class="link" scr="https://data.diabox.com/?id=106&view=webcam"
+            <a class="link" href="https://data.diabox.com/?id=106&view=webcam"
               >par là</a
             >.
           </div>

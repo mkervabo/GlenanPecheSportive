@@ -1,23 +1,20 @@
 <template>
   <nav>
-    <div class="header_button nav_01">
+    <a href="/association" class="header_button">
       <div class="header_button_filter">Association</div>
-    </div>
-    <div class="header_button nav_02">
+    </a>
+    <a href="/contest" class="header_button">
       <div class="header_button_filter">Competition</div>
-    </div>
-    <div class="header_button nav_03">
-      <div class="header_button_filter">Archipel</div>
-    </div>
-    <div class="header_button nav_04">
+    </a>
+    <a href="/agenda" class="header_button">
       <div class="header_button_filter">Agenda</div>
-    </div>
-    <div class="header_button nav_05">
+    </a>
+    <a href="/partenaire" class="header_button">
       <div class="header_button_filter">Partenaire</div>
-    </div>
-    <div class="header_button nav_06">
+    </a>
+    <a href="/gallery" class="header_button">
       <div class="header_button_filter">Galerie</div>
-    </div>
+    </a>
   </nav>
 </template>
 
@@ -28,7 +25,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(58, 58, 58, 0.8);
+  background: rgba(58, 58, 58, 0.6);
   position: absolute;
   bottom: 0;
 }
@@ -67,17 +64,18 @@ nav {
   color: #f37538;
   z-index: 1;
   transition: all 150ms;
+  background: #3a3a3a;
 }
 
 .header_button:hover {
-  height: 110px;
-  width: 110px;
+  height: 130px;
+  width: 130px;
 }
 
 .header_button_filter {
   height: 100%;
   width: 100%;
-  background-color: rgba(242, 242, 242, 0.4);
+  /*background-color: rgba(242, 242, 242, 0.4);*/
   display: flex;
   justify-content: center;
   align-items: center;
