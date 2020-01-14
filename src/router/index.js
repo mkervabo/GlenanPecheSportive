@@ -6,6 +6,7 @@ import Contest from "../views/Contest.vue";
 import Association from "../views/Association.vue";
 import Partenaire from "../views/Partenaire.vue";
 import Agenda from "../views/Agenda.vue";
+import Gallery from "../views/Gallery.vue";
 
 Vue.use(VueRouter);
 
@@ -39,6 +40,11 @@ const routes = [
     path: "/agenda",
     name: "agenda",
     component: Agenda
+  },
+  {
+    path: "/gallery",
+    name: "gallery",
+    component: Gallery
   }
 ];
 

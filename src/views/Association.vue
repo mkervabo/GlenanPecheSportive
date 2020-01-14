@@ -48,14 +48,15 @@
 .association-title {
   font: caption;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 25px;
   margin: 10px;
 }
 
 .association-content {
   font: caption;
-  margin: 25px;
+  margin: 10px;
   text-align: justify;
+  font-size: 15px;
 }
 .association-pres {
   max-width: 800px;
