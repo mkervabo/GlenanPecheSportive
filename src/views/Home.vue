@@ -10,10 +10,12 @@
             Venez nous rencontrer lors du salon de Nantes. Ce sera l'occasion de
             discuter pêches et de s'inscrire à l'Open. N'oubliez pas de venir
             munie de votre
-            <a href="/subscription" class="link">dossier d'inscription</a>.
+            <router-link to="/subscription" class="link"
+              >dossier d'inscription</router-link
+            >.
           </div>
-          <a href="/agenda" class="other-event event-description link"
-            >Pour les autres evenements à venir c'est ici !</a
+          <router-link to="/agenda" class="other-event event-description link"
+            >Pour les autres evenements à venir c'est ici !</router-link
           >
           <div class="event-description">
             Et pour avoir les infos en direct suivez nous sur notre page
@@ -33,18 +35,18 @@
           </div>
           <div class="contest-description">
             Pour une description plus complete c'est
-            <a href="/contest" class="link">ici</a>.
+            <router-link to="/contest" class="link">ici</router-link>.
           </div>
           <div class="contest-description">
             Pour vous inscrire c'est
-            <a href="/subcription" class="link">par là</a>.
+            <router-link to="/subcription" class="link">par là</router-link>.
           </div>
         </div>
-        <a href="gallery" class="gallery">
+        <router-link to="gallery" class="gallery">
           <div class="gallery-filter">
             <a class="gallery-title orange">Galerie</a>
           </div>
-        </a>
+        </router-link>
         <div class="meteo">
           <i class="fas fa-cloud article-icon blue"></i>
           <div class="meteo-title blue">Météo des Glénan</div>
@@ -114,6 +116,7 @@ export default {};
 
 .event-description {
   font: caption;
+  font-size: 15px;
   margin: 10px;
   text-align: justify;
 }
@@ -138,6 +141,7 @@ export default {};
   font: caption;
   margin: 10px;
   text-align: justify;
+  font-size: 15px;
 }
 
 .gallery {
@@ -186,6 +190,7 @@ export default {};
 
 .contest-description {
   font: caption;
+  font-size: 15px;
   margin: 10px;
   text-align: justify;
 }

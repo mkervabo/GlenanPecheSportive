@@ -19,7 +19,7 @@
         <label>Date de Naissance:</label>
         <input class="jour" v-model="naissance_jour" placeholder="00" />
         <input class="mois" v-model="naissance_mois" placeholder="00" />
-        <input class="année" v-model="naissance_année" placeholder="0000" />
+        <input class="année" v-model="naissance_annee" placeholder="0000" />
       </div>
     </div>
     <div class="section">
@@ -51,7 +51,7 @@
     </div>
     <div class="label-form">
       <label>Taille T-shirt:</label>
-      <select v-model="selected">
+      <select v-model="t_shirt">
         <option disabled value>Choisissez</option>
         <option>XS</option>
         <option>S</option>
@@ -64,6 +64,28 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data: function() {
+    return {
+      kind: false,
+      nom: "",
+      prenom: "",
+      naissance_jour: 0,
+      naissance_mois: 0,
+      naissance_annee: 0,
+      adresse: "",
+      postal: 0,
+      ville: "",
+      postable: 0,
+      fixe: 0,
+      email: "",
+      t_shirt: ""
+    };
+  }
+};
+</script>
 
 <style>
 label {

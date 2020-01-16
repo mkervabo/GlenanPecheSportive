@@ -55,59 +55,59 @@
               projecteur, lampe IOR) ou individuel s'il est étanche et porté par
               chaque personne embarquée
             </label>
-            <input type="checkbox" v-model="secutite2" />
+            <input type="checkbox" v-model="securite2" />
           </div>
           <div class="label-form security-form">
             <label
               >Dispositif d’assèchement fixe ou mobile sauf navires
               auto-videur</label
             >
-            <input type="checkbox" v-model="secutite3" />
+            <input type="checkbox" v-model="securite3" />
           </div>
           <div class="label-form security-form">
             <label>Moyen de remonter à bord une personne tombée à l’eau</label>
-            <input type="checkbox" v-model="secutite4" />
+            <input type="checkbox" v-model="securite4" />
           </div>
           <div class="label-form security-form">
             <label>
               Dispositif coupe-circuit en cas d’éjection du pilote si moteur(s)
               hors bord à barre franche de puissance > 4,5 Kw
             </label>
-            <input type="checkbox" v-model="secutite5" />
+            <input type="checkbox" v-model="securite5" />
           </div>
           <div class="label-form security-form">
             <label>
               Dispositif de lutte contre l’incendie
               <span class="font">à jour de sa visite d'entretien</span>
             </label>
-            <input type="checkbox" v-model="secutite6" />
+            <input type="checkbox" v-model="securite6" />
           </div>
           <div class="label-form security-form">
             <label>Dispositif de remorquage</label>
-            <input type="checkbox" v-model="secutite7" />
+            <input type="checkbox" v-model="securite7" />
           </div>
           <div class="label-form security-form">
             <label
               >Ligne de mouillage ou ancre flottante sauf embarcations de
               capacité inférieur à 5 adultes</label
             >
-            <input type="checkbox" v-model="secutite8" />
+            <input type="checkbox" v-model="securite8" />
           </div>
           <div class="label-form security-form">
             <label>Pavillon national Si franchisé</label>
-            <input type="checkbox" v-model="secutite9" />
+            <input type="checkbox" v-model="securite9" />
           </div>
           <div class="label-form security-form">
             <label>Trois feux rouges automatiques à main</label>
-            <input type="checkbox" v-model="secutite10" />
+            <input type="checkbox" v-model="securite10" />
           </div>
           <div class="label-form security-form">
             <label>Miroir de signalisation</label>
-            <input type="checkbox" v-model="secutite11" />
+            <input type="checkbox" v-model="securite11" />
           </div>
           <div class="label-form security-form">
             <label>Moyen de signalisation sonore</label>
-            <input type="checkbox" v-model="secutite12" />
+            <input type="checkbox" v-model="securite12" />
           </div>
           <div class="label-form security-form">
             <label>
@@ -115,30 +115,30 @@
               sauf embarcations de capacité inferieur à 5 adultes et tous
               pneumatiques
             </label>
-            <input type="checkbox" v-model="secutite13" />
+            <input type="checkbox" v-model="securite13" />
           </div>
           <div class="label-form security-form">
             <label>Compas magnétique</label>
-            <input type="checkbox" v-model="secutite14" />
+            <input type="checkbox" v-model="securite14" />
           </div>
           <div class="label-form security-form">
             <label
               >Règlement international pour prévenir les abordages en mer
               (RIPAM)</label
             >
-            <input type="checkbox" v-model="secutite15" />
+            <input type="checkbox" v-model="securite15" />
           </div>
           <div class="label-form security-form">
             <label>Document de synthèse du balisage</label>
-            <input type="checkbox" v-model="secutite16" />
+            <input type="checkbox" v-model="securite16" />
           </div>
           <div class="label-form security-form">
             <label>Carte(s) de navigation</label>
-            <input type="checkbox" v-model="secutite17" />
+            <input type="checkbox" v-model="securite17" />
           </div>
           <div class="label-form">
             <label>VHF Radiomaritime obligatoire</label>
-            <input type="checkbox" v-model="secutite18" />
+            <input type="checkbox" v-model="securite18" />
           </div>
         </div>
       </div>
@@ -197,6 +197,28 @@ export default {
   components: {
     IdForm
   }
+  /*security: function () {
+	return {
+	securite1: false,
+	securite2: false,
+	securite3: false,
+	securite4: false,
+	securite5: false,
+	securite6: false,
+	securite7: false,
+	securite8: false,
+	securite9: false,
+	securite10: false,
+	securite11: false,
+	securite12: false,
+	securite13: false,
+	securite14: false,
+	securite15: false,
+	securite16: false,
+	securite17: false,
+	securite18: false
+	}
+  }*/
 };
 </script>
 

@@ -22,5 +22,6 @@
   margin: 10px;
   padding: 10px;
   text-align: justify;
+  font-size: 15px;
 }
 </style>

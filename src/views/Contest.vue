@@ -3,11 +3,13 @@
     <div class="contest-article contest-sub">
       <div class="contest-title orange">A savoir</div>
       <div class="contest-content">
-        Pour s'incrire c'est par <a class="link" href="/subscription">ici</a> !
+        Pour s'incrire c'est par
+        <router-link class="link" to="/subscription">ici</router-link> !
       </div>
       <div class="contest-content">
         <br />
-        Le règlement est par la <a class="link" href="/subscription">ici</a> !
+        Le règlement est par la
+        <router-link class="link" to="/subscription">ici</router-link> !
       </div>
       <br />
       <div class="contest-content">

@@ -30,6 +30,7 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  font-size: 15px;
 }
 
 .partenaire-icone {

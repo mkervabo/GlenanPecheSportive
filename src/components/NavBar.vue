@@ -1,20 +1,20 @@
 <template>
   <nav>
-    <a href="/association" class="header_button">
+    <router-link to="/association" class="header_button">
       <div class="header_button_filter">Association</div>
-    </a>
-    <a href="/contest" class="header_button">
+    </router-link>
+    <router-link to="/contest" class="header_button">
       <div class="header_button_filter">Competition</div>
-    </a>
-    <a href="/agenda" class="header_button">
+    </router-link>
+    <router-link to="/agenda" class="header_button">
       <div class="header_button_filter">Agenda</div>
-    </a>
-    <a href="/partenaire" class="header_button">
+    </router-link>
+    <router-link to="/partenaire" class="header_button">
       <div class="header_button_filter">Partenaire</div>
-    </a>
-    <a href="/gallery" class="header_button">
+    </router-link>
+    <router-link to="/gallery" class="header_button">
       <div class="header_button_filter">Galerie</div>
-    </a>
+    </router-link>
   </nav>
 </template>
 
