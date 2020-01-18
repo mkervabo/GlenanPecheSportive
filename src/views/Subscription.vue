@@ -40,6 +40,7 @@
     </div>
     <div class="subscription-part">
       <div class="form securite">
+        <!-- a modifier a partir de: https://www.ecologique-solidaire.gouv.fr/sites/default/files/equipement_secu_plaisance_4p_DEF_Web.pdf -->
         <div class="subscription-title orange">Équipement obligatoire</div>
         <div>
           <div class="label-form security-form">
@@ -102,12 +103,8 @@
             <input type="checkbox" v-model="securite10" />
           </div>
           <div class="label-form security-form">
-            <label>Miroir de signalisation</label>
-            <input type="checkbox" v-model="securite11" />
-          </div>
-          <div class="label-form security-form">
-            <label>Moyen de signalisation sonore</label>
-            <input type="checkbox" v-model="securite12" />
+            <label>Annuaire de marée</label>
+            <input type="checkbox" v-model="secutite12" />
           </div>
           <div class="label-form security-form">
             <label>
@@ -182,7 +179,7 @@
           sécurité obligatoires pour la catégorie de navigation correspondante à
           la compétition
           <br />
-          <button>Enregistrer</button>
+          <button>Télécharger</button>
           <button>Imprimer</button>
         </div>
       </div>
