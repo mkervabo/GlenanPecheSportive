@@ -248,10 +248,6 @@ main {
   font-size: 17px;
 }
 
-.id-form {
-  max-width: 700px;
-}
-
 .form {
   background: #3a3a3a;
   padding: 10px;
@@ -259,6 +255,7 @@ main {
   justify-content: flex-start;
   flex-wrap: wrap;
   margin: 10px;
+  width: 800px;
 }
 
 .rules {
@@ -307,7 +304,7 @@ button {
 }
 
 .securite {
-  max-width: 800px;
+  width: 800px;
   text-align: justify;
 }
 </style>
