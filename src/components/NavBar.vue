@@ -68,8 +68,7 @@ nav {
 }
 
 .header_button:hover {
-  height: 130px;
-  width: 130px;
+  transform: scale(1.1);
 }
 
 .header_button_filter {

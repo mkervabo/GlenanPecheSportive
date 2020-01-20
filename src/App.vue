@@ -1,16 +1,22 @@
 <template>
   <div id="app">
     <div class="reseau">
-      <i class="fab fa-instagram icone dark-olive"></i>
-      <i class="fab fa-facebook-square icone dark-blue"></i>
-      <i class="fas fa-envelope icone white"></i>
-      <i class="fas fa-phone-square-alt icone orange"></i>
-      <i class="fab fa-twitter-square icone blue"></i>
+      <fa-icon :icon="['fab', 'instagram']" class="icone dark-olive"></fa-icon>
+      <fa-icon
+        :icon="['fab', 'facebook-square']"
+        class="icone dark-blue"
+      ></fa-icon>
+      <fa-icon :icon="['fas', 'envelope']" class="icone white"></fa-icon>
+      <fa-icon
+        :icon="['fas', 'phone-square-alt']"
+        class="icone orange"
+      ></fa-icon>
+      <fa-icon :icon="['fab', 'twitter-square']" class="icone blue"></fa-icon>
     </div>
     <header class="intro">
-      <a herf="/">
+      <router-link to="/">
         <img class="logo" src="./assets/logo.png" />
-      </a>
+      </router-link>
       <Caroussel />
       <NavBar />
     </header>
@@ -38,6 +44,18 @@
 <script>
 import NavBar from "./components/NavBar";
 import Caroussel from "./components/Caroussel";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faInstagram,
+  faFacebookSquare,
+  faTwitterSquare
+} from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+
+library.add(faInstagram);
+library.add(faFacebookSquare);
+library.add(faTwitterSquare);
+library.add(faEnvelope);
 
 export default {
   components: {
@@ -88,16 +106,18 @@ body {
   right: 0;
   top: 50%;
   transform: translateY(-50%);
+  padding: 6px;
 }
 
 .icone {
   width: 50px;
   text-align: center;
   font-size: 50px;
+  transition: transform 200ms;
 }
 
 .icone:hover {
-  font-size: 45px;
+  transform: scale(0.9);
 }
 
 .link:hover {

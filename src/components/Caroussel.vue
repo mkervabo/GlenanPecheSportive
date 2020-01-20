@@ -1,16 +1,28 @@
 <template>
   <div>
     <div class="next next-left" v-on:click="left">
-      <i class="far fa-arrow-alt-circle-left arrow"></i>
+      <fa-icon :icon="['far', 'arrow-alt-circle-left']" class="arrow"></fa-icon>
     </div>
     <img class="caroussel" v-bind:src="banners[i]" />
     <div class="next next-right" v-on:click="right">
-      <i class="far fa-arrow-alt-circle-right arrow"></i>
+      <fa-icon
+        :icon="['far', 'arrow-alt-circle-right']"
+        class="arrow"
+      ></fa-icon>
     </div>
   </div>
 </template>
 
 <script>
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faArrowAltCircleLeft,
+  faArrowAltCircleRight
+} from "@fortawesome/free-regular-svg-icons";
+
+library.add(faArrowAltCircleLeft);
+library.add(faArrowAltCircleRight);
+
 const banners = [
   require("../assets/banner/banner00.jpg"),
   require("../assets/banner/banner02.jpg"),

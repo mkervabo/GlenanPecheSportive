@@ -3,7 +3,10 @@
     <div class="fond">
       <div class="articles">
         <div class="next-event">
-          <i class="fas fa-exclamation-circle article-icon orange"></i>
+          <fa-icon
+            :icon="['fas', 'exclamation-circle']"
+            class="article-icon orange"
+          ></fa-icon>
           <div class="orange event-name ">Salon de Nantes</div>
           <div class="blue date">00/00/00 - 00/00/00</div>
           <div class="event-description">
@@ -25,7 +28,7 @@
           </div>
         </div>
         <div class="contest">
-          <i class="fas fa-fish article-icon white"></i>
+          <fa-icon :icon="['fas', 'fish']" class="article-icon white"></fa-icon>
           <div class="contest-title white">Open des Glénan</div>
           <div class="white date">00/00/00 - 00/00/00</div>
           <div class="contest-description">
@@ -48,7 +51,7 @@
           </div>
         </router-link>
         <div class="meteo">
-          <i class="fas fa-cloud article-icon blue"></i>
+          <fa-icon :icon="['fas', 'cloud']" class="article-icon blue"></fa-icon>
           <div class="meteo-title blue">Météo des Glénan</div>
           <div class="meteo-info">
             Pour avoir plus d'infos sur les horaires de marées rendez-vous
@@ -71,6 +74,17 @@
 </template>
 
 <script>
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faFish,
+  faExclamationCircle,
+  faCloud
+} from "@fortawesome/free-solid-svg-icons";
+
+library.add(faFish);
+library.add(faExclamationCircle);
+library.add(faCloud);
+
 export default {};
 </script>
 
