@@ -1,10 +1,10 @@
 <template>
-  <div class="agenda-fond">
-    <div class="agenda-body">
+  <main id="agenda">
+    <div class="body">
       <AgendaElem />
-      <agendaElem />
+      <AgendaElem />
     </div>
-  </div>
+  </main>
 </template>
 
 <script>
@@ -18,7 +18,7 @@ export default {
 </script>
 
 <style>
-.agenda-fond {
+#agenda {
   width: 100%;
   background: #65aee2;
   font: caption;
@@ -26,10 +26,11 @@ export default {
   justify-content: center;
 }
 
-.agenda-body {
+#agenda > .body {
   max-width: 1200px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: auto;
 }
 </style>

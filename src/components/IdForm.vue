@@ -3,9 +3,9 @@
     <div class="section">
       <div class="label-form">
         <label for="mr">Mr </label>
-        <input type="radio" id="mr" v-model="kind" />
+        <input type="radio" value="H" v-model="kind" />
         <label for="mm">Mm</label>
-        <input type="radio" id="mm" v-model="kind" />
+        <input type="radio" value="F" v-model="kind" />
       </div>
       <div class="label-form">
         <label>Nom:</label>
@@ -17,9 +17,7 @@
       </div>
       <div class="label-form">
         <label>Date de Naissance:</label>
-        <input class="jour" v-model="naissance_jour" placeholder="00" />
-        <input class="mois" v-model="naissance_mois" placeholder="00" />
-        <input class="année" v-model="naissance_annee" placeholder="0000" />
+        <input type="date" v-model="naissance" />
       </div>
     </div>
     <div class="section">
@@ -42,7 +40,7 @@
       <input v-model="portable" />
     </div>
     <div class="label-form">
-      <label>Email</label>
+      <label>Email:</label>
       <input v-model="email" />
     </div>
     <div class="label-form">
@@ -69,12 +67,10 @@
 export default {
   data() {
     return {
-      kind: false,
+      kind: "H",
       nom: "",
       prenom: "",
-      naissance_jour: 0,
-      naissance_mois: 0,
-      naissance_annee: 0,
+      naissance: "",
       adresse: "",
       postal: 0,
       ville: "",

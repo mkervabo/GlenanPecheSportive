@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main id="#subscription">
     <div class="subscription-part">
       <div class="rules important">
         <div class="subscription-title dark-blue">Important</div>
@@ -220,7 +220,7 @@ export default {
 </script>
 
 <style>
-main {
+#subscription {
   height: 100%;
   background: #65aee2;
   font: caption;
@@ -230,7 +230,6 @@ main {
 }
 
 .subscription-part {
-  width: 100vw;
   display: flex;
   justify-content: center;
 }

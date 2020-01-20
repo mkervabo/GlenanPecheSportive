@@ -312,6 +312,9 @@
         indisponible après.
       </div>
     </div>
+    <a :href="require('../assets/plan-du-site.pdf')"
+      >Licorne magique tombé du ciel</a
+    >
   </div>
 </template>
 
@@ -323,7 +326,6 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: 100%;
   padding: 10px;
 }
 

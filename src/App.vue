@@ -6,7 +6,7 @@
         :icon="['fab', 'facebook-square']"
         class="icone dark-blue"
       ></fa-icon>
-      <fa-icon :icon="['fas', 'envelope']" class="icone white"></fa-icon>
+      <fa-icon :icon="['fas', 'envelope-square']" class="icone white"></fa-icon>
       <fa-icon
         :icon="['fas', 'phone-square-alt']"
         class="icone orange"
@@ -20,7 +20,7 @@
       <Caroussel />
       <NavBar />
     </header>
-    <router-view />
+    <router-view class="content" />
     <footer>
       <a href="http://fiiish.com/">
         <img class="partner-icone" src="./assets/partner/fiiish.jpg" />
@@ -50,12 +50,16 @@ import {
   faFacebookSquare,
   faTwitterSquare
 } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {
+  faPhoneSquareAlt,
+  faEnvelopeSquare
+} from "@fortawesome/free-solid-svg-icons";
 
 library.add(faInstagram);
 library.add(faFacebookSquare);
 library.add(faTwitterSquare);
-library.add(faEnvelope);
+library.add(faPhoneSquareAlt);
+library.add(faEnvelopeSquare);
 
 export default {
   components: {
@@ -72,6 +76,14 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  background: #65aee2;
 }
 
 body {
@@ -92,7 +104,7 @@ body {
 }
 
 .logo:hover {
-  height: 135px;
+  transform: scale(1.05);
 }
 
 .reseau {
