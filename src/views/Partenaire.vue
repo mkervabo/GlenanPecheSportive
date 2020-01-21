@@ -3,16 +3,26 @@
     <div class="partenaire-body">
       <div class="partenaire-icone partenaire-icone1">
         <a href="http://fiiish.com/">
-          <img class="partner-icone" src="../assets/partner/fiiish.jpg" />
+          <img class="partenaire-img" src="../assets/partner/fiiish.jpg" />
           <br />
           <div class="link">Fiiish</div>
         </a>
       </div>
       <div class="partenaire-icone partenaire-icone2">
         <a href="http://www.suzukimarine.fr/">
-          <img class="partner-icone" src="../assets/partner/suzuki.png" />
+          <img class="partenaire-img" src="../assets/partner/suzuki.png" />
           <br />
           <div class="link">Suzuki marine</div>
+        </a>
+      </div>
+      <div class="partenaire-icone partenaire-icone1">
+        <a href="http://www.grand-pavois.com/">
+          <img
+            class="partenaire-img"
+            src="../assets/partner/grand-pavois-2020.png"
+          />
+          <br />
+          <div class="link">Fiiish</div>
         </a>
       </div>
     </div>
@@ -47,5 +57,10 @@
 .partenaire-icone2 {
   background-color: #3a3a3a;
   color: #f2f2f2;
+}
+
+.partenaire-img {
+  max-width: 280px;
+  max-height: 120px;
 }
 </style>

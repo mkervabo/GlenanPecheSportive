@@ -4,11 +4,11 @@
       <div class="contest-title orange">A savoir</div>
       <div class="contest-content">
         Pour s'incrire c'est par
-        <router-link class="link" to="/subscription">ici</router-link>!
+        <router-link class="link" to="/subscription">ici</router-link> !
       </div>
       <div class="contest-content">
-        <br />Le règlement est par la
-        <router-link class="link" to="/subscription">ici</router-link>!
+        <br />Le règlement est par
+        <a class="link" href="Reglement-open-des-Glenan-2020.pdf">là</a> !
       </div>
       <br />
       <div class="contest-content">
@@ -51,7 +51,7 @@
         <br />
         <span class="font">
           Arrivée à Concarneau le vendredi 19/06:
-          <a class="link2">photo aérienne du site</a>
+          <a class="link2" href="plan-du-site.pdf">photo aérienne du site</a>
         </span>
         <br />
         <br />
@@ -73,7 +73,7 @@
         <br />
         <br />
         <br />
-        <span>class="font">Important:</span> Prévoir 2 bouts d'amarrage de 25m
+        <span class="font">Important:</span> Prévoir 2 bouts d'amarrage de 25m
         environ (avant et arrière), et des pare-battages. Les bateaux seront
         amarrés à couple sur plusieurs largeurs, et les conditions météo
         imposent de solides amarrages.
@@ -185,9 +185,13 @@
       <br />
       <div class="contest-content">
         Téléchargez le bulletin d'inscription
-        <a class="link2">2020 en cliquant ici</a>
+        <router-link class="link2" to="/subscription"
+          >2020 en cliquant ici</router-link
+        >
         <br />Téléchargez le règlement
-        <a class="link2">2020 en cliquant ici</a>
+        <a class="link2" href="Reglement-open-des-Glenan-2020.pdf"
+          >2020 en cliquant ici</a
+        >
         <br />
         <br />Instructions importantes pour tous les compétiteurs:
         <a class="link2">cliquez ici à quelques jours de la compétition !</a>
@@ -205,7 +209,7 @@
         <span class="font">De 13h30 à 17h00:</span> cale de mise à l'eau de
         Roudouic ouverte pour les compétiteurs, bien respecter les
         <a class="link2 font">instructions</a>.
-        <a class="link2 font">Photo du site ici.</a>
+        <a href="plan-du-site.pdf" class="link2 font">Photo du site ici.</a>
         <br />
         <br />
         <span class="font">A partir de 19h:</span> pot de bienvenu à la base à
@@ -234,8 +238,8 @@
         <span class="font">A 8h:</span> départ lancé de la
         <span class="font">première manche</span>, 20 noeuds maxi, et début de
         la pêche. Carte avec la zone de départ et les limites de zone de pêche
-        <a class="link2 font">ici</a>.
-        <span class="link2 font"
+        <a href="Carte-zone-de-pêche.gif" class="link2 font">ici</a>.
+        <span class="font"
           >C'est la même zone de pêche que les précédentes éditions</span
         >.
         <br />
@@ -312,9 +316,6 @@
         indisponible après.
       </div>
     </div>
-    <a :href="require('../assets/plan-du-site.pdf')"
-      >Licorne magique tombé du ciel</a
-    >
   </div>
 </template>
 
