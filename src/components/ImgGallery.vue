@@ -1,6 +1,12 @@
 <template>
-  <img class="img-gallery" src="../assets/kitten/kitten01.png" />
+  <img class="img-gallery" v-bind:src="imgGallery" />
 </template>
+
+<script>
+export default {
+  props: ["imgGallery"]
+};
+</script>
 
 <style>
 .img-gallery {
@@ -8,5 +14,6 @@
   height: 350px;
   object-fit: cover;
   margin: 10px;
+  z-index: 0;
 }
 </style>

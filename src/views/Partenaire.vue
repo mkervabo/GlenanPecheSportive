@@ -183,7 +183,7 @@
         </a>
       </div>
       <div class="partenaire-icone">
-        <a>
+        <a href="http://www.ticafishing.com/">
           <img class="partenaire-img" src="../assets/partner/tica.jpg" />
           <br />
           <div class="link">Tica</div>
