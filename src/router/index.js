@@ -17,34 +17,54 @@ const routes = [
     component: Home
   },
   {
-    path: "/subscription",
-    name: "subscription",
-    component: Subscription
+    path: "/association",
+    name: "association",
+    component: Association,
+    meta: {
+      title: "Association",
+      image: require("../assets/navbar/Drenec.svg")
+    }
   },
   {
     path: "/contest",
     name: "contest",
-    component: Contest
-  },
-  {
-    path: "/association",
-    name: "association",
-    component: Association
-  },
-  {
-    path: "/partenaire",
-    name: "partenaire",
-    component: Partenaire
+    component: Contest,
+    meta: {
+      title: "Competition",
+      image: require("../assets/navbar/Guiautec.svg")
+    }
   },
   {
     path: "/agenda",
     name: "agenda",
-    component: Agenda
+    component: Agenda,
+    meta: {
+      title: "Agenda",
+      image: require("../assets/navbar/Loc_h.svg")
+    }
   },
   {
     path: "/gallery",
     name: "gallery",
-    component: Gallery
+    component: Gallery,
+    meta: {
+      title: "Galerie",
+      image: require("../assets/navbar/Saint_Nicolas.svg")
+    }
+  },
+  {
+    path: "/partenaire",
+    name: "partenaire",
+    component: Partenaire,
+    meta: {
+      title: "Partenaires",
+      image: require("../assets/navbar/Penfret.svg")
+    }
+  },
+  {
+    path: "/subscription",
+    name: "subscription",
+    component: Subscription
   }
 ];
 

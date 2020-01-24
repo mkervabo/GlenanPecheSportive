@@ -1,22 +1,24 @@
 <template>
   <nav>
-    <router-link to="/association" class="header_button">
-      <div class="header_button_filter">Association</div>
-    </router-link>
-    <router-link to="/contest" class="header_button">
-      <div class="header_button_filter">Competition</div>
-    </router-link>
-    <router-link to="/agenda" class="header_button">
-      <div class="header_button_filter">Agenda</div>
-    </router-link>
-    <router-link to="/partenaire" class="header_button">
-      <div class="header_button_filter">Partenaire</div>
-    </router-link>
-    <router-link to="/gallery" class="header_button">
-      <div class="header_button_filter">Galerie</div>
+    <router-link
+      v-for="route in $router.options.routes.filter(route => route.meta)"
+      :key="route.path"
+      :to="route.path"
+      :style="`background-image: url('${route.meta.image}')`"
+      class="header_button"
+    >
+      {{ route.meta.title }}
     </router-link>
   </nav>
 </template>
+
+<script>
+export default {
+  mounted() {
+    window.lol = this;
+  }
+};
+</script>
 
 <style>
 nav {
@@ -25,58 +27,28 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(58, 58, 58, 0.6);
+  background: rgba(101, 174, 226, 0.4);
   position: absolute;
   bottom: 0;
-}
-
-.nav_01 {
-  background: url("../assets/kitten/kitten01.png");
-}
-
-.nav_02 {
-  background: url("../assets/kitten/kitten02.jpg");
-}
-
-.nav_03 {
-  background: url("../assets/kitten/kitten03.jpeg");
-}
-
-.nav_04 {
-  background: url("../assets/kitten/kitten04.jpg");
-}
-
-.nav_05 {
-  background: url("../assets/kitten/kitten05.jpg");
-}
-
-.nav_06 {
-  background: url("../assets/kitten/kitten06.jpeg");
 }
 
 .header_button {
   font: caption;
   font-size: 14px;
   font-weight: bold;
-  clip-path: circle(40%);
-  height: 120px;
-  width: 120px;
+  height: 100px;
+  width: 100px;
+  line-height: 100px;
+  margin: 0 10px;
   color: #f37538;
   z-index: 1;
   transition: all 150ms;
-  background: #3a3a3a;
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-decoration: none;
 }
 
 .header_button:hover {
   transform: scale(1.1);
-}
-
-.header_button_filter {
-  height: 100%;
-  width: 100%;
-  /*background-color: rgba(242, 242, 242, 0.4);*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 </style>
