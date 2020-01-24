@@ -15,9 +15,9 @@
           petits déjeuners et paniers repas du samedi et dimanche midi, ainsi
           qu’un repas à Concarneau le samedi soir pour les équipages. Il est
           possible de réserver des
-          <span class="font"
-            >diners supplémentaires le samedi soir pour les accompagnants, 20€
-            par personne</span
+          <span class="font">
+            diners supplémentaires le samedi soir pour les accompagnants, 20€
+            par personne </span
           >.
           <br />
           <br />
@@ -25,16 +25,18 @@
             <label class="dark-olive">Nombres de repas suplémentaire</label>
             <input class="repas" v-model="repas" />
           </div>
+          <span class="subscription-title2 orange">Total: </span
+          >{{ 130 + repas * 20 }}€
         </div>
       </div>
       <div>
         <div class="form">
           <div class="subscription-title orange">Patron</div>
-          <IdForm class="form id-form" />
+          <IdForm class="form id-form" ref="patron" />
         </div>
         <div class="form">
           <div class="subscription-title orange">Mousse</div>
-          <IdForm class="form id-form" />
+          <IdForm class="form id-form" ref="mousse" />
         </div>
       </div>
     </div>
@@ -59,10 +61,9 @@
             <input type="checkbox" v-model="securite2" />
           </div>
           <div class="label-form security-form">
-            <label
-              >Dispositif d’assèchement fixe ou mobile sauf navires
-              auto-videur</label
-            >
+            <label>
+              Dispositif d’assèchement fixe ou mobile sauf navires auto-videur
+            </label>
             <input type="checkbox" v-model="securite3" />
           </div>
           <div class="label-form security-form">
@@ -88,10 +89,10 @@
             <input type="checkbox" v-model="securite7" />
           </div>
           <div class="label-form security-form">
-            <label
-              >Ligne de mouillage ou ancre flottante sauf embarcations de
-              capacité inférieur à 5 adultes</label
-            >
+            <label>
+              Ligne de mouillage ou ancre flottante sauf embarcations de
+              capacité inférieur à 5 adultes
+            </label>
             <input type="checkbox" v-model="securite8" />
           </div>
           <div class="label-form security-form">
@@ -119,10 +120,9 @@
             <input type="checkbox" v-model="securite14" />
           </div>
           <div class="label-form security-form">
-            <label
-              >Règlement international pour prévenir les abordages en mer
-              (RIPAM)</label
-            >
+            <label>
+              Règlement international pour prévenir les abordages en mer (RIPAM)
+            </label>
             <input type="checkbox" v-model="securite15" />
           </div>
           <div class="label-form security-form">
@@ -174,13 +174,11 @@
         <div class="subscription-title dark-blue">Valider</div>
         <div class="rules-content dark-olive">
           <div class="font">En poursuivant:</div>
+          <br />En continuant je certifie que je dispose de tous les matériels
+          de sécurité obligatoires pour la catégorie de navigation
+          correspondante à la compétition
           <br />
-          En continuant je certifie que je dispose de tous les matériels de
-          sécurité obligatoires pour la catégorie de navigation correspondante à
-          la compétition
-          <br />
-          <button>Télécharger</button>
-          <button>Imprimer</button>
+          <button v-on:click="generate">Valider</button>
         </div>
       </div>
     </div>
@@ -189,10 +187,63 @@
 
 <script>
 import IdForm from "../components/IdForm";
+import { PDFDocument } from "pdf-lib";
 
 export default {
   components: {
     IdForm
+  },
+  data() {
+    return {
+      repas: 0
+    };
+  },
+  methods: {
+    generate() {
+      const tab = window.open();
+
+      fetch("/contest/inscription.pdf")
+        .then(res => res.arrayBuffer())
+        .then(pdf => PDFDocument.load(pdf))
+        .then(doc => {
+          const pages = doc.getPages();
+          const firstPage = pages[0];
+          //const secondPage = pages[1];
+          const { width, height } = firstPage.getSize();
+
+          window.console.log(width, height);
+
+          firstPage.setFontSize(12);
+
+          firstPage.moveTo(0, height);
+          firstPage.moveDown(143);
+          firstPage.moveRight(143);
+          firstPage.drawText("I will be drawn at (50, 50)");
+          this.drawIdForm(firstPage, this.$refs.patron, 0);
+          this.drawIdForm(firstPage, this.$refs.mousse, 360 - 173);
+          firstPage.moveTo(0, height);
+          firstPage.moveDown(402);
+          firstPage.moveRight(516);
+          firstPage.drawText(this.repas);
+
+          return doc.save();
+        })
+        .then(pdf => {
+          const blob = new Blob([pdf], { type: "application/pdf" });
+          const url = URL.createObjectURL(blob);
+          tab.location.assign(url);
+        });
+    },
+    drawIdForm(page, idForm, offset) {
+      page.moveTo(0, page.getSize().height);
+      page.moveDown(159);
+      page.moveRight(173 + offset);
+      for (const [i, value] of idForm.toArray().entries()) {
+        page.moveDown(19);
+        if (i >= 8) page.moveDown(3);
+        page.drawText(value || "");
+      }
+    }
   }
   /*security: function () {
 	return {

@@ -74,11 +74,27 @@ export default {
       adresse: "",
       postal: 0,
       ville: "",
-      postable: 0,
+      portable: 0,
       fixe: 0,
       email: "",
       t_shirt: ""
     };
+  },
+  methods: {
+    toArray() {
+      return [
+        this.nom,
+        this.prenom,
+        this.adresse,
+        this.postal,
+        this.ville,
+        this.naissance,
+        this.fixe,
+        this.portable,
+        this.email,
+        this.t_shirt
+      ];
+    }
   }
 };
 </script>
