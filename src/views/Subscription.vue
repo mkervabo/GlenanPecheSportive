@@ -303,7 +303,8 @@ export default {
         })
         .then(pdf => {
           const blob = new Blob([pdf], { type: "application/pdf" });
-          if (this.willDownload) window.navigator.msSaveOrOpenBlob(blob);
+          if (this.willDownload)
+            window.navigator.msSaveOrOpenBlob(blob, "inscription-2020.pdf");
           else {
             const url = URL.createObjectURL(blob);
             return loaded.then(() => tab.location.assign(url));
