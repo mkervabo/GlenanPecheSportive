@@ -25,8 +25,8 @@
             <label class="dark-olive">Nombres de repas suplémentaire</label>
             <input class="repas" v-model="repas" />
           </div>
-          <span class="subscription-title2 orange">Total: </span
-          >{{ 130 + repas * 20 }}€
+          <span class="subscription-title2 orange">Total:</span>
+          {{ 130 + repas * 20 }}€
         </div>
       </div>
       <div>
@@ -61,9 +61,10 @@
             <input type="checkbox" v-model="securities[1]" />
           </div>
           <div class="label-form security-form">
-            <label>
-              Dispositif d’assèchement fixe ou mobile sauf navires auto-videur
-            </label>
+            <label
+              >Dispositif d’assèchement fixe ou mobile sauf navires
+              auto-videur</label
+            >
             <input type="checkbox" v-model="securities[2]" />
           </div>
           <div class="label-form security-form">
@@ -120,9 +121,10 @@
             <input type="checkbox" v-model="securities[12]" />
           </div>
           <div class="label-form security-form">
-            <label>
-              Règlement international pour prévenir les abordages en mer (RIPAM)
-            </label>
+            <label
+              >Règlement international pour prévenir les abordages en mer
+              (RIPAM)</label
+            >
             <input type="checkbox" v-model="securities[13]" />
           </div>
           <div class="label-form security-form">
@@ -179,9 +181,14 @@
           correspondante à la compétition
           <br />
 
-          <button :disabled="!securityOk" v-on:click="generate">Valider</button>
-          <p v-show="!securityOk">
-            Vous n'avez pas tout l'equipement obligatoire
+          <button :disabled="!securityOk || !boatOk" v-on:click="generate">
+            Valider
+          </button>
+          <p v-show="!securityOk" class="form-error">
+            Vous n'avez pas tout l'équipement obligatoire
+          </p>
+          <p v-show="!boatOk" class="form-error">
+            Vous n'avez pas remplis tout les champs
           </p>
         </div>
       </div>
@@ -213,6 +220,17 @@ export default {
   computed: {
     securityOk() {
       return this.securities.every(s => s);
+    },
+    boatOk() {
+      return (
+        this.equipage &&
+        this.bateau &&
+        this.longueur &&
+        this.immatriculation &&
+        this.moteur &&
+        this.assurance1 &&
+        this.assurance2
+      );
     }
   },
   methods: {
@@ -389,5 +407,9 @@ button:disabled {
 .securite {
   width: 800px;
   text-align: justify;
+}
+
+.form-error {
+  color: red;
 }
 </style>
