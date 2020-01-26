@@ -218,6 +218,7 @@ export default {
   methods: {
     generate() {
       const tab = window.open("/loading.html");
+      const loaded = new Promise(resolve => (tab.onload = resolve));
 
       fetch("/contest/inscription-2020.pdf")
         .then(res => res.arrayBuffer())
@@ -280,7 +281,7 @@ export default {
         .then(pdf => {
           const blob = new Blob([pdf], { type: "application/pdf" });
           const url = URL.createObjectURL(blob);
-          tab.location.assign(url);
+          return loaded.then(() => tab.location.assign(url));
         });
     },
     drawIdForm(page, idForm, offset) {
