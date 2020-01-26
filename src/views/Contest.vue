@@ -8,7 +8,10 @@
       </div>
       <div class="contest-content">
         <br />Le règlement est par
-        <a class="link" href="Reglement-open-des-Glenan-2020.pdf">là</a> !
+        <a class="link" href="/contest/Reglement-open-des-Glenan-2020.pdf"
+          >là</a
+        >
+        !
       </div>
       <br />
       <div class="contest-content">
@@ -51,7 +54,9 @@
         <br />
         <span class="font">
           Arrivée à Concarneau le vendredi 19/06:
-          <a class="link2" href="plan-du-site.pdf">photo aérienne du site</a>
+          <a class="link2" href="/contest/plan-du-site.pdf"
+            >photo aérienne du site</a
+          >
         </span>
         <br />
         <br />
@@ -189,7 +194,7 @@
           >2020 en cliquant ici</router-link
         >
         <br />Téléchargez le règlement
-        <a class="link2" href="Reglement-open-des-Glenan-2020.pdf"
+        <a class="link2" href="/contest/Reglement-open-des-Glenan-2020.pdf"
           >2020 en cliquant ici</a
         >
         <br />
@@ -209,7 +214,9 @@
         <span class="font">De 13h30 à 17h00:</span> cale de mise à l'eau de
         Roudouic ouverte pour les compétiteurs, bien respecter les
         <a class="link2 font">instructions</a>.
-        <a href="plan-du-site.pdf" class="link2 font">Photo du site ici.</a>
+        <a href="/contest/plan-du-site.pdf" class="link2 font"
+          >Photo du site ici.</a
+        >
         <br />
         <br />
         <span class="font">A partir de 19h:</span> pot de bienvenu à la base à
@@ -238,7 +245,7 @@
         <span class="font">A 8h:</span> départ lancé de la
         <span class="font">première manche</span>, 20 noeuds maxi, et début de
         la pêche. Carte avec la zone de départ et les limites de zone de pêche
-        <a href="Carte-zone-de-pêche.gif" class="link2 font">ici</a>.
+        <a href="/contest/Carte-zone-de-pêche.gif" class="link2 font">ici</a>.
         <span class="font"
           >C'est la même zone de pêche que les précédentes éditions</span
         >.

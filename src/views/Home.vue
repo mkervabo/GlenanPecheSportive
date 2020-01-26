@@ -42,7 +42,7 @@
           </div>
           <div class="contest-description">
             Pour vous inscrire c'est
-            <router-link to="/subcription" class="link">par là</router-link>.
+            <router-link to="/subscription" class="link">par là</router-link>.
           </div>
         </div>
         <router-link to="gallery" class="gallery">
