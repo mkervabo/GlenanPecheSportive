@@ -217,7 +217,7 @@ export default {
   },
   methods: {
     generate() {
-      const tab = window.open();
+      const tab = window.open("/loading.html");
 
       fetch("/contest/inscription-2020.pdf")
         .then(res => res.arrayBuffer())
