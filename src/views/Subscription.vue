@@ -182,7 +182,7 @@
           <br />
 
           <button :disabled="!securityOk || !boatOk" v-on:click="generate">
-            Valider
+            {{ willDownload ? "Télécharger" : "Valider" }}
           </button>
           <p v-show="!securityOk" class="form-error">
             Vous n'avez pas tout l'équipement obligatoire
@@ -218,6 +218,10 @@ export default {
     };
   },
   computed: {
+    willDownload() {
+      // Edge can't open a blob data url
+      return window.navigator && window.navigator.msSaveOrOpenBlob;
+    },
     securityOk() {
       return this.securities.every(s => s);
     },
@@ -235,8 +239,9 @@ export default {
   },
   methods: {
     generate() {
-      const tab = window.open("/loading.html");
-      const loaded = new Promise(resolve => (tab.onload = resolve));
+      const tab = this.willDownload || window.open("/loading.html");
+      const loaded =
+        this.willDownload || new Promise(resolve => (tab.onload = resolve));
 
       fetch("/contest/inscription-2020.pdf")
         .then(res => res.arrayBuffer())
@@ -298,8 +303,11 @@ export default {
         })
         .then(pdf => {
           const blob = new Blob([pdf], { type: "application/pdf" });
-          const url = URL.createObjectURL(blob);
-          return loaded.then(() => tab.location.assign(url));
+          if (this.willDownload) window.navigator.msSaveOrOpenBlob(blob);
+          else {
+            const url = URL.createObjectURL(blob);
+            return loaded.then(() => tab.location.assign(url));
+          }
         });
     },
     drawIdForm(page, idForm, offset) {
