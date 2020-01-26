@@ -50,7 +50,7 @@
               Équipement individuel de flottabilité par personne embarquée (aide
               à la flottabilité ou gilet de sauvetage)
             </label>
-            <input type="checkbox" v-model="securite1" />
+            <input type="checkbox" v-model="securities[0]" />
           </div>
           <div class="label-form security-form">
             <label>
@@ -58,54 +58,54 @@
               projecteur, lampe IOR) ou individuel s'il est étanche et porté par
               chaque personne embarquée
             </label>
-            <input type="checkbox" v-model="securite2" />
+            <input type="checkbox" v-model="securities[1]" />
           </div>
           <div class="label-form security-form">
             <label>
               Dispositif d’assèchement fixe ou mobile sauf navires auto-videur
             </label>
-            <input type="checkbox" v-model="securite3" />
+            <input type="checkbox" v-model="securities[2]" />
           </div>
           <div class="label-form security-form">
             <label>Moyen de remonter à bord une personne tombée à l’eau</label>
-            <input type="checkbox" v-model="securite4" />
+            <input type="checkbox" v-model="securities[3]" />
           </div>
           <div class="label-form security-form">
             <label>
               Dispositif coupe-circuit en cas d’éjection du pilote si moteur(s)
               hors bord à barre franche de puissance > 4,5 Kw
             </label>
-            <input type="checkbox" v-model="securite5" />
+            <input type="checkbox" v-model="securities[4]" />
           </div>
           <div class="label-form security-form">
             <label>
               Dispositif de lutte contre l’incendie
               <span class="font">à jour de sa visite d'entretien</span>
             </label>
-            <input type="checkbox" v-model="securite6" />
+            <input type="checkbox" v-model="securities[5]" />
           </div>
           <div class="label-form security-form">
             <label>Dispositif de remorquage</label>
-            <input type="checkbox" v-model="securite7" />
+            <input type="checkbox" v-model="securities[6]" />
           </div>
           <div class="label-form security-form">
             <label>
               Ligne de mouillage ou ancre flottante sauf embarcations de
               capacité inférieur à 5 adultes
             </label>
-            <input type="checkbox" v-model="securite8" />
+            <input type="checkbox" v-model="securities[7]" />
           </div>
           <div class="label-form security-form">
             <label>Pavillon national Si franchisé</label>
-            <input type="checkbox" v-model="securite9" />
+            <input type="checkbox" v-model="securities[8]" />
           </div>
           <div class="label-form security-form">
             <label>Trois feux rouges automatiques à main</label>
-            <input type="checkbox" v-model="securite10" />
+            <input type="checkbox" v-model="securities[9]" />
           </div>
           <div class="label-form security-form">
             <label>Annuaire de marée</label>
-            <input type="checkbox" v-model="secutite12" />
+            <input type="checkbox" v-model="securities[10]" />
           </div>
           <div class="label-form security-form">
             <label>
@@ -113,29 +113,29 @@
               sauf embarcations de capacité inferieur à 5 adultes et tous
               pneumatiques
             </label>
-            <input type="checkbox" v-model="securite13" />
+            <input type="checkbox" v-model="securities[11]" />
           </div>
           <div class="label-form security-form">
             <label>Compas magnétique</label>
-            <input type="checkbox" v-model="securite14" />
+            <input type="checkbox" v-model="securities[12]" />
           </div>
           <div class="label-form security-form">
             <label>
               Règlement international pour prévenir les abordages en mer (RIPAM)
             </label>
-            <input type="checkbox" v-model="securite15" />
+            <input type="checkbox" v-model="securities[13]" />
           </div>
           <div class="label-form security-form">
             <label>Document de synthèse du balisage</label>
-            <input type="checkbox" v-model="securite16" />
+            <input type="checkbox" v-model="securities[14]" />
           </div>
           <div class="label-form security-form">
             <label>Carte(s) de navigation</label>
-            <input type="checkbox" v-model="securite17" />
+            <input type="checkbox" v-model="securities[15]" />
           </div>
           <div class="label-form">
             <label>VHF Radiomaritime obligatoire</label>
-            <input type="checkbox" v-model="securite18" />
+            <input type="checkbox" v-model="securities[16]" />
           </div>
         </div>
       </div>
@@ -178,7 +178,11 @@
           de sécurité obligatoires pour la catégorie de navigation
           correspondante à la compétition
           <br />
-          <button v-on:click="generate">Valider</button>
+
+          <button :disabled="!securityOk" v-on:click="generate">Valider</button>
+          <p v-show="!securityOk">
+            Vous n'avez pas tout l'equipement obligatoire
+          </p>
         </div>
       </div>
     </div>
@@ -195,20 +199,33 @@ export default {
   },
   data() {
     return {
-      repas: 0
+      repas: 0,
+      equipage: "",
+      bateau: "",
+      longueur: "",
+      immatriculation: "",
+      moteur: "",
+      assuranre1: "",
+      assurance2: "",
+      securities: Array.from({ length: 17 }).fill(false)
     };
+  },
+  computed: {
+    securityOk() {
+      return this.securities.every(s => s);
+    }
   },
   methods: {
     generate() {
       const tab = window.open();
 
-      fetch("/contest/inscription.pdf")
+      fetch("/contest/inscription-2020.pdf")
         .then(res => res.arrayBuffer())
         .then(pdf => PDFDocument.load(pdf))
         .then(doc => {
           const pages = doc.getPages();
           const firstPage = pages[0];
-          //const secondPage = pages[1];
+          const secondPage = pages[1];
           const { width, height } = firstPage.getSize();
 
           window.console.log(width, height);
@@ -218,14 +235,46 @@ export default {
           firstPage.moveTo(0, height);
           firstPage.moveDown(143);
           firstPage.moveRight(143);
-          firstPage.drawText("I will be drawn at (50, 50)");
+          firstPage.drawText(this.equipage);
           this.drawIdForm(firstPage, this.$refs.patron, 0);
           this.drawIdForm(firstPage, this.$refs.mousse, 360 - 173);
           firstPage.moveTo(0, height);
-          firstPage.moveDown(402);
-          firstPage.moveRight(516);
-          firstPage.drawText(this.repas);
+          firstPage.moveDown(397);
+          firstPage.moveRight(514);
+          firstPage.drawText(String(this.repas));
 
+          secondPage.setFontSize(12);
+
+          secondPage.moveTo(0, height);
+          secondPage.moveDown(148);
+          secondPage.moveRight(159);
+          secondPage.drawText(this.equipage);
+          secondPage.moveDown(14);
+          secondPage.drawText(this.equipage);
+          secondPage.moveDown(14);
+          secondPage.drawText(this.equipage);
+          secondPage.moveDown(14);
+          secondPage.drawText(this.equipage);
+
+          secondPage.moveTo(0, height);
+          secondPage.moveDown(148 + 14);
+          secondPage.moveRight(430);
+          secondPage.drawText(this.equipage);
+          secondPage.moveDown(14);
+          secondPage.drawText(this.equipage);
+          secondPage.moveDown(14);
+          secondPage.drawText(this.equipage);
+
+          secondPage.moveTo(0, height);
+          secondPage.moveDown(280);
+          secondPage.moveRight(430);
+
+          for (const [i, security] of this.securities.entries()) {
+            if (security) secondPage.drawText("X" + i);
+            if (i == 0 || i == 1 || i == 4 || i == 11) secondPage.moveDown(10);
+            if (i == 12) secondPage.moveDown(12);
+            secondPage.moveDown(12.2);
+          }
           return doc.save();
         })
         .then(pdf => {
@@ -351,6 +400,11 @@ button {
   border-bottom: solid 1px #0185c6;
   padding: 8px;
   margin: 10px;
+}
+
+button:disabled {
+  background: #3a3a3a;
+  color: graytext;
 }
 
 .securite {
