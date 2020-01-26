@@ -143,7 +143,7 @@
         <div class="subscription-title dark-blue">Équipe et Bateau</div>
         <div class="form-equipage">
           <div class="label-form">
-            <label class="dark-olive">Nom de léquipage:</label>
+            <label class="dark-olive">Nom de l'équipage:</label>
             <input v-model="equipage" />
           </div>
           <div class="label-form">
@@ -205,7 +205,7 @@ export default {
       longueur: "",
       immatriculation: "",
       moteur: "",
-      assuranre1: "",
+      assurance1: "",
       assurance2: "",
       securities: Array.from({ length: 17 }).fill(false)
     };
@@ -250,27 +250,27 @@ export default {
           secondPage.moveRight(159);
           secondPage.drawText(this.equipage);
           secondPage.moveDown(14);
-          secondPage.drawText(this.equipage);
+          secondPage.drawText(this.bateau);
           secondPage.moveDown(14);
-          secondPage.drawText(this.equipage);
+          secondPage.drawText(this.longueur);
           secondPage.moveDown(14);
-          secondPage.drawText(this.equipage);
+          secondPage.drawText(this.assurance1);
 
           secondPage.moveTo(0, height);
           secondPage.moveDown(148 + 14);
           secondPage.moveRight(430);
-          secondPage.drawText(this.equipage);
+          secondPage.drawText(this.immatriculation);
           secondPage.moveDown(14);
-          secondPage.drawText(this.equipage);
+          secondPage.drawText(this.moteur);
           secondPage.moveDown(14);
-          secondPage.drawText(this.equipage);
+          secondPage.drawText(this.assurance2);
 
           secondPage.moveTo(0, height);
           secondPage.moveDown(280);
           secondPage.moveRight(430);
 
           for (const [i, security] of this.securities.entries()) {
-            if (security) secondPage.drawText("X" + i);
+            if (security) secondPage.drawText("X");
             if (i == 0 || i == 1 || i == 4 || i == 11) secondPage.moveDown(10);
             if (i == 12) secondPage.moveDown(12);
             secondPage.moveDown(12.2);
@@ -294,28 +294,6 @@ export default {
       }
     }
   }
-  /*security: function () {
-	return {
-	securite1: false,
-	securite2: false,
-	securite3: false,
-	securite4: false,
-	securite5: false,
-	securite6: false,
-	securite7: false,
-	securite8: false,
-	securite9: false,
-	securite10: false,
-	securite11: false,
-	securite12: false,
-	securite13: false,
-	securite14: false,
-	securite15: false,
-	securite16: false,
-	securite17: false,
-	securite18: false
-	}
-  }*/
 };
 </script>
 
