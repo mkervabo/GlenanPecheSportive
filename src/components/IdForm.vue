@@ -43,6 +43,9 @@
       <label>Email:</label>
       <input v-model="email" />
     </div>
+    <p v-show="!mailOk" class="form-error">
+      Vous avez entré un email invalide
+    </p>
     <div class="label-form">
       <label>Téléphone Fixe:</label>
       <input v-model="fixe" />
@@ -72,13 +75,34 @@ export default {
       prenom: "",
       naissance: "",
       adresse: "",
-      postal: 0,
+      postal: "",
       ville: "",
-      portable: 0,
-      fixe: 0,
+      portable: "",
+      fixe: "",
       email: "",
       t_shirt: ""
     };
+  },
+  computed: {
+    mailOk() {
+      var mailReg = new RegExp(/^([\w-.]+)@((?:[\w]+\.)+)([a-zA-Z]{2,4})/i);
+      return mailReg.test(this.email);
+    },
+    isOk() {
+      return (
+        this.nom &&
+        this.prenom &&
+        this.naissance &&
+        this.adresse &&
+        this.postal &&
+        this.ville &&
+        this.portable &&
+        this.fixe &&
+        this.email &&
+        this.t_shirt &&
+        this.mailOk
+      );
+    }
   },
   methods: {
     toArray() {

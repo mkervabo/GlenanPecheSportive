@@ -50,7 +50,7 @@
               Équipement individuel de flottabilité par personne embarquée (aide
               à la flottabilité ou gilet de sauvetage)
             </label>
-            <input type="checkbox" v-model="securities[0]" />
+            <input class="check-box" type="checkbox" v-model="securities[0]" />
           </div>
           <div class="label-form security-form">
             <label>
@@ -58,55 +58,55 @@
               projecteur, lampe IOR) ou individuel s'il est étanche et porté par
               chaque personne embarquée
             </label>
-            <input type="checkbox" v-model="securities[1]" />
+            <input class="check-box" type="checkbox" v-model="securities[1]" />
           </div>
           <div class="label-form security-form">
             <label
               >Dispositif d’assèchement fixe ou mobile sauf navires
               auto-videur</label
             >
-            <input type="checkbox" v-model="securities[2]" />
+            <input class="check-box" type="checkbox" v-model="securities[2]" />
           </div>
           <div class="label-form security-form">
             <label>Moyen de remonter à bord une personne tombée à l’eau</label>
-            <input type="checkbox" v-model="securities[3]" />
+            <input class="check-box" type="checkbox" v-model="securities[3]" />
           </div>
           <div class="label-form security-form">
             <label>
               Dispositif coupe-circuit en cas d’éjection du pilote si moteur(s)
               hors bord à barre franche de puissance > 4,5 Kw
             </label>
-            <input type="checkbox" v-model="securities[4]" />
+            <input class="check-box" type="checkbox" v-model="securities[4]" />
           </div>
           <div class="label-form security-form">
             <label>
               Dispositif de lutte contre l’incendie
               <span class="font">à jour de sa visite d'entretien</span>
             </label>
-            <input type="checkbox" v-model="securities[5]" />
+            <input class="check-box" type="checkbox" v-model="securities[5]" />
           </div>
           <div class="label-form security-form">
             <label>Dispositif de remorquage</label>
-            <input type="checkbox" v-model="securities[6]" />
+            <input class="check-box" type="checkbox" v-model="securities[6]" />
           </div>
           <div class="label-form security-form">
             <label>
               Ligne de mouillage ou ancre flottante sauf embarcations de
               capacité inférieur à 5 adultes
             </label>
-            <input type="checkbox" v-model="securities[7]" />
+            <input class="check-box" type="checkbox" v-model="securities[7]" />
           </div>
           <div class="label-form security-form">
             <label>Pavillon national Si franchisé</label>
-            <input type="checkbox" v-model="securities[8]" />
+            <input class="check-box" type="checkbox" v-model="securities[8]" />
           </div>
           <div class="label-form security-form">
             <label>Trois feux rouges automatiques à main</label>
-            <input type="checkbox" v-model="securities[9]" />
+            <input class="check-box" type="checkbox" v-model="securities[9]" />
           </div>
           <div class="label-form security-form">
             <label>Annuaire de marée</label>
-            <input type="checkbox" v-model="securities[10]" />
+            <input class="check-box" type="checkbox" v-model="securities[10]" />
           </div>
           <div class="label-form security-form">
             <label>
@@ -114,30 +114,30 @@
               sauf embarcations de capacité inferieur à 5 adultes et tous
               pneumatiques
             </label>
-            <input type="checkbox" v-model="securities[11]" />
+            <input class="check-box" type="checkbox" v-model="securities[11]" />
           </div>
           <div class="label-form security-form">
             <label>Compas magnétique</label>
-            <input type="checkbox" v-model="securities[12]" />
+            <input class="check-box" type="checkbox" v-model="securities[12]" />
           </div>
           <div class="label-form security-form">
             <label
               >Règlement international pour prévenir les abordages en mer
               (RIPAM)</label
             >
-            <input type="checkbox" v-model="securities[13]" />
+            <input class="check-box" type="checkbox" v-model="securities[13]" />
           </div>
           <div class="label-form security-form">
             <label>Document de synthèse du balisage</label>
-            <input type="checkbox" v-model="securities[14]" />
+            <input class="check-box" type="checkbox" v-model="securities[14]" />
           </div>
           <div class="label-form security-form">
             <label>Carte(s) de navigation</label>
-            <input type="checkbox" v-model="securities[15]" />
+            <input class="check-box" type="checkbox" v-model="securities[15]" />
           </div>
           <div class="label-form">
             <label>VHF Radiomaritime obligatoire</label>
-            <input type="checkbox" v-model="securities[16]" />
+            <input class="check-box" type="checkbox" v-model="securities[16]" />
           </div>
         </div>
       </div>
@@ -181,7 +181,15 @@
           correspondante à la compétition
           <br />
 
-          <button :disabled="!securityOk || !boatOk" v-on:click="generate">
+          <button
+            :disabled="
+              !securityOk ||
+                !boatOk ||
+                !($refs.patron && $refs.patron.isOk) ||
+                !($refs.mousse && $refs.mousse.isOk)
+            "
+            v-on:click="generate"
+          >
             {{ willDownload ? "Télécharger" : "Valider" }}
           </button>
           <p v-show="!securityOk" class="form-error">
@@ -189,6 +197,12 @@
           </p>
           <p v-show="!boatOk" class="form-error">
             Vous n'avez pas remplis tout les champs
+          </p>
+          <p v-show="!($refs.patron && $refs.patron.isOk)" class="form-error">
+            Vous n'avez pas complété le formulaire du patron
+          </p>
+          <p v-show="!($refs.mousse && $refs.mousse.isOk)" class="form-error">
+            Vous n'avez pas complété le formulaire du mousse
           </p>
         </div>
       </div>
@@ -421,4 +435,10 @@ button:disabled {
 .form-error {
   color: red;
 }
+
+/*.check-box {
+	width: 25px;
+	height: 25px;
+	color: #f37538;
+}*/
 </style>
