@@ -8,7 +8,7 @@
             class="article-icon orange"
           ></fa-icon>
           <div class="orange event-name ">Salon de Nantes</div>
-          <div class="blue date">00/00/00 - 00/00/00</div>
+          <div class="blue date">14/02/20 - 16/02/20</div>
           <div class="event-description">
             Venez nous rencontrer lors du salon de Nantes. Ce sera l'occasion de
             discuter pêches et de s'inscrire à l'Open. N'oubliez pas de venir
@@ -30,7 +30,7 @@
         <div class="contest">
           <fa-icon :icon="['fas', 'fish']" class="article-icon white"></fa-icon>
           <div class="contest-title white">Open des Glénan</div>
-          <div class="white date">00/00/00 - 00/00/00</div>
+          <div class="white date">20/06/20 - 21/06/20</div>
           <div class="contest-description">
             En cette année 2020 nous vous convions au 10eme anniversaire de
             l'Open des Glenan. Blablabla c'est un concour de peche, blabla il y

@@ -15,7 +15,33 @@
       </div>
       <br />
       <div class="contest-content">
-        L'Open se deroulera du vendredis XX/XX au dimanche XX/XX !
+        L'Open se deroulera du samedis 20/06 au dimanche 21/06 !
+      </div>
+      <br />
+      <div class="contest-title orange">Classement</div>
+      <div v-on:click="showClassement(contest18)" class="contest-content link">
+        Classement 2018
+      </div>
+      <div v-show="contest18">
+        <div class="contest-content">
+          Le nombre de bars péchés et maillés augmente nettement cette année:
+          494 bars ont été validés puis relachés. A noter que de nombreux
+          poissons non maillés ont été péchés également. Bien sûr, tous les
+          poissons péchés ont été relâchés vivants.
+          <br />
+          Cliquez ci-dessous pour consulter les résultats des manches et le
+          classement général de l'open des Glénan 2018.
+          <a class="link2">1ere manche Open des Glénan 2018, samedi 23 juin</a>
+          <br />
+          <a class="link2"
+            >2eme manche Open des Glénan 2018, dimanche 24 juin</a
+          >
+          <br />
+          <a class="link2"
+            >Classement général des équipes et des équipages Open des Glénan
+            2018</a
+          >
+        </div>
       </div>
     </div>
     <div class="contest-article contest-info">
@@ -326,7 +352,24 @@
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  data() {
+    return {
+      contest18: false,
+      contest17: false,
+      contest16: false,
+      contest15: false
+    };
+  },
+  methods: {
+    showClassement(show) {
+      if (show == true) show = false;
+      else show = true;
+    }
+  }
+};
+</script>
 
 <style>
 .contest-fond {

@@ -1,18 +1,22 @@
 <template>
   <div class="agenda-event">
-    <div class="font dark-blue">Nom de l'evenement</div>
-    <div class="orange date">00/00/00 - 00/00/00</div>
+    <div class="font dark-blue">{{ event }}</div>
+    <div class="orange date">{{ date }}</div>
     <div>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in urna a orci
-      bibendum faucibus id eget ante. Etiam purus ligula, vehicula a dui in,
-      sodales semper urna. Donec et tempus lacus. Nunc ultricies dolor sit amet
-      quam interdum viverra. Integer id placerat sapien, eget imperdiet lectus.
-      Sed turpis tortor, facilisis vitae cursus quis, efficitur at sapien.
-      Pellentesque scelerisque augue eget magna semper, a volutpat sapien
-      molestie
+      <slot></slot>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    event: String,
+    date: String,
+    description: String
+  }
+};
+</script>
 
 <style>
 .agenda-event {
