@@ -90,7 +90,7 @@
         </a>
       </div>
       <div class="partenaire-icone">
-        <a href="https://www.ultimate-fishing.net/">
+        <a href="https://catalog.ultimate-fishing.net/">
           <img
             class="partenaire-img"
             src="../assets/partner/Ultimate-Fishing.jpg"

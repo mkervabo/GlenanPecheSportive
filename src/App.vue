@@ -31,11 +31,80 @@
       <a href="http://www.spiderwire.com/">
         <img class="partner-icone" src="./assets/partner/spider_wire.png" />
       </a>
-      <a href="https://www.catamaran-emelia.com/">
+      <a href="http://www.grand-pavois.com/">
+        <img
+          class="partner-icone"
+          src="./assets/partner/grand-pavois-2020.png"
+        />
+      </a>
+      <a href="https://www.salon-peche-mer.com/">
+        <img
+          class="partner-icone"
+          src="./assets/partner/salon-peche-en-mer.jpg"
+        />
+      </a>
+      <a>
+        <img class="partner-icone" src="./assets/partner/peche-en-mer.jpg" />
+      </a>
+      <a href="http://acp-atlantique.com/">
+        <img class="partner-icone" src="./assets/partner/ACP.png" />
+      </a>
+      <a href="https://www.kerfil.com/">
+        <img class="partner-icone" src="./assets/partner/kerfil.jpg" />
+      </a>
+      <a
+        href="http://www.mediterranee.creditmaritime.fr/mer-assur-1264/id-menu-1046.html"
+      >
         <img class="partner-icone" src="./assets/partner/mer_assur.gif" />
       </a>
-      <a href="https://delalande-peche.fr/">
-        <img class="partner-icone" src="./assets/partner/delalande.jpg" />
+      <a href="https://www.mc-technologies.fr/">
+        <img class="partner-icone" src="./assets/partner/mc_tech.png" />
+      </a>
+      <a href="https://catalog.ultimate-fishing.net/">
+        <img
+          class="partner-icone"
+          src="./assets/partner/Ultimate-Fishing.jpg"
+        />
+      </a>
+      <a href="http://www.besse.fr/">
+        <img class="partner-icone" src="./assets/partner/Besse.gif" />
+      </a>
+      <a href="https://www.aon.com/home/index.html#">
+        <img class="partner-icone" src="./assets/partner/Aon.svg" />
+      </a>
+      <a
+        href="https://www.beneteau.com/fr/beneteau-evenement-page-associee/participer-au-barracuda-tour"
+      >
+        <img class="partner-icone" src="./assets/partner/barracuda-tour.png" />
+      </a>
+      <a>
+        <img class="partner-icone" src="./assets/partner/tenryu.jpg" />
+      </a>
+      <a href="https://www.rodhouse.fr/fr/">
+        <img class="partner-icone" src="./assets/partner/rodhouse.jpg" />
+      </a>
+      <a href="https://www.alre-peche.com/">
+        <img class="partner-icone" src="./assets/partner/alre-peche.jpg" />
+      </a>
+      <a href="http://www.lepasco.com/">
+        <img class="partner-icone" src="./assets/partner/le-pasco.png" />
+      </a>
+      <a
+        href="https://fr-fr.facebook.com/pages/category/Media/RonProduction-134411313302276//"
+      >
+        <img class="partner-icone" src="./assets/partner/ron-production.jpg" />
+      </a>
+      <a href="http://work.atm-communication.com/">
+        <img class="partner-icone" src="./assets/partner/Atm-com.png" />
+      </a>
+      <a>
+        <img
+          class="partner-icone"
+          src="./assets/partner/Cap-Marine-Assurances.gif"
+        />
+      </a>
+      <a href="http://www.ticafishing.com/">
+        <img class="partner-icone" src="./assets/partner/tica.jpg" />
       </a>
     </footer>
   </div>
