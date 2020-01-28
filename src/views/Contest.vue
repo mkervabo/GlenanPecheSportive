@@ -19,11 +19,11 @@
       </div>
       <br />
       <div class="contest-title orange">Classement</div>
-      <div v-on:click="showClassement(contest18)" class="contest-content link">
+      <div v-on:click="contest18 = !contest18" class="contest-content link">
         Classement 2018
       </div>
-      <div v-show="contest18">
-        <div class="contest-content">
+      <div v-show="contest18" class="link">
+        <p class="white">
           Le nombre de bars péchés et maillés augmente nettement cette année:
           494 bars ont été validés puis relachés. A noter que de nombreux
           poissons non maillés ont été péchés également. Bien sûr, tous les
@@ -31,19 +31,139 @@
           <br />
           Cliquez ci-dessous pour consulter les résultats des manches et le
           classement général de l'open des Glénan 2018.
-          <a class="link2">1ere manche Open des Glénan 2018, samedi 23 juin</a>
+        </p>
+        <a
+          class="link2"
+          href="/contest/classement/2018/Classement-1ere-manche.pdf"
+          >1ere manche Open des Glénan 2018, samedi 23 juin</a
+        >
+        <br />
+        <a
+          class="link2"
+          href="/contest/classement/2018/Classement-2eme-manche.pdf"
+          >2eme manche Open des Glénan 2018, dimanche 24 juin</a
+        >
+        <br />
+        <a class="link2" href="/contest/classement/2018/Classement-general.pdf"
+          >Classement général des équipes et des équipages Open des Glénan
+          2018</a
+        >
+      </div>
+      <div v-on:click="contest17 = !contest17" class="contest-content link">
+        Classement 2017
+      </div>
+      <div v-show="contest17" class="link">
+        <p class="white">
+          Le nombre de bars péchés et maillés augmente nettement cette année:
+          Quelques chiffres sur la pêche cette année: 357 bars maillés ont été
+          péchés puis relachés. A noter que de nombreux poissons non maillés ont
+          été péchés également. Bien sûr, tous les poissons péchés ont été
+          relâchés vivants.
           <br />
-          <a class="link2"
-            >2eme manche Open des Glénan 2018, dimanche 24 juin</a
+          Cliquez ci-dessous pour consulter les résultats des manches et le
+          classement général de l'open des Glénan 2017.
+        </p>
+        <a
+          class="link2"
+          href="/contest/classement/2017/Classement-1ere-manche.pdf"
+          >1ere manche Open des Glénan 2017, samedi 1er juillet</a
+        >
+        <br />
+        <a
+          class="link2"
+          href="/contest/classement/2017/Classement-2eme-manche.pdf"
+          >2eme manche Open des Glénan 2017, dimanche 2 juillet</a
+        >
+        <br />
+        <a class="link2" href="/contest/classement/2017/Classement-general.pdf"
+          >Classement général des équipes et des équipages Open des Glénan
+          2017</a
+        >
+      </div>
+      <div v-on:click="contest16 = !contest16" class="contest-content link">
+        Classement 2016
+      </div>
+      <div v-show="contest16" class="link">
+        <p class="white">
+          Quelques chiffres sur la pêche en 2016: 258 bars ont été péchés puis
+          relachés. Pour mémoire en 2015, 137 bars péchés, et en 2014, 190 bars
+          avaient été péchés.
+          <br />
+          Cliquez ci-dessous pour consulter les résultats des manches et le
+          classement général de l'open des Glénan 2016.
+        </p>
+        <a
+          class="link2"
+          href="/contest/classement/2016/Classement-1ere-manche.pdf"
+          >1ere manche Open des Glénan 2016, samedi 18 juin</a
+        >
+        <br />
+        <a
+          class="link2"
+          href="/contest/classement/2016/Classement-2eme-manche.pdf"
+          >2eme manche Open des Glénan, dimanche 19 juin</a
+        >
+        <br />
+        <a class="link2" href="/contest/classement/2016/Classement-general.pdf"
+          >Clasement général Open des Glénan 2016</a
+        >
+      </div>
+      <div v-on:click="contest15 = !contest15" class="contest-content link">
+        Classement 2015
+      </div>
+      <div v-show="contest15" class="link">
+        <p class="white">
+          Quelques chiffres sur la pêche en 2015: 137 bars ont été péchés puis
+          relachés (115 par l'Open et 22 par les Barracudas). Pour mémoire en
+          2014, 190 bars avaient été péchés puis relachés (172 par l'Open et 18
+          par les barracudas).
+          <br />
+          Cliquez ci-dessous pour consulter les résultats des manches et le
+          classement général de l'open des Glénan 2015.
+        </p>
+        <p>
+          <a class="link2" href="/contest/classement/2015/equipage.jpg"
+            >Liste des équipes et équipages</a
+          >
+          <br /><br />
+          <a
+            class="link2"
+            href="/contest/classement/2015/Classement-1ere-manche.pdf"
+            >1ere manche Open des Glénan, samedi 20 juin</a
           >
           <br />
-          <a class="link2"
-            >Classement général des équipes et des équipages Open des Glénan
-            2018</a
+          <a
+            class="link2"
+            href="/contest/classement/2015/Classement-2eme-manche.pdf"
+            >2eme manche Open des Glénan, dimanche 21 juin</a
           >
-        </div>
+          <br />
+          <a
+            class="link2"
+            href="/contest/classement/2015/Classement-general.pdf"
+            >Classement général Open des Glénan 2015</a
+          >
+        </p>
+        <a
+          class="link2"
+          href="/contest/classement/2015/Classement-1ere-manche-Barracuda.pdf"
+          >1ere manche Barracuda Concarneau 2015</a
+        >
+        <br />
+        <a
+          class="link2"
+          href="/contest/classement/2015/Classement-2eme-manche-Barracuda.pdf"
+          >2eme manche Barracuda Concarneau 2015</a
+        >
+        <br />
+        <a
+          class="link2"
+          href="/contest/classement/2015/Classement-general-Barracuda.pdf"
+          >Classement général Barracuda Concarneau 2015</a
+        >
       </div>
     </div>
+
     <div class="contest-article contest-info">
       <div class="contest-title dark-blue">Planning</div>
       <br />
