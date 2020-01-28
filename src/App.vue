@@ -2,10 +2,12 @@
   <div id="app">
     <div class="reseau">
       <fa-icon :icon="['fab', 'instagram']" class="icone dark-olive"></fa-icon>
-      <fa-icon
-        :icon="['fab', 'facebook-square']"
-        class="icone dark-blue"
-      ></fa-icon>
+      <a href="https://www.facebook.com/glenanpechesportive/"
+        ><fa-icon
+          :icon="['fab', 'facebook-square']"
+          class="icone dark-blue"
+        ></fa-icon
+      ></a>
       <fa-icon :icon="['fas', 'envelope-square']" class="icone white"></fa-icon>
       <fa-icon
         :icon="['fas', 'phone-square-alt']"

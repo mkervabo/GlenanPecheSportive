@@ -2,40 +2,56 @@
   <main id="#subscription">
     <div class="subscription-part">
       <div class="rules important">
-        <div class="subscription-title dark-blue">Important</div>
+        <h2 class="subscription-title dark-blue">Important</h2>
         <div class="rules-content dark-olive">
           Ceci est le formulaire de pré-incription, votre inscription sera
           valider une fois le formulaire imprimer et poster.
+          <p class="contest-content">
+            Le règlement est par
+            <a class="link" href="/contest/Reglement-open-des-Glenan-2020.pdf"
+              >là</a
+            >
+            ! Il est important de le lire !
+          </p>
+          <p class="font">Joindre au présent bulletin d'inscription :</p>
+          <p>
+            Les attestations d'assurance responsabilité civile des équipiers et
+            du bateau, <span class="font">et</span> la fiche sécurité dûment
+            remplie et signée.
+          </p>
         </div>
+        <h2 class="subscription-title2 orange">Prix de l’inscription:</h2>
         <div class="rules-content dark-olive">
-          <div class="subscription-title2 orange">Prix de l’inscription:</div>
           <br />
-          <span class="font">130€ par bateau</span> (prix pour les deux
-          équipiers pour l’ensemble de la compétition) comprenant aussi les
-          petits déjeuners et paniers repas du samedi et dimanche midi, ainsi
-          qu’un repas à Concarneau le samedi soir pour les équipages. Il est
-          possible de réserver des
-          <span class="font">
-            diners supplémentaires le samedi soir pour les accompagnants, 20€
-            par personne </span
-          >.
+          <p>
+            <span class="font">130€ par bateau</span> (prix pour les deux
+            équipiers pour l’ensemble de la compétition) comprenant aussi les
+            petits déjeuners et paniers repas du samedi et dimanche midi, ainsi
+            qu’un repas à Concarneau le samedi soir pour les équipages. Il est
+            possible de réserver des
+            <span class="font">
+              diners supplémentaires le samedi soir pour les accompagnants, 20€
+              par personne </span
+            >.
+          </p>
           <br />
           <br />
           <div>
             <label class="dark-olive">Nombres de repas suplémentaire</label>
             <input class="repas" v-model="repas" />
           </div>
+          <br />
           <span class="subscription-title2 orange">Total:</span>
           {{ 130 + repas * 20 }}€
         </div>
       </div>
       <div>
         <div class="form">
-          <div class="subscription-title orange">Patron</div>
+          <h2 class="subscription-title orange">Patron</h2>
           <IdForm class="form id-form" ref="patron" />
         </div>
         <div class="form">
-          <div class="subscription-title orange">Mousse</div>
+          <h2 class="subscription-title orange">Mousse</h2>
           <IdForm class="form id-form" ref="mousse" />
         </div>
       </div>
@@ -43,7 +59,7 @@
     <div class="subscription-part">
       <div class="form securite">
         <!-- a modifier a partir de: https://www.ecologique-solidaire.gouv.fr/sites/default/files/equipement_secu_plaisance_4p_DEF_Web.pdf -->
-        <div class="subscription-title orange">Équipement obligatoire</div>
+        <h2 class="subscription-title orange">Équipement obligatoire</h2>
         <div>
           <div class="label-form security-form">
             <label>
@@ -142,7 +158,7 @@
         </div>
       </div>
       <div class="rules equipage">
-        <div class="subscription-title dark-blue">Équipe et Bateau</div>
+        <h2 class="subscription-title dark-blue">Équipe et Bateau</h2>
         <div class="form-equipage">
           <div class="label-form">
             <label class="dark-olive">Nom de l'équipage:</label>
@@ -173,13 +189,14 @@
             <input v-model="assurance2" />
           </div>
         </div>
-        <div class="subscription-title dark-blue">Valider</div>
+        <h2 class="subscription-title dark-blue">Valider</h2>
         <div class="rules-content dark-olive">
           <div class="font">En poursuivant:</div>
-          <br />En continuant je certifie que je dispose de tous les matériels
-          de sécurité obligatoires pour la catégorie de navigation
-          correspondante à la compétition
-          <br />
+          <p>
+            En continuant je certifie que je dispose de tous les matériels de
+            sécurité obligatoires pour la catégorie de navigation correspondante
+            à la compétition
+          </p>
 
           <button
             :disabled="

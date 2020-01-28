@@ -9,64 +9,64 @@
           ></fa-icon>
           <div class="orange event-name ">Salon de Nantes</div>
           <div class="blue date">14/02/20 - 16/02/20</div>
-          <div class="event-description">
+          <p class="event-description">
             Venez nous rencontrer lors du salon de Nantes. Ce sera l'occasion de
             discuter pêches et de s'inscrire à l'Open. N'oubliez pas de venir
             munie de votre
             <router-link to="/subscription" class="link"
               >dossier d'inscription</router-link
             >.
-          </div>
+          </p>
           <router-link to="/agenda" class="other-event event-description link"
             >Pour les autres evenements à venir c'est ici !</router-link
           >
-          <div class="event-description">
+          <p class="event-description">
             Et pour avoir les infos en direct suivez nous sur notre page
             <a class="link" href="https://www.facebook.com/glenanpechesportive/"
               >facebook</a
             >.
-          </div>
+          </p>
         </div>
         <div class="contest">
           <fa-icon :icon="['fas', 'fish']" class="article-icon white"></fa-icon>
-          <div class="contest-title white">Open des Glénan</div>
-          <div class="white date">20/06/20 - 21/06/20</div>
-          <div class="contest-description">
+          <h2 class="contest-title white">Open des Glénan</h2>
+          <p class="white date">20/06/20 - 21/06/20</p>
+          <p class="contest-description">
             En cette année 2020 nous vous convions au 10eme anniversaire de
             l'Open des Glenan. Blablabla c'est un concour de peche, blabla il y
             a un repas.
-          </div>
-          <div class="contest-description">
+          </p>
+          <p class="contest-description">
             Pour une description plus complete c'est
             <router-link to="/contest" class="link">ici</router-link>.
-          </div>
-          <div class="contest-description">
+          </p>
+          <p class="contest-description">
             Pour vous inscrire c'est
             <router-link to="/subscription" class="link">par là</router-link>.
-          </div>
+          </p>
         </div>
         <router-link to="gallery" class="gallery">
           <div class="gallery-filter">
-            <a class="gallery-title orange">Galerie</a>
+            <h2><a class="gallery-title orange">Galerie</a></h2>
           </div>
         </router-link>
         <div class="meteo">
           <fa-icon :icon="['fas', 'cloud']" class="article-icon blue"></fa-icon>
-          <div class="meteo-title blue">Météo des Glénan</div>
-          <div class="meteo-info">
+          <h2 class="meteo-title blue">Météo des Glénan</h2>
+          <p class="meteo-info">
             Pour avoir plus d'infos sur les horaires de marées rendez-vous
             <a
               class="link"
               href="https://mareespeche.com/fr/bretagne-atlantique/concarneau"
               >ici</a
             >.
-          </div>
-          <div class="meteo-info">
+          </p>
+          <p class="meteo-info">
             Pour avoir une vision en direct de la météo sur l'archipel ce sera
             <a class="link" href="https://data.diabox.com/?id=106&view=webcam"
               >par là</a
             >.
-          </div>
+          </p>
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 <template>
   <div class="agenda-event">
-    <div class="font dark-blue">{{ event }}</div>
+    <h3 class="font dark-blue agenda-title">{{ event }}</h3>
     <div class="orange date">{{ date }}</div>
     <div>
       <slot></slot>
@@ -27,5 +27,9 @@ export default {
   padding: 10px;
   text-align: justify;
   font-size: 15px;
+}
+
+.agenda-title {
+  font-size: 18px;
 }
 </style>
