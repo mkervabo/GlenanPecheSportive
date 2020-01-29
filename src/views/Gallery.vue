@@ -5,7 +5,7 @@
         v-for="(imgGallery, i) in imgsGallery"
         v-bind:key="i"
         v-bind:img-gallery="imgGallery"
-        v-on:click="openImg(i)"
+        v-on:click="openImg = !openImg"
       />
       <ImgGallery2 v-bind:img-gallery="monImage" />
     </div>
@@ -16,12 +16,23 @@
 import ImgGallery from "../components/ImgGallery";
 
 const imgsGallery = [
-  require("../assets/kitten/kitten01.png"),
-  require("../assets/kitten/kitten02.jpg"),
-  require("../assets/kitten/kitten03.jpeg"),
-  require("../assets/kitten/kitten04.jpg"),
-  require("../assets/kitten/kitten05.jpg"),
-  require("../assets/kitten/kitten06.jpeg")
+  require("../assets/gallery/gallery01.jpg"),
+  require("../assets/gallery/gallery02.jpg"),
+  require("../assets/gallery/gallery03.jpg"),
+  require("../assets/gallery/gallery04.jpg"),
+  require("../assets/gallery/gallery05.jpg"),
+  require("../assets/gallery/gallery06.jpg"),
+  require("../assets/gallery/gallery07.jpg"),
+  require("../assets/gallery/gallery08.jpg"),
+  require("../assets/gallery/gallery09.jpg"),
+  require("../assets/gallery/gallery10.jpg"),
+  require("../assets/gallery/gallery11.jpg"),
+  require("../assets/gallery/gallery12.jpg"),
+  require("../assets/gallery/gallery13.jpg"),
+  require("../assets/gallery/gallery14.jpg"),
+  require("../assets/gallery/gallery15.jpg"),
+  require("../assets/gallery/gallery16.jpg"),
+  require("../assets/gallery/gallery17.jpg")
 ];
 
 export default {
@@ -30,15 +41,11 @@ export default {
   },
   data() {
     return {
-      monImage: "../assets/kitten/kitten01.png",
+      monImage: "../assets/gallery/gallery01.jpg",
       imgsGallery,
-      i: 0
+      i: 0,
+      openImg: false
     };
-  },
-  methods: {
-    openImg: function(i) {
-      this.monImage = imgsGallery[i];
-    }
   }
 };
 </script>
