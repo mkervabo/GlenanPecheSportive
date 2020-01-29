@@ -11,8 +11,9 @@
       >
       <AgendaElem event="Open des Glénan" date="20/06/20 - 21/06/20"
         >En cette année 2020 nous vous convions au 10eme anniversaire de l'Open
-        des Glenan. Blablabla c'est un concour de peche, blabla il y a un repas.
-        Plus d'info
+        des Glénan.C'est un concour de peche, au bars No Kill. Qui se déroule
+        sur 2 jours. La base se trouve à Concarneau(29) et le concours se
+        déroule sur l'archipel des Glénan. Plus d'info
         <router-link to="/contest" class="link">ici</router-link></AgendaElem
       >
     </div>

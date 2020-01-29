@@ -9,6 +9,10 @@
           ></fa-icon>
           <div class="orange event-name ">Salon de Nantes</div>
           <div class="blue date">14/02/20 - 16/02/20</div>
+          <img
+            class="article-img"
+            src="../assets/partner/salon-peche-en-mer.jpg"
+          />
           <p class="event-description">
             Venez nous rencontrer lors du salon de Nantes. Ce sera l'occasion de
             discuter pêches et de s'inscrire à l'Open. N'oubliez pas de venir
@@ -31,18 +35,20 @@
           <fa-icon :icon="['fas', 'fish']" class="article-icon white"></fa-icon>
           <h2 class="contest-title white">Open des Glénan</h2>
           <p class="white date">20/06/20 - 21/06/20</p>
+          <img class="article-img" src="../assets/logo-10-ans.jpg" />
           <p class="contest-description">
             En cette année 2020 nous vous convions au 10eme anniversaire de
-            l'Open des Glenan. Blablabla c'est un concour de peche, blabla il y
-            a un repas.
+            l'Open des Glénan.C'est un concour de peche, au bars No Kill. Qui se
+            déroule sur 2 jours. La base se trouve à Concarneau(29) et le
+            concours se déroule sur l'archipel des Glénan.
           </p>
           <p class="contest-description">
             Pour une description plus complete c'est
-            <router-link to="/contest" class="link">ici</router-link>.
+            <router-link to="/contest" class="link2">ici</router-link>.
           </p>
           <p class="contest-description">
             Pour vous inscrire c'est
-            <router-link to="/subscription" class="link">par là</router-link>.
+            <router-link to="/subscription" class="link2">par là</router-link>.
           </p>
         </div>
         <router-link to="gallery" class="gallery">
@@ -112,6 +118,13 @@ export default {};
   margin: 10px;
 }
 
+.article-img {
+  width: 100%;
+  height: 80px;
+  margin: auto;
+  object-fit: contain;
+}
+
 .next-event {
   padding: 10px;
   display: flex;
@@ -160,7 +173,7 @@ export default {};
 
 .gallery {
   width: 370px;
-  height: 370px;
+  min-height: 370px;
   background: url(../assets/banner/banner00.jpg);
   background-size: cover;
 }
@@ -219,10 +232,6 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-}
-
-.partner-icone {
-  height: 120px;
 }
 
 .date {

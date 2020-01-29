@@ -15,7 +15,7 @@
       </div>
       <br />
       <div class="contest-content">
-        L'Open se deroulera du samedis 20/06 au dimanche 21/06 !
+        L'Open se deroulera du samedi 20/06 au dimanche 21/06 !
       </div>
       <br />
       <h2 class="contest-title orange">Classement</h2>
@@ -248,10 +248,9 @@
           seront disponibles bientôt (Lowrance et Humminbird).
         </p>
         <p>
-          <span class="font">Carburant:</span> il est possible que la station de
-          carburant du port de plaisance de Concarneau ne soit pas
-          opérationnelle (elle est en travaux): prévoir votre approvisionnement
-          en carburant autrement.
+          <span class="font">Carburant:</span> la station de carburant du port
+          de plaisance de Concarneau ne serat pas opérationnelle (elle est en
+          travaux): prévoir votre approvisionnement en carburant autrement.
         </p>
         <br />
         <p>

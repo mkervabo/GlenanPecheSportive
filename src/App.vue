@@ -83,7 +83,7 @@
         <img class="partner-icone" src="./assets/partner/tenryu.jpg" />
       </a>
       <a href="https://www.rodhouse.fr/fr/">
-        <img class="partner-icone" src="./assets/partner/rodhouse.jpg" />
+        <img class="partner-icone" src="./assets/partner/rodhouse2.jpg" />
       </a>
       <a href="https://www.alre-peche.com/">
         <img class="partner-icone" src="./assets/partner/alre-peche.jpg" />
@@ -230,5 +230,10 @@ body {
 .font {
   font: caption;
   font-weight: bold;
+}
+
+.partner-icone {
+  height: 100px;
+  margin: 5px;
 }
 </style>
