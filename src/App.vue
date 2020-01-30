@@ -108,6 +108,9 @@
       <a href="http://www.ticafishing.com/">
         <img class="partner-icone" src="./assets/partner/tica.jpg" />
       </a>
+      <a href="https://www.navicom.fr/">
+        <img class="partner-icone" src="./assets/partner/navicom.svg" />
+      </a>
     </footer>
   </div>
 </template>

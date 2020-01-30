@@ -189,6 +189,13 @@
           <div class="link">Tica</div>
         </a>
       </div>
+      <div class="partenaire-icone">
+        <a href="https://www.navicom.fr/">
+          <img class="partenaire-img" src="../assets/partner/navicom.svg" />
+          <br />
+          <div class="link">Navicom</div>
+        </a>
+      </div>
     </div>
   </div>
 </template>
