@@ -5,15 +5,23 @@
         v-for="(imgGallery, i) in imgsGallery"
         v-bind:key="i"
         v-bind:img-gallery="imgGallery"
-        v-on:click="openImg = !openImg"
+        v-on:click.native="
+          monImage = imgGallery;
+          openImg = true;
+        "
       />
-      <ImgGallery2 v-bind:img-gallery="monImage" />
+      <ImgGallery2
+        v-bind:img-gallery="monImage"
+        v-show="openImg"
+        v-on:click.native="openImg = false"
+      />
     </div>
   </div>
 </template>
 
 <script>
 import ImgGallery from "../components/ImgGallery";
+import ImgGallery2 from "../components/ImgGallery2";
 
 const imgsGallery = [
   require("../assets/gallery/gallery01.jpg"),
@@ -37,7 +45,8 @@ const imgsGallery = [
 
 export default {
   components: {
-    ImgGallery
+    ImgGallery,
+    ImgGallery2
   },
   data() {
     return {

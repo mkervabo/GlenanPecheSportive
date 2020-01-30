@@ -174,7 +174,7 @@ export default {};
 .gallery {
   width: 370px;
   min-height: 370px;
-  background: url(../assets/banner/banner00.jpg);
+  background: url(../assets/gallery/gallery15.jpg);
   background-size: cover;
 }
 

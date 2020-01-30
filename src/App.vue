@@ -8,11 +8,18 @@
           class="icone dark-blue"
         ></fa-icon
       ></a>
-      <fa-icon :icon="['fas', 'envelope-square']" class="icone white"></fa-icon>
-      <fa-icon
-        :icon="['fas', 'phone-square-alt']"
-        class="icone orange"
-      ></fa-icon>
+      <a href="mailto:infos@glenanpechesportive.fr"
+        ><fa-icon
+          :icon="['fas', 'envelope-square']"
+          class="icone white"
+        ></fa-icon
+      ></a>
+      <a href="tel:+33677707126"
+        ><fa-icon
+          :icon="['fas', 'phone-square-alt']"
+          class="icone orange"
+        ></fa-icon
+      ></a>
       <fa-icon :icon="['fab', 'twitter-square']" class="icone blue"></fa-icon>
     </div>
     <header class="intro">

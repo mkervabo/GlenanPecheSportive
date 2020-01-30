@@ -17,7 +17,8 @@
           <p>
             Les attestations d'assurance responsabilité civile des équipiers et
             du bateau, <span class="font">et</span> la fiche sécurité dûment
-            remplie et signée.
+            remplie et signée. Ansi qu'une photo d'identité de chaque membre
+            d'équipage
           </p>
         </div>
         <h2 class="subscription-title2 orange">Prix de l’inscription:</h2>
@@ -335,7 +336,10 @@ export default {
         .then(pdf => {
           const blob = new Blob([pdf], { type: "application/pdf" });
           if (this.willDownload)
-            window.navigator.msSaveOrOpenBlob(blob, "inscription-2020.pdf");
+            window.navigator.msSaveOrOpenBlob(
+              blob,
+              "inscription-open-glenan-2020.pdf"
+            );
           else {
             const url = URL.createObjectURL(blob);
             return loaded.then(() => tab.location.assign(url));
