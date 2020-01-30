@@ -172,7 +172,7 @@
         consulter à quelques jours de l’Open des Glénan 2020. Petite précision
         l'organisation se réserve le droit de modifier les horaires des manches
         en fonction des derniers bulletins météo, que vous pouvez consulter sur
-        <span class="link2">
+        <span class="orange">
           <a class="font link2" href="https://www.windguru.cz/48469"
             >Windguru</a
           >
