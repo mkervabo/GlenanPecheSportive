@@ -19,7 +19,10 @@
       </div>
       <br />
       <h2 class="contest-title orange">Classement</h2>
-      <div v-on:click="contest18 = !contest18" class="contest-content link">
+      <div
+        v-on:click="contest18 = !contest18"
+        class="contest-content link cursor"
+      >
         Classement 2018
       </div>
       <div v-show="contest18" class="link">
@@ -49,7 +52,10 @@
           2018</a
         >
       </div>
-      <div v-on:click="contest17 = !contest17" class="contest-content link">
+      <div
+        v-on:click="contest17 = !contest17"
+        class="contest-content link cursor"
+      >
         Classement 2017
       </div>
       <div v-show="contest17" class="link">
@@ -80,7 +86,10 @@
           2017</a
         >
       </div>
-      <div v-on:click="contest16 = !contest16" class="contest-content link">
+      <div
+        v-on:click="contest16 = !contest16"
+        class="contest-content link cursor"
+      >
         Classement 2016
       </div>
       <div v-show="contest16" class="link">
@@ -108,7 +117,10 @@
           >Clasement général Open des Glénan 2016</a
         >
       </div>
-      <div v-on:click="contest15 = !contest15" class="contest-content link">
+      <div
+        v-on:click="contest15 = !contest15"
+        class="contest-content link cursor"
+      >
         Classement 2015
       </div>
       <div v-show="contest15" class="link">
@@ -529,5 +541,9 @@ export default {
 
 .link2:hover {
   color: #0185c6;
+}
+
+.cursor {
+  cursor: pointer;
 }
 </style>

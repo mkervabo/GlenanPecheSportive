@@ -12,6 +12,7 @@
           <img
             class="article-img"
             src="../assets/partner/salon-peche-en-mer.jpg"
+            href="https://www.salon-peche-mer.com/"
           />
           <p class="event-description">
             Venez nous rencontrer lors du salon de Nantes. Ce sera l'occasion de

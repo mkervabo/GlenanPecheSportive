@@ -72,7 +72,7 @@
       <a href="https://catalog.ultimate-fishing.net/">
         <img
           class="partner-icone"
-          src="./assets/partner/Ultimate-Fishing.jpg"
+          src="./assets/partner/Ultimate-Fishing.svg"
         />
       </a>
       <a href="http://www.besse.fr/">
@@ -95,8 +95,8 @@
       <a href="https://www.alre-peche.com/">
         <img class="partner-icone" src="./assets/partner/alre-peche.jpg" />
       </a>
-      <a href="http://www.lepasco.com/">
-        <img class="partner-icone" src="./assets/partner/le-pasco.png" />
+      <a href="https://www.cndiffusion.com/">
+        <img class="partner-icone" src="./assets/partner/cndiffusion.png" />
       </a>
       <a
         href="https://fr-fr.facebook.com/pages/category/Media/RonProduction-134411313302276//"

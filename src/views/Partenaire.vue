@@ -93,7 +93,7 @@
         <a href="https://catalog.ultimate-fishing.net/">
           <img
             class="partenaire-img"
-            src="../assets/partner/Ultimate-Fishing.jpg"
+            src="../assets/partner/Ultimate-Fishing.svg"
           />
           <br />
           <div class="link">Ultimate Fishing</div>
@@ -147,8 +147,8 @@
         </a>
       </div>
       <div class="partenaire-icone">
-        <a href="http://www.lepasco.com/">
-          <img class="partenaire-img" src="../assets/partner/le-pasco.png" />
+        <a href="https://www.cndiffusion.com/">
+          <img class="partenaire-img" src="../assets/partner/cndiffusion.png" />
           <br />
           <div class="link">Le Pasco</div>
         </a>

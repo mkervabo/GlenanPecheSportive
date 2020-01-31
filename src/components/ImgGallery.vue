@@ -15,5 +15,6 @@ export default {
   object-fit: cover;
   margin: 10px;
   z-index: 0;
+  cursor: pointer;
 }
 </style>

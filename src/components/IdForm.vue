@@ -9,15 +9,15 @@
       </div>
       <div class="label-form">
         <label>Nom:</label>
-        <input v-model="nom" />
+        <input v-model="nom" id="family-name" />
       </div>
       <div class="label-form">
         <label>Prénom:</label>
-        <input v-model="prenom" />
+        <input v-model="prenom" id="given-name" />
       </div>
       <div class="label-form">
         <label>Date de Naissance:</label>
-        <input type="date" v-model="naissance" />
+        <input type="date" v-model="naissance" id="bday" />
       </div>
     </div>
     <div class="section">
@@ -27,7 +27,7 @@
       </div>
       <div class="label-form">
         <label>Code postal:</label>
-        <input v-model="postal" />
+        <input v-model="postal" id="postal-code" />
       </div>
       <div class="label-form">
         <label>Ville:</label>
@@ -37,11 +37,11 @@
 
     <div class="label-form">
       <label>Téléphone Portable:</label>
-      <input v-model="portable" />
+      <input v-model="portable" id="tel-local" />
     </div>
     <div class="label-form">
       <label>Email:</label>
-      <input v-model="email" />
+      <input v-model="email" id="email" />
     </div>
     <p v-show="!mailOk" class="form-error">
       Vous avez entré un email invalide
