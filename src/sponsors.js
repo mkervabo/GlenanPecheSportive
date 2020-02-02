@@ -57,7 +57,8 @@ export default [
   {
     name: "Ultimate Fishing",
     link: "https://catalog.ultimate-fishing.net/",
-    logo: require("./assets/partner/Ultimate-Fishing.svg")
+    logo: require("./assets/partner/Ultimate-Fishing.svg"),
+    whitebackground: true
   },
   {
     name: "Bessé",
@@ -67,13 +68,15 @@ export default [
   {
     name: "Aon",
     link: "https://www.aon.com/home/index.html",
-    logo: require("./assets/partner/Aon.svg")
+    logo: require("./assets/partner/Aon.svg"),
+    whitebackground: true
   },
   {
     name: "Barracuda Tour",
     link:
       "https://www.beneteau.com/fr/beneteau-evenement-page-associee/participer-au-barracuda-tour",
-    logo: require("./assets/partner/barracuda-tour.png")
+    logo: require("./assets/partner/barracuda-tour.png"),
+    whitebackground: true
   },
   {
     name: "Tenryu",
@@ -82,7 +85,8 @@ export default [
   {
     name: "Rodhouse",
     link: "https://www.rodhouse.fr/fr/",
-    logo: require("./assets/partner/rodhouse.jpg")
+    logo: require("./assets/partner/rodhouse.jpg"),
+    whitebackground: true
   },
   {
     name: "CNDiffusion",

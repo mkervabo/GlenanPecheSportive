@@ -31,7 +31,11 @@
     <router-view class="content" />
     <footer>
       <a v-for="sponsor in sponsors" :key="sponsor.name" :href="sponsor.link">
-        <img class="partner-icone" :src="sponsor.logo" />
+        <img
+          class="partner-icone"
+          :src="sponsor.logo"
+          :style="sponsor.whitebackground && 'background: white;'"
+        />
       </a>
     </footer>
   </div>
