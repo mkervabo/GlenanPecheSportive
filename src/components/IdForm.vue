@@ -4,7 +4,7 @@
       <div class="label-form">
         <label for="mr">Mr </label>
         <input type="radio" value="H" v-model="kind" />
-        <label for="mm">Mm</label>
+        <label for="mme">Mme</label>
         <input type="radio" value="F" v-model="kind" />
       </div>
       <div class="label-form">
