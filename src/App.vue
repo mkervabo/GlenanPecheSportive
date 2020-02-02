@@ -20,7 +20,6 @@
           class="icone orange"
         ></fa-icon
       ></a>
-      <fa-icon :icon="['fab', 'twitter-square']" class="icone blue"></fa-icon>
     </div>
     <header class="intro">
       <router-link to="/">
@@ -45,8 +44,7 @@ import sponsors from "./sponsors";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faInstagram,
-  faFacebookSquare,
-  faTwitterSquare
+  faFacebookSquare
 } from "@fortawesome/free-brands-svg-icons";
 import {
   faPhoneSquareAlt,
@@ -55,7 +53,6 @@ import {
 
 library.add(faInstagram);
 library.add(faFacebookSquare);
-library.add(faTwitterSquare);
 library.add(faPhoneSquareAlt);
 library.add(faEnvelopeSquare);
 
