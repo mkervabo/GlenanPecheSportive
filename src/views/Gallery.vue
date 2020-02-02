@@ -10,6 +10,7 @@
           openImg = true;
         "
       />
+      <div v-for="i in 20" :key="i" class="gallery-spacer" />
       <ImgGallery2
         v-bind:img-gallery="monImage"
         v-show="openImg"
@@ -23,25 +24,9 @@
 import ImgGallery from "../components/ImgGallery";
 import ImgGallery2 from "../components/ImgGallery2";
 
-const imgsGallery = [
-  require("../assets/gallery/gallery01.jpg"),
-  require("../assets/gallery/gallery02.jpg"),
-  require("../assets/gallery/gallery03.jpg"),
-  require("../assets/gallery/gallery04.jpg"),
-  require("../assets/gallery/gallery05.jpg"),
-  require("../assets/gallery/gallery06.jpg"),
-  require("../assets/gallery/gallery07.jpg"),
-  require("../assets/gallery/gallery08.jpg"),
-  require("../assets/gallery/gallery09.jpg"),
-  require("../assets/gallery/gallery10.jpg"),
-  require("../assets/gallery/gallery11.jpg"),
-  require("../assets/gallery/gallery12.jpg"),
-  require("../assets/gallery/gallery13.jpg"),
-  require("../assets/gallery/gallery14.jpg"),
-  require("../assets/gallery/gallery15.jpg"),
-  require("../assets/gallery/gallery16.jpg"),
-  require("../assets/gallery/gallery17.jpg")
-];
+const context = require.context("../assets/gallery", true, /.*/);
+
+const imgsGallery = context.keys().map(key => context(key));
 
 export default {
   components: {
@@ -72,5 +57,10 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.gallery-spacer {
+  width: 350px;
+  margin: 0 10px;
 }
 </style>
