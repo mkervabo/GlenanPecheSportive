@@ -31,92 +31,8 @@
     </header>
     <router-view class="content" />
     <footer>
-      <a href="http://fiiish.com/">
-        <img class="partner-icone" src="./assets/partner/fiiish.jpg" />
-      </a>
-      <a href="http://www.suzukimarine.fr/">
-        <img class="partner-icone" src="./assets/partner/suzuki.png" />
-      </a>
-      <a href="http://www.spiderwire.com/">
-        <img class="partner-icone" src="./assets/partner/spider_wire.png" />
-      </a>
-      <a href="http://www.grand-pavois.com/">
-        <img
-          class="partner-icone"
-          src="./assets/partner/grand-pavois-2020.png"
-        />
-      </a>
-      <a href="https://www.salon-peche-mer.com/">
-        <img
-          class="partner-icone"
-          src="./assets/partner/salon-peche-en-mer.jpg"
-        />
-      </a>
-      <a>
-        <img class="partner-icone" src="./assets/partner/peche-en-mer.jpg" />
-      </a>
-      <a href="http://acp-atlantique.com/">
-        <img class="partner-icone" src="./assets/partner/ACP.png" />
-      </a>
-      <a href="https://www.kerfil.com/">
-        <img class="partner-icone" src="./assets/partner/kerfil.jpg" />
-      </a>
-      <a
-        href="http://www.mediterranee.creditmaritime.fr/mer-assur-1264/id-menu-1046.html"
-      >
-        <img class="partner-icone" src="./assets/partner/mer_assur.gif" />
-      </a>
-      <a href="https://www.mc-technologies.fr/">
-        <img class="partner-icone" src="./assets/partner/mc_tech.png" />
-      </a>
-      <a href="https://catalog.ultimate-fishing.net/">
-        <img
-          class="partner-icone"
-          src="./assets/partner/Ultimate-Fishing.svg"
-        />
-      </a>
-      <a href="http://www.besse.fr/">
-        <img class="partner-icone" src="./assets/partner/Besse.gif" />
-      </a>
-      <a href="https://www.aon.com/home/index.html#">
-        <img class="partner-icone" src="./assets/partner/Aon.svg" />
-      </a>
-      <a
-        href="https://www.beneteau.com/fr/beneteau-evenement-page-associee/participer-au-barracuda-tour"
-      >
-        <img class="partner-icone" src="./assets/partner/barracuda-tour.png" />
-      </a>
-      <a>
-        <img class="partner-icone" src="./assets/partner/tenryu.jpg" />
-      </a>
-      <a href="https://www.rodhouse.fr/fr/">
-        <img class="partner-icone" src="./assets/partner/rodhouse2.jpg" />
-      </a>
-      <a href="https://www.alre-peche.com/">
-        <img class="partner-icone" src="./assets/partner/alre-peche.jpg" />
-      </a>
-      <a href="https://www.cndiffusion.com/">
-        <img class="partner-icone" src="./assets/partner/cndiffusion.png" />
-      </a>
-      <a
-        href="https://fr-fr.facebook.com/pages/category/Media/RonProduction-134411313302276//"
-      >
-        <img class="partner-icone" src="./assets/partner/ron-production.jpg" />
-      </a>
-      <a href="http://work.atm-communication.com/">
-        <img class="partner-icone" src="./assets/partner/Atm-com.png" />
-      </a>
-      <a>
-        <img
-          class="partner-icone"
-          src="./assets/partner/Cap-Marine-Assurances.gif"
-        />
-      </a>
-      <a href="http://www.ticafishing.com/">
-        <img class="partner-icone" src="./assets/partner/tica.jpg" />
-      </a>
-      <a href="https://www.navicom.fr/">
-        <img class="partner-icone" src="./assets/partner/navicom.svg" />
+      <a v-for="sponsor in sponsors" :key="sponsor.name" :href="sponsor.link">
+        <img class="partner-icone" :src="sponsor.logo" />
       </a>
     </footer>
   </div>
@@ -125,6 +41,7 @@
 <script>
 import NavBar from "./components/NavBar";
 import Caroussel from "./components/Caroussel";
+import sponsors from "./sponsors";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faInstagram,
@@ -146,6 +63,11 @@ export default {
   components: {
     NavBar,
     Caroussel
+  },
+  computed: {
+    sponsors() {
+      return sponsors;
+    }
   }
 };
 </script>

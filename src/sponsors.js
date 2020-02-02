@@ -1,0 +1,127 @@
+export default [
+  {
+    name: "Fiiish",
+    link: "http://fiiish.com/",
+    logo: require("./assets/partner/fiiish.jpg")
+  },
+  {
+    name: "Suzuki marine",
+    link: "http://www.suzukimarine.fr/",
+    logo: require("./assets/partner/suzuki.png")
+  },
+  {
+    name: "Grand Pavois",
+    link: "http://www.grand-pavois.com/",
+    logo: require("./assets/partner/grand-pavois-2020.png")
+  },
+  {
+    name: "Salon de la Pêche en Mer",
+    link: "https://www.salon-peche-mer.com/",
+    logo: require("./assets/partner/salon-peche-en-mer.jpg")
+  },
+  {
+    name: "Pêche en Mer",
+    logo: require("./assets/partner/peche-en-mer.jpg")
+  },
+  {
+    name: "Spider Wire",
+    link: "http://www.spiderwire.com/",
+    logo: require("./assets/partner/spider_wire.png")
+  },
+  {
+    name: "ACP Cabinet de recrutement",
+    link: "http://acp-atlantique.com/",
+    logo: require("./assets/partner/ACP.png")
+  },
+  {
+    name: "Kerfil",
+    link: "https://www.kerfil.com/",
+    logo: require("./assets/partner/kerfil.jpg")
+  },
+  {
+    name: "Mer Assur",
+    link:
+      "http://www.mediterranee.creditmaritime.fr/mer-assur-1264/id-menu-1046.html",
+    logo: require("./assets/partner/mer_assur.gif")
+  },
+  {
+    name: "M.C Technologies",
+    link: "https://www.mc-technologies.fr/",
+    logo: require("./assets/partner/mc_tech.png")
+  },
+  {
+    name: "Delalande",
+    link: "https://delalande-peche.fr/",
+    logo: require("./assets/partner/delalande.jpg")
+  },
+  {
+    name: "Ultimate Fishing",
+    link: "https://catalog.ultimate-fishing.net/",
+    logo: require("./assets/partner/Ultimate-Fishing.svg")
+  },
+  {
+    name: "Bessé",
+    link: "http://www.besse.fr/",
+    logo: require("./assets/partner/Besse.gif")
+  },
+  {
+    name: "Aon",
+    link: "https://www.aon.com/home/index.html",
+    logo: require("./assets/partner/Aon.svg")
+  },
+  {
+    name: "Barracuda Tour",
+    link:
+      "https://www.beneteau.com/fr/beneteau-evenement-page-associee/participer-au-barracuda-tour",
+    logo: require("./assets/partner/barracuda-tour.png")
+  },
+  {
+    name: "Tenryu",
+    logo: require("./assets/partner/tenryu.jpg")
+  },
+  {
+    name: "Rodhouse",
+    link: "https://www.rodhouse.fr/fr/",
+    logo: require("./assets/partner/rodhouse.jpg")
+  },
+  {
+    name: "CNDiffusion",
+    link: "https://www.cndiffusion.com/",
+    logo: require("./assets/partner/cndiffusion.png")
+  },
+  {
+    name: "Ron production",
+    link:
+      "https://fr-fr.facebook.com/pages/category/Media/RonProduction-134411313302276/",
+    logo: require("./assets/partner/ron-production.jpg")
+  },
+  {
+    name: "Atm Communication",
+    link: "http://work.atm-communication.com/",
+    logo: require("./assets/partner/Atm-com.png")
+  },
+  {
+    name: "Cap Marine Assurances",
+    logo: require("./assets/partner/Cap-Marine-Assurances.gif")
+  },
+  {
+    name: "Tica",
+    link: "http://www.ticafishing.com/",
+    logo: require("./assets/partner/tica.jpg")
+  },
+  {
+    name: "Navicom",
+    link: "https://www.navicom.fr/",
+    logo: require("./assets/partner/navicom.svg")
+  },
+  {
+    name: "Guy Cotten",
+    link: "https://www.guycotten.com/fr",
+    logo: require("./assets/partner/cotten.jpg")
+  },
+  {
+    name: "Crown",
+    link: "https://www.crowncork.com/",
+    logo: require("./assets/partner/crown.svg")
+  }
+];
