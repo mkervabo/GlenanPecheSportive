@@ -7,7 +7,7 @@
             :icon="['fas', 'exclamation-circle']"
             class="article-icon orange"
           ></fa-icon>
-          <div class="orange event-name ">Salon de Nantes</div>
+          <div class="orange event-name">Salon de Nantes</div>
           <div class="blue date">14/02/20 - 16/02/20</div>
           <img
             class="article-img"
@@ -21,6 +21,10 @@
             <router-link to="/subscription" class="link"
               >dossier d'inscription</router-link
             >.
+          </p>
+          <p class="event-description">
+            Retrouvez nous le samedi 16/02 à partir de 12h30 pour trinquer à
+            l'édition de l'Open 2020.
           </p>
           <router-link to="/agenda" class="other-event event-description link"
             >Pour les autres evenements à venir c'est ici !</router-link
@@ -39,9 +43,20 @@
           <img class="article-img" src="../assets/logo-10-ans.jpg" />
           <p class="contest-description">
             En cette année 2020 nous vous convions au 10eme anniversaire de
-            l'Open des Glénan.C'est un concour de peche, au bars No Kill. Qui se
-            déroule sur 2 jours. La base se trouve à Concarneau(29) et le
-            concours se déroule sur l'archipel des Glénan.
+            l'Open des Glénan.
+          </p>
+          <p class="contest-description">
+            C'est une compétition de pêche au bar No Kill.
+          </p>
+          <p class="contest-description">
+            Qui se déroule sur 2 jours. La base à terre se trouve à
+            Concarneau(29) et le compétition se déroule sur l'archipel des
+            Glénan.
+          </p>
+          <p class="contest-description">
+            Carte de la zone
+            <a class="link2" href="/contest/Carte-zone-de-pêche.git">ici</a>,
+            c'est la même zone que les précédentes éditions.
           </p>
           <p class="contest-description">
             Pour une description plus complete c'est
@@ -54,7 +69,9 @@
         </div>
         <router-link to="gallery" class="gallery">
           <div class="gallery-filter">
-            <h2><a class="gallery-title orange">Galerie</a></h2>
+            <h2>
+              <a class="gallery-title orange">Galerie</a>
+            </h2>
           </div>
         </router-link>
         <div class="meteo">

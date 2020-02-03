@@ -3,33 +3,43 @@
     <div class="association-article association-pres">
       <h2 class="association-title dark-blue">L'Association</h2>
       <div class="association-content">
-        <p>Démat d’an holl,</p>
-        <p>GPS a 10 ans, enfin 11 maintenant.</p>
+        <p>Présentation du bureau</p>
+        <br />
+        <p><span class="font blue">Hervé Cotonnec:</span> Président</p>
+        <p><span class="font blue">Romain Marion: </span>Vice président</p>
         <p>
-          L’a un peu de poil qui apparaît sur les coucouilles (ou sur le
-          pubiiiiiiii, si GPS est femelle). Car oui, à l’occasion des 11 ans et
-          du nouveau site tintin net, osons lancer le débat, le seul qui vaille
-          alors que pour la retraite c’est déjà baisé et que celui qui y croit
-          encore il est neuneu. Le vrai débat, qui devrait mobiliser la France
-          entière qu’elle soit halieutique ou pas est : EST-CE QUE GPS A DES
-          COUILLES ?
+          <span class="font blue">Patrick Rural: </span>Responsable commissaires
+          Trésorier
         </p>
         <p>
-          Les tenants du oui diront que forcément GPS est mâle : on pêche, on a
-          des grandes cannes toutes raides, toutes les 30 secondes on propulse
-          un gros truc avec notre grande canne, après notre canne elle plie, et
-          on attrape (des fois) une morue. Donc OUI, GPS est mâle. Les tenants
-          du non, plus subtils, telles les gonzesses du bureau, diront : NON,
-          GPS est femelle, car GPS veut dire Grosse Paire de Seins et que dans
-          le passé, quand GPS s’appelait APSFG, déjà l’acronyme était explicite
-          : APSFG = Association des Pêcheresses Simulant Fort Gaiement. C’est
-          quand même un signe.
+          <span class="font blue">Valérie Le Bartz et Lucie Trouillebout: </span
+          >Secrétaires
         </p>
         <p>
-          Alors, OUi GPS n’a pas de couilles. Il faut l’admettre au risque de
-          choquer un aréopage machiste.
+          <span class="font blue">Yannick et Frédérique Kervabon:</span>
+          Responsable Inscriptions
         </p>
-        Na !
+        <p>
+          <span class="font blue">Christophe Le Bartz:</span> Responsable pub
+          annuaire
+        </p>
+        <p>
+          <span class="font blue">Jean-Loup et Anne Marie Weber: </span>Gestion
+          à Terre "Mise à l'eau et petit déjeuné "
+        </p>
+        <p>
+          <span class="font orange">Membres actifs:</span> Gérard Guernalec,
+          Christophe Guillerme, Jean François Le Buhannic, Claude Diascorn
+        </p>
+        <br />
+        <br />
+        <p>
+          A l'attention des membres de l'association Glénan Pêche Sportive,nous
+          vous demandons de remplir un bulletin d'adhésion pour l'année 2020.
+          <a class="link2" href="/GPS-Bulletin-dadhésion-2020.pdf"
+            >Rendez vous sur cette page.</a
+          >
+        </p>
       </div>
     </div>
   </div>
