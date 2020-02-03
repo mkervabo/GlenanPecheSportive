@@ -127,5 +127,11 @@ export default [
     name: "Crown",
     link: "https://www.crowncork.com/",
     logo: require("./assets/partner/crown.svg")
+  },
+  {
+    name: "HPA",
+    link:
+      "https://www.hpa-shop.fr/fr/?gclid=Cj0KCQiApt_xBRDxARIsAAMUMu-DoDw_cWd9Gzm3p0DTGTg092ozAYYbnVaCb8EiekeURxa6ecRArecaAmpDEALw_wcB",
+    logo: require("./assets/partner/hpa.jpg")
   }
 ];
