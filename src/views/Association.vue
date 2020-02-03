@@ -8,7 +8,7 @@
         <p><span class="font blue">Hervé Cotonnec:</span> Président</p>
         <p><span class="font blue">Romain Marion: </span>Vice président</p>
         <p>
-          <span class="font blue">Patrick Rural: </span>Responsable commissaires
+          <span class="font blue">Patrick Tudal: </span>Responsable commissaires
           Trésorier
         </p>
         <p>
