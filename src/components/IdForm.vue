@@ -1,67 +1,106 @@
 <template>
-  <div>
-    <div class="section">
-      <div class="label-form">
-        <label for="mr">Mr </label>
-        <input type="radio" value="H" v-model="kind" />
-        <label for="mme">Mme</label>
-        <input type="radio" value="F" v-model="kind" />
-      </div>
-      <div class="label-form">
-        <label>Nom:</label>
-        <input v-model="nom" id="family-name" />
-      </div>
-      <div class="label-form">
-        <label>Prénom:</label>
-        <input v-model="prenom" id="given-name" />
-      </div>
-      <div class="label-form">
-        <label>Date de Naissance:</label>
-        <input type="date" v-model="naissance" id="bday" />
-      </div>
+  <div class="id-form">
+    <div class="row">
+      <fieldset class="kind">
+        <label
+          >M
+          <input type="radio" value="H" v-model="kind" />
+        </label>
+        <label
+          >Mme
+          <input type="radio" value="F" v-model="kind" />
+        </label>
+      </fieldset>
     </div>
-    <div class="section">
-      <div class="label-form">
-        <label>Adresse:</label>
-        <input v-model="adresse" />
-      </div>
-      <div class="label-form">
-        <label>Code postal:</label>
-        <input v-model="postal" id="postal-code" />
-      </div>
-      <div class="label-form">
-        <label>Ville:</label>
-        <input v-model="ville" />
-      </div>
+    <div class="row">
+      <fieldset class="section">
+        <div class="label-form">
+          <label
+            >Nom:
+            <input v-model="nom" autocomplete="family-name" />
+          </label>
+        </div>
+        <div class="label-form">
+          <label
+            >Prénom:
+            <input v-model="prenom" autocomplete="given-name" />
+          </label>
+        </div>
+        <div class="label-form">
+          <label
+            >Date de Naissance:
+            <input type="date" v-model="naissance" autocomplete="bday" />
+          </label>
+        </div>
+      </fieldset>
+      <fieldset class="section">
+        <div class="label-form">
+          <label
+            >Adresse:
+            <input v-model="adresse" />
+          </label>
+        </div>
+        <div class="label-form">
+          <label
+            >Code postal:
+            <input v-model="postal" autocomplete="postal-code" />
+          </label>
+        </div>
+        <div class="label-form">
+          <label
+            >Ville:
+            <input v-model="ville" autocomplete="address-level1" />
+          </label>
+        </div>
+      </fieldset>
     </div>
-
-    <div class="label-form">
-      <label>Téléphone Portable:</label>
-      <input v-model="portable" id="tel-local" />
+    <div class="row">
+      <fieldset class="section">
+        <div class="label-form">
+          <label
+            >Téléphone Portable:
+            <input v-model="portable" autocomplete="tel-local" />
+          </label>
+        </div>
+      </fieldset>
+      <fieldset class="section">
+        <div class="label-form">
+          <label
+            >Email:
+            <input v-model="email" autocomplete="email" />
+          </label>
+          <p v-show="!mailOk" class="form-error">
+            Vous avez entré un email invalide
+          </p>
+        </div>
+      </fieldset>
     </div>
-    <div class="label-form">
-      <label>Email:</label>
-      <input v-model="email" id="email" />
-    </div>
-    <p v-show="!mailOk" class="form-error">
-      Vous avez entré un email invalide
-    </p>
-    <div class="label-form">
-      <label>Téléphone Fixe:</label>
-      <input v-model="fixe" />
-    </div>
-    <div class="label-form">
-      <label>Taille T-shirt:</label>
-      <select v-model="t_shirt">
-        <option disabled value>Choisissez</option>
-        <option>XS</option>
-        <option>S</option>
-        <option>M</option>
-        <option>L</option>
-        <option>XL</option>
-        <option>XXL</option>
-        <option>XXXL</option>
-      </select>
+    <div class="row">
+      <fieldset class="section">
+        <div class="label-form">
+          <label
+            >Téléphone Fixe:
+            <input v-model="fixe" />
+          </label>
+        </div>
+      </fieldset>
+      <fieldset class="section">
+        <div class="label-form">
+          <label
+            >Taille T-shirt:
+            <select v-model="t_shirt">
+              <option disabled value>Choisissez</option>
+              <option>XS</option>
+              <option>S</option>
+              <option>M</option>
+              <option>L</option>
+              <option>XL</option>
+              <option>XXL</option>
+              <option>XXXL</option>
+            </select>
+          </label>
+        </div>
+      </fieldset>
     </div>
   </div>
 </template>
@@ -85,7 +124,7 @@ export default {
   },
   computed: {
     mailOk() {
-      var mailReg = new RegExp(/^([\w-.]+)@((?:[\w]+\.)+)([a-zA-Z]{2,4})/i);
+      var mailReg = new RegExp(/^([\w-.]+)@((?:[\w]+\.)+)([a-zA-Z]{2})/i);
       return mailReg.test(this.email);
     },
     isOk() {
@@ -118,26 +157,69 @@ export default {
         this.email,
         this.t_shirt
       ];
+    },
+    toJSON() {
+      return {
+        kind: this.kind,
+        nom: this.nom,
+        prenom: this.prenom,
+        adresse: this.adresse,
+        postal: this.postal,
+        ville: this.ville,
+        naissance: this.naissance,
+        fixe: this.fixe,
+        portable: this.portable,
+        email: this.email,
+        t_shirt: this.t_shirt
+      };
     }
   }
 };
 </script>
 
 <style>
-label {
+.id-form label {
   font: caption;
   font-size: 15px;
   color: #f2f2f2;
+  width: 100%;
 }
 
-.section {
-  width: 300px;
+.id-form fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.id-form {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.id-form .row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.id-form .kind {
+  width: 50%;
+  text-align: right;
+}
+
+.id-form .kind > label {
+  margin: 0 10px;
+}
+
+.id-form .section {
+  min-width: 50%;
 }
 
 .label-form {
   display: flex;
-  justify-content: space-between;
   margin: 10px;
+  flex-direction: column;
 }
 
 .jour {

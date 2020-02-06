@@ -38,22 +38,24 @@
           <br />
           <br />
           <div>
-            <label class="dark-olive">Nombres de repas suplémentaire</label>
-            <input class="repas" v-model="repas" />
+            <label class="dark-olive"
+              >Nombres de repas suplémentaire
+              <input class="repas" v-model="repas" />
+            </label>
           </div>
           <br />
           <span class="subscription-title2 orange">Total:</span>
           {{ 130 + repas * 20 }}€
         </div>
       </div>
-      <div>
+      <div class="members">
         <div class="form">
           <h2 class="subscription-title orange">Patron</h2>
-          <IdForm class="form id-form" ref="patron" />
+          <IdForm ref="patron" />
         </div>
         <div class="form">
           <h2 class="subscription-title orange">Mousse</h2>
-          <IdForm class="form id-form" ref="mousse" />
+          <IdForm ref="mousse" />
         </div>
       </div>
     </div>
@@ -66,95 +68,181 @@
             <label>
               Équipement individuel de flottabilité par personne embarquée (aide
               à la flottabilité ou gilet de sauvetage)
+              <input
+                class="check-box"
+                type="checkbox"
+                v-model="securities[0]"
+              />
             </label>
-            <input class="check-box" type="checkbox" v-model="securities[0]" />
           </div>
           <div class="label-form security-form">
             <label>
               Moyen de repérage lumineux. Il peut être collectif (lampe,
               projecteur, lampe IOR) ou individuel s'il est étanche et porté par
               chaque personne embarquée
+              <input
+                class="check-box"
+                type="checkbox"
+                v-model="securities[1]"
+              />
             </label>
-            <input class="check-box" type="checkbox" v-model="securities[1]" />
           </div>
           <div class="label-form security-form">
-            <label
-              >Dispositif d’assèchement fixe ou mobile sauf navires
-              auto-videur</label
-            >
-            <input class="check-box" type="checkbox" v-model="securities[2]" />
+            <label>
+              Dispositif d’assèchement fixe ou mobile sauf navires auto-videur
+              <input
+                class="check-box"
+                type="checkbox"
+                v-model="securities[2]"
+              />
+            </label>
           </div>
           <div class="label-form security-form">
-            <label>Moyen de remonter à bord une personne tombée à l’eau</label>
-            <input class="check-box" type="checkbox" v-model="securities[3]" />
+            <label>
+              Moyen de remonter à bord une personne tombée à l’eau
+              <input
+                class="check-box"
+                type="checkbox"
+                v-model="securities[3]"
+              />
+            </label>
           </div>
           <div class="label-form security-form">
             <label>
               Dispositif coupe-circuit en cas d’éjection du pilote si moteur(s)
               hors bord à barre franche de puissance > 4,5 Kw
+              <input
+                class="check-box"
+                type="checkbox"
+                v-model="securities[4]"
+              />
             </label>
-            <input class="check-box" type="checkbox" v-model="securities[4]" />
           </div>
           <div class="label-form security-form">
             <label>
-              Dispositif de lutte contre l’incendie
-              <span class="font">à jour de sa visite d'entretien</span>
+              <span>
+                Dispositif de lutte contre l’incendie
+                <span class="font">à jour de sa visite d'entretien</span>
+              </span>
+              <input
+                class="check-box"
+                type="checkbox"
+                v-model="securities[5]"
+              />
             </label>
-            <input class="check-box" type="checkbox" v-model="securities[5]" />
           </div>
           <div class="label-form security-form">
-            <label>Dispositif de remorquage</label>
-            <input class="check-box" type="checkbox" v-model="securities[6]" />
+            <label>
+              Dispositif de remorquage
+              <input
+                class="check-box"
+                type="checkbox"
+                v-model="securities[6]"
+              />
+            </label>
           </div>
           <div class="label-form security-form">
             <label>
               Ligne de mouillage ou ancre flottante sauf embarcations de
               capacité inférieur à 5 adultes
+              <input
+                class="check-box"
+                type="checkbox"
+                v-model="securities[7]"
+              />
             </label>
-            <input class="check-box" type="checkbox" v-model="securities[7]" />
           </div>
           <div class="label-form security-form">
-            <label>Pavillon national Si franchisé</label>
-            <input class="check-box" type="checkbox" v-model="securities[8]" />
+            <label>
+              Pavillon national Si franchisé
+              <input
+                class="check-box"
+                type="checkbox"
+                v-model="securities[8]"
+              />
+            </label>
           </div>
           <div class="label-form security-form">
-            <label>Trois feux rouges automatiques à main</label>
-            <input class="check-box" type="checkbox" v-model="securities[9]" />
+            <label>
+              Trois feux rouges automatiques à main
+              <input
+                class="check-box"
+                type="checkbox"
+                v-model="securities[9]"
+              />
+            </label>
           </div>
           <div class="label-form security-form">
-            <label>Annuaire de marée</label>
-            <input class="check-box" type="checkbox" v-model="securities[10]" />
+            <label>
+              Annuaire de marée
+              <input
+                class="check-box"
+                type="checkbox"
+                v-model="securities[10]"
+              />
+            </label>
           </div>
           <div class="label-form security-form">
             <label>
               Dispositif repérage et assistance d’une personne tombée à l’eau
               sauf embarcations de capacité inferieur à 5 adultes et tous
               pneumatiques
+              <input
+                class="check-box"
+                type="checkbox"
+                v-model="securities[11]"
+              />
             </label>
-            <input class="check-box" type="checkbox" v-model="securities[11]" />
           </div>
           <div class="label-form security-form">
-            <label>Compas magnétique</label>
-            <input class="check-box" type="checkbox" v-model="securities[12]" />
+            <label>
+              Compas magnétique
+              <input
+                class="check-box"
+                type="checkbox"
+                v-model="securities[12]"
+              />
+            </label>
           </div>
           <div class="label-form security-form">
-            <label
-              >Règlement international pour prévenir les abordages en mer
-              (RIPAM)</label
-            >
-            <input class="check-box" type="checkbox" v-model="securities[13]" />
+            <label>
+              Règlement international pour prévenir les abordages en mer (RIPAM)
+              <input
+                class="check-box"
+                type="checkbox"
+                v-model="securities[13]"
+              />
+            </label>
           </div>
           <div class="label-form security-form">
-            <label>Document de synthèse du balisage</label>
-            <input class="check-box" type="checkbox" v-model="securities[14]" />
+            <label>
+              Document de synthèse du balisage
+              <input
+                class="check-box"
+                type="checkbox"
+                v-model="securities[14]"
+              />
+            </label>
           </div>
           <div class="label-form security-form">
-            <label>Carte(s) de navigation</label>
-            <input class="check-box" type="checkbox" v-model="securities[15]" />
+            <label>
+              Carte(s) de navigation
+              <input
+                class="check-box"
+                type="checkbox"
+                v-model="securities[15]"
+              />
+            </label>
           </div>
-          <div class="label-form">
-            <label>VHF Radiomaritime obligatoire</label>
-            <input class="check-box" type="checkbox" v-model="securities[16]" />
+          <div class="label-form security-form">
+            <label>
+              VHF Radiomaritime obligatoire
+              <input
+                class="check-box"
+                type="checkbox"
+                v-model="securities[16]"
+              />
+            </label>
           </div>
         </div>
       </div>
@@ -162,24 +250,34 @@
         <h2 class="subscription-title dark-blue">Équipe et Bateau</h2>
         <div class="form-equipage">
           <div class="label-form">
-            <label class="dark-olive">Nom de l'équipage:</label>
-            <input v-model="equipage" />
+            <label class="dark-olive">
+              Nom de l'équipage:
+              <input v-model="equipage" />
+            </label>
           </div>
           <div class="label-form">
-            <label class="dark-olive">Nom du bateau:</label>
-            <input v-model="bateau" />
+            <label class="dark-olive">
+              Nom du bateau:
+              <input v-model="bateau" />
+            </label>
           </div>
           <div class="label-form">
-            <label class="dark-olive">Longueur du bateau:</label>
-            <input v-model="longueur" />
+            <label class="dark-olive">
+              Longueur du bateau:
+              <input v-model="longueur" />
+            </label>
           </div>
           <div class="label-form">
-            <label class="dark-olive">Immatriculation:</label>
-            <input v-model="immatriculation" />
+            <label class="dark-olive">
+              Immatriculation:
+              <input v-model="immatriculation" />
+            </label>
           </div>
           <div class="label-form">
-            <label class="dark-olive">Puissance moteur:</label>
-            <input v-model="moteur" />
+            <label class="dark-olive">
+              Puissance moteur:
+              <input v-model="moteur" />
+            </label>
           </div>
           <div class="label-form">
             <label class="dark-olive">Compagnie d'assurance:</label>
@@ -274,6 +372,25 @@ export default {
       const tab = this.willDownload || window.open("/loading.html");
       const loaded =
         this.willDownload || new Promise(resolve => (tab.onload = resolve));
+
+      fetch("/.netlify/functions/subscription", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json"
+        },
+        body: JSON.stringify({
+          repas: this.repas,
+          equipage: this.equipage,
+          bateau: this.bateau,
+          longueur: this.longueur,
+          immatriculation: this.immatriculation,
+          moteur: this.moteur,
+          assurance1: this.assurance1,
+          assurance2: this.assurance2,
+          patron: this.$refs.patron.toJSON(),
+          mousse: this.$refs.mousse.toJSON()
+        })
+      });
 
       fetch("/contest/inscription-2020.pdf")
         .then(res => res.arrayBuffer())
@@ -373,6 +490,7 @@ export default {
 .subscription-part {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .subscription-title {
@@ -389,13 +507,16 @@ export default {
 }
 
 .form {
+  text-align: justify;
+  flex-direction: column;
   background: #3a3a3a;
   padding: 10px;
   display: flex;
   justify-content: flex-start;
-  flex-wrap: wrap;
   margin: 10px;
-  width: 800px;
+  width: calc(100% - 20px);
+  box-sizing: border-box;
+  max-width: 800px;
 }
 
 .rules {
@@ -405,7 +526,7 @@ export default {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  flex-wrap: wrap;
+  flex-direction: column;
   padding: 10px;
 }
 
@@ -432,6 +553,19 @@ export default {
   border-bottom: 1px solid rgba(242, 242, 242, 0.2);
 }
 
+.security-form:last-child {
+  border-bottom: none;
+}
+
+.security-form label {
+  font: caption;
+  font-size: 15px;
+  color: #f2f2f2;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
 button {
   background: #65aee2;
   color: #f2f2f2;
@@ -448,13 +582,24 @@ button:disabled {
   color: graytext;
 }
 
-.securite {
-  width: 800px;
-  text-align: justify;
+.members {
+  width: 100%;
+  max-width: 820px;
 }
 
 .form-error {
   color: red;
+  margin: 0;
+}
+
+.form-equipage label {
+  font: caption;
+  font-size: 15px;
+  width: 100%;
+}
+
+.form-equipage .label-form {
+  display: inherit;
 }
 
 /*.check-box {
