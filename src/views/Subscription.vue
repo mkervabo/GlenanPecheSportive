@@ -13,12 +13,24 @@
             >
             ! Il est important de le lire !
           </p>
+          <p class="contest-content">
+            Le bulletin d'inscription vierge est par
+            <a class="link" href="/contest/inscription-2020.pdf">ici</a>
+            !
+          </p>
+          <p class="contest-content">
+            Pour plus d'informations ou en cas de problèmes lors de votre
+            inscription vous pouvez nous conacter sur cet email:
+            <a class="link" href="mailto:inscription2020@glenanpechesportive.fr"
+              >inscription2020@glenanpechesportive.fr</a
+            >
+          </p>
           <p class="font">Joindre au présent bulletin d'inscription :</p>
           <p>
             Les attestations d'assurance responsabilité civile des équipiers et
-            du bateau, <span class="font">et</span> la fiche sécurité dûment
-            remplie et signée. Ansi qu'une photo d'identité de chaque membre
-            d'équipage
+            du bateau,
+            <span class="font">et</span> la fiche sécurité dûment remplie et
+            signée. Ansi qu'une photo d'identité de chaque membre d'équipage
           </p>
         </div>
         <h2 class="subscription-title2 orange">Prix de l’inscription:</h2>
