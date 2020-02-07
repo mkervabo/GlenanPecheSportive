@@ -44,10 +44,9 @@
             possible de réserver des
             <span class="font">
               diners supplémentaires le samedi soir pour les accompagnants, 20€
-              par personne </span
-            >.
+              par personne
+            </span>
           </p>
-          <br />
           <br />
           <div>
             <label class="dark-olive"
@@ -529,6 +528,7 @@ export default {
   width: calc(100% - 20px);
   box-sizing: border-box;
   max-width: 800px;
+  height: 100%;
 }
 
 .rules {
@@ -543,7 +543,7 @@ export default {
 }
 
 .important {
-  width: 350px;
+  width: 400px;
 }
 
 .repas {
@@ -558,7 +558,7 @@ export default {
 }
 
 .equipage {
-  width: 350px;
+  width: 400px;
 }
 
 .security-form {
@@ -576,6 +576,10 @@ export default {
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+
+.securite {
+  height: auto;
 }
 
 button {
@@ -597,6 +601,8 @@ button:disabled {
 .members {
   width: 100%;
   max-width: 820px;
+  display: flex;
+  flex-direction: column;
 }
 
 .form-error {
@@ -612,6 +618,9 @@ button:disabled {
 
 .form-equipage .label-form {
   display: inherit;
+  width: 100%;
+  text-align: right;
+  white-space: nowrap;
 }
 
 /*.check-box {
