@@ -244,14 +244,6 @@ export default {};
   color: #65aee2;
 }
 
-footer {
-  background: rgb(53, 53, 53);
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
 .date {
   padding-left: 80px;
   font: caption;

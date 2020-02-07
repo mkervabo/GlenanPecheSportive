@@ -169,4 +169,17 @@ body {
   height: 100px;
   margin: 5px;
 }
+
+footer {
+  background: rgb(53, 53, 53);
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
 </style>

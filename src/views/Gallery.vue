@@ -10,7 +10,7 @@
           openImg = true;
         "
       />
-      <div v-for="i in 20" :key="i" class="gallery-spacer" />
+      <div v-for="i in 20" :key="`spacer-${i}`" class="gallery-spacer" />
       <ImgGallery2
         v-bind:img-gallery="monImage"
         v-show="openImg"
