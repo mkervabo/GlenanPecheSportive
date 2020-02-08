@@ -1,25 +1,28 @@
 <template>
   <div id="app">
     <div class="reseau">
-      <fa-icon :icon="['fab', 'instagram']" class="icone dark-olive"></fa-icon>
-      <a href="https://www.facebook.com/glenanpechesportive/"
-        ><fa-icon
+      <a href="https://www.instagram.com/open_des_glenan/?hl=fr">
+        <fa-icon
+          :icon="['fab', 'instagram']"
+          class="icone dark-olive"
+        ></fa-icon>
+      </a>
+      <a href="https://www.facebook.com/glenanpechesportive/">
+        <fa-icon
           :icon="['fab', 'facebook-square']"
           class="icone dark-blue"
-        ></fa-icon
-      ></a>
-      <a href="mailto:infos@glenanpechesportive.fr"
-        ><fa-icon
+        ></fa-icon>
+      </a>
+      <a href="mailto:infos@glenanpechesportive.fr">
+        <fa-icon
           :icon="['fas', 'envelope-square']"
           class="icone white"
-        ></fa-icon
-      ></a>
-      <a href="tel:+33677707126"
-        ><fa-icon
-          :icon="['fas', 'phone-square-alt']"
-          class="icone orange"
-        ></fa-icon
-      ></a>
+        ></fa-icon>
+      </a>
+      <a href="tel:+33677707126">
+        <fa-icon :icon="['fas', 'phone-square-alt']" class="icone orange">
+        </fa-icon>
+      </a>
     </div>
     <header class="intro">
       <router-link to="/">
