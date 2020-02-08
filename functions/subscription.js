@@ -16,6 +16,10 @@ exports.handler = async event => {
   const womenNum =
     Number(body.mousse.kind === "F") + Number(body.patron.kind === "F");
 
+  const junior =
+    parseInt(body.mousse.naissance) >= 2002 ||
+    parseInt(body.patron.naissance) >= 2002;
+
   await sheets.spreadsheets.values.append({
     spreadsheetId: "1WgKRev-mVc-fGo8FvoyfNAYre6sqTCIcTBdA6ZmMeGc",
     range: "A1",
@@ -30,11 +34,11 @@ exports.handler = async event => {
           `${body.mousse.email}\n${body.mousse.portable}`,
           `site`,
           `${130 + body.repas * 20}`,
-          body.repas,
+          `${body.repas}`,
           "",
           body.patron.t_shirt,
           body.mousse.t_shirt,
-          ["", "MIXTE", "FEMININE"][womenNum],
+          junior ? "JUNIOR" : ["", "MIXTE", "FEMININE"][womenNum],
           `${womenNum}`,
           body.moteur,
           body.longueur,
