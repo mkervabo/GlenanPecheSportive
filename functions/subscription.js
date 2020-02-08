@@ -13,6 +13,9 @@ const sheets = google.sheets({ version: "v4", auth });
 exports.handler = async event => {
   const body = JSON.parse(event.body);
 
+  const womenNum =
+    Number(body.mousse.kind === "F") + Number(body.patron.kind === "F");
+
   await sheets.spreadsheets.values.append({
     spreadsheetId: "1WgKRev-mVc-fGo8FvoyfNAYre6sqTCIcTBdA6ZmMeGc",
     range: "A1",
@@ -31,11 +34,11 @@ exports.handler = async event => {
           "",
           body.patron.t_shirt,
           body.mousse.t_shirt,
-          "",
-          `${Number(body.mousse.kind === "F") +
-            Number(body.patron.kind === "F")}`,
+          ["", "MIXTE", "FEMININE"][womenNum],
+          `${womenNum}`,
           body.moteur,
-          body.longueur
+          body.longueur,
+          JSON.stringify(body)
         ]
       ]
     }
