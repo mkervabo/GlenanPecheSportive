@@ -38,7 +38,7 @@ exports.handler = async event => {
           "",
           body.patron.t_shirt,
           body.mousse.t_shirt,
-          junior ? "JUNIOR" : ["", "MIXTE", "FEMININE"][womenNum],
+          (junior ? "JUNIOR " : "") + ["", "MIXTE", "FEMININE"][womenNum],
           `${womenNum}`,
           body.moteur,
           body.longueur,
