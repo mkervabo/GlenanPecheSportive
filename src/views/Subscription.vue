@@ -5,18 +5,13 @@
         <h2 class="subscription-title dark-blue">Important</h2>
         <div class="rules-content dark-olive">
           Ceci est le formulaire de pré-incription, votre inscription sera
-          valider une fois le formulaire imprimer et poster.
+          valider une fois le formulaire imprimé et posté.
           <p class="contest-content">
             Le règlement est par
             <a class="link" href="/contest/Reglement-open-des-Glenan-2020.pdf"
               >là</a
             >
             ! Il est important de le lire !
-          </p>
-          <p class="contest-content">
-            Le bulletin d'inscription vierge est par
-            <a class="link" href="/contest/inscription-2020.pdf">ici</a>
-            !
           </p>
           <p class="contest-content">
             Pour plus d'informations ou en cas de problèmes lors de votre
@@ -330,6 +325,14 @@
           </p>
           <p v-show="!($refs.mousse && $refs.mousse.isOk)" class="form-error">
             Vous n'avez pas complété le formulaire du mousse
+          </p>
+          <p class="contest-content">
+            Si vous rencontrez des problèmes pour remplir l'inscription vous
+            pouvez toujours
+            <a class="link" href="/contest/inscription-2020.pdf"
+              >télécharger un bulletin vierge</a
+            >
+            et le remplir comme avant.
           </p>
         </div>
       </div>
