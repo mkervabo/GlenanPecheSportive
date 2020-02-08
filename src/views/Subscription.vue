@@ -458,8 +458,8 @@ export default {
 
           for (const [i, security] of this.securities.entries()) {
             if (security) secondPage.drawText("X");
-            if (i == 0 || i == 1 || i == 4 || i == 11) secondPage.moveDown(10);
-            if (i == 12) secondPage.moveDown(12);
+            if (i == 0 || i == 1 || i == 4 || i == 10) secondPage.moveDown(10);
+            if (i == 11) secondPage.moveDown(12);
             secondPage.moveDown(12.2);
           }
           return doc.save();
