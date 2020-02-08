@@ -74,4 +74,16 @@ const router = new VueRouter({
   routes
 });
 
+if (typeof window.ga !== "undefined") {
+  window.ga("set", "page", router.currentRoute.path);
+  window.ga("send", "pageview");
+}
+
+router.afterEach(to => {
+  if (typeof window.ga !== "undefined") {
+    window.ga("set", "page", to.path);
+    window.ga("send", "pageview");
+  }
+});
+
 export default router;
