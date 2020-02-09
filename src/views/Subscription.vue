@@ -473,7 +473,14 @@ export default {
             );
           else {
             const url = URL.createObjectURL(blob);
-            return loaded.then(() => tab.location.assign(url));
+            return loaded.then(() => {
+              tab.location.assign(url);
+              setTimeout(() => {
+                if (tab.location.pathname === "/loading.html") {
+                  tab.close();
+                }
+              }, 0);
+            });
           }
         });
     },
