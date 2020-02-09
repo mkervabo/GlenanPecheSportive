@@ -4,8 +4,10 @@
       <div class="rules important">
         <h2 class="subscription-title dark-blue">Important</h2>
         <div class="rules-content dark-olive">
-          Ceci est le formulaire de pré-incription, votre inscription sera
-          valider une fois le formulaire imprimé et posté.
+          <span class="font" style="color: #E53935"
+            >Ceci est le formulaire de pré-incription, votre inscription sera
+            validée une fois le formulaire imprimé et posté.</span
+          >
           <p class="contest-content">
             Le règlement est par
             <a class="link" href="/contest/Reglement-open-des-Glenan-2020.pdf"
