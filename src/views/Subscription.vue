@@ -46,7 +46,7 @@
           <div>
             <label class="dark-olive"
               >Nombres de repas suplémentaire
-              <input class="repas" v-model="repas" />
+              <input class="repas" v-model="repas" autocomplete="off" />
             </label>
           </div>
           <br />
