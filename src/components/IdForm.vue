@@ -17,13 +17,13 @@
         <div class="label-form">
           <label
             >Nom:
-            <input v-model="nom" autocomplete="family-name" />
+            <input type="text" v-model="nom" autocomplete="family-name" />
           </label>
         </div>
         <div class="label-form">
           <label
             >Prénom:
-            <input v-model="prenom" autocomplete="given-name" />
+            <input type="text" v-model="prenom" autocomplete="given-name" />
           </label>
         </div>
         <div class="label-form">
@@ -37,19 +37,19 @@
         <div class="label-form">
           <label
             >Adresse:
-            <input v-model="adresse" />
+            <input type="text" v-model="adresse" />
           </label>
         </div>
         <div class="label-form">
           <label
             >Code postal:
-            <input v-model="postal" autocomplete="postal-code" />
+            <input type="number" v-model="postal" autocomplete="postal-code" />
           </label>
         </div>
         <div class="label-form">
           <label
             >Ville:
-            <input v-model="ville" autocomplete="address-level1" />
+            <input type="text" v-model="ville" autocomplete="address-level1" />
           </label>
         </div>
       </fieldset>
@@ -59,7 +59,7 @@
         <div class="label-form">
           <label
             >Téléphone Portable:
-            <input v-model="portable" autocomplete="tel-local" />
+            <input type="text" v-model="portable" autocomplete="tel-local" />
           </label>
         </div>
       </fieldset>
@@ -67,7 +67,7 @@
         <div class="label-form">
           <label
             >Email:
-            <input v-model="email" autocomplete="email" />
+            <input type="email" v-model="email" autocomplete="email" />
           </label>
           <p v-show="!mailOk" class="form-error">
             Vous avez entré un email invalide
@@ -80,7 +80,7 @@
         <div class="label-form">
           <label
             >Téléphone Fixe:
-            <input v-model="fixe" />
+            <input type="text" v-model="fixe" />
           </label>
         </div>
       </fieldset>
