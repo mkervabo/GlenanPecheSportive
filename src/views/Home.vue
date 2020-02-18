@@ -7,33 +7,31 @@
             :icon="['fas', 'exclamation-circle']"
             class="article-icon orange"
           ></fa-icon>
-          <div class="orange event-name">Salon de Nantes</div>
-          <div class="blue date">14/02/20 - 16/02/20</div>
+          <div class="orange event-name">Important</div>
           <img
             class="article-img"
             src="../assets/partner/salon-peche-en-mer.jpg"
             href="https://www.salon-peche-mer.com/"
           />
           <p class="event-description">
-            Venez nous rencontrer lors du salon de Nantes. Ce sera l'occasion de
-            discuter pêches et de s'inscrire à l'Open. N'oubliez pas de venir
-            munie de votre
-            <router-link to="/subscription" class="link"
-              >dossier d'inscription</router-link
-            >.
-          </p>
-          <p class="event-description">
-            Retrouvez nous le samedi 16/02 à partir de 12h30 pour trinquer à
-            l'édition de l'Open 2020.
-          </p>
-          <router-link to="/agenda" class="other-event event-description link"
-            >Pour les autres evenements à venir c'est ici !</router-link
-          >
-          <p class="event-description">
-            Et pour avoir les infos en direct suivez nous sur notre page
+            Amis compétiteurs,<br /><br />
+            Vous avez été plus que nombreux à venir sur le stand de Glénan Pêche
+            Sportive au salon de Nantes ce week-end et on vous en remercie.<br />
+            Nous vous avons donné la priorité concernant votre inscription à
+            l'open 2020 et beaucoup de dossiers complets nous ont été déposés.
+            <span class="orange font"
+              >Pour ceux à qui il manque un élément, nous vous donnons jusqu'à
+              vendredi 21 Février minuit pour régulariser l'inscription.</span
+            >
+            Passé ce délai, si nous manquons de place, vous passerez sur liste
+            d'attente.<br />
+            Merci de votre compréhension.<br /><br />
+            Pour toute question nous ne répondrons que sur
             <a class="link" href="https://www.facebook.com/glenanpechesportive/"
               >facebook</a
-            >.
+            >
+            en mp ou sur notre mail que vous trouverez
+            <a class="link" href="mailto:infos@glenanpechesportive.fr">ici</a>.
           </p>
         </div>
         <div class="contest">
@@ -65,6 +63,21 @@
           <p class="contest-description">
             Pour vous inscrire c'est
             <router-link to="/subscription" class="link2">par là</router-link>.
+          </p>
+          <p class="event-description">
+            <router-link
+              to="/agenda"
+              class="other-event event-description link2"
+              >Pour les autres evenements à venir c'est ici !</router-link
+            >
+          </p>
+          <p class="event-description">
+            Et pour avoir les infos en direct suivez nous sur notre page
+            <a
+              class="link2"
+              href="https://www.facebook.com/glenanpechesportive/"
+              >facebook</a
+            >.
           </p>
         </div>
         <router-link to="gallery" class="gallery">
