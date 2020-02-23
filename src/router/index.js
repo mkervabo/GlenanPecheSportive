@@ -7,6 +7,7 @@ import Association from "../views/Association.vue";
 import Partenaire from "../views/Partenaire.vue";
 import Agenda from "../views/Agenda.vue";
 import Gallery from "../views/Gallery.vue";
+import Annonce from "../views/Annonce.vue";
 
 Vue.use(VueRouter);
 
@@ -65,6 +66,11 @@ const routes = [
     path: "/subscription",
     name: "subscription",
     component: Subscription
+  },
+  {
+    path: "/annonce",
+    name: "annonce",
+    component: Annonce
   }
 ];
 

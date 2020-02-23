@@ -45,8 +45,6 @@
   </div>
 </template>
 
-<script></script>
-
 <style>
 .association-fond {
   background: #65aee2;
