@@ -8,6 +8,7 @@ import Partenaire from "../views/Partenaire.vue";
 import Agenda from "../views/Agenda.vue";
 import Gallery from "../views/Gallery.vue";
 import Annonce from "../views/Annonce.vue";
+import Error404 from "../views/404.vue";
 
 Vue.use(VueRouter);
 
@@ -71,6 +72,15 @@ const routes = [
     path: "/annonce",
     name: "annonce",
     component: Annonce
+  },
+  {
+    path: "/404",
+    name: "404",
+    component: Error404
+  },
+  {
+    path: "*",
+    redirect: "/404"
   }
 ];
 
