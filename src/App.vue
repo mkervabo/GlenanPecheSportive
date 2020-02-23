@@ -35,6 +35,7 @@
     <footer>
       <a v-for="sponsor in sponsors" :key="sponsor.name" :href="sponsor.link">
         <img
+          importance="low"
           class="partner-icone"
           :src="sponsor.logo"
           :style="sponsor.whitebackground && 'background: white;'"
