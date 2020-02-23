@@ -12,8 +12,27 @@
         velit, sed vestibulum neque lectus a nulla.
       </p>
     </div>
+    <table class="annonce_equipes white">
+      <tbody>
+        <Equipe number="01" name="Nom de test" />
+        <Equipe number="01" name="Nom de test" />
+        <Equipe number="01" name="Nom de test" />
+        <Equipe number="01" name="Nom de test" />
+        <Equipe number="01" name="Nom de test" />
+      </tbody>
+    </table>
   </main>
 </template>
+
+<script>
+import Equipe from "../components/Equipe";
+
+export default {
+  components: {
+    Equipe
+  }
+};
+</script>
 
 <style>
 #annonce {
@@ -41,7 +60,8 @@
 }
 
 .annonce_equipes {
-  max-width: 900px;
+  width: 100%;
+  max-width: 920px;
   padding: 10px;
   margin: 10px auto;
   background: #3a3a3a;

@@ -1,8 +1,8 @@
 <template>
-  <div class="equipe">
-    <span class="equipe_number font">{{ number }}</span>
-    <span class="equipe_name white">{{ name }}</span>
-  </div>
+  <tr class="equipe">
+    <td class="equipe_number font">{{ number }}</td>
+    <td class="equipe_name white">{{ name }}</td>
+  </tr>
 </template>
 
 <script>
@@ -18,6 +18,11 @@ export default {
 
 .equipe_number {
   border: 1px solid #f2f2f2;
+  color: #65aee2;
+}
+
+.equipe_number:nth-child(2n) {
+  color: #f37538;
 }
 
 .equipe_name {
