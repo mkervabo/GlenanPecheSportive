@@ -1,20 +1,6 @@
 <template>
   <main id="agenda">
     <div class="body">
-      <AgendaElem event="Salon de Nantes" date="14/02/20 - 16/02/20">
-        <p>
-          Venez nous rencontrer lors du salon de Nantes. Ce sera l'occasion de
-          discuter pêches et de s'inscrire à l'Open. N'oubliez pas de venir
-          munie de votre
-          <router-link to="/subscription" class="link"
-            >dossier d'inscription</router-link
-          >.
-        </p>
-        <p>
-          Retrouvez nous le samedi 16/02 à partir de 12h30 pour trinquer à
-          l'édition de l'Open 2020.
-        </p>
-      </AgendaElem>
       <AgendaElem event="Open des Glénan" date="20/06/20 - 21/06/20">
         <p>
           En cette année 2020 nous vous convions au 10eme anniversaire de l'Open
