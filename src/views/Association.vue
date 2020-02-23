@@ -41,11 +41,10 @@
           >
         </p>
       </div>
+      {{ teams }}
     </div>
   </div>
 </template>
-
-<script></script>
 
 <style>
 .association-fond {

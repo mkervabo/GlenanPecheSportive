@@ -17,15 +17,16 @@ export default {
 }
 
 .equipe_number {
-  border: 1px solid #f2f2f2;
+  /* border: 1px solid #f2f2f2; */
   color: #65aee2;
 }
 
-.equipe_number:nth-child(2n) {
+.equipe:nth-child(2n) .equipe_number {
   color: #f37538;
 }
 
 .equipe_name {
-  border-left: 1px solid #f2f2f2;
+  /* border-left: 1px solid #f2f2f2; */
+  text-align: left;
 }
 </style>

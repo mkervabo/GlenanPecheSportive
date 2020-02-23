@@ -12,15 +12,19 @@
         velit, sed vestibulum neque lectus a nulla.
       </p>
     </div>
-    <table class="annonce_equipes white">
-      <tbody>
-        <Equipe number="01" name="Nom de test" />
-        <Equipe number="01" name="Nom de test" />
-        <Equipe number="01" name="Nom de test" />
-        <Equipe number="01" name="Nom de test" />
-        <Equipe number="01" name="Nom de test" />
-      </tbody>
-    </table>
+    <div class="annonce_equipes white" v-if="teams !== null">
+      <table>
+        <tbody>
+          <Equipe
+            v-for="team in teams"
+            :key="team[0]"
+            number="-"
+            :name="team[1]"
+          />
+        </tbody>
+      </table>
+    </div>
+    <img v-else src="/loading.svg" />
   </main>
 </template>
 
@@ -30,6 +34,19 @@ import Equipe from "../components/Equipe";
 export default {
   components: {
     Equipe
+  },
+  data() {
+    return {
+      teams: null
+    };
+  },
+  mounted() {
+    window.console.log("mounted");
+    const minTime = new Promise(resolve => setTimeout(resolve, 1000));
+    fetch("/.netlify/functions/teams")
+      .then(res => res.json())
+      .then(e => minTime.then(() => e))
+      .then(teams => (this.teams = teams));
   }
 };
 </script>
@@ -61,9 +78,12 @@ export default {
 
 .annonce_equipes {
   width: 100%;
-  max-width: 920px;
+  max-width: 900px;
   padding: 10px;
   margin: 10px auto;
   background: #3a3a3a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
