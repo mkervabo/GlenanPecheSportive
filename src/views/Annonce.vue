@@ -3,7 +3,22 @@
     <div class="annonce_info">
       <h2 class="subscription-title orange">A lire</h2>
       <p class="annonce-content dark-olive">
-        Liste des inscrits 2020
+        Amis compétiteurs<br />
+        Vous avez été très nombreux à vous inscrire à l'open des Glénan 2020,
+        tant à l'occasion du salon de Nantes que durant cette semaine par
+        courrier. Nous avons dû faire face à un engouement sans précédent pour
+        notre compétition et nous vous en sommes très reconnaissant.
+        Malheureusement nous ne pourrons pas contenter tout le monde à notre
+        grand regret.<br />
+        Voici donc la liste des inscrits pour cette édition 2020.<br />
+        Nous avons essayé d'être le plus impartial possible en prenant en
+        priorité les dossiers complets déposés à Nantes suivis des arrivées par
+        courrier. Vous comprendrez tous qu'un certain nombre de places étaient
+        réservées pour nos fidèles partenaires sans qui cette compétition
+        n'existerait pas.<br />
+        Une liste d'attente est en place, si vous en faite partie nous vous
+        informerons de l'évolution des inscriptions.<br />
+        Merci à tous.<br />
       </p>
     </div>
     <div class="annonce_equipes white" v-if="teams !== null">
