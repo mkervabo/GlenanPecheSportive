@@ -72,10 +72,9 @@ export default [
     whitebackground: true
   },
   {
-    name: "Barracuda Tour",
-    link:
-      "https://www.beneteau.com/fr/beneteau-evenement-page-associee/participer-au-barracuda-tour",
-    logo: require("./assets/partner/barracuda-tour.png"),
+    name: "Beneteau",
+    link: "https://www.beneteau.com/fr/",
+    logo: require("./assets/partner/Beneteau.jpg"),
     whitebackground: true
   },
   {
@@ -138,5 +137,15 @@ export default [
     name: "Hénaff",
     link: "https://www.henaff.com/",
     logo: require("./assets/partner/logo-henaff-1907.jpg")
+  },
+  {
+    name: "Centaure",
+    link: "http://www.centaure-semirigide.fr/",
+    logo: require("./assets/partner/centaure.jpg")
+  },
+  {
+    name: "Coprexma",
+    link: "https://coprexma.fr/",
+    logo: require("./assets/partner/coprexma.jpg")
   }
 ];
