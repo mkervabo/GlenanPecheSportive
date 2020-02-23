@@ -61,8 +61,8 @@
             <router-link to="/contest" class="link2">ici</router-link>.
           </p>
           <p class="contest-description">
-            Pour vous inscrire c'est
-            <router-link to="/subscription" class="link2">par là</router-link>.
+            Pour voir la liste des inscrits c'est
+            <router-link to="/annonce" class="link2">par là</router-link>.
           </p>
           <p class="event-description">
             <router-link

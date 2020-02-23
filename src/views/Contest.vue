@@ -3,8 +3,8 @@
     <div class="contest-article contest-sub">
       <h2 class="contest-title orange">A savoir</h2>
       <div class="contest-content">
-        Pour s'incrire c'est par
-        <router-link class="link" to="/subscription">ici</router-link> !
+        Pour consulter la liste des inscrits c'est
+        <router-link class="link" to="/annonce">ici</router-link> !
       </div>
       <div class="contest-content">
         <br />Le règlement est par

@@ -15,9 +15,9 @@
           <a class="link" href="/contest/Carte-zone-de-pêche.git">ici</a>, c'est
           la même zone que les précédentes éditions. Pour une description plus
           complete c'est
-          <router-link to="/contest" class="link">ici</router-link>. Pour vous
-          inscrire c'est
-          <router-link to="/subscription" class="link">par là</router-link>.
+          <router-link to="/contest" class="link">ici</router-link>. La liste
+          des inscrits est
+          <router-link to="/annonce" class="link">par là</router-link>.
         </p>
       </AgendaElem>
     </div>
