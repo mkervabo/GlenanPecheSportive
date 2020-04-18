@@ -8,24 +8,22 @@
             class="article-icon orange"
           ></fa-icon>
           <div class="orange event-name">Important</div>
-          <img
-            class="article-img"
-            src="../assets/partner/salon-peche-en-mer.jpg"
-            href="https://www.salon-peche-mer.com/"
-          />
           <p class="event-description">
-            Amis compétiteurs,<br /><br />
-            Vous avez été plus que nombreux à venir sur le stand de Glénan Pêche
-            Sportive au salon de Nantes ce week-end et on vous en remercie.<br />
-            Nous vous avons donné la priorité concernant votre inscription à
-            l'open 2020 et beaucoup de dossiers complets nous ont été déposés.
-            <span class="orange font"
-              >Pour ceux à qui il manque un élément, nous vous donnons jusqu'à
-              vendredi 21 Février minuit pour régulariser l'inscription.</span
-            >
-            Passé ce délai, si nous manquons de place, vous passerez sur liste
-            d'attente.<br />
-            Merci de votre compréhension.<br /><br />
+            Chers Amis bénévoles et compétiteurs, Comme nous l'avons dit un peu
+            plus tôt à nos partenaires, la situation actuelle et les dernières
+            mesures prisent par les autorités nous obligent pour la deuxième
+            année consécutive à annuler l’Open des Glénan prévu les 20 et 21
+            Juin 2020. A l’heure actuelle nous ne sommes pas en mesure de dire
+            si un simple report est envisageable, il nous faudra attendre
+            plusieurs semaines pour cela. L’organisation de notre manifestation
+            dépend de beaucoup de paramètres et aujourd’hui la situation ne nous
+            permet pas de nous projeter vers une nouvelle date. <br /><br />
+            A l’heure de la reprise, les têtes ne seront pas à la dépense et
+            sans financement, pas d’Open… Nous devrons prendre en compte tous
+            ces paramètres avant de prendre une décision. <br />
+            Pour les compétiteurs, nous conservons les dossiers pour le moment.
+            Si report il y a ils seront valables, si annulation définitive, on
+            détruira vos chèques. Merci de votre compréhension.<br /><br />
             Pour toute question nous ne répondrons que sur
             <a class="link" href="https://www.facebook.com/glenanpechesportive/"
               >facebook</a
