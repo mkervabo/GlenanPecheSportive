@@ -1,7 +1,7 @@
 <template>
   <main id="agenda">
     <div class="body">
-      <AgendaElem event="Open des Glénan" date="20/06/20 - 21/06/20">
+      <AgendaElem event="Open des Glénan">
         <p>
           En cette année 2020 nous vous convions au 10eme anniversaire de l'Open
           des Glénan. C'est une compétition de pêche au bar No Kill.

@@ -35,7 +35,6 @@
         <div class="contest">
           <fa-icon :icon="['fas', 'fish']" class="article-icon white"></fa-icon>
           <h2 class="contest-title white">Open des Glénan</h2>
-          <p class="white date">20/06/20 - 21/06/20</p>
           <img class="article-img" src="../assets/logo-10-ans.jpg" />
           <p class="contest-description">
             En cette année 2020 nous vous convions au 10eme anniversaire de

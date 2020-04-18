@@ -1,7 +1,7 @@
 <template>
   <div class="agenda-event">
     <h3 class="font dark-blue agenda-title">{{ event }}</h3>
-    <div class="orange date">{{ date }}</div>
+    <div v-if="date" class="orange date">{{ date }}</div>
     <div>
       <slot></slot>
     </div>
