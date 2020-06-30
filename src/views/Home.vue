@@ -9,21 +9,16 @@
           ></fa-icon>
           <div class="orange event-name">Important</div>
           <p class="event-description">
-            Chers Amis bénévoles et compétiteurs, Comme nous l'avons dit un peu
-            plus tôt à nos partenaires, la situation actuelle et les dernières
-            mesures prisent par les autorités nous obligent pour la deuxième
-            année consécutive à annuler l’Open des Glénan prévu les 20 et 21
-            Juin 2020. A l’heure actuelle nous ne sommes pas en mesure de dire
-            si un simple report est envisageable, il nous faudra attendre
-            plusieurs semaines pour cela. L’organisation de notre manifestation
-            dépend de beaucoup de paramètres et aujourd’hui la situation ne nous
-            permet pas de nous projeter vers une nouvelle date. <br /><br />
-            A l’heure de la reprise, les têtes ne seront pas à la dépense et
-            sans financement, pas d’Open… Nous devrons prendre en compte tous
-            ces paramètres avant de prendre une décision. <br />
-            Pour les compétiteurs, nous conservons les dossiers pour le moment.
-            Si report il y a ils seront valables, si annulation définitive, on
-            détruira vos chèques. Merci de votre compréhension.<br /><br />
+            En cette période compliquée le bureau de Glenan Pêche Sportive a
+            décidé de ne pas organiser l’édition 2020. <br />
+            En effet notre date de repli après la date initiale du 20/21 juin
+            était le 4/5 octobre. Cette date voulait ne pas pénaliser les
+            compétitions de septembre déjà prévues, ni aucun évènement de pêche
+            en mer. or, le Grand Pavois se fera sur cette date. De nombreux
+            compétiteurs et partenaires sont
+            <router-link class="link2" to="/annonce">[...]</router-link><br />
+          </p>
+          <p class="event-description">
             Pour toute question nous ne répondrons que sur
             <a class="link" href="https://www.facebook.com/glenanpechesportive/"
               >facebook</a
@@ -37,10 +32,6 @@
           <h2 class="contest-title white">Open des Glénan</h2>
           <img class="article-img" src="../assets/logo-10-ans.jpg" />
           <p class="contest-description">
-            En cette année 2020 nous vous convions au 10eme anniversaire de
-            l'Open des Glénan.
-          </p>
-          <p class="contest-description">
             C'est une compétition de pêche au bar No Kill.
           </p>
           <p class="contest-description">
@@ -51,21 +42,12 @@
           <p class="contest-description">
             Carte de la zone
             <a class="link2" href="/contest/Carte-zone-de-pêche.git">ici</a>,
-            c'est la même zone que les précédentes éditions.
-          </p>
-          <p class="contest-description">
-            Pour une description plus complete c'est
-            <router-link to="/contest" class="link2">ici</router-link>.
-          </p>
-          <p class="contest-description">
-            Pour voir la liste des inscrits c'est
-            <router-link to="/annonce" class="link2">par là</router-link>.
           </p>
           <p class="event-description">
             <router-link
               to="/agenda"
               class="other-event event-description link2"
-              >Pour les autres evenements à venir c'est ici !</router-link
+              >Pour les évenements à venir c'est ici !</router-link
             >
           </p>
           <p class="event-description">
