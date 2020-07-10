@@ -10,13 +10,14 @@
           <div class="orange event-name">Important</div>
           <p class="event-description">
             En cette période compliquée le bureau de Glenan Pêche Sportive a
-            décidé de ne pas organiser l’édition 2020. <br />
-            En effet notre date de repli après la date initiale du 20/21 juin
-            était le 4/5 octobre. Cette date voulait ne pas pénaliser les
+            décidé de ne pas organiser l’édition 2020.
+            <br />En effet notre date de repli après la date initiale du 20/21
+            juin était le 4/5 octobre. Cette date voulait ne pas pénaliser les
             compétitions de septembre déjà prévues, ni aucun évènement de pêche
             en mer. or, le Grand Pavois se fera sur cette date. De nombreux
             compétiteurs et partenaires sont
-            <router-link class="link2" to="/annonce">[...]</router-link><br />
+            <router-link class="link2" to="/annonce">[...]</router-link>
+            <br />
           </p>
           <p class="event-description">
             Pour toute question nous ne répondrons que sur
@@ -25,6 +26,32 @@
             >
             en mp ou sur notre mail que vous trouverez
             <a class="link" href="mailto:infos@glenanpechesportive.fr">ici</a>.
+          </p>
+        </div>
+        <div class="meteo">
+          <fa-icon
+            :icon="['fas', 'exclamation-circle']"
+            class="article-icon dark-blue"
+          ></fa-icon>
+          <div class="dark-blue event-name">Grand Pavois</div>
+          <p class="date orange">29/09/2020 au 04/10/2020</p>
+          <img
+            class="article-img"
+            src="../assets/partner/grand-pavois-2020.png"
+          />
+          <p class="event-description">
+            Venez rencontrer nos partenaires, lors du Grand Pavois à la Rochelle
+            . Du mardi 29 septembre au dimanche 4 octobre
+          </p>
+          <p class="event-description">
+            Pour voir les autres evenements a vennir rendez-vous sur cette
+            <router-link class="link2" to="/agenda">page</router-link>
+          </p>
+          <p class="event-description">
+            Pour etre tenu au courant suivez nous sur
+            <a class="link" href="https://www.facebook.com/glenanpechesportive/"
+              >facebook</a
+            >
           </p>
         </div>
         <div class="contest">
