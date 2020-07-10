@@ -44,7 +44,7 @@
             . Du mardi 29 septembre au dimanche 4 octobre
           </p>
           <p class="event-description">
-            Pour voir les autres evenements a vennir rendez-vous sur cette
+            Pour voir les autres evenements a venir rendez-vous sur cette
             <router-link class="link2" to="/agenda">page</router-link>
           </p>
           <p class="event-description">
