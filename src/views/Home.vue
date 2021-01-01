@@ -8,25 +8,11 @@
             class="article-icon orange"
           ></fa-icon>
           <div class="orange event-name">Important</div>
-          <p class="event-description">
-            En cette période compliquée le bureau de Glenan Pêche Sportive a
-            décidé de ne pas organiser l’édition 2020.
-            <br />En effet notre date de repli après la date initiale du 20/21
-            juin était le 4/5 octobre. Cette date voulait ne pas pénaliser les
-            compétitions de septembre déjà prévues, ni aucun évènement de pêche
-            en mer. or, le Grand Pavois se fera sur cette date. De nombreux
-            compétiteurs et partenaires sont
-            <router-link class="link2" to="/annonce">[...]</router-link>
+          <!-- <p class="event-description">
+            L'Open vous souhaite une bonne et heureuse année 2021 !
             <br />
-          </p>
-          <p class="event-description">
-            Pour toute question nous ne répondrons que sur
-            <a class="link" href="https://www.facebook.com/glenanpechesportive/"
-              >facebook</a
-            >
-            en mp ou sur notre mail que vous trouverez
-            <a class="link" href="mailto:infos@glenanpechesportive.fr">ici</a>.
-          </p>
+          </p> -->
+          <img class="article-illustration" src="../assets/hny.png" />
         </div>
         <div class="meteo">
           <fa-icon
@@ -158,6 +144,13 @@ export default {};
 .article-img {
   width: 100%;
   height: 80px;
+  margin: auto;
+  object-fit: contain;
+}
+
+.article-illustration {
+  width: 100%;
+  height: 300px;
   margin: auto;
   object-fit: contain;
 }
