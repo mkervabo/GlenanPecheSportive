@@ -1,13 +1,13 @@
 <template>
   <main id="agenda">
     <div class="body">
-      <AgendaElem event="Grand Pavois" date="29/09/2020 au 04/10/2020">
+      <AgendaElem event="Grand Pavois" date="28/09/2021 au 03/10/2021">
         <p>
           Venez rencontrer nos partenaires, lors du Grand Pavois à la Rochelle .
-          Du mardi 29 septembre au dimanche 4 octobre
+          Du mardi 28 septembre au dimanche 3 octobre 2021
         </p>
         <div class="agenda-article">
-          <img class="agenda_img" src="../assets/grand_pavois_agenda.png" />
+          <img class="agenda_img" src="../assets/partner/grand_pavois.png" />
         </div>
       </AgendaElem>
     </div>

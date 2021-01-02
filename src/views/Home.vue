@@ -20,14 +20,11 @@
             class="article-icon dark-blue"
           ></fa-icon>
           <div class="dark-blue event-name">Grand Pavois</div>
-          <p class="date orange">29/09/2020 au 04/10/2020</p>
-          <img
-            class="article-img"
-            src="../assets/partner/grand-pavois-2020.png"
-          />
+          <p class="date orange">28/09/2021 au 03/10/2021</p>
+          <img class="article-img" src="../assets/partner/grand_pavois.png" />
           <p class="event-description">
             Venez rencontrer nos partenaires, lors du Grand Pavois à la Rochelle
-            . Du mardi 29 septembre au dimanche 4 octobre
+            . Du mardi 28 septembre au dimanche 3 octobre 2021.
           </p>
           <p class="event-description">
             Pour voir les autres evenements a venir rendez-vous sur cette

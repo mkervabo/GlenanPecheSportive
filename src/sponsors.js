@@ -12,7 +12,7 @@ export default [
   {
     name: "Grand Pavois",
     link: "http://www.grand-pavois.com/",
-    logo: require("./assets/partner/grand-pavois-2020.png")
+    logo: require("./assets/partner/grand_pavois.png")
   },
   {
     name: "Salon de la Pêche en Mer",
