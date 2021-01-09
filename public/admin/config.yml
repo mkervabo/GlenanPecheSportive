@@ -1,3 +1,28 @@
+locale: fr
+
 backend:
   name: git-gateway
   branch: netlifyCMS # Branch to update (optional; defaults to master)
+
+# This line should *not* be indented
+publish_mode: editorial_workflow
+
+# These lines should *not* be indented
+media_folder: "public/images/uploads" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+
+
+collections:
+  - name: "articles" # Used in routes, e.g., /admin/collections/blog
+    label: "Articles" # Used in the UI
+    folder: "src/text" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Couleur fond", name: "color", widget: "select", options: ["bleu claire", "bleu foncé", "noir", "orange", "blanc"], default: "blanc"}
+      - {label: "Icone", name: "icon", widget: "string"}
+      - {label: "Titre", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime", required: false}
+      - {label: "Image", name: "thumbnail", widget: "image", required: false}
+      - {label: "Corps", name: "body", widget: "markdown", required: false}
+      
