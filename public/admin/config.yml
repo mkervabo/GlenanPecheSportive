@@ -3,6 +3,7 @@ locale: fr
 backend:
   name: git-gateway
   branch: netlifyCMS # Branch to update (optional; defaults to master)
+  squash_merges: true
 
 # This line should *not* be indented
 publish_mode: editorial_workflow
