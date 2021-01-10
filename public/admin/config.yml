@@ -21,10 +21,27 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Couleur fond", name: "color", widget: "select", options: ["bleu claire", "bleu foncé", "noir", "orange", "blanc"], default: "blanc"}
-      - {label: "Icone", name: "icon", widget: "string"}
+      - label: "Couleur fond"
+        name: "color"
+        widget: "select"
+        default: "white"
+        options: 
+          - {label: "bleu foncé", value: "theme-dark-blue"}
+          - {label: "noir", value: "theme-black"} 
+          - {label: "orange", value: "theme-orange"}
+          - {label: "blanc", value: "theme-white"}
+      - label: "Icone"
+        name: "icon"
+        widget: "select"
+        required: false
+        default: "exclamation-circle"
+        options:
+          - {label: "poisson", value: "fish"}
+          - {label: "important", value: "exclamation-circle"} 
+          - {label: "nuage", value: "cloud"}
       - {label: "Titre", name: "title", widget: "string"}
-      - {label: "Date", name: "date", widget: "datetime", required: false}
+      - {label: "Date", name: "startDate", widget: "datetime", required: false}
+      - {label: "Date de fin", name: "endDate", widget: "datetime", required: false}
       - {label: "Image", name: "thumbnail", widget: "image", required: false}
       - {label: "Corps", name: "body", widget: "markdown", required: false}
       
