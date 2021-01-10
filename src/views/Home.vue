@@ -14,9 +14,9 @@
           ></fa-icon>
           <h2>{{ article.title }}</h2>
           <div v-if="article.startDate">
-            <span class="date">{{ article.startDate }}</span>
+            <span class="date">{{ formatDate(article.startDate) }}</span>
             <span class="date" v-if="article.endDate">
-              au {{ article.endDate }}</span
+              au {{ formatDate(article.endDate) }}</span
             >
           </div>
           <img
@@ -48,6 +48,7 @@
 </template>
 <script>
 import marked from "marked";
+import { DateTime } from "luxon";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faFish,
@@ -71,6 +72,9 @@ export default {
   methods: {
     markdown(input) {
       return marked(input, { sanitize: true });
+    },
+    formatDate(input) {
+      return DateTime.fromISO(input).toFormat("dd LLL yyyy");
     }
   }
 };
@@ -133,10 +137,13 @@ export default {
 }
 
 .theme-black > div > .date {
-  padding-left: 80px;
   font: caption;
   font-weight: bold;
   color: #0185c6;
+}
+
+.theme-black > div > .date:first-child {
+  padding-left: 80px;
 }
 
 .theme-black > .body {
@@ -174,10 +181,13 @@ export default {
 }
 
 .theme-white > div > .date {
-  padding-left: 80px;
   font: caption;
   font-weight: bold;
   color: #f37538;
+}
+
+.theme-white > div > .date:first-child {
+  padding-left: 80px;
 }
 
 .theme-white > .body {
@@ -243,10 +253,13 @@ export default {
 }
 
 .theme-dark-blue > div > .date {
-  padding-left: 80px;
   font: caption;
   font-weight: bold;
   color: #3a3a3a;
+}
+
+.theme-dark-blue > div > .date:first-child {
+  padding-left: 80px;
 }
 
 .theme-dark-blue > .body {
