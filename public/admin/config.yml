@@ -40,8 +40,8 @@ collections:
           - {label: "important", value: "exclamation-circle"} 
           - {label: "nuage", value: "cloud"}
       - {label: "Titre", name: "title", widget: "string"}
-      - {label: "Date", name: "startDate", widget: "datetime", required: false}
-      - {label: "Date de fin", name: "endDate", widget: "datetime", required: false}
+      - {label: "Date", name: "startDate", widget: "datetime", default: '', required: false}
+      - {label: "Date de fin", name: "endDate", widget: "datetime", default: '', required: false}
       - {label: "Image", name: "thumbnail", widget: "image", required: false}
       - {label: "Corps", name: "body", widget: "markdown", required: false}
       
