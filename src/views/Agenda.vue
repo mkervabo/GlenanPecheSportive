@@ -1,25 +1,45 @@
 <template>
   <main id="agenda">
     <div class="body">
-      <AgendaElem event="Grand Pavois" date="28/09/2021 au 03/10/2021">
-        <p>
-          Venez rencontrer nos partenaires, lors du Grand Pavois à la Rochelle .
-          Du mardi 28 septembre au dimanche 3 octobre 2021
-        </p>
-        <div class="agenda-article">
-          <img class="agenda_img" src="../assets/partner/grand_pavois.png" />
+      <div v-for="event in articles" :key="event.name" class=".agenda-article">
+        <h2 class="font dark-blue agenda-title">{{ event.name }}</h2>
+        <div v-if="event.startDate">
+          <span class="orange date">{{ formatDate(event.startDate) }}</span>
+          <span class="orange date" v-if="event.endDate">
+            au {{ formatDate(event.endDate) }}</span
+          >
         </div>
-      </AgendaElem>
+        <div v-if="event.body" v-html="markdown(event.body)" class="body"></div>
+        <img
+          v-if="event.thumbnail"
+          class=".agenda_img"
+          :src="article.thumbnail"
+        />
+      </div>
     </div>
   </main>
 </template>
 
 <script>
-import AgendaElem from "../components/AgendaElem";
+import marked from "marked";
+import { DateTime } from "luxon";
+
+const r = require.context("../agenda", true, /\.json$/);
+const articles = r.keys().map(file => r(file));
 
 export default {
-  components: {
-    AgendaElem
+  computed: {
+    articles() {
+      return articles;
+    }
+  },
+  methods: {
+    markdown(input) {
+      return marked(input, { sanitize: true });
+    },
+    formatDate(input) {
+      return DateTime.fromISO(input).toFormat("dd LLL yyyy");
+    }
   }
 };
 </script>
@@ -52,5 +72,24 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.agenda-event {
+  background: #f2f2f2;
+  max-width: 500px;
+  min-height: 60px;
+  margin: 10px;
+  padding: 10px;
+  text-align: justify;
+  font-size: 15px;
+}
+
+.agenda-title {
+  font-size: 18px;
+}
+
+.date {
+  font: caption;
+  font-weight: bold;
 }
 </style>

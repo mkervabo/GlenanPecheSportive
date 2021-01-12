@@ -44,4 +44,15 @@ collections:
       - {label: "Date de fin", name: "endDate", widget: "datetime", default: '', required: false}
       - {label: "Image", name: "thumbnail", widget: "image", required: false}
       - {label: "Corps", name: "body", widget: "markdown", required: false}
-      
+  - name: "agenda" # Used in routes, e.g., /admin/collections/blog
+    label: "Agenda" # Used in the UI
+    format: json
+    folder: "src/agenda" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Date", name: "startDate", widget: "datetime", default: '', required: false}
+      - {label: "Date de fin", name: "endDate", widget: "datetime", default: '', required: false}
+      - {label: "Corps", name: "body", widget: "markdown", required: false}
+      - {label: "Image", name: "thumbnail", widget: "image", required: false}
