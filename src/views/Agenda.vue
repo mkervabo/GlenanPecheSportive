@@ -1,8 +1,8 @@
 <template>
   <main id="agenda">
     <div class="body">
-      <div v-for="event in articles" :key="event.name" class=".agenda-article">
-        <h2 class="font dark-blue agenda-title">{{ event.name }}</h2>
+      <div v-for="event in articles" :key="event.title" class=".agenda-article">
+        <h2 class="font dark-blue agenda-title">{{ event.title }}</h2>
         <div v-if="event.startDate">
           <span class="orange date">{{ formatDate(event.startDate) }}</span>
           <span class="orange date" v-if="event.endDate">
