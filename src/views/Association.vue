@@ -5,27 +5,29 @@
       <div class="association-content">
         <p>Présentation du bureau</p>
         <br />
-        <p><span class="font blue">Hervé Cotonnec:</span> Président</p>
-        <p><span class="font blue">Romain Marion: </span>Vice président</p>
+        <p><span class="font blue">Président: </span>Hervé Cotonnec</p>
+        <p><span class="font blue">Vice président: </span>Romain Marion</p>
         <p>
-          <span class="font blue">Patrick Tudal: </span>Responsable commissaires
-          Trésorier
+          <span class="font blue">Responsable commissaires Trésorier: </span
+          >Patrick Tudal
         </p>
         <p>
-          <span class="font blue">Valérie Le Bartz et Lucie Trouillebout: </span
-          >Secrétaires
+          <span class="font blue">Secrétaires: </span>Valérie Le Bartz et Lucie
+          Trouillebout
         </p>
         <p>
-          <span class="font blue">Yannick et Frédérique Kervabon:</span>
-          Responsable Inscriptions
+          <span class="font blue">Responsable Inscriptions:</span>
+          Yannick et Frédérique Kervabon
         </p>
         <p>
-          <span class="font blue">Christophe Le Bartz:</span> Responsable pub
-          annuaire
+          <span class="font blue">Responsable pub annuaire: </span>Christophe Le
+          Bartz
         </p>
         <p>
-          <span class="font blue">Jean-Loup et Anne Marie Weber: </span>Gestion
-          à Terre "Mise à l'eau et petit déjeuné "
+          <span class="font blue"
+            >Gestion à Terre "Mise à l'eau et petit déjeuné ":
+          </span>
+          Jean-Loup et Anne Marie Weber
         </p>
         <p>
           <span class="font orange">Membres actifs:</span> Gérard Guernalec,
@@ -44,7 +46,25 @@
     </div>
   </div>
 </template>
+<script>
+import marked from "marked";
 
+const r = require.context("../association", true, /\.json$/);
+const articles = r.keys().map(file => r(file));
+
+export default {
+  computed: {
+    articles() {
+      return articles;
+    }
+  },
+  methods: {
+    markdown(input) {
+      return marked(input, { sanitize: true });
+    }
+  }
+};
+</script>
 <style>
 .association-fond {
   background: #65aee2;

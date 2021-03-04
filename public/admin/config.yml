@@ -28,7 +28,6 @@ collections:
         options: 
           - {label: "bleu foncé", value: "theme-dark-blue"}
           - {label: "noir", value: "theme-black"} 
-          - {label: "orange", value: "theme-orange"}
           - {label: "blanc", value: "theme-white"}
       - label: "Icone"
         name: "icon"
@@ -44,6 +43,14 @@ collections:
       - {label: "Date de fin", name: "endDate", widget: "datetime", default: '', required: false}
       - {label: "Image", name: "thumbnail", widget: "image", required: false}
       - {label: "Corps", name: "body", widget: "markdown", required: false}
+  - name: carroussel
+    label: "Carroussel" # Used in the UI
+    format: json
+    folder: "src/carroussel" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields: # The fields for each document, usually in front matter
+      - {label: "Image", name: "img", widget: "image"}
   - name: "agenda" # Used in routes, e.g., /admin/collections/blog
     label: "Agenda" # Used in the UI
     format: json
@@ -51,7 +58,7 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Name", name: "title", widget: "string"}
+      - {label: "Evenement", name: "title", widget: "string"}
       - {label: "Date", name: "startDate", widget: "datetime", default: '', required: false}
       - {label: "Date de fin", name: "endDate", widget: "datetime", default: '', required: false}
       - {label: "Corps", name: "body", widget: "markdown", required: false}

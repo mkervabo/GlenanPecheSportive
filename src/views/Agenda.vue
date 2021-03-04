@@ -1,7 +1,7 @@
 <template>
   <main id="agenda">
     <div class="body">
-      <div v-for="event in articles" :key="event.title" class=".agenda-article">
+      <div v-for="event in articles" :key="event.title" class="agenda-event">
         <h2 class="font dark-blue agenda-title">{{ event.title }}</h2>
         <div v-if="event.startDate">
           <span class="orange date">{{ formatDate(event.startDate) }}</span>
@@ -9,12 +9,8 @@
             au {{ formatDate(event.endDate) }}</span
           >
         </div>
-        <div v-if="event.body" v-html="markdown(event.body)" class="body"></div>
-        <img
-          v-if="event.thumbnail"
-          class=".agenda_img"
-          :src="article.thumbnail"
-        />
+        <div v-if="event.body" v-html="markdown(event.body)"></div>
+        <img v-if="event.thumbnail" class="agenda_img" :src="event.thumbnail" />
       </div>
     </div>
   </main>
