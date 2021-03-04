@@ -3,27 +3,36 @@
     <div class="annonce_info">
       <h2 class="subscription-title orange">A lire</h2>
       <p class="annonce-content dark-olive">
-        En cette période compliquée le bureau de Glenan Pêche Sportive a décidé
-        de ne pas organiser l’édition 2020. <br />
-        En effet notre date de repli après la date initiale du 20/21 juin était
-        le 4/5 octobre. Cette date voulait ne pas pénaliser les compétitions de
-        septembre déjà prévues, ni aucun évènement de pêche en mer. or, le Grand
-        Pavois se fera sur cette date. De nombreux compétiteurs et partenaires
-        sont sur les deux évènements ce qui était très gênant.<br />
-        D’autres éléments ont motivé notre décision : <br />
-        Tout d’abord, l’open des Glenan mobilise beaucoup de ressources tant
-        humaines que matérielles. Nos partenaires ne seront sans doute pas
-        fâchés de se reporter sur 2021 et notre 10ème anniversaire....enfin
-        fêté.<br />
-        Enfin, et ce n’est pas la moindre de nos explications, pour les
-        compétiteurs, les partenaires et même nous les bénévoles, l’open des
-        Glenan est synonyme longue journée, de beau temps et de «douce nuit ».
-        Autant de facteurs impossible à retrouver en octobre.<br />
-        Nous vous remercions tous, partenaires, compétiteurs, de votre
-        bienveillance à l’égard de Glénan Pêche Sportive et vous assurons de
-        notre motivation à organiser un 10ème anniversaire de l’open propre à
-        envoyer le Covid sur une autre galaxie, effrayé qu’il va être par le
-        bruit que nous allons faire à Concarneau et aux Îles.<br /><br />
+        Bonjour à tous,<br />
+        Malgré la situation actuelle, nous avons décidé d'organiser l'Open des
+        Glénan en 2021. Cette édition ne s'appellera pas "Les 10 ans" mais sera
+        plutôt une version light de tout ce que l'on vous a proposé jusqu'à
+        maintenant. Le but est de continuer à faire vivre notre compétition mise
+        à mal ces deux dernières années par la mauvaise météo et le covid, et de
+        garder la motivation des bénévoles, partenaires et compétiteurs, même si
+        nous aurons du mal à retrouver l'esprit convivial de cet évènement. Bien
+        sûr tout ceci reste lié à l'évolution de la situation sanitaire et aux
+        autorisations administratives nécessaires. Voici ce vers quoi nous nous
+        dirigeons:<br /><br />
+        - La compétition se déroulera sur une seule journée le Samedi 12 Juin
+        2021.<br />
+        - Aucune organisation à terre. (briefing, podium, buvette, repas...)<br />
+        - Tout se fera en mer à partir d'un bateau organisation (briefing,
+        pointage visuel, remise des prix...)<br />
+        - Les compétiteurs géreront la mise à l'eau de leur bateau, nous
+        mettront à dispo un endroit de stockage des remorques à Concarneau et
+        Port la Forêt si possible. <br />
+        - Le RDV se fera à un point précis en mer.<br />
+        - Le nombre de bateau sera limité à 60.<br />
+        - Le montant de l'inscription sera revu à la baisse, probablement aux
+        alentour de 50 € par bateau.<br />
+        - Lorsque les autorisations seront validées, nous éditerons en ligne un
+        bulletin de pré-inscription et une date limite de retour. Après cette
+        date, nous effectuerons un tirage au sort en live via Facebook pour
+        désigner les heureux participants.<br /><br />
+        Merci à tous de l'intérêt que vous portez à notre évènement, à
+        bientôt.<br />
+        Le bureau de Glénan Pêche Sportive.<br />
         Pour toute question nous ne répondrons que sur
         <a class="link" href="https://www.facebook.com/glenanpechesportive/"
           >facebook</a

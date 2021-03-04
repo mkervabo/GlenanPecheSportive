@@ -8,11 +8,19 @@
             class="article-icon orange"
           ></fa-icon>
           <div class="orange event-name">Important</div>
-          <!-- <p class="event-description">
-            L'Open vous souhaite une bonne et heureuse année 2021 !
-            <br />
-          </p> -->
-          <img class="article-illustration" src="../assets/hny.png" />
+          <p class="event-description">
+            Bonjour à tous,<br />
+            Malgré la situation actuelle, nous avons décidé d'organiser l'Open
+            des Glénan en 2021. Cette édition ne s'appellera pas "Les 10 ans"
+            mais sera plutôt une version light de tout ce que l'on vous a
+            proposé jusqu'à maintenant. Le but est de continuer à faire vivre
+            notre compétition mise à mal ces deux dernières années
+            <a class="link2" href="/annonce">lire la suite ...</a>
+          </p>
+          <img
+            class="article-illustration"
+            src="../assets/contest/annonce2021.png"
+          />
         </div>
         <div class="meteo">
           <fa-icon
@@ -45,7 +53,7 @@
             C'est une compétition de pêche au bar No Kill.
           </p>
           <p class="contest-description">
-            Qui se déroule sur 2 jours. La base à terre se trouve à
+            Qui se déroule sur une journée. La base à terre se trouve à
             Concarneau(29) et le compétition se déroule sur l'archipel des
             Glénan.
           </p>

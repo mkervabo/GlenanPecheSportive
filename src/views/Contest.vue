@@ -4,8 +4,9 @@
       <h2 class="contest-title orange">A savoir</h2>
       <br />
       <div class="contest-content">
-        L'Open est annulé en raison du COVID-19 ! Pour plus d'informations
-        rendez-vous <router-link class="link" to="/annonce">ici</router-link> !
+        L'Open se déroulera sur une seule journée le Samedi 12 Juin 2021. Pour
+        plus d'informations rendez-vous
+        <router-link class="link" to="/annonce">ici</router-link> !
       </div>
       <br />
       <h2 class="contest-title orange">Classement</h2>
