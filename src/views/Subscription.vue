@@ -3,7 +3,7 @@
     <div class="subscription-important">
       <h2 class="subscription-title orange">A lire</h2>
       <p class="rules-content dark-olive">
-        Amis compétiteurs,<br /><br />
+        <!-- Amis compétiteurs,<br /><br />
         Vous avez été plus que nombreux à venir sur le stand de Glénan Pêche
         Sportive au salon de Nantes ce week-end et on vous en remercie.<br />
         Nous vous avons donné la priorité concernant votre inscription à l'open
@@ -14,7 +14,7 @@
         >
         Passé ce délai, si nous manquons de place, vous passerez sur liste
         d'attente.<br />
-        Merci de votre compréhension.<br /><br />
+        Merci de votre compréhension.<br /><br /> -->
         Pour toute question nous ne répondrons que sur
         <a class="link" href="https://www.facebook.com/glenanpechesportive/"
           >facebook</a
