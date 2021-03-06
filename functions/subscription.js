@@ -17,11 +17,11 @@ exports.handler = async event => {
     Number(body.mousse.kind === "F") + Number(body.patron.kind === "F");
 
   const junior =
-    parseInt(body.mousse.naissance) >= 2002 ||
-    parseInt(body.patron.naissance) >= 2002;
+    parseInt(body.mousse.naissance) >= 2003 ||
+    parseInt(body.patron.naissance) >= 2003;
 
   await sheets.spreadsheets.values.append({
-    spreadsheetId: "1WgKRev-mVc-fGo8FvoyfNAYre6sqTCIcTBdA6ZmMeGc",
+    spreadsheetId: "140_Q_ZUeG7TfmV5_yfShMWMUvGZ_F1ue8dKF7w3d2v0",
     range: "A1",
     valueInputOption: "RAW",
     requestBody: {
