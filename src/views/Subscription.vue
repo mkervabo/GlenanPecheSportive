@@ -493,7 +493,7 @@ export default {
                 if (tab.location.pathname === "/loading.html") {
                   tab.close();
                 }
-              }, 0);
+              }, 500);
             });
           }
         });
