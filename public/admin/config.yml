@@ -63,3 +63,37 @@ collections:
       - {label: "Date de fin", name: "endDate", widget: "datetime", default: '', required: false}
       - {label: "Corps", name: "body", widget: "markdown", required: false}
       - {label: "Image", name: "thumbnail", widget: "image", required: false}
+  - name: "sponsors"
+    label: "Partenaire"
+    format: json
+    folder: "src/sponsors"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Nom", name: "name", widget: "string"}
+      - {label: "Site", name: "link", widget: "string"}
+      - {label: "Logo", name: "logo", widget: "image"}
+  - name: "association"
+    label: "Association"
+    format: json
+    folder: "scr/association"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Role", name: "role", widget: "string", required: false}
+      - label: "Couleur"
+        name: "color"
+        widget: "select"
+        default: "blue"
+        options: 
+          - {label: "bleu", value: "blue"}
+          - {label: "orange", value: "orange"}
+      - {label: "Nom", name: "name", widget: "string"}
+  - name: "gallery"
+    label: "Gallerie"
+    format: json
+    folder: "src/gallery"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Image", name: "img", widget: "img"}

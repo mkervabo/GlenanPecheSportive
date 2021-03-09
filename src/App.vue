@@ -48,7 +48,6 @@
 <script>
 import NavBar from "./components/NavBar";
 import Caroussel from "./components/Caroussel";
-import sponsors from "./sponsors";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faInstagram,
@@ -63,6 +62,9 @@ library.add(faInstagram);
 library.add(faFacebookSquare);
 library.add(faPhoneSquareAlt);
 library.add(faEnvelopeSquare);
+
+const r = require.context("./sponsors", true, /\.json$/);
+const sponsors = r.keys().map(file => r(file));
 
 export default {
   components: {
