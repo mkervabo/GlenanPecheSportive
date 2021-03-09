@@ -3,7 +3,7 @@
     <div class="next next-left" v-on:click="left">
       <fa-icon :icon="['far', 'arrow-alt-circle-left']" class="arrow"></fa-icon>
     </div>
-    <img class="caroussel" v-bind:src="banners[i]" />
+    <img class="caroussel" v-bind:src="banners[i].img" />
     <div class="next next-right" v-on:click="right">
       <fa-icon
         :icon="['far', 'arrow-alt-circle-right']"
@@ -23,19 +23,17 @@ import {
 library.add(faArrowAltCircleLeft);
 library.add(faArrowAltCircleRight);
 
-const banners = [
-  require("../assets/banner/banner00.jpg"),
-  require("../assets/banner/banner02.jpg"),
-  require("../assets/banner/banner03.jpg"),
-  require("../assets/banner/banner04.jpg"),
-  require("../assets/banner/banner05.jpg"),
-  require("../assets/banner/banner06.jpg")
-];
+const r = require.context("../caroussel", true, /\.json$/);
+const banners = r.keys().map(file => r(file));
 
 export default {
+  computed: {
+    banners() {
+      return banners;
+    }
+  },
   data() {
     return {
-      banners,
       i: 0
     };
   },

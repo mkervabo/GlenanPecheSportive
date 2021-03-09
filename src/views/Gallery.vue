@@ -4,9 +4,9 @@
       <ImgGallery
         v-for="(imgGallery, i) in imgsGallery"
         v-bind:key="i"
-        v-bind:img-gallery="imgGallery"
+        v-bind:img-gallery="imgGallery.img"
         v-on:click.native="
-          monImage = imgGallery;
+          monImage = imgGallery.img;
           openImg = true;
         "
       />
@@ -24,18 +24,22 @@
 import ImgGallery from "../components/ImgGallery";
 import ImgGallery2 from "../components/ImgGallery2";
 
-const context = require.context("../assets/gallery", true, /.*/);
-
-const imgsGallery = context.keys().map(key => context(key));
+const r = require.context("../text", true, /\.json$/);
+const imgsGallery = r.keys().map(file => r(file));
 
 export default {
+  computer: {
+    imgsGallery() {
+      return imgsGallery;
+    }
+  },
   components: {
     ImgGallery,
     ImgGallery2
   },
   data() {
     return {
-      monImage: "../assets/gallery/gallery01.jpg",
+      monImage: imgsGallery[0].img,
       imgsGallery,
       i: 0,
       openImg: false

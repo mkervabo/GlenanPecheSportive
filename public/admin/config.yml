@@ -43,10 +43,10 @@ collections:
       - {label: "Date de fin", name: "endDate", widget: "datetime", default: '', required: false}
       - {label: "Image", name: "thumbnail", widget: "image", required: false}
       - {label: "Corps", name: "body", widget: "markdown", required: false}
-  - name: carroussel
-    label: "Carroussel" # Used in the UI
+  - name: caroussel
+    label: "Caroussel" # Used in the UI
     format: json
-    folder: "src/carroussel" # The path to the folder where the documents are stored
+    folder: "src/caroussel" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields: # The fields for each document, usually in front matter
@@ -63,3 +63,37 @@ collections:
       - {label: "Date de fin", name: "endDate", widget: "datetime", default: '', required: false}
       - {label: "Corps", name: "body", widget: "markdown", required: false}
       - {label: "Image", name: "thumbnail", widget: "image", required: false}
+  - name: "sponsors"
+    label: "Partenaire"
+    format: json
+    folder: "src/sponsors"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Nom", name: "name", widget: "string"}
+      - {label: "Site", name: "link", widget: "string"}
+      - {label: "Logo", name: "logo", widget: "image"}
+  - name: "association"
+    label: "Association"
+    format: json
+    folder: "src/association"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Role", name: "role", widget: "string", required: false}
+      - label: "Couleur"
+        name: "color"
+        widget: "select"
+        default: "blue"
+        options: 
+          - {label: "bleu", value: "blue"}
+          - {label: "orange", value: "orange"}
+      - {label: "Nom", name: "name", widget: "string"}
+  - name: "gallery"
+    label: "Galerie"
+    format: json
+    folder: "src/gallery"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Image", name: "img", widget: "image"}

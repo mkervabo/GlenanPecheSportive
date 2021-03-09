@@ -5,7 +5,7 @@
       <br />
       <div class="contest-content">
         L'Open est annulé en raison du COVID-19 ! Pour plus d'informations
-        rendez-vous <router-link class="link" to="/annonce">ici</router-link> !
+        rendez-vous <router-link class="link2" to="/annonce">ici</router-link> !
       </div>
       <br />
       <h2 class="contest-title orange">Classement</h2>
@@ -15,7 +15,7 @@
       >
         Classement 2018
       </div>
-      <div v-show="contest18" class="link">
+      <div v-show="contest18" class="link2">
         <p class="white">
           Le nombre de bars péchés et maillés augmente nettement cette année:
           494 bars ont été validés puis relachés. A noter que de nombreux
@@ -109,11 +109,11 @@
       </div>
       <div
         v-on:click="contest15 = !contest15"
-        class="contest-content link cursor"
+        class="contest-content link2 cursor"
       >
         Classement 2015
       </div>
-      <div v-show="contest15" class="link">
+      <div v-show="contest15" class="link2">
         <p class="white">
           Quelques chiffres sur la pêche en 2015: 137 bars ont été péchés puis
           relachés (115 par l'Open et 22 par les Barracudas). Pour mémoire en

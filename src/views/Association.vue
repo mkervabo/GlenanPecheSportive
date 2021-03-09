@@ -5,42 +5,9 @@
       <div class="association-content">
         <p>Présentation du bureau</p>
         <br />
-        <p><span class="font blue">Président: </span>Hervé Cotonnec</p>
-        <p><span class="font blue">Vice président: </span>Romain Marion</p>
-        <p>
-          <span class="font blue">Responsable commissaires Trésorier: </span
-          >Patrick Tudal
-        </p>
-        <p>
-          <span class="font blue">Secrétaires: </span>Valérie Le Bartz et Lucie
-          Trouillebout
-        </p>
-        <p>
-          <span class="font blue">Responsable Inscriptions:</span>
-          Yannick et Frédérique Kervabon
-        </p>
-        <p>
-          <span class="font blue">Responsable pub annuaire: </span>Christophe Le
-          Bartz
-        </p>
-        <p>
-          <span class="font blue"
-            >Gestion à Terre "Mise à l'eau et petit déjeuné ":
-          </span>
-          Jean-Loup et Anne Marie Weber
-        </p>
-        <p>
-          <span class="font orange">Membres actifs:</span> Gérard Guernalec,
-          Christophe Guillerme, Jean François Le Buhannic, Claude Diascorn
-        </p>
-        <br />
-        <br />
-        <p>
-          A l'attention des membres de l'association Glénan Pêche Sportive,nous
-          vous demandons de remplir un bulletin d'adhésion pour l'année 2020.
-          <a class="link2" href="/GPS-Bulletin-dadhésion-2020.pdf"
-            >Rendez vous sur cette page.</a
-          >
+        <p v-for="(member, i) in members" :key="i">
+          <span class="font" :class="member.color">{{ member.role }} </span
+          >{{ member.name }}
         </p>
       </div>
     </div>
@@ -50,12 +17,12 @@
 import marked from "marked";
 
 const r = require.context("../association", true, /\.json$/);
-const articles = r.keys().map(file => r(file));
+const members = r.keys().map(file => r(file));
 
 export default {
   computed: {
-    articles() {
-      return articles;
+    members() {
+      return members;
     }
   },
   methods: {
