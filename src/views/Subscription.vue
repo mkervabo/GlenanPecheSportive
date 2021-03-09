@@ -4,7 +4,7 @@
       <h2 class="subscription-title orange">A lire</h2>
       <p class="rules-content dark-olive">
         Merci de votre compréhension.<br /><br />
-        --> Pour toute question nous ne répondrons que sur
+        Pour toute question nous ne répondrons que sur
         <a class="link" href="https://www.facebook.com/glenanpechesportive/"
           >facebook</a
         >
@@ -46,18 +46,11 @@
         <div class="rules-content dark-olive">
           <br />
           <p>
-            <span class="font">130€ par bateau</span> (prix pour les deux
-            équipiers pour l’ensemble de la compétition) comprenant aussi les
-            petits déjeuners et paniers repas du samedi et dimanche midi, ainsi
-            qu’un repas à Concarneau le samedi soir pour les équipages. Il est
-            possible de réserver des
-            <span class="font">
-              diners supplémentaires le samedi soir pour les accompagnants, 20€
-              par personne
-            </span>
+            <span class="font">50€ par bateau</span> (prix pour les deux
+            équipiers pour l’ensemble de la compétition) comprenant ... TODO
           </p>
           <br />
-          <div>
+          <div hidden>
             <label class="dark-olive"
               >Nombres de repas suplémentaire
               <input class="repas" v-model="repas" autocomplete="off" />
@@ -65,7 +58,7 @@
           </div>
           <br />
           <span class="subscription-title2 orange">Total:</span>
-          {{ 130 + repas * 20 }}€
+          {{ 50 + repas * 20 }}€
         </div>
       </div>
       <div class="members">
