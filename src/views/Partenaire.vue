@@ -18,12 +18,20 @@
 </template>
 
 <script>
-import sponsors from "../sponsors";
+import marked from "marked";
+
+const r = require.context("../sponsors", true, /\.json$/);
+const sponsors = r.keys().map(file => r(file));
 
 export default {
   computed: {
     sponsors() {
       return sponsors;
+    }
+  },
+  methods: {
+    markdown(input) {
+      return marked(input, { sanitize: true });
     }
   }
 };
