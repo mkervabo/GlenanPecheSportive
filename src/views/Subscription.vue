@@ -45,7 +45,7 @@
       </div>
       <div class="members">
         <div class="form">
-          <h2 class="subscription-title orange">Patron</h2>
+          <h2 class="subscription-title orange">Capitaine</h2>
           <IdForm ref="patron" />
         </div>
         <div class="form">
@@ -104,7 +104,7 @@
             Vous n'avez pas remplis tout les champs
           </p>
           <p v-show="!($refs.patron && $refs.patron.isOk)" class="form-error">
-            Vous n'avez pas complété le formulaire du patron
+            Vous n'avez pas complété le formulaire du capitaine
           </p>
           <p v-show="!($refs.mousse && $refs.mousse.isOk)" class="form-error">
             Vous n'avez pas complété le formulaire du mousse
