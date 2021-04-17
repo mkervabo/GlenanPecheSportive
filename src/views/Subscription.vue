@@ -139,8 +139,8 @@ export default {
     }
   },
   methods: {
-    generate() {
-      fetch("/.netlify/functions/subscription", {
+    async generate() {
+      const { status } = await fetch("/.netlify/functions/subscription", {
         method: "POST",
         headers: {
           "content-type": "application/json"
@@ -153,15 +153,30 @@ export default {
           mousse: this.$refs.mousse.toJSON()
         })
       });
-    },
-    drawIdForm(page, idForm, offset) {
-      page.moveTo(0, page.getSize().height);
-      page.moveDown(159);
-      page.moveRight(173 + offset);
-      for (const [i, value] of idForm.toArray().entries()) {
-        page.moveDown(19);
-        if (i >= 8) page.moveDown(3);
-        page.drawText(value || "");
+
+      if (status === 200) {
+        this.$toasted.show("Inscription validée", {
+          className: "font toast-success",
+          position: "top-center",
+          action: {
+            text: "X",
+            onClick: (e, toastObject) => {
+              toastObject.goAway(0);
+            }
+          }
+        });
+      } else {
+        this.$toasted.show("Erreur lors de l'inscription", {
+          type: "error",
+          className: "font",
+          position: "top-center",
+          action: {
+            text: "X",
+            onClick: (e, toastObject) => {
+              toastObject.goAway(0);
+            }
+          }
+        });
       }
     }
   }
@@ -309,6 +324,10 @@ button:disabled {
   width: 100%;
   text-align: right;
   white-space: nowrap;
+}
+
+.toast-success {
+  background: #f37538 !important;
 }
 
 /*.check-box {
