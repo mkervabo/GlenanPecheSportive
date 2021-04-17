@@ -3,8 +3,15 @@
     <div class="subscription-important">
       <h2 class="subscription-title orange">A lire</h2>
       <p class="rules-content dark-olive">
+        Cette année a l'occasion de l'Open des Glénant 2021 nous organisons un
+        tirage au sort afin de sélectionner les participants. L'inscription
+        officielle des gagnants aura lieu après ce tirage au sort, nous vous
+        informerons de l'organisation de celui-ci sur notre
+        <a class="link" href="https://www.facebook.com/glenanpechesportive/"
+          >facebook</a
+        >.<br />
         Merci de votre compréhension.<br /><br />
-        Pour toute question nous ne répondrons que sur
+        Pour toute question nous ne répondrons que sur notre
         <a class="link" href="https://www.facebook.com/glenanpechesportive/"
           >facebook</a
         >
@@ -18,47 +25,22 @@
         <div class="rules-content dark-olive">
           <span class="font" style="color: #E53935"
             >Ceci est le formulaire de pré-incription, votre inscription sera
-            validée une fois le formulaire imprimé et posté.</span
-          >
+            validée une le tirgae au sort effectuer.
+          </span>
           <p class="contest-content">
-            Le règlement est par
-            <a class="link" href="/contest/Reglement-open-des-Glenan-2020.pdf"
-              >là</a
-            >
-            ! Il est important de le lire !
+            Le règlement de l'open de 2021 sera disponible dès que possible, il
+            sera rédigé en accord avec les réglementations COVID en vigueur à ce
+            moment-là.
           </p>
           <p class="contest-content">
             Pour plus d'informations ou en cas de problèmes lors de votre
-            inscription vous pouvez nous conacter sur cet email:
-            <a class="link" href="mailto:inscription2020@glenanpechesportive.fr"
-              >inscription2020@glenanpechesportive.fr</a
+            inscription vous pouvez nous contacter sur cet email:
+            <a
+              class="link"
+              href="mailto:inscription2021@glenanpechesportive.bzh"
+              >inscription2021@glenanpechesportive.bzh</a
             >
           </p>
-          <p class="font">Joindre au présent bulletin d'inscription :</p>
-          <p>
-            Les attestations d'assurance responsabilité civile des équipiers et
-            du bateau,
-            <span class="font">et</span> la fiche sécurité dûment remplie et
-            signée. Ansi qu'une photo d'identité de chaque membre d'équipage
-          </p>
-        </div>
-        <h2 class="subscription-title2 orange">Prix de l’inscription:</h2>
-        <div class="rules-content dark-olive">
-          <br />
-          <p>
-            <span class="font">50€ par bateau</span> (prix pour les deux
-            équipiers pour l’ensemble de la compétition) comprenant ... TODO
-          </p>
-          <br />
-          <div hidden>
-            <label class="dark-olive"
-              >Nombres de repas suplémentaire
-              <input class="repas" v-model="repas" autocomplete="off" />
-            </label>
-          </div>
-          <br />
-          <span class="subscription-title2 orange">Total:</span>
-          {{ 50 + repas * 20 }}€
         </div>
       </div>
       <div class="members">
@@ -73,192 +55,6 @@
       </div>
     </div>
     <div class="subscription-part">
-      <div class="form securite">
-        <!-- a modifier a partir de: https://www.ecologique-solidaire.gouv.fr/sites/default/files/equipement_secu_plaisance_4p_DEF_Web.pdf -->
-        <h2 class="subscription-title orange">Équipement obligatoire</h2>
-        <div>
-          <div class="label-form security-form">
-            <label>
-              Équipement individuel de flottabilité par personne embarquée (aide
-              à la flottabilité ou gilet de sauvetage)
-              <input
-                class="check-box"
-                type="checkbox"
-                v-model="securities[0]"
-              />
-            </label>
-          </div>
-          <div class="label-form security-form">
-            <label>
-              Moyen de repérage lumineux. Il peut être collectif (lampe,
-              projecteur, lampe IOR) ou individuel s'il est étanche et porté par
-              chaque personne embarquée
-              <input
-                class="check-box"
-                type="checkbox"
-                v-model="securities[1]"
-              />
-            </label>
-          </div>
-          <div class="label-form security-form">
-            <label>
-              Dispositif d’assèchement fixe ou mobile sauf navires auto-videur
-              <input
-                class="check-box"
-                type="checkbox"
-                v-model="securities[2]"
-              />
-            </label>
-          </div>
-          <div class="label-form security-form">
-            <label>
-              Moyen de remonter à bord une personne tombée à l’eau
-              <input
-                class="check-box"
-                type="checkbox"
-                v-model="securities[3]"
-              />
-            </label>
-          </div>
-          <div class="label-form security-form">
-            <label>
-              Dispositif coupe-circuit en cas d’éjection du pilote si moteur(s)
-              hors bord à barre franche de puissance > 4,5 Kw
-              <input
-                class="check-box"
-                type="checkbox"
-                v-model="securities[4]"
-              />
-            </label>
-          </div>
-          <div class="label-form security-form">
-            <label>
-              <span>
-                Dispositif de lutte contre l’incendie
-                <span class="font">à jour de sa visite d'entretien</span>
-              </span>
-              <input
-                class="check-box"
-                type="checkbox"
-                v-model="securities[5]"
-              />
-            </label>
-          </div>
-          <div class="label-form security-form">
-            <label>
-              Dispositif de remorquage
-              <input
-                class="check-box"
-                type="checkbox"
-                v-model="securities[6]"
-              />
-            </label>
-          </div>
-          <div class="label-form security-form">
-            <label>
-              Ligne de mouillage ou ancre flottante sauf embarcations de
-              capacité inférieur à 5 adultes
-              <input
-                class="check-box"
-                type="checkbox"
-                v-model="securities[7]"
-              />
-            </label>
-          </div>
-          <div class="label-form security-form">
-            <label>
-              Pavillon national Si franchisé
-              <input
-                class="check-box"
-                type="checkbox"
-                v-model="securities[8]"
-              />
-            </label>
-          </div>
-          <div class="label-form security-form">
-            <label>
-              Trois feux rouges automatiques à main
-              <input
-                class="check-box"
-                type="checkbox"
-                v-model="securities[9]"
-              />
-            </label>
-          </div>
-          <div class="label-form security-form">
-            <label>
-              Annuaire de marée
-              <input
-                class="check-box"
-                type="checkbox"
-                v-model="securities[10]"
-              />
-            </label>
-          </div>
-          <div class="label-form security-form">
-            <label>
-              Dispositif repérage et assistance d’une personne tombée à l’eau
-              sauf embarcations de capacité inferieur à 5 adultes et tous
-              pneumatiques
-              <input
-                class="check-box"
-                type="checkbox"
-                v-model="securities[11]"
-              />
-            </label>
-          </div>
-          <div class="label-form security-form">
-            <label>
-              Compas magnétique
-              <input
-                class="check-box"
-                type="checkbox"
-                v-model="securities[12]"
-              />
-            </label>
-          </div>
-          <div class="label-form security-form">
-            <label>
-              Règlement international pour prévenir les abordages en mer (RIPAM)
-              <input
-                class="check-box"
-                type="checkbox"
-                v-model="securities[13]"
-              />
-            </label>
-          </div>
-          <div class="label-form security-form">
-            <label>
-              Document de synthèse du balisage
-              <input
-                class="check-box"
-                type="checkbox"
-                v-model="securities[14]"
-              />
-            </label>
-          </div>
-          <div class="label-form security-form">
-            <label>
-              Carte(s) de navigation
-              <input
-                class="check-box"
-                type="checkbox"
-                v-model="securities[15]"
-              />
-            </label>
-          </div>
-          <div class="label-form security-form">
-            <label>
-              VHF Radiomaritime obligatoire
-              <input
-                class="check-box"
-                type="checkbox"
-                v-model="securities[16]"
-              />
-            </label>
-          </div>
-        </div>
-      </div>
       <div class="rules equipage">
         <h2 class="subscription-title dark-blue">Équipe et Bateau</h2>
         <div class="form-equipage">
@@ -270,20 +66,8 @@
           </div>
           <div class="label-form">
             <label class="dark-olive">
-              Nom du bateau:
-              <input v-model="bateau" />
-            </label>
-          </div>
-          <div class="label-form">
-            <label class="dark-olive">
               Longueur du bateau:
               <input v-model="longueur" />
-            </label>
-          </div>
-          <div class="label-form">
-            <label class="dark-olive">
-              Immatriculation:
-              <input v-model="immatriculation" />
             </label>
           </div>
           <div class="label-form">
@@ -292,24 +76,16 @@
               <input v-model="moteur" />
             </label>
           </div>
-          <div class="label-form">
-            <label class="dark-olive">Compagnie d'assurance:</label>
-            <input v-model="assurance1" />
-          </div>
-          <div class="label-form">
-            <label class="dark-olive">N° de contrat assurance:</label>
-            <input v-model="assurance2" />
-          </div>
         </div>
         <h2 class="subscription-title dark-blue">Valider</h2>
         <div class="rules-content dark-olive">
           <div class="font">En poursuivant:</div>
           <p>
-            En continuant je certifie que je dispose de tous les matériels de
-            sécurité obligatoires pour la catégorie de navigation correspondante
-            à la compétition
+            J'ai conscience que l'association Glénan Pêche Sportive collecte mes
+            informations afin de me recontacter à la fin du tirage au sort et
+            que mes informations ne seront pas utilisées à des fins
+            commerciales.
           </p>
-
           <button
             :disabled="
               !securityOk ||
@@ -319,7 +95,7 @@
             "
             v-on:click="generate"
           >
-            {{ willDownload ? "Télécharger" : "Valider" }}
+            Valider
           </button>
           <p v-show="!securityOk" class="form-error">
             Vous n'avez pas tout l'équipement obligatoire
@@ -333,14 +109,6 @@
           <p v-show="!($refs.mousse && $refs.mousse.isOk)" class="form-error">
             Vous n'avez pas complété le formulaire du mousse
           </p>
-          <p class="contest-content">
-            Si vous rencontrez des problèmes pour remplir l'inscription vous
-            pouvez toujours
-            <a class="link" href="/contest/inscription-2020.pdf"
-              >télécharger un bulletin vierge</a
-            >
-            et le remplir comme avant.
-          </p>
         </div>
       </div>
     </div>
@@ -349,7 +117,6 @@
 
 <script>
 import IdForm from "../components/IdForm";
-import { PDFDocument } from "pdf-lib";
 
 export default {
   components: {
@@ -357,139 +124,35 @@ export default {
   },
   data() {
     return {
-      repas: 0,
       equipage: "",
-      bateau: "",
       longueur: "",
-      immatriculation: "",
-      moteur: "",
-      assurance1: "",
-      assurance2: "",
-      securities: Array.from({ length: 17 }).fill(false)
+      moteur: ""
     };
   },
   computed: {
-    willDownload() {
-      // Edge can't open a blob data url
-      return window.navigator && window.navigator.msSaveOrOpenBlob;
-    },
     securityOk() {
-      return this.securities.every(s => s);
+      // return this.securities.every(s => s);
+      return 1;
     },
     boatOk() {
-      return (
-        this.equipage &&
-        this.bateau &&
-        this.longueur &&
-        this.immatriculation &&
-        this.moteur &&
-        this.assurance1 &&
-        this.assurance2
-      );
+      return this.equipage && this.longueur && this.moteur;
     }
   },
   methods: {
     generate() {
-      const tab = this.willDownload || window.open("/loading.html");
-      const loaded =
-        this.willDownload || new Promise(resolve => (tab.onload = resolve));
-
       fetch("/.netlify/functions/subscription", {
         method: "POST",
         headers: {
           "content-type": "application/json"
         },
         body: JSON.stringify({
-          repas: this.repas,
           equipage: this.equipage,
-          bateau: this.bateau,
           longueur: this.longueur,
-          immatriculation: this.immatriculation,
           moteur: this.moteur,
-          assurance1: this.assurance1,
-          assurance2: this.assurance2,
           patron: this.$refs.patron.toJSON(),
           mousse: this.$refs.mousse.toJSON()
         })
       });
-
-      fetch("/contest/inscription-2020.pdf")
-        .then(res => res.arrayBuffer())
-        .then(pdf => PDFDocument.load(pdf))
-        .then(doc => {
-          const pages = doc.getPages();
-          const firstPage = pages[0];
-          const secondPage = pages[1];
-          const { width, height } = firstPage.getSize();
-
-          window.console.log(width, height);
-
-          firstPage.setFontSize(12);
-
-          firstPage.moveTo(0, height);
-          firstPage.moveDown(143);
-          firstPage.moveRight(143);
-          firstPage.drawText(this.equipage);
-          this.drawIdForm(firstPage, this.$refs.patron, 0);
-          this.drawIdForm(firstPage, this.$refs.mousse, 360 - 173);
-          firstPage.moveTo(0, height);
-          firstPage.moveDown(397);
-          firstPage.moveRight(514);
-          firstPage.drawText(String(this.repas));
-
-          secondPage.setFontSize(12);
-
-          secondPage.moveTo(0, height);
-          secondPage.moveDown(148);
-          secondPage.moveRight(159);
-          secondPage.drawText(this.equipage);
-          secondPage.moveDown(14);
-          secondPage.drawText(this.bateau);
-          secondPage.moveDown(14);
-          secondPage.drawText(this.longueur);
-          secondPage.moveDown(14);
-          secondPage.drawText(this.assurance1);
-
-          secondPage.moveTo(0, height);
-          secondPage.moveDown(148 + 14);
-          secondPage.moveRight(430);
-          secondPage.drawText(this.immatriculation);
-          secondPage.moveDown(14);
-          secondPage.drawText(this.moteur);
-          secondPage.moveDown(14);
-          secondPage.drawText(this.assurance2);
-
-          secondPage.moveTo(0, height);
-          secondPage.moveDown(280);
-          secondPage.moveRight(430);
-
-          for (const [i, security] of this.securities.entries()) {
-            if (security) secondPage.drawText("X");
-            if (i == 0 || i == 1 || i == 4 || i == 10) secondPage.moveDown(10);
-            if (i == 11) secondPage.moveDown(12);
-            secondPage.moveDown(12.2);
-          }
-          return doc.save();
-        })
-        .then(pdf => {
-          const blob = new Blob([pdf], { type: "application/pdf" });
-          if (this.willDownload)
-            window.navigator.msSaveOrOpenBlob(
-              blob,
-              "inscription-open-glenan-2020.pdf"
-            );
-          else {
-            const url = URL.createObjectURL(blob);
-            return loaded.then(() => {
-              tab.location.assign(url);
-              setTimeout(() => {
-                if (tab.location.pathname === "/loading.html") {
-                  tab.close();
-                }
-              }, 500);
-            });
-          }
-        });
     },
     drawIdForm(page, idForm, offset) {
       page.moveTo(0, page.getSize().height);

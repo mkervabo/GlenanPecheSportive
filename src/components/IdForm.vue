@@ -1,17 +1,6 @@
 <template>
   <div class="id-form">
-    <div class="row">
-      <fieldset class="kind">
-        <label
-          >M
-          <input type="radio" value="H" v-model="kind" />
-        </label>
-        <label
-          >Mme
-          <input type="radio" value="F" v-model="kind" />
-        </label>
-      </fieldset>
-    </div>
+    <div class="row"></div>
     <div class="row">
       <fieldset class="section">
         <div class="label-form">
@@ -26,33 +15,8 @@
             <input type="text" v-model="prenom" autocomplete="given-name" />
           </label>
         </div>
-        <div class="label-form">
-          <label
-            >Date de Naissance:
-            <input type="date" v-model="naissance" autocomplete="bday" />
-          </label>
-        </div>
       </fieldset>
-      <fieldset class="section">
-        <div class="label-form">
-          <label
-            >Adresse:
-            <input type="text" v-model="adresse" />
-          </label>
-        </div>
-        <div class="label-form">
-          <label
-            >Code postal:
-            <input type="number" v-model="postal" autocomplete="postal-code" />
-          </label>
-        </div>
-        <div class="label-form">
-          <label
-            >Ville:
-            <input type="text" v-model="ville" autocomplete="address-level1" />
-          </label>
-        </div>
-      </fieldset>
+      <fieldset class="section"></fieldset>
     </div>
     <div class="row">
       <fieldset class="section">
@@ -84,23 +48,7 @@
           </label>
         </div>
       </fieldset>
-      <fieldset class="section">
-        <div class="label-form">
-          <label
-            >Taille T-shirt:
-            <select v-model="t_shirt">
-              <option disabled value>Choisissez</option>
-              <option>XS</option>
-              <option>S</option>
-              <option>M</option>
-              <option>L</option>
-              <option>XL</option>
-              <option>XXL</option>
-              <option>XXXL</option>
-            </select>
-          </label>
-        </div>
-      </fieldset>
+      <fieldset class="section"></fieldset>
     </div>
   </div>
 </template>
@@ -109,17 +57,11 @@
 export default {
   data() {
     return {
-      kind: "H",
       nom: "",
       prenom: "",
-      naissance: "",
-      adresse: "",
-      postal: "",
-      ville: "",
       portable: "",
       fixe: "",
-      email: "",
-      t_shirt: ""
+      email: ""
     };
   },
   computed: {
@@ -131,46 +73,23 @@ export default {
       return (
         this.nom &&
         this.prenom &&
-        this.naissance &&
-        this.adresse &&
-        this.postal &&
-        this.ville &&
-        this.portable &&
-        this.fixe &&
+        (this.portable || this.fixe) &&
         this.email &&
-        this.t_shirt &&
         this.mailOk
       );
     }
   },
   methods: {
     toArray() {
-      return [
-        this.nom,
-        this.prenom,
-        this.adresse,
-        this.postal,
-        this.ville,
-        this.naissance,
-        this.fixe,
-        this.portable,
-        this.email,
-        this.t_shirt
-      ];
+      return [this.nom, this.prenom, this.fixe, this.portable, this.email];
     },
     toJSON() {
       return {
-        kind: this.kind,
         nom: this.nom,
         prenom: this.prenom,
-        adresse: this.adresse,
-        postal: this.postal,
-        ville: this.ville,
-        naissance: this.naissance,
         fixe: this.fixe,
         portable: this.portable,
-        email: this.email,
-        t_shirt: this.t_shirt
+        email: this.email
       };
     }
   }
