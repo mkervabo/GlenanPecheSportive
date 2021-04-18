@@ -2,6 +2,31 @@
   <main>
     <div class="fond">
       <div class="articles">
+        <div class="contest">
+          <fa-icon
+            :icon="['fas', 'exclamation-circle']"
+            class="article-icon white"
+          ></fa-icon>
+          <h2 class="contest-title white">Les Inscriptions sont ouverte !</h2>
+          <img class="article-img" src="../assets/contest/annonce2021.png" />
+          <p class="contest-description">
+            Cette année a l'occasion de l'Open des Glénan 2021 qui aura lieu le
+            12 juin nous organisons un tirage au sort afin de sélectionner les
+            participants. L'inscription officielle des gagnants aura lieu après
+            ce tirage au sort, nous vous informerons de l'organisation de
+            celui-ci sur notre
+            <a
+              class="link2"
+              href="https://www.facebook.com/glenanpechesportive/"
+              >facebook</a
+            >.
+          </p>
+          <p class="contest-description">
+            Pour vous inscrire au tirage au sort
+            <a class="link2" href="/subscription">rendez-vous ici</a>. Les
+            inscriptions sont ouverte jusqu'aux 30 mars inclus.
+          </p>
+        </div>
         <div class="next-event">
           <fa-icon
             :icon="['fas', 'exclamation-circle']"

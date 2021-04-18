@@ -4,9 +4,15 @@
       <h2 class="contest-title orange">A savoir</h2>
       <br />
       <div class="contest-content">
-        L'Open se déroulera sur une seule journée le Samedi 12 Juin 2021. Pour
-        plus d'informations rendez-vous
-        <router-link class="link" to="/annonce">ici</router-link> !
+        <p>
+          L'Open se déroulera sur une seule journée le Samedi 12 Juin 2021. Pour
+          plus d'informations rendez-vous
+          <router-link class="link" to="/annonce">ici</router-link> !
+        </p>
+        <p>
+          Les inscriptions sont ouverte jusqu'aux 30 mars,
+          <a class="link2" href="/subscription">rendez-vous ici</a>.
+        </p>
       </div>
       <br />
       <h2 class="contest-title orange">Classement</h2>
