@@ -12,7 +12,7 @@
         >.
       </p>
       <p class="rules-content dark-olive">
-        Les pré-inscriptions sont ouverte
+        Les pré-inscriptions sont ouvertes
         <span class="font" style="color: #E53935"
           >jusqu'aux 30 avril inclus.</span
         >
