@@ -26,7 +26,7 @@
           <p class="contest-description">
             Pour vous inscrire au tirage au sort
             <a class="link2" href="/subscription">rendez-vous ici</a>. Les
-            pré-inscriptions sont ouverte jusqu'aux 30 mars inclus.
+            pré-inscriptions sont ouverte jusqu'aux 30 avril inclus.
           </p>
         </div>
         <div class="next-event">

@@ -14,7 +14,7 @@
       <p class="rules-content dark-olive">
         Les pré-inscriptions sont ouverte
         <span class="font" style="color: #E53935"
-          >jusqu'aux 30 mars inclus.</span
+          >jusqu'aux 30 avril inclus.</span
         >
       </p>
       <p class="rules-content dark-olive">
