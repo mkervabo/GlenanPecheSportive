@@ -9,8 +9,15 @@
         informerons de l'organisation de celui-ci sur notre
         <a class="link" href="https://www.facebook.com/glenanpechesportive/"
           >facebook</a
-        >.<br />
-        Merci de votre compréhension.<br /><br />
+        >.
+      </p>
+      <p class="rules-content dark-olive">
+        Les inscriptions sont ouverte
+        <span class="font" style="color: #E53935"
+          >jusqu'aux 30 mars inclus.</span
+        >
+      </p>
+      <p class="rules-content dark-olive">
         Pour toute question nous ne répondrons que sur notre
         <a class="link" href="https://www.facebook.com/glenanpechesportive/"
           >facebook</a
@@ -19,6 +26,9 @@
         <a class="link" href="mailto:infos@glenanpechesportive.fr"
           >infos@glenanpechesportive.fr</a
         >.
+      </p>
+      <p class="rules-content dark-olive">
+        Merci de votre compréhension.
       </p>
     </div>
     <div class="subscription-part">
@@ -38,7 +48,7 @@
             Pour plus d'informations ou en cas de problèmes lors de votre
             inscription vous pouvez nous contacter sur cet email:
             <a class="link" href="mailto:inscription@glenanpechesportive.bzh"
-              >inscription2021@glenanpechesportive.bzh</a
+              >inscription@glenanpechesportive.bzh</a
             >
           </p>
         </div>
