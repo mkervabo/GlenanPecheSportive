@@ -167,6 +167,8 @@ export default {
         this.$toasted.show("Inscription validée", {
           className: "font toast-success",
           position: "top-center",
+          fullWidth: true,
+          fitToScreen: true,
           action: {
             text: "X",
             onClick: (e, toastObject) => {
@@ -179,6 +181,8 @@ export default {
           type: "error",
           className: "font",
           position: "top-center",
+          fullWidth: true,
+          fitToScreen: true,
           action: {
             text: "X",
             onClick: (e, toastObject) => {
