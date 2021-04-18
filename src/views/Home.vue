@@ -7,7 +7,9 @@
             :icon="['fas', 'exclamation-circle']"
             class="article-icon white"
           ></fa-icon>
-          <h2 class="contest-title white">Les Inscriptions sont ouverte !</h2>
+          <h2 class="contest-title white">
+            Les Pré-inscriptions sont ouverte !
+          </h2>
           <img class="article-img" src="../assets/contest/annonce2021.png" />
           <p class="contest-description">
             Cette année a l'occasion de l'Open des Glénan 2021 qui aura lieu le
@@ -24,7 +26,7 @@
           <p class="contest-description">
             Pour vous inscrire au tirage au sort
             <a class="link2" href="/subscription">rendez-vous ici</a>. Les
-            inscriptions sont ouverte jusqu'aux 30 mars inclus.
+            pré-inscriptions sont ouverte jusqu'aux 30 mars inclus.
           </p>
         </div>
         <div class="next-event">
