@@ -3,7 +3,7 @@
     <div class="subscription-important">
       <h2 class="subscription-title orange">A lire</h2>
       <p class="rules-content dark-olive">
-        Cette année a l'occasion de l'Open des Glénant 2021 nous organisons un
+        Cette année a l'occasion de l'Open des Glénan 2021 nous organisons un
         tirage au sort afin de sélectionner les participants. L'inscription
         officielle des gagnants aura lieu après ce tirage au sort, nous vous
         informerons de l'organisation de celui-ci sur notre
@@ -16,7 +16,9 @@
           >facebook</a
         >
         en mp ou sur notre mail que vous trouverez
-        <a class="link" href="mailto:infos@glenanpechesportive.fr">ici</a>.
+        <a class="link" href="mailto:infos@glenanpechesportive.fr"
+          >infos@glenanpechesportive.fr</a
+        >.
       </p>
     </div>
     <div class="subscription-part">
@@ -25,7 +27,7 @@
         <div class="rules-content dark-olive">
           <span class="font" style="color: #E53935"
             >Ceci est le formulaire de pré-incription, votre inscription sera
-            validée une le tirgae au sort effectuer.
+            validée une fois le tirage au sort effectuer.
           </span>
           <p class="contest-content">
             Le règlement de l'open de 2021 sera disponible dès que possible, il
@@ -35,9 +37,7 @@
           <p class="contest-content">
             Pour plus d'informations ou en cas de problèmes lors de votre
             inscription vous pouvez nous contacter sur cet email:
-            <a
-              class="link"
-              href="mailto:inscription2021@glenanpechesportive.bzh"
+            <a class="link" href="mailto:inscription@glenanpechesportive.bzh"
               >inscription2021@glenanpechesportive.bzh</a
             >
           </p>
@@ -82,8 +82,7 @@
           <div class="font">En poursuivant:</div>
           <p>
             J'ai conscience que l'association Glénan Pêche Sportive collecte mes
-            informations afin de me recontacter à la fin du tirage au sort et
-            que mes informations ne seront pas utilisées à des fins
+            informations et qu'elles ne seront pas utilisées à des fins
             commerciales.
           </p>
           <button
@@ -329,10 +328,4 @@ button:disabled {
 .toast-success {
   background: #f37538 !important;
 }
-
-/*.check-box {
-	width: 25px;
-	height: 25px;
-	color: #f37538;
-}*/
 </style>
