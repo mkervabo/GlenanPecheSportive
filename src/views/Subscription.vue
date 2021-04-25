@@ -149,18 +149,25 @@ export default {
   },
   methods: {
     async generate() {
+      const formData = new FormData();
+
+      formData.append("form-name", "sub");
+      formData.append("equipage", this.equipage);
+
       const { status } = await fetch("/.netlify/functions/subscription", {
         method: "POST",
         headers: {
-          "content-type": "application/json"
+          "content-type": "multipart/form-data"
         },
-        body: JSON.stringify({
-          equipage: this.equipage,
-          longueur: this.longueur,
-          moteur: this.moteur,
-          patron: this.$refs.patron.toJSON(),
-          mousse: this.$refs.mousse.toJSON()
-        })
+        body: formData
+        // body: JSON.stringify({
+
+        //   equipage: this.equipage,
+        //   longueur: this.longueur,
+        //   moteur: this.moteur,
+        //   patron: this.$refs.patron.toJSON(),
+        //   mousse: this.$refs.mousse.toJSON()
+        // })
       });
 
       if (status === 200) {
