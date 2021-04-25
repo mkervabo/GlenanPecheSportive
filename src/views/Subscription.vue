@@ -154,7 +154,7 @@ export default {
       formData.append("form-name", "sub");
       formData.append("equipage", this.equipage);
 
-      const { status } = await fetch("/.netlify/functions/subscription", {
+      const { status } = await fetch("/", {
         method: "POST",
         headers: {
           "content-type": "multipart/form-data"
