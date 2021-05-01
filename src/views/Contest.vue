@@ -10,8 +10,7 @@
           <router-link class="link" to="/annonce">ici</router-link> !
         </p>
         <p>
-          Les pré-inscriptions sont ouvertes jusqu'aux 30 avril,
-          <a class="link2" href="/subscription">rendez-vous ici</a>.
+          Les pré-inscriptions sont fermées.
         </p>
       </div>
       <br />

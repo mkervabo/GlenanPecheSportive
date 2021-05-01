@@ -1,7 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import Subscription from "../views/Subscription.vue";
+// import Subscription from "../views/Subscription.vue";
 import Contest from "../views/Contest.vue";
 import Association from "../views/Association.vue";
 import Partenaire from "../views/Partenaire.vue";
@@ -63,11 +63,11 @@ const routes = [
       image: require("../assets/navbar/Penfret.svg")
     }
   },
-  {
-    path: "/subscription",
-    name: "subscription",
-    component: Subscription
-  },
+  // {
+  //   path: "/subscription",
+  //   name: "subscription",
+  //   component: Subscription
+  // },
   {
     path: "/annonce",
     name: "annonce",

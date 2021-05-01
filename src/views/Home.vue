@@ -8,7 +8,7 @@
             class="article-icon white"
           ></fa-icon>
           <h2 class="contest-title white">
-            Les Pré-inscriptions sont ouvertes !
+            Les Pré-inscriptions sont fermées !
           </h2>
           <img class="article-img" src="../assets/contest/annonce2021.png" />
           <p class="contest-description">
@@ -22,11 +22,6 @@
               href="https://www.facebook.com/glenanpechesportive/"
               >facebook</a
             >.
-          </p>
-          <p class="contest-description">
-            Pour vous inscrire au tirage au sort
-            <a class="link2" href="/subscription">rendez-vous ici</a>. Les
-            pré-inscriptions sont ouvertes jusqu'aux 30 avril inclus.
           </p>
         </div>
         <div class="next-event">
