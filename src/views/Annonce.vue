@@ -44,13 +44,7 @@
     <div class="annonce_info white" id="equipes">
       <h2 class="subscription-title orange">Résultats</h2>
       <p class="annonce-content dark-olive">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut felis risus,
-        sagittis eget quam id, varius ultricies mi. Quisque ac nisl fermentum,
-        viverra nunc nec, egestas diam. Nam nec diam sit amet mi vestibulum
-        faucibus ut et metus. Nullam in mauris blandit, euismod nibh vel,
-        maximus turpis. Donec in nunc augue. Maecenas id ex neque. Donec
-        fermentum, nulla tincidunt sagittis congue, ligula massa vulputate
-        velit, sed vestibulum neque lectus a nulla.
+        La liste des participants de cette année est ci-dessous:
       </p>
     </div>
     <div class="annonce_equipes white" v-if="teams !== null">

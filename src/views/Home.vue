@@ -8,21 +8,12 @@
             class="article-icon white"
           ></fa-icon>
           <h2 class="contest-title white">
-            Les Pré-inscriptions sont fermées !
+            Le résultat du tirage au sort
           </h2>
           <img class="article-img" src="../assets/contest/annonce2021.png" />
           <p class="contest-description">
-            <a class="link2" href="/annonce#equipes">lire la suite ...</a>
-            Cette année a l'occasion de l'Open des Glénan 2021 qui aura lieu le
-            12 juin nous organisons un tirage au sort afin de sélectionner les
-            participants. L'inscription officielle des gagnants aura lieu après
-            ce tirage au sort, nous vous informerons de l'organisation de
-            celui-ci sur notre
-            <a
-              class="link2"
-              href="https://www.facebook.com/glenanpechesportive/"
-              >facebook</a
-            >.
+            Le tirage au sort a eu lieu, pour voir la liste des sélectionnés
+            <a class="link2" href="/annonce#equipes">par ici !</a>
           </p>
         </div>
         <div class="next-event">
