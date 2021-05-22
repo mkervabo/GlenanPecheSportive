@@ -12,8 +12,8 @@ const sheets = google.sheets({ version: "v4", auth });
 
 exports.handler = async () => {
   const { data } = await sheets.spreadsheets.values.get({
-    spreadsheetId: "1Q7WxFWKPz8u2s6SoCiUfoveFbKTXPNsS0fQA8i8MuB4",
-    range: "A:B"
+    spreadsheetId: "140_Q_ZUeG7TfmV5_yfShMWMUvGZ_F1ue8dKF7w3d2v0",
+    range: "Liste tirage au sort!A:B"
   });
 
   return {

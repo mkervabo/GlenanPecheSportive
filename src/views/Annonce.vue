@@ -41,7 +41,13 @@
         <a class="link" href="mailto:infos@glenanpechesportive.fr">ici</a>.
       </p>
     </div>
-    <!-- <div class="annonce_equipes white" v-if="teams !== null">
+    <div class="annonce_info white" id="equipes">
+      <h2 class="subscription-title orange">Résultats</h2>
+      <p class="annonce-content dark-olive">
+        La liste des participants de cette année est ci-dessous:
+      </p>
+    </div>
+    <div class="annonce_equipes white" v-if="teams !== null">
       <table>
         <tbody>
           <Equipe
@@ -53,31 +59,30 @@
         </tbody>
       </table>
     </div>
-    <img v-else src="/loading.svg" /> -->
+    <img v-else src="/loading.svg" />
   </main>
 </template>
 
 <script>
-// import Equipe from "../components/Equipe";
-
-// export default {
-//   components: {
-//     Equipe
-//   },
-//   data() {
-//     return {
-//       teams: null
-//     };
-//   },
-//   mounted() {
-//     window.console.log("mounted");
-//     const minTime = new Promise(resolve => setTimeout(resolve, 1000));
-//     fetch("/.netlify/functions/teams")
-//       .then(res => res.json())
-//       .then(e => minTime.then(() => e))
-//       .then(teams => (this.teams = teams));
-//   }
-// };
+import Equipe from "../components/Equipe";
+export default {
+  components: {
+    Equipe
+  },
+  data() {
+    return {
+      teams: null
+    };
+  },
+  mounted() {
+    window.console.log("mounted");
+    const minTime = new Promise(resolve => setTimeout(resolve, 1000));
+    fetch("/.netlify/functions/teams")
+      .then(res => res.json())
+      .then(e => minTime.then(() => e))
+      .then(teams => (this.teams = teams));
+  }
+};
 </script>
 
 <style>
@@ -89,14 +94,12 @@
   flex-wrap: wrap;
   justify-content: center;
 }
-
 .annonce-content {
   font: caption;
   margin-left: 10px;
   margin-right: 10px;
   text-align: justify;
 }
-
 .annonce_info {
   max-width: 900px;
   padding: 10px;
@@ -104,7 +107,6 @@
   background: #f2f2f2;
   text-align: left;
 }
-
 .annonce_equipes {
   width: 100%;
   max-width: 900px;
