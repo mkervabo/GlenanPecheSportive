@@ -12,6 +12,7 @@
           </h2>
           <img class="article-img" src="../assets/contest/annonce2021.png" />
           <p class="contest-description">
+            <a class="link2" href="/annonce#equipes">lire la suite ...</a>
             Cette année a l'occasion de l'Open des Glénan 2021 qui aura lieu le
             12 juin nous organisons un tirage au sort afin de sélectionner les
             participants. L'inscription officielle des gagnants aura lieu après
