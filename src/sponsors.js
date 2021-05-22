@@ -147,5 +147,10 @@ export default [
     name: "Coprexma",
     link: "https://coprexma.fr/",
     logo: require("./assets/partner/coprexma.jpg")
+  },
+  {
+    name: "Pafex",
+    link: "https://pafex.fr/",
+    logo: require("./assets/partner/pafex.png")
   }
 ];
