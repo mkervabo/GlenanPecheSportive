@@ -85,6 +85,7 @@ export default {
   },
   computed: {
     sortTeams() {
+      window.console.log(this.teams);
       return this.teams.slice(0).sort(function(a, b) {
         return a[1] > b[1] ? 1 : -1;
       });
