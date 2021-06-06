@@ -55,7 +55,7 @@
             :key="team[0]"
             :number="index + 1 + '-'"
             :name="team[0]"
-            :score="'-' + team[1]"
+            :score="'-  ' + team[1]"
           />
         </tbody>
       </table>
