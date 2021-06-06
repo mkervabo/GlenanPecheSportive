@@ -53,7 +53,7 @@
           <Equipe
             v-for="(team, index) in sortTeams"
             :key="team[0]"
-            :number="index + '-'"
+            :number="index + 1 + '-'"
             :name="team[0]"
             :score="'-' + team[1]"
           />
@@ -87,7 +87,7 @@ export default {
     sortTeams() {
       window.console.log(this.teams);
       return this.teams.slice(0).sort(function(a, b) {
-        return parseInt(a[1], 10) > parseInt(b[1], 10) ? 1 : -1;
+        return parseInt(a[1], 10) < parseInt(b[1], 10) ? 1 : -1;
       });
     }
   }
