@@ -2,12 +2,13 @@
   <tr class="equipe">
     <td class="equipe_number font">{{ number }}</td>
     <td class="equipe_name white">{{ name }}</td>
+    <td class="equipe_name white">{{ score }}</td>
   </tr>
 </template>
 
 <script>
 export default {
-  props: ["number", "name"]
+  props: ["number", "name", "score"]
 };
 </script>
 
