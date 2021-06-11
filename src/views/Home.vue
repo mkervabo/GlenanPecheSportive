@@ -73,7 +73,15 @@
           </p>
           <p class="contest-description">
             Carte de la zone
-            <a class="link2" href="/contest/Carte-zone-de-pêche.git">ici</a>,
+            <a class="link2" href="/contest/Carte-zone-de-pêche.gif">ici</a
+            >.<br />
+            Points gps de la zone
+            <a
+              class="link2"
+              href="/contest/TraceZonePecheOpenGlenan.gpx"
+              download
+              >ici</a
+            >.
           </p>
           <p class="event-description">
             <router-link
