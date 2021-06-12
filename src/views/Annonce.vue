@@ -44,7 +44,8 @@
     <div class="annonce_info white" id="equipes">
       <h2 class="subscription-title orange">Résultats</h2>
       <p class="annonce-content dark-olive">
-        La liste des participants de cette année est ci-dessous:
+        Ci-dessous se trouvent les résultats en continu de la compétition. Ils
+        seront mis à jour régulièrement au cours de la journée.
       </p>
     </div>
     <div class="annonce_equipes white" v-if="teams !== null">

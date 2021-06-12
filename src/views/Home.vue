@@ -8,11 +8,14 @@
             class="article-icon white"
           ></fa-icon>
           <h2 class="contest-title white">
-            Le résultat du tirage au sort
+            Les résultats
           </h2>
           <img class="article-img" src="../assets/contest/annonce2021.png" />
           <p class="contest-description">
-            Le tirage au sort a eu lieu, pour voir la liste des sélectionnés
+            Aujourd'hui c'est le grand jour, bonne chance au compétiteur et
+            bonne journée !<br />
+            Pour pouvoir suivre les résultats de la compétition tout au long de
+            la journée c'est
             <a class="link2" href="/annonce#equipes">par ici !</a>
           </p>
         </div>
