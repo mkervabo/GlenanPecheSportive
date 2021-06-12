@@ -44,17 +44,19 @@
     <div class="annonce_info white" id="equipes">
       <h2 class="subscription-title orange">Résultats</h2>
       <p class="annonce-content dark-olive">
-        La liste des participants de cette année est ci-dessous:
+        Ci-dessous se trouvent les résultats en continu de la compétition. Ils
+        seront mis à jour régulièrement au cours de la journée.
       </p>
     </div>
     <div class="annonce_equipes white" v-if="teams !== null">
       <table>
         <tbody>
           <Equipe
-            v-for="team in teams"
+            v-for="(team, index) in sortTeams"
             :key="team[0]"
-            :number="(team[0], '-')"
-            :name="team[1]"
+            :number="index + 1 + '-'"
+            :name="team[0]"
+            :score="'|  ' + team[1]"
           />
         </tbody>
       </table>
@@ -71,7 +73,7 @@ export default {
   },
   data() {
     return {
-      teams: null
+      teams: []
     };
   },
   mounted() {
@@ -81,6 +83,14 @@ export default {
       .then(res => res.json())
       .then(e => minTime.then(() => e))
       .then(teams => (this.teams = teams));
+  },
+  computed: {
+    sortTeams() {
+      window.console.log(this.teams);
+      return this.teams.slice(0).sort(function(a, b) {
+        return parseInt(a[1], 10) < parseInt(b[1], 10) ? 1 : -1;
+      });
+    }
   }
 };
 </script>
