@@ -42,7 +42,7 @@
       </p>
     </div>
     <div class="annonce_info white" id="equipes">
-      <h2 class="subscription-title orange">Résultats</h2>
+      <h2 class="subscription-title orange">Classement</h2>
       <p class="annonce-content dark-olive">
         Ci-dessous se trouvent les résultats en continu de la compétition. Ils
         seront mis à jour régulièrement au cours de la journée.
