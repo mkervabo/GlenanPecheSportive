@@ -1,6 +1,5 @@
 <template>
   <div class="id-form">
-    <div class="row"></div>
     <div class="row">
       <fieldset class="kind">
         <label
@@ -12,7 +11,7 @@
           <input type="radio" value="F" v-model="kind" />
         </label>
       </fieldset>
-      <fieldset class="kind">
+      <fieldset v-show="!captain" class="kind">
         <label
           >Mineur
           <input type="checkbox" v-model="minor" />
@@ -130,6 +129,7 @@ export default {
       t_shirt: ""
     };
   },
+  props: ["captain"],
   computed: {
     mailOk() {
       var mailReg = new RegExp(/^([\w-.]+)@((?:[\w]+\.)+)([a-zA-Z]{2})/i);
@@ -139,24 +139,47 @@ export default {
       return (
         this.nom &&
         this.prenom &&
+        this.naissance &&
+        this.adresse &&
+        this.postal &&
+        this.ville &&
         (this.portable || this.fixe) &&
         this.email &&
+        this.t_shirt &&
         this.mailOk
       );
-    }
-  },
-  methods: {
-    toArray() {
-      return [this.nom, this.prenom, this.fixe, this.portable, this.email];
     },
-    toJSON() {
-      return {
-        nom: this.nom,
-        prenom: this.prenom,
-        fixe: this.fixe,
-        portable: this.portable,
-        email: this.email
-      };
+    methods: {
+      toArray() {
+        return [
+          this.nom,
+          this.prenom,
+          this.adresse,
+          this.postal,
+          this.ville,
+          this.naissance,
+          this.fixe,
+          this.portable,
+          this.email,
+          this.t_shirt
+        ];
+      },
+      toJSON() {
+        return {
+          kind: this.kind,
+          minor: this.minor,
+          nom: this.nom,
+          prenom: this.prenom,
+          adresse: this.adresse,
+          postal: this.postal,
+          ville: this.ville,
+          naissance: this.naissance,
+          fixe: this.fixe,
+          portable: this.portable,
+          email: this.email,
+          t_shirt: this.t_shirt
+        };
+      }
     }
   }
 };

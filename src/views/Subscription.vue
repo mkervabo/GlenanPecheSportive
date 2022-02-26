@@ -66,11 +66,11 @@
       <div class="members">
         <div class="form">
           <h2 class="subscription-title orange">Capitaine</h2>
-          <IdForm ref="patron" />
+          <IdForm ref="patron" :captain="true" />
         </div>
         <div class="form">
           <h2 class="subscription-title orange">Mousse</h2>
-          <IdForm ref="mousse" />
+          <IdForm ref="mousse" :captain="false" />
         </div>
       </div>
     </div>
