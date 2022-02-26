@@ -37,7 +37,7 @@
         <div class="rules-content dark-olive">
           <span class="font" style="color: #E53935"
             >Ceci est le formulaire de pré-incription, votre inscription sera
-            validée une fois le tirage au sort effectuer.
+            validée une fois le formulaire imprimé et posté.
           </span>
           <p class="contest-content">
             Le règlement de l'open de 2021 sera disponible dès que possible, il
@@ -51,6 +51,27 @@
               >inscription@glenanpechesportive.bzh</a
             >
           </p>
+          <p>
+            <span class="font">130€ par bateau</span> (prix pour les deux
+            équipiers pour l’ensemble de la compétition) comprenant aussi les
+            petits déjeuners et paniers repas du samedi et dimanche midi, ainsi
+            qu’un repas à Concarneau le samedi soir pour les équipages. Il est
+            possible de réserver des
+            <span class="font">
+              diners supplémentaires le samedi soir pour les accompagnants, 20€
+              par personne
+            </span>
+          </p>
+          <br />
+          <div>
+            <label class="dark-olive"
+              >Nombres de repas suplémentaire
+              <input class="repas" v-model="repas" autocomplete="off" />
+            </label>
+          </div>
+          <br />
+          <span class="subscription-title2 orange">Total:</span>
+          {{ 130 + repas * 20 }}€
         </div>
       </div>
       <div class="members">
@@ -65,6 +86,191 @@
       </div>
     </div>
     <div class="subscription-part">
+      <div class="form securite">
+        <h2 class="subscription-title orange">Équipement obligatoire</h2>
+        <div>
+          <div class="label-form security-form">
+            <label>
+              Équipement individuel de flottabilité par personne embarquée (aide
+              à la flottabilité ou gilet de sauvetage)
+              <input
+                class="check-box"
+                type="checkbox"
+                v-model="securities[0]"
+              />
+            </label>
+          </div>
+          <div class="label-form security-form">
+            <label>
+              Moyen de repérage lumineux. Il peut être collectif (lampe,
+              projecteur, lampe IOR) ou individuel s'il est étanche et porté par
+              chaque personne embarquée
+              <input
+                class="check-box"
+                type="checkbox"
+                v-model="securities[1]"
+              />
+            </label>
+          </div>
+          <div class="label-form security-form">
+            <label>
+              Dispositif d’assèchement fixe ou mobile sauf navires auto-videur
+              <input
+                class="check-box"
+                type="checkbox"
+                v-model="securities[2]"
+              />
+            </label>
+          </div>
+          <div class="label-form security-form">
+            <label>
+              Moyen de remonter à bord une personne tombée à l’eau
+              <input
+                class="check-box"
+                type="checkbox"
+                v-model="securities[3]"
+              />
+            </label>
+          </div>
+          <div class="label-form security-form">
+            <label>
+              Dispositif coupe-circuit en cas d’éjection du pilote si moteur(s)
+              hors bord à barre franche de puissance > 4,5 Kw
+              <input
+                class="check-box"
+                type="checkbox"
+                v-model="securities[4]"
+              />
+            </label>
+          </div>
+          <div class="label-form security-form">
+            <label>
+              <span>
+                Dispositif de lutte contre l’incendie
+                <span class="font">à jour de sa visite d'entretien</span>
+              </span>
+              <input
+                class="check-box"
+                type="checkbox"
+                v-model="securities[5]"
+              />
+            </label>
+          </div>
+          <div class="label-form security-form">
+            <label>
+              Dispositif de remorquage
+              <input
+                class="check-box"
+                type="checkbox"
+                v-model="securities[6]"
+              />
+            </label>
+          </div>
+          <div class="label-form security-form">
+            <label>
+              Ligne de mouillage ou ancre flottante sauf embarcations de
+              capacité inférieur à 5 adultes
+              <input
+                class="check-box"
+                type="checkbox"
+                v-model="securities[7]"
+              />
+            </label>
+          </div>
+          <div class="label-form security-form">
+            <label>
+              Pavillon national Si franchisé
+              <input
+                class="check-box"
+                type="checkbox"
+                v-model="securities[8]"
+              />
+            </label>
+          </div>
+          <div class="label-form security-form">
+            <label>
+              Trois feux rouges automatiques à main
+              <input
+                class="check-box"
+                type="checkbox"
+                v-model="securities[9]"
+              />
+            </label>
+          </div>
+          <div class="label-form security-form">
+            <label>
+              Annuaire de marée
+              <input
+                class="check-box"
+                type="checkbox"
+                v-model="securities[10]"
+              />
+            </label>
+          </div>
+          <div class="label-form security-form">
+            <label>
+              Dispositif repérage et assistance d’une personne tombée à l’eau
+              sauf embarcations de capacité inferieur à 5 adultes et tous
+              pneumatiques
+              <input
+                class="check-box"
+                type="checkbox"
+                v-model="securities[11]"
+              />
+            </label>
+          </div>
+          <div class="label-form security-form">
+            <label>
+              Compas magnétique
+              <input
+                class="check-box"
+                type="checkbox"
+                v-model="securities[12]"
+              />
+            </label>
+          </div>
+          <div class="label-form security-form">
+            <label>
+              Règlement international pour prévenir les abordages en mer (RIPAM)
+              <input
+                class="check-box"
+                type="checkbox"
+                v-model="securities[13]"
+              />
+            </label>
+          </div>
+          <div class="label-form security-form">
+            <label>
+              Document de synthèse du balisage
+              <input
+                class="check-box"
+                type="checkbox"
+                v-model="securities[14]"
+              />
+            </label>
+          </div>
+          <div class="label-form security-form">
+            <label>
+              Carte(s) de navigation
+              <input
+                class="check-box"
+                type="checkbox"
+                v-model="securities[15]"
+              />
+            </label>
+          </div>
+          <div class="label-form security-form">
+            <label>
+              VHF Radiomaritime obligatoire
+              <input
+                class="check-box"
+                type="checkbox"
+                v-model="securities[16]"
+              />
+            </label>
+          </div>
+        </div>
+      </div>
       <div class="rules equipage">
         <h2 class="subscription-title dark-blue">Équipe et Bateau</h2>
         <div class="form-equipage">
@@ -76,8 +282,26 @@
           </div>
           <div class="label-form">
             <label class="dark-olive">
+              Nom de l'équipage:
+              <input v-model="equipage" />
+            </label>
+          </div>
+          <div class="label-form">
+            <label class="dark-olive">
+              Nom du bateau:
+              <input v-model="bateau" />
+            </label>
+          </div>
+          <div class="label-form">
+            <label class="dark-olive">
               Longueur du bateau:
               <input v-model="longueur" />
+            </label>
+          </div>
+          <div class="label-form">
+            <label class="dark-olive">
+              Immatriculation:
+              <input v-model="immatriculation" />
             </label>
           </div>
           <div class="label-form">
@@ -85,6 +309,14 @@
               Puissance moteur:
               <input v-model="moteur" />
             </label>
+          </div>
+          <div class="label-form">
+            <label class="dark-olive">Compagnie d'assurance:</label>
+            <input v-model="assurance1" />
+          </div>
+          <div class="label-form">
+            <label class="dark-olive">N° de contrat assurance:</label>
+            <input v-model="assurance2" />
           </div>
         </div>
         <h2 class="subscription-title dark-blue">Valider</h2>
@@ -133,18 +365,31 @@ export default {
   },
   data() {
     return {
+      repas: 0,
       equipage: "",
+      bateau: "",
       longueur: "",
-      moteur: ""
+      immatriculation: "",
+      moteur: "",
+      assurance1: "",
+      assurance2: "",
+      securities: Array.from({ length: 17 }).fill(false)
     };
   },
   computed: {
     securityOk() {
-      // return this.securities.every(s => s);
-      return 1;
+      return this.securities.every(s => s);
     },
     boatOk() {
-      return this.equipage && this.longueur && this.moteur;
+      return (
+        this.equipage &&
+        this.bateau &&
+        this.longueur &&
+        this.immatriculation &&
+        this.moteur &&
+        this.assurance1 &&
+        this.assurance2
+      );
     }
   },
   methods: {
