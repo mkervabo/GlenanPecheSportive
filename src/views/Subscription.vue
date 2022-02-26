@@ -3,19 +3,8 @@
     <div class="subscription-important">
       <h2 class="subscription-title orange">A lire</h2>
       <p class="rules-content dark-olive">
-        Cette année a l'occasion de l'Open des Glénan 2021 nous organisons un
-        tirage au sort afin de sélectionner les participants. L'inscription
-        officielle des gagnants aura lieu après ce tirage au sort, nous vous
-        informerons de l'organisation de celui-ci sur notre
-        <a class="link" href="https://www.facebook.com/glenanpechesportive/"
-          >facebook</a
-        >.
-      </p>
-      <p class="rules-content dark-olive">
         Les pré-inscriptions sont ouvertes
-        <span class="font" style="color: #E53935"
-          >jusqu'aux 30 avril inclus.</span
-        >
+        <span class="font" style="color: #E53935">jusqu'aux ?? inclus.</span>
       </p>
       <p class="rules-content dark-olive">
         Pour toute question nous ne répondrons que sur notre
@@ -40,7 +29,7 @@
             validée une fois le formulaire imprimé et posté.
           </span>
           <p class="contest-content">
-            Le règlement de l'open de 2021 sera disponible dès que possible, il
+            Le règlement de l'open de 2022 sera disponible dès que possible, il
             sera rédigé en accord avec les réglementations COVID en vigueur à ce
             moment-là.
           </p>
