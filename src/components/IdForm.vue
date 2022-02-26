@@ -2,6 +2,24 @@
   <div class="id-form">
     <div class="row"></div>
     <div class="row">
+      <fieldset class="kind">
+        <label
+          >M
+          <input type="radio" value="H" v-model="kind" />
+        </label>
+        <label
+          >Mme
+          <input type="radio" value="F" v-model="kind" />
+        </label>
+      </fieldset>
+      <fieldset class="kind">
+        <label
+          >Mineur
+          <input type="checkbox" v-model="minor" />
+        </label>
+      </fieldset>
+    </div>
+    <div class="row">
       <fieldset class="section">
         <div class="label-form">
           <label
@@ -15,8 +33,33 @@
             <input type="text" v-model="prenom" autocomplete="given-name" />
           </label>
         </div>
+        <div class="label-form">
+          <label
+            >Date de Naissance:
+            <input type="date" v-model="naissance" autocomplete="bday" />
+          </label>
+        </div>
       </fieldset>
-      <fieldset class="section"></fieldset>
+      <fieldset class="section">
+        <div class="label-form">
+          <label
+            >Adresse:
+            <input type="text" v-model="adresse" />
+          </label>
+        </div>
+        <div class="label-form">
+          <label
+            >Code postal:
+            <input type="number" v-model="postal" autocomplete="postal-code" />
+          </label>
+        </div>
+        <div class="label-form">
+          <label
+            >Ville:
+            <input type="text" v-model="ville" autocomplete="address-level1" />
+          </label>
+        </div>
+      </fieldset>
     </div>
     <div class="row">
       <fieldset class="section">
@@ -48,7 +91,23 @@
           </label>
         </div>
       </fieldset>
-      <fieldset class="section"></fieldset>
+      <fieldset class="section">
+        <div class="label-form">
+          <label
+            >Taille T-shirt:
+            <select v-model="t_shirt">
+              <option disabled value>Choisissez</option>
+              <option>XS</option>
+              <option>S</option>
+              <option>M</option>
+              <option>L</option>
+              <option>XL</option>
+              <option>XXL</option>
+              <option>XXXL</option>
+            </select>
+          </label>
+        </div>
+      </fieldset>
     </div>
   </div>
 </template>
@@ -57,11 +116,18 @@
 export default {
   data() {
     return {
+      kind: "H",
+      minor: false,
       nom: "",
       prenom: "",
+      naissance: "",
+      adresse: "",
+      postal: "",
+      ville: "",
       portable: "",
       fixe: "",
-      email: ""
+      email: "",
+      t_shirt: ""
     };
   },
   computed: {
