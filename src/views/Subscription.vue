@@ -389,9 +389,14 @@ export default {
           "content-type": "application/json"
         },
         body: JSON.stringify({
+          repas: this.repas,
           equipage: this.equipage,
+          bateau: this.bateau,
           longueur: this.longueur,
+          immatriculation: this.immatriculation,
           moteur: this.moteur,
+          assurance1: this.assurance1,
+          assurance2: this.assurance2,
           patron: this.$refs.patron.toJSON(),
           mousse: this.$refs.mousse.toJSON()
         })
