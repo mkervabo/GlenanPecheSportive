@@ -271,12 +271,6 @@
           </div>
           <div class="label-form">
             <label class="dark-olive">
-              Nom de l'équipage:
-              <input v-model="equipage" />
-            </label>
-          </div>
-          <div class="label-form">
-            <label class="dark-olive">
               Nom du bateau:
               <input v-model="bateau" />
             </label>

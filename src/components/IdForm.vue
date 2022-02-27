@@ -134,21 +134,21 @@ export default {
     mailOk() {
       var mailReg = new RegExp(/^([\w-.]+)@((?:[\w]+\.)+)([a-zA-Z]{2})/i);
       return mailReg.test(this.email);
+    },
+    isOk() {
+      return (
+        this.nom &&
+        this.prenom &&
+        this.naissance &&
+        this.adresse &&
+        this.postal &&
+        this.ville &&
+        (this.portable || this.fixe) &&
+        this.email &&
+        this.t_shirt &&
+        this.mailOk
+      );
     }
-  },
-  isOk() {
-    return (
-      this.nom &&
-      this.prenom &&
-      this.naissance &&
-      this.adresse &&
-      this.postal &&
-      this.ville &&
-      (this.portable || this.fixe) &&
-      this.email &&
-      this.t_shirt &&
-      this.mailOk
-    );
   },
   methods: {
     toArray() {
