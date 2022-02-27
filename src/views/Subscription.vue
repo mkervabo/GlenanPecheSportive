@@ -347,6 +347,7 @@
 
 <script>
 import IdForm from "../components/IdForm";
+import { PDFDocument } from "pdf-lib";
 
 export default {
   components: {
@@ -383,6 +384,10 @@ export default {
   },
   methods: {
     async generate() {
+      const tab = this.willDownload || window.open("/loading.html");
+      const loaded =
+        this.willDownload || new Promise(resolve => (tab.onload = resolve));
+
       const { status } = await fetch("/.netlify/functions/subscription", {
         method: "POST",
         headers: {
@@ -401,7 +406,6 @@ export default {
           mousse: this.$refs.mousse.toJSON()
         })
       });
-
       if (status === 200) {
         this.$toasted.show("Inscription validée", {
           className: "font toast-success",
@@ -429,6 +433,85 @@ export default {
             }
           }
         });
+      }
+      fetch("/contest/inscription-2020.pdf")
+        .then(res => res.arrayBuffer())
+        .then(pdf => PDFDocument.load(pdf))
+        .then(doc => {
+          const pages = doc.getPages();
+          const firstPage = pages[0];
+          const secondPage = pages[1];
+          const { width, height } = firstPage.getSize();
+          window.console.log(width, height);
+          firstPage.setFontSize(12);
+          firstPage.moveTo(0, height);
+          firstPage.moveDown(143);
+          firstPage.moveRight(143);
+          firstPage.drawText(this.equipage);
+          this.drawIdForm(firstPage, this.$refs.patron, 0);
+          this.drawIdForm(firstPage, this.$refs.mousse, 360 - 173);
+          firstPage.moveTo(0, height);
+          firstPage.moveDown(397);
+          firstPage.moveRight(514);
+          firstPage.drawText(String(this.repas));
+          secondPage.setFontSize(12);
+          secondPage.moveTo(0, height);
+          secondPage.moveDown(148);
+          secondPage.moveRight(159);
+          secondPage.drawText(this.equipage);
+          secondPage.moveDown(14);
+          secondPage.drawText(this.bateau);
+          secondPage.moveDown(14);
+          secondPage.drawText(this.longueur);
+          secondPage.moveDown(14);
+          secondPage.drawText(this.assurance1);
+          secondPage.moveTo(0, height);
+          secondPage.moveDown(148 + 14);
+          secondPage.moveRight(430);
+          secondPage.drawText(this.immatriculation);
+          secondPage.moveDown(14);
+          secondPage.drawText(this.moteur);
+          secondPage.moveDown(14);
+          secondPage.drawText(this.assurance2);
+          secondPage.moveTo(0, height);
+          secondPage.moveDown(280);
+          secondPage.moveRight(430);
+          for (const [i, security] of this.securities.entries()) {
+            if (security) secondPage.drawText("X");
+            if (i == 0 || i == 1 || i == 4 || i == 10) secondPage.moveDown(10);
+            if (i == 11) secondPage.moveDown(12);
+            secondPage.moveDown(12.2);
+          }
+          return doc.save();
+        })
+        .then(pdf => {
+          const blob = new Blob([pdf], { type: "application/pdf" });
+          if (this.willDownload)
+            window.navigator.msSaveOrOpenBlob(
+              blob,
+              "inscription-open-glenan-2020.pdf"
+            );
+          else {
+            const url = URL.createObjectURL(blob);
+            return loaded.then(() => {
+              tab.location.assign(url);
+              setTimeout(() => {
+                if (tab.location.pathname === "/loading.html") {
+                  tab.close();
+                }
+              }, 0);
+            });
+          }
+        });
+    },
+    drawIdForm(page, idForm, offset) {
+      page.moveTo(0, page.getSize().height);
+      page.moveDown(159);
+      page.moveRight(173 + offset);
+      for (const [i, value] of idForm.toArray().entries()) {
+        page.moveDown(19);
+        if (i >= 8) page.moveDown(3);
+        page.drawText(value || "");
       }
     }
   }
