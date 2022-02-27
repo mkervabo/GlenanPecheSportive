@@ -134,52 +134,52 @@ export default {
     mailOk() {
       var mailReg = new RegExp(/^([\w-.]+)@((?:[\w]+\.)+)([a-zA-Z]{2})/i);
       return mailReg.test(this.email);
+    }
+  },
+  isOk() {
+    return (
+      this.nom &&
+      this.prenom &&
+      this.naissance &&
+      this.adresse &&
+      this.postal &&
+      this.ville &&
+      (this.portable || this.fixe) &&
+      this.email &&
+      this.t_shirt &&
+      this.mailOk
+    );
+  },
+  methods: {
+    toArray() {
+      return [
+        this.nom,
+        this.prenom,
+        this.adresse,
+        this.postal,
+        this.ville,
+        this.naissance,
+        this.fixe,
+        this.portable,
+        this.email,
+        this.t_shirt
+      ];
     },
-    isOk() {
-      return (
-        this.nom &&
-        this.prenom &&
-        this.naissance &&
-        this.adresse &&
-        this.postal &&
-        this.ville &&
-        (this.portable || this.fixe) &&
-        this.email &&
-        this.t_shirt &&
-        this.mailOk
-      );
-    },
-    methods: {
-      toArray() {
-        return [
-          this.nom,
-          this.prenom,
-          this.adresse,
-          this.postal,
-          this.ville,
-          this.naissance,
-          this.fixe,
-          this.portable,
-          this.email,
-          this.t_shirt
-        ];
-      },
-      toJSON() {
-        return {
-          kind: this.kind,
-          minor: this.minor,
-          nom: this.nom,
-          prenom: this.prenom,
-          adresse: this.adresse,
-          postal: this.postal,
-          ville: this.ville,
-          naissance: this.naissance,
-          fixe: this.fixe,
-          portable: this.portable,
-          email: this.email,
-          t_shirt: this.t_shirt
-        };
-      }
+    toJSON() {
+      return {
+        kind: this.kind,
+        minor: this.minor,
+        nom: this.nom,
+        prenom: this.prenom,
+        adresse: this.adresse,
+        postal: this.postal,
+        ville: this.ville,
+        naissance: this.naissance,
+        fixe: this.fixe,
+        portable: this.portable,
+        email: this.email,
+        t_shirt: this.t_shirt
+      };
     }
   }
 };
