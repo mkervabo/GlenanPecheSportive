@@ -1,4 +1,4 @@
-# glenanpechesportive
+# Glenan Peche Sportive
 
 ## Project setup
 ```
