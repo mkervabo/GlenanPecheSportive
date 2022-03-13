@@ -432,7 +432,7 @@ export default {
           }
         });
       }
-      fetch("/contest/inscription-2020.pdf")
+      fetch("/contest/inscription-2022.pdf")
         .then(res => res.arrayBuffer())
         .then(pdf => PDFDocument.load(pdf))
         .then(doc => {
@@ -487,7 +487,7 @@ export default {
           if (this.willDownload)
             window.navigator.msSaveOrOpenBlob(
               blob,
-              "inscription-open-glenan-2020.pdf"
+              "inscription-open-glenan-2022.pdf"
             );
           else {
             const url = URL.createObjectURL(blob);
