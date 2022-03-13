@@ -361,6 +361,10 @@ export default {
     };
   },
   computed: {
+    willDownload() {
+      // Edge can't open a blob data url
+      return window.navigator && window.navigator.msSaveOrOpenBlob;
+    },
     securityOk() {
       return this.securities.every(s => s);
     },
@@ -493,7 +497,7 @@ export default {
                 if (tab.location.pathname === "/loading.html") {
                   tab.close();
                 }
-              }, 0);
+              }, 500);
             });
           }
         });
