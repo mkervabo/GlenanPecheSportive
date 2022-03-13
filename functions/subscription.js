@@ -26,8 +26,8 @@ exports.handler = async event => {
           body.equipage,
           `${body.patron.nom} ${body.patron.prenom}`,
           `${body.mousse.nom} ${body.mousse.prenom}`,
-          `${body.patron.email}\n${body.patron.portable}`,
-          `${body.mousse.email}\n${body.mousse.portable}`,
+          `${body.patron.email}\n${body.patron.portable}\n${body.patron.fixe}`,
+          `${body.mousse.email}\n${body.mousse.portable}\n${body.mousse.fixe}`,
           `site`,
           `${130 + body.repas * 20}`,
           `${body.repas}`,
@@ -39,6 +39,9 @@ exports.handler = async event => {
           `${womenNum}`,
           body.moteur,
           body.longueur,
+          body.immatriculation,
+          body.assurance1,
+          body.assurance2,
           JSON.stringify(body)
         ]
       ]
