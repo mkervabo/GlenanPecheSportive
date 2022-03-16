@@ -3,8 +3,7 @@
     <div class="subscription-important">
       <h2 class="subscription-title orange">A lire</h2>
       <p class="rules-content dark-olive">
-        Les pré-inscriptions sont ouvertes
-        <span class="font" style="color: #E53935">jusqu'aux ?? inclus.</span>
+        Les pré-inscriptions sont ouvertes !
       </p>
       <p class="rules-content dark-olive">
         Pour toute question nous ne répondrons que sur notre
@@ -26,7 +25,8 @@
         <div class="rules-content dark-olive">
           <span class="font" style="color: #E53935"
             >Ceci est le formulaire de pré-incription, votre inscription sera
-            validée une fois le formulaire imprimé et posté.
+            validée une fois le formulaire imprimé et posté.<br />
+            Minimum requis pour s'inscrire 50ch et 5m.
           </span>
           <p class="contest-content">
             Le règlement de l'open de 2022 sera disponible dès que possible, il
@@ -44,8 +44,8 @@
             <span class="font">130€ par bateau</span> (prix pour les deux
             équipiers pour l’ensemble de la compétition) comprenant aussi les
             petits déjeuners et paniers repas du samedi et dimanche midi, ainsi
-            qu’un repas à Concarneau le samedi soir pour les équipages. Il est
-            possible de réserver des
+            qu’un repas à Port la Forêt le samedi soir pour les équipages. Il
+            est possible de réserver des
             <span class="font">
               diners supplémentaires le samedi soir pour les accompagnants, 20€
               par personne
