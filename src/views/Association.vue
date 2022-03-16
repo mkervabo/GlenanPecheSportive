@@ -11,17 +11,16 @@
           <span class="font blue">Patrick Tudal: </span>Responsable commissaires
           Trésorier
         </p>
-        <p>
-          <span class="font blue">Valérie Le Bartz et Lucie Trouillebout: </span
-          >Secrétaires
-        </p>
+        <p><span class="font blue">Michel Guillou: </span>Secrétaires</p>
         <p>
           <span class="font blue">Yannick et Frédérique Kervabon:</span>
           Responsable Inscriptions
         </p>
         <p>
-          <span class="font blue">Christophe Le Bartz:</span> Responsable pub
-          annuaire
+          <span class="font blue"
+            >Christophe Le Bartz et Christophe Guillerme:</span
+          >
+          Relation partenaire
         </p>
         <p>
           <span class="font blue">Jean-Loup et Anne Marie Weber: </span>Gestion
@@ -29,7 +28,7 @@
         </p>
         <p>
           <span class="font orange">Membres actifs:</span> Gérard Guernalec,
-          Christophe Guillerme, Jean François Le Buhannic, Claude Diascorn
+          Jean François Le Buhannic, Claude Diascorn
         </p>
         <br />
         <br />

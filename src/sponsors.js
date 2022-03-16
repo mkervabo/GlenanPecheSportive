@@ -17,7 +17,7 @@ export default [
   {
     name: "Salon de la Pêche en Mer",
     link: "https://www.salon-peche-mer.com/",
-    logo: require("./assets/partner/salon-peche-en-mer.jpg")
+    logo: require("./assets/partner/salon-peche-en-mer.png")
   },
   {
     name: "Pêche en Mer",

@@ -4,35 +4,24 @@
       <h2 class="subscription-title orange">A lire</h2>
       <p class="annonce-content dark-olive">
         Bonjour à tous,<br />
-        Malgré la situation actuelle, nous avons décidé d'organiser l'Open des
-        Glénan en 2021. Cette édition ne s'appellera pas "Les 10 ans" mais sera
-        plutôt une version light de tout ce que l'on vous a proposé jusqu'à
-        maintenant. Le but est de continuer à faire vivre notre compétition mise
-        à mal ces deux dernières années par la mauvaise météo et le covid, et de
-        garder la motivation des bénévoles, partenaires et compétiteurs, même si
-        nous aurons du mal à retrouver l'esprit convivial de cet évènement. Bien
-        sûr tout ceci reste lié à l'évolution de la situation sanitaire et aux
-        autorisations administratives nécessaires. Voici ce vers quoi nous nous
-        dirigeons:<br /><br />
-        - La compétition se déroulera sur une seule journée le Samedi 12 Juin
-        2021.<br />
-        - Aucune organisation à terre. (briefing, podium, buvette, repas...)<br />
-        - Tout se fera en mer à partir d'un bateau organisation (briefing,
-        pointage visuel, remise des prix...)<br />
-        - Les compétiteurs géreront la mise à l'eau de leur bateau, nous
-        mettront à dispo un endroit de stockage des remorques à Concarneau et
-        Port la Forêt si possible. <br />
-        - Le RDV se fera à un point précis en mer.<br />
-        - Le nombre de bateau sera limité à 60.<br />
-        - Le montant de l'inscription sera revu à la baisse, probablement aux
-        alentour de 50 € par bateau.<br />
-        - Lorsque les autorisations seront validées, nous éditerons en ligne un
-        bulletin de pré-inscription et une date limite de retour. Après cette
-        date, nous effectuerons un tirage au sort en live via Facebook pour
-        désigner les heureux participants.<br /><br />
-        Merci à tous de l'intérêt que vous portez à notre évènement, à
-        bientôt.<br />
-        Le bureau de Glénan Pêche Sportive.<br />
+        Vous êtes très nombreux à nous envoyer des messages, nous appeler...
+        pour avoir des nouvelles de l'open des Glénan 2022.<br />
+        On peut enfin vous confirmer qu'il aura bien lieu les 25 et 26 Juin à
+        ...PORT LA FORÊT.<br />
+        Nous avons reçu la réponse définitive ce matin. 🤩😎<br />
+        Concernant les inscriptions, tout sera en ligne sur le site ce week-end.
+        <br />
+        Le principe reste le même pour s'inscrire: <br />
+        Téléchargez la feuille de renseignements<br />
+        Constituez un dossier COMPLET avec le règlement par chèque<br />
+        Postez le tout....<br />
+        La prise en compte des dossiers complets se fera dans leur ordre
+        d'arrivée dans la boite.<br />
+        SVP ne nous inondez pas de messages, tout les renseignements vous seront
+        donnés.<br />
+        Merci à tous de votre intérêt pour notre compète, et RDV pour une vraie
+        10ième édition.....<br />
+        Le bureau de GPS.<br />
         Pour toute question nous ne répondrons que sur
         <a class="link" href="https://www.facebook.com/glenanpechesportive/"
           >facebook</a
@@ -41,7 +30,7 @@
         <a class="link" href="mailto:infos@glenanpechesportive.fr">ici</a>.
       </p>
     </div>
-    <div class="annonce_info white" id="equipes">
+    <!-- <div class="annonce_info white" id="equipes">
       <h2 class="subscription-title orange">Classement</h2>
       <p class="annonce-content dark-olive">
         Ci-dessous se trouvent les résultats en continu de la compétition. Ils
@@ -60,39 +49,39 @@
           />
         </tbody>
       </table>
-    </div>
-    <img v-else src="/loading.svg" />
+    </div> 
+    <img v-else src="/loading.svg" />-->
   </main>
 </template>
 
 <script>
-import Equipe from "../components/Equipe";
-export default {
-  components: {
-    Equipe
-  },
-  data() {
-    return {
-      teams: []
-    };
-  },
-  mounted() {
-    window.console.log("mounted");
-    const minTime = new Promise(resolve => setTimeout(resolve, 1000));
-    fetch("/.netlify/functions/teams")
-      .then(res => res.json())
-      .then(e => minTime.then(() => e))
-      .then(teams => (this.teams = teams));
-  },
-  computed: {
-    sortTeams() {
-      window.console.log(this.teams);
-      return this.teams.slice(0).sort(function(a, b) {
-        return parseInt(a[1], 10) < parseInt(b[1], 10) ? 1 : -1;
-      });
-    }
-  }
-};
+// import Equipe from "../components/Equipe";
+// export default {
+//   components: {
+//     Equipe
+//   },
+//   data() {
+//     return {
+//       teams: []
+//     };
+//   },
+//   mounted() {
+//     window.console.log("mounted");
+//     const minTime = new Promise(resolve => setTimeout(resolve, 1000));
+//     fetch("/.netlify/functions/teams")
+//       .then(res => res.json())
+//       .then(e => minTime.then(() => e))
+//       .then(teams => (this.teams = teams));
+//   },
+//   computed: {
+//     sortTeams() {
+//       window.console.log(this.teams);
+//       return this.teams.slice(0).sort(function(a, b) {
+//         return parseInt(a[1], 10) < parseInt(b[1], 10) ? 1 : -1;
+//       });
+//     }
+//   }
+// };
 </script>
 
 <style>

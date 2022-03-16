@@ -1,22 +1,13 @@
 <template>
   <main id="agenda">
     <div class="body">
-      <AgendaElem event="Open des Glénan" date="12/06/2021">
+      <AgendaElem event="Open des Glénan" date="25/06/2022 au 26/06/2022">
         <p>
-          La compétition se déroulera sur une seule journée le Samedi 12 Juin
-          2021.
+          La compétition se déroulera sur deux jours du Samedi 25 Juin au
+          dimanche 26 Juin 2021.
         </p>
         <div class="agenda-article">
           <img class="agenda_img" src="../assets/contest/annonce2021.png" />
-        </div>
-      </AgendaElem>
-      <AgendaElem event="Grand Pavois" date="28/09/2021 au 03/10/2021">
-        <p>
-          Venez rencontrer nos partenaires, lors du Grand Pavois à la Rochelle .
-          Du mardi 28 septembre au dimanche 3 octobre 2021
-        </p>
-        <div class="agenda-article">
-          <img class="agenda_img" src="../assets/partner/grand_pavois.png" />
         </div>
       </AgendaElem>
     </div>

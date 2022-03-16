@@ -2,7 +2,7 @@
   <main>
     <div class="fond">
       <div class="articles">
-        <div class="contest">
+        <!-- <div class="contest">
           <fa-icon
             :icon="['fas', 'exclamation-circle']"
             class="article-icon white"
@@ -18,7 +18,7 @@
             la journée c'est
             <a class="link2" href="/annonce#equipes">par ici !</a>
           </p>
-        </div>
+        </div> -->
         <div class="next-event">
           <fa-icon
             :icon="['fas', 'exclamation-circle']"
@@ -26,30 +26,27 @@
           ></fa-icon>
           <div class="orange event-name">Important</div>
           <p class="event-description">
-            Bonjour à tous,<br />
-            Malgré la situation actuelle, nous avons décidé d'organiser l'Open
-            des Glénan en 2021. Cette édition ne s'appellera pas "Les 10 ans"
-            mais sera plutôt une version light de tout ce que l'on vous a
-            proposé jusqu'à maintenant. Le but est de continuer à faire vivre
-            notre compétition mise à mal ces deux dernières années
+            Bonjour à tous, Vous êtes très nombreux à nous envoyer des messages,
+            nous appeler... pour avoir des nouvelles de l'open des Glénan 2022.
+            On peut enfin vous confirmer qu'il aura bien lieu les 25 et 26 Juin
+            à ...PORT LA FORÊT. Nous avons reçu la réponse définitive ce matin.
+            🤩😎 Concernant les inscriptions, tout sera en ligne sur le site ce
+            week-end.
             <a class="link2" href="/annonce">lire la suite ...</a>
           </p>
-          <img
-            class="article-illustration"
-            src="../assets/contest/annonce2021.png"
-          />
+          <img class="article-illustration" src="../assets/logo-10-ans.jpg" />
         </div>
         <div class="meteo">
           <fa-icon
             :icon="['fas', 'exclamation-circle']"
             class="article-icon dark-blue"
           ></fa-icon>
-          <div class="dark-blue event-name">Grand Pavois</div>
-          <p class="date orange">28/09/2021 au 03/10/2021</p>
-          <img class="article-img" src="../assets/partner/grand_pavois.png" />
+          <div class="dark-blue event-name">Agenda</div>
+          <p class="date orange">25/06/2022 au 26/06/2022</p>
+          <img class="article-img" src="../assets/logo.png" />
           <p class="event-description">
-            Venez rencontrer nos partenaires, lors du Grand Pavois à la Rochelle
-            . Du mardi 28 septembre au dimanche 3 octobre 2021.
+            La compétition se déroulera sur deux jours du Samedi 25 Juin au
+            dimanche 26 Juin 2021.
           </p>
           <p class="event-description">
             Pour voir les autres evenements a venir rendez-vous sur cette
@@ -70,9 +67,8 @@
             C'est une compétition de pêche au bar No Kill.
           </p>
           <p class="contest-description">
-            Qui se déroule sur une journée. La base à terre se trouve à
-            Concarneau(29) et le compétition se déroule sur l'archipel des
-            Glénan.
+            Qui se déroule sur deux jours. La base à terre se trouve à Port la
+            Forêt(29) et le compétition se déroule sur l'archipel des Glénan.
           </p>
           <p class="contest-description">
             Carte de la zone
@@ -180,7 +176,7 @@ export default {};
 
 .article-illustration {
   width: 100%;
-  height: 300px;
+  max-height: 300px;
   margin: auto;
   object-fit: contain;
 }
