@@ -29,7 +29,7 @@ exports.handler = async event => {
           `${body.patron.email}\n${body.patron.portable}\n${body.patron.fixe}`,
           `${body.mousse.email}\n${body.mousse.portable}\n${body.mousse.fixe}`,
           `site`,
-          `${130 + body.repas * 20}`,
+          `${140 + body.repas * 25}`,
           `${body.repas}`,
           "",
           body.patron.t_shirt,

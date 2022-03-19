@@ -11,7 +11,7 @@
           >facebook</a
         >
         en mp ou sur notre mail que vous trouverez
-        <a class="link" href="mailto:infos@glenanpechesportive.fr"
+        <a class="link" href="mailto:infos@glenanpechesportive.bzh"
           >infos@glenanpechesportive.fr</a
         >.
       </p>
@@ -29,9 +29,11 @@
             Minimum requis pour s'inscrire 50ch et 5m.
           </span>
           <p class="contest-content">
-            Le règlement de l'open de 2022 sera disponible dès que possible, il
-            sera rédigé en accord avec les réglementations COVID en vigueur à ce
-            moment-là.
+            Le règlement est par
+            <a class="link" href="/contest/Réglement-open-des-Glénan-2022.pdf"
+              >là</a
+            >
+            ! Il est important de le lire !
           </p>
           <p class="contest-content">
             Pour plus d'informations ou en cas de problèmes lors de votre
@@ -40,14 +42,21 @@
               >inscription@glenanpechesportive.bzh</a
             >
           </p>
+          <p class="font">Joindre au présent bulletin d'inscription :</p>
           <p>
-            <span class="font">130€ par bateau</span> (prix pour les deux
+            Les attestations d'assurance responsabilité civile des équipiers et
+            du bateau,
+            <span class="font">et</span> la fiche sécurité dûment remplie et
+            signée. Ansi qu'une photo d'identité de chaque membre d'équipage
+          </p>
+          <p>
+            <span class="font">140€ par bateau</span> (prix pour les deux
             équipiers pour l’ensemble de la compétition) comprenant aussi les
             petits déjeuners et paniers repas du samedi et dimanche midi, ainsi
             qu’un repas à Port la Forêt le samedi soir pour les équipages. Il
             est possible de réserver des
             <span class="font">
-              diners supplémentaires le samedi soir pour les accompagnants, 20€
+              diners supplémentaires le samedi soir pour les accompagnants, 25€
               par personne
             </span>
           </p>
@@ -60,7 +69,7 @@
           </div>
           <br />
           <span class="subscription-title2 orange">Total:</span>
-          {{ 130 + repas * 20 }}€
+          {{ 140 + repas * 25 }}€
         </div>
       </div>
       <div class="members">
@@ -310,6 +319,11 @@
             informations et qu'elles ne seront pas utilisées à des fins
             commerciales.
           </p>
+          <p>
+            En continuant je certifie que je dispose de tous les matériels de
+            sécurité obligatoires pour la catégorie de navigation correspondante
+            à la compétition
+          </p>
           <button
             :disabled="
               !securityOk ||
@@ -319,7 +333,7 @@
             "
             v-on:click="generate"
           >
-            Valider
+            {{ willDownload ? "Télécharger" : "Valider" }}
           </button>
           <p v-show="!securityOk" class="form-error">
             Vous n'avez pas tout l'équipement obligatoire
@@ -332,6 +346,14 @@
           </p>
           <p v-show="!($refs.mousse && $refs.mousse.isOk)" class="form-error">
             Vous n'avez pas complété le formulaire du mousse
+          </p>
+          <p class="contest-content">
+            Si vous rencontrez des problèmes pour remplir l'inscription vous
+            pouvez toujours
+            <a class="link" href="/contest/inscription-2022.pdf"
+              >télécharger un bulletin vierge</a
+            >
+            et le remplir comme avant.
           </p>
         </div>
       </div>
@@ -644,6 +666,7 @@ button:disabled {
 .form-error {
   color: red;
   margin: 0;
+  font-size: 11px;
 }
 
 .form-equipage label {
