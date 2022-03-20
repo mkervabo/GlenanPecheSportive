@@ -2,23 +2,23 @@
   <main>
     <div class="fond">
       <div class="articles">
-        <!-- <div class="contest">
+        <div class="contest">
           <fa-icon
             :icon="['fas', 'exclamation-circle']"
             class="article-icon white"
           ></fa-icon>
           <h2 class="contest-title white">
-            Les résultats
+            Inscription 2022
           </h2>
-          <img class="article-img" src="../assets/contest/annonce2021.png" />
+          <img class="article-img" src="../assets/logo.png" />
           <p class="contest-description">
-            Aujourd'hui c'est le grand jour, bonne chance au compétiteur et
-            bonne journée !<br />
-            Pour pouvoir suivre les résultats de la compétition tout au long de
-            la journée c'est
-            <a class="link2" href="/annonce#equipes">par ici !</a>
+            Les inscriptions pour l'open 2022 sont ouvertes 😉 !
           </p>
-        </div> -->
+          <p class="contest-description">
+            Pour s'inscrire c'est
+            <a class="link2" href="/subscription">par ici !</a>
+          </p>
+        </div>
         <div class="next-event">
           <fa-icon
             :icon="['fas', 'exclamation-circle']"
