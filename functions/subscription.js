@@ -13,9 +13,12 @@ const sheets = google.sheets({ version: "v4", auth });
 exports.handler = async event => {
   const body = JSON.parse(event.body);
 
+  const womenNum =
+    Number(body.mousse.kind === "F") + Number(body.patron.kind === "F");
+
   await sheets.spreadsheets.values.append({
     spreadsheetId: "140_Q_ZUeG7TfmV5_yfShMWMUvGZ_F1ue8dKF7w3d2v0",
-    range: "A1",
+    range: "Inscription2022!A1",
     valueInputOption: "RAW",
     requestBody: {
       values: [
@@ -26,8 +29,19 @@ exports.handler = async event => {
           `${body.patron.email}\n${body.patron.portable}\n${body.patron.fixe}`,
           `${body.mousse.email}\n${body.mousse.portable}\n${body.mousse.fixe}`,
           `site`,
+          `${140 + body.repas * 25}`,
+          `${body.repas}`,
+          "",
+          body.patron.t_shirt,
+          body.mousse.t_shirt,
+          (body.mousse.minor ? "JUNIOR " : "") +
+            ["", "MIXTE", "FEMININE"][womenNum],
+          `${womenNum}`,
           body.moteur,
           body.longueur,
+          body.immatriculation,
+          body.assurance1,
+          body.assurance2,
           JSON.stringify(body)
         ]
       ]
