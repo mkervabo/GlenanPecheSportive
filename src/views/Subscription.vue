@@ -656,6 +656,10 @@ button:disabled {
   color: graytext;
 }
 
+button:active {
+  background: #0185c6;
+}
+
 .members {
   width: 100%;
   max-width: 820px;
