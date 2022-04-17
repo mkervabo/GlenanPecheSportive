@@ -26,12 +26,13 @@
           ></fa-icon>
           <div class="orange event-name">Important</div>
           <p class="event-description">
-            Bonjour à tous, Vous êtes très nombreux à nous envoyer des messages,
-            nous appeler... pour avoir des nouvelles de l'open des Glénan 2022.
-            On peut enfin vous confirmer qu'il aura bien lieu les 25 et 26 Juin
-            à ...PORT LA FORÊT. Nous avons reçu la réponse définitive ce matin.
-            🤩😎 Concernant les inscriptions, tout sera en ligne sur le site ce
-            week-end.
+            Voici la liste des inscrits de l’open des Glénan 2022.<br />
+            Si le nom de votre équipe n’apparaît pas dans cette liste c’est sans
+            doute 🤔: <br />
+            Que votre dossier est incomplet <br />
+            Ou pas encore arrivé par voie postale.<br />
+            En cas de doute contactez-nous<br />
+            A bientôt sur l’eau 😉<br />
             <a class="link2" href="/annonce">lire la suite ...</a>
           </p>
           <img class="article-illustration" src="../assets/logo-10-ans.jpg" />

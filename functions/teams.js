@@ -13,7 +13,7 @@ const sheets = google.sheets({ version: "v4", auth });
 exports.handler = async () => {
   const { data } = await sheets.spreadsheets.values.get({
     spreadsheetId: "140_Q_ZUeG7TfmV5_yfShMWMUvGZ_F1ue8dKF7w3d2v0",
-    range: "resultat!B:C"
+    range: "liste2022!A:B"
   });
 
   return {
