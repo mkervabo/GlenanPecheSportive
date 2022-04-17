@@ -18,12 +18,12 @@
         <a class="link" href="mailto:infos@glenanpechesportive.fr">ici</a>.
       </p>
     </div>
-    <div class="annonce_info white" id="equipes">
+    <!-- <div class="annonce_info white" id="equipes">
       <h2 class="subscription-title orange">Classement</h2>
       <p class="annonce-content dark-olive">
         Ci-dessous se trouvent la liste des inscrits pour l'open 2022:
       </p>
-    </div>
+    </div> -->
     <div class="annonce_equipes white" v-if="teams !== null">
       <table>
         <tbody>
