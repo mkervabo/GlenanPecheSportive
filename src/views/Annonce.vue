@@ -30,7 +30,7 @@
         <a class="link" href="mailto:infos@glenanpechesportive.fr">ici</a>.
       </p>
     </div>
-    <!-- <div class="annonce_info white" id="equipes">
+    <div class="annonce_info white" id="equipes">
       <h2 class="subscription-title orange">Classement</h2>
       <p class="annonce-content dark-olive">
         Ci-dessous se trouvent les résultats en continu de la compétition. Ils
@@ -41,47 +41,50 @@
       <table>
         <tbody>
           <Equipe
-            v-for="(team, index) in sortTeams"
+            v-for="team in deleteEmpty"
             :key="team[0]"
-            :number="index + 1 + '-'"
-            :name="team[0]"
-            :score="team[1]"
+            :number="team[0] + '-'"
+            :name="team[1]"
           />
         </tbody>
       </table>
-    </div> 
-    <img v-else src="/loading.svg" />-->
+    </div>
+    <img v-else src="/loading.svg" />
   </main>
 </template>
 
 <script>
-// import Equipe from "../components/Equipe";
-// export default {
-//   components: {
-//     Equipe
-//   },
-//   data() {
-//     return {
-//       teams: []
-//     };
-//   },
-//   mounted() {
-//     window.console.log("mounted");
-//     const minTime = new Promise(resolve => setTimeout(resolve, 1000));
-//     fetch("/.netlify/functions/teams")
-//       .then(res => res.json())
-//       .then(e => minTime.then(() => e))
-//       .then(teams => (this.teams = teams));
-//   },
-//   computed: {
-//     sortTeams() {
-//       window.console.log(this.teams);
-//       return this.teams.slice(0).sort(function(a, b) {
-//         return parseInt(a[1], 10) < parseInt(b[1], 10) ? 1 : -1;
-//       });
-//     }
-//   }
-// };
+import Equipe from "../components/Equipe";
+export default {
+  components: {
+    Equipe
+  },
+  data() {
+    return {
+      teams: []
+    };
+  },
+  mounted() {
+    window.console.log("mounted");
+    const minTime = new Promise(resolve => setTimeout(resolve, 1000));
+    fetch("/.netlify/functions/teams")
+      .then(res => res.json())
+      .then(e => minTime.then(() => e))
+      .then(teams => (this.teams = teams));
+  },
+  computed: {
+    deleteEmpty() {
+      window.console.log(this.teams);
+      return this.teams.filter(team => team[1] != null).slice(1);
+    }
+    //   sortTeams() {
+    //     window.console.log(this.teams);
+    //     return this.teams.slice(0).sort(function(a, b) {
+    //       return parseInt(a[1], 10) < parseInt(b[1], 10) ? 1 : -1;
+    //     });
+    //   }
+  }
+};
 </script>
 
 <style>
