@@ -107,6 +107,20 @@
             >.
           </p>
         </div>
+        <div class="next-event">
+          <fa-icon
+            :icon="['fas', 'exclamation-circle']"
+            class="article-icon orange"
+          ></fa-icon>
+          <div class="orange event-name">Carte</div>
+          <div class="article-illustration hidden">
+            <iframe
+              src="https://www.google.com/maps/d/embed?mid=1NgeCOZ7qTJRP2gsQloDksbadrHVfadE&ehbc=2E312F"
+              width="100%"
+              height="300"
+            ></iframe>
+          </div>
+        </div>
       </div>
     </div>
   </main>
@@ -270,5 +284,9 @@ export default {};
   padding-left: 80px;
   font: caption;
   font-weight: bold;
+}
+
+.hidden {
+  overflow: hidden;
 }
 </style>
