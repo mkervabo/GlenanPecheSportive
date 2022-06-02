@@ -5,8 +5,8 @@
       <br />
       <div class="contest-content">
         <p>
-          L'Open se déroulera sur une seule journée le Samedi 12 Juin 2021. Pour
-          plus d'informations rendez-vous
+          L'Open se déroulera sur une seule journée du samedi 25 Juin au
+          dimanche 26 Juin 2021. Pour plus d'informations rendez-vous
           <router-link class="link" to="/annonce">ici</router-link> !
         </p>
         <p>

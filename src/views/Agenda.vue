@@ -7,7 +7,7 @@
           dimanche 26 Juin 2021.
         </p>
         <div class="agenda-article">
-          <img class="agenda_img" src="../assets/contest/annonce2021.png" />
+          <img class="agenda_img" src="../assets/logo-10-ans.jpg" />
         </div>
       </AgendaElem>
     </div>
