@@ -10,11 +10,6 @@ export default [
     logo: require("./assets/partner/suzuki.png")
   },
   {
-    name: "Grand Pavois",
-    link: "http://www.grand-pavois.com/",
-    logo: require("./assets/partner/grand_pavois.png")
-  },
-  {
     name: "Salon de la Pêche en Mer",
     link: "https://www.salon-peche-mer.com/",
     logo: require("./assets/partner/salon-peche-en-mer.png")
@@ -45,11 +40,6 @@ export default [
     logo: require("./assets/partner/mer_assur.gif")
   },
   {
-    name: "M.C Technologies",
-    link: "https://www.mc-technologies.fr/",
-    logo: require("./assets/partner/mc_tech.png")
-  },
-  {
     name: "Delalande",
     link: "https://delalande-peche.fr/",
     logo: require("./assets/partner/delalande.jpg")
@@ -72,12 +62,6 @@ export default [
     whitebackground: true
   },
   {
-    name: "Beneteau",
-    link: "https://www.beneteau.com/fr/",
-    logo: require("./assets/partner/Beneteau.jpg"),
-    whitebackground: true
-  },
-  {
     name: "Tenryu",
     logo: require("./assets/partner/tenryu.jpg")
   },
@@ -97,11 +81,6 @@ export default [
     link:
       "https://fr-fr.facebook.com/pages/category/Media/RonProduction-134411313302276/",
     logo: require("./assets/partner/ron-production.jpg")
-  },
-  {
-    name: "Atm Communication",
-    link: "http://work.atm-communication.com/",
-    logo: require("./assets/partner/Atm-com.png")
   },
   {
     name: "Cap Marine Assurances",
@@ -139,18 +118,18 @@ export default [
     logo: require("./assets/partner/logo-henaff-1907.jpg")
   },
   {
-    name: "Centaure",
-    link: "http://www.centaure-semirigide.fr/",
-    logo: require("./assets/partner/centaure.jpg")
-  },
-  {
     name: "Coprexma",
     link: "https://coprexma.fr/",
     logo: require("./assets/partner/coprexma.jpg")
   },
   {
-    name: "Pafex",
-    link: "https://pafex.fr/",
-    logo: require("./assets/partner/pafex.png")
+    name: "Lowrance",
+    link: "https://www.lowrance.com/fr-fr/",
+    logo: require("./assets/partner/Lowrance.png")
+  },
+  {
+    name: "Marine West Port la Forêt",
+    link: "http://www.marine-west.com/",
+    logo: require("./assets/partner/marine-west.jpeg")
   }
 ];
