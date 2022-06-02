@@ -19,6 +19,11 @@ export default [
     logo: require("./assets/partner/peche-en-mer.jpg")
   },
   {
+    name: "Grand Pavois",
+    link: "http://www.grand-pavois.com/",
+    logo: require("./assets/partner/grand_pavois.png")
+  },
+  {
     name: "Spider Wire",
     link: "http://www.spiderwire.com/",
     logo: require("./assets/partner/spider_wire.png")
