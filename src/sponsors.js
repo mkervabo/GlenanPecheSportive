@@ -136,5 +136,20 @@ export default [
     name: "Marine West Port la Forêt",
     link: "http://www.marine-west.com/",
     logo: require("./assets/partner/marine-west.jpeg")
+  },
+  {
+    name: "MMG",
+    link: "https://www.mmg-bateaux.fr/",
+    logo: require("./assets/partner/mmg.png")
+  },
+  {
+    name: "Westing Fishing",
+    link: "https://www.westin-fishing.com/fr/",
+    logo: require("./assets/partner/Westin_Fishing.jpeg")
+  },
+  {
+    name: "Port la Forêt",
+    link: "https://www.foret-fouesnant.org/",
+    logo: require("./assets/partner/la-foret-fouesnant.svg")
   }
 ];
