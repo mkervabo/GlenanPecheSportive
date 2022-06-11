@@ -7,7 +7,7 @@
         <p>
           L'Open se déroulera sur deux jours du samedi 25 Juin au dimanche 26
           Juin 2022. Pour plus d'informations rendez-vous
-          <router-link class="link" to="/annonce">ici</router-link> !
+          <router-link class="link2" to="/annonce">ici</router-link> !
         </p>
         <p>
           Les pré-inscriptions sont fermées.
@@ -115,7 +115,7 @@
       </div>
       <div
         v-on:click="contest15 = !contest15"
-        class="contest-content link2 cursor"
+        class="contest-content link cursor"
       >
         Classement 2015
       </div>
@@ -375,6 +375,14 @@ export default {
 
 .day {
   font-size: 19px;
+  color: #f37538;
+}
+
+.link {
+  color: #0185c6;
+}
+
+.link:hover {
   color: #f37538;
 }
 
