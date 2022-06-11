@@ -11,6 +11,12 @@
           <input type="radio" value="F" v-model="kind" />
         </label>
       </fieldset>
+      <fieldset v-show="!captain" class="kind">
+        <label
+          >Mineur
+          <input type="checkbox" v-model="minor" />
+        </label>
+      </fieldset>
     </div>
     <div class="row">
       <fieldset class="section">
@@ -110,6 +116,7 @@ export default {
   data() {
     return {
       kind: "H",
+      minor: false,
       nom: "",
       prenom: "",
       naissance: "",
@@ -122,6 +129,7 @@ export default {
       t_shirt: ""
     };
   },
+  props: ["captain"],
   computed: {
     mailOk() {
       var mailReg = new RegExp(/^([\w-.]+)@((?:[\w]+\.)+)([a-zA-Z]{2})/i);
@@ -135,8 +143,7 @@ export default {
         this.adresse &&
         this.postal &&
         this.ville &&
-        this.portable &&
-        this.fixe &&
+        (this.portable || this.fixe) &&
         this.email &&
         this.t_shirt &&
         this.mailOk
@@ -161,6 +168,7 @@ export default {
     toJSON() {
       return {
         kind: this.kind,
+        minor: this.minor,
         nom: this.nom,
         prenom: this.prenom,
         adresse: this.adresse,

@@ -3,24 +3,20 @@
     <div class="subscription-important">
       <h2 class="subscription-title orange">A lire</h2>
       <p class="rules-content dark-olive">
-        Amis compétiteurs,<br /><br />
-        Vous avez été plus que nombreux à venir sur le stand de Glénan Pêche
-        Sportive au salon de Nantes ce week-end et on vous en remercie.<br />
-        Nous vous avons donné la priorité concernant votre inscription à l'open
-        2020 et beaucoup de dossiers complets nous ont été déposés.
-        <span class="orange font"
-          >Pour ceux à qui il manque un élément, nous vous donnons jusqu'à
-          vendredi 21 Février minuit pour régulariser l'inscription.</span
-        >
-        Passé ce délai, si nous manquons de place, vous passerez sur liste
-        d'attente.<br />
-        Merci de votre compréhension.<br /><br />
-        Pour toute question nous ne répondrons que sur
+        Les pré-inscriptions sont ouvertes !
+      </p>
+      <p class="rules-content dark-olive">
+        Pour toute question nous ne répondrons que sur notre
         <a class="link" href="https://www.facebook.com/glenanpechesportive/"
           >facebook</a
         >
         en mp ou sur notre mail que vous trouverez
-        <a class="link" href="mailto:infos@glenanpechesportive.fr">ici</a>.
+        <a class="link" href="mailto:infos@glenanpechesportive.bzh"
+          >infos@glenanpechesportive.fr</a
+        >.
+      </p>
+      <p class="rules-content dark-olive">
+        Merci de votre compréhension.
       </p>
     </div>
     <div class="subscription-part">
@@ -29,20 +25,21 @@
         <div class="rules-content dark-olive">
           <span class="font" style="color: #E53935"
             >Ceci est le formulaire de pré-incription, votre inscription sera
-            validée une fois le formulaire imprimé et posté.</span
-          >
+            validée une fois le formulaire imprimé et posté.<br />
+            Minimum requis pour s'inscrire 50ch et 5m.
+          </span>
           <p class="contest-content">
             Le règlement est par
-            <a class="link" href="/contest/Reglement-open-des-Glenan-2020.pdf"
+            <a class="link" href="/contest/Réglement-open-des-Glénan-2022.pdf"
               >là</a
             >
             ! Il est important de le lire !
           </p>
           <p class="contest-content">
             Pour plus d'informations ou en cas de problèmes lors de votre
-            inscription vous pouvez nous conacter sur cet email:
-            <a class="link" href="mailto:inscription2020@glenanpechesportive.fr"
-              >inscription2020@glenanpechesportive.fr</a
+            inscription vous pouvez nous contacter sur cet email:
+            <a class="link" href="mailto:inscription@glenanpechesportive.bzh"
+              >inscription@glenanpechesportive.bzh</a
             >
           </p>
           <p class="font">Joindre au présent bulletin d'inscription :</p>
@@ -52,18 +49,14 @@
             <span class="font">et</span> la fiche sécurité dûment remplie et
             signée. Ansi qu'une photo d'identité de chaque membre d'équipage
           </p>
-        </div>
-        <h2 class="subscription-title2 orange">Prix de l’inscription:</h2>
-        <div class="rules-content dark-olive">
-          <br />
           <p>
-            <span class="font">130€ par bateau</span> (prix pour les deux
+            <span class="font">140€ par bateau</span> (prix pour les deux
             équipiers pour l’ensemble de la compétition) comprenant aussi les
             petits déjeuners et paniers repas du samedi et dimanche midi, ainsi
-            qu’un repas à Concarneau le samedi soir pour les équipages. Il est
-            possible de réserver des
+            qu’un repas à Port la Forêt le samedi soir pour les équipages. Il
+            est possible de réserver des
             <span class="font">
-              diners supplémentaires le samedi soir pour les accompagnants, 20€
+              diners supplémentaires le samedi soir pour les accompagnants, 25€
               par personne
             </span>
           </p>
@@ -76,23 +69,22 @@
           </div>
           <br />
           <span class="subscription-title2 orange">Total:</span>
-          {{ 130 + repas * 20 }}€
+          {{ 140 + repas * 25 }}€
         </div>
       </div>
       <div class="members">
         <div class="form">
-          <h2 class="subscription-title orange">Patron</h2>
-          <IdForm ref="patron" />
+          <h2 class="subscription-title orange">Capitaine</h2>
+          <IdForm ref="patron" :captain="true" />
         </div>
         <div class="form">
           <h2 class="subscription-title orange">Mousse</h2>
-          <IdForm ref="mousse" />
+          <IdForm ref="mousse" :captain="false" />
         </div>
       </div>
     </div>
     <div class="subscription-part">
       <div class="form securite">
-        <!-- a modifier a partir de: https://www.ecologique-solidaire.gouv.fr/sites/default/files/equipement_secu_plaisance_4p_DEF_Web.pdf -->
         <h2 class="subscription-title orange">Équipement obligatoire</h2>
         <div>
           <div class="label-form security-form">
@@ -323,11 +315,15 @@
         <div class="rules-content dark-olive">
           <div class="font">En poursuivant:</div>
           <p>
+            J'ai conscience que l'association Glénan Pêche Sportive collecte mes
+            informations et qu'elles ne seront pas utilisées à des fins
+            commerciales.
+          </p>
+          <p>
             En continuant je certifie que je dispose de tous les matériels de
             sécurité obligatoires pour la catégorie de navigation correspondante
             à la compétition
           </p>
-
           <button
             :disabled="
               !securityOk ||
@@ -346,7 +342,7 @@
             Vous n'avez pas remplis tout les champs
           </p>
           <p v-show="!($refs.patron && $refs.patron.isOk)" class="form-error">
-            Vous n'avez pas complété le formulaire du patron
+            Vous n'avez pas complété le formulaire du capitaine
           </p>
           <p v-show="!($refs.mousse && $refs.mousse.isOk)" class="form-error">
             Vous n'avez pas complété le formulaire du mousse
@@ -354,7 +350,7 @@
           <p class="contest-content">
             Si vous rencontrez des problèmes pour remplir l'inscription vous
             pouvez toujours
-            <a class="link" href="/contest/inscription-2020.pdf"
+            <a class="link" href="/contest/inscription-2022.pdf"
               >télécharger un bulletin vierge</a
             >
             et le remplir comme avant.
@@ -407,12 +403,12 @@ export default {
     }
   },
   methods: {
-    generate() {
+    async generate() {
       const tab = this.willDownload || window.open("/loading.html");
       const loaded =
         this.willDownload || new Promise(resolve => (tab.onload = resolve));
 
-      fetch("/.netlify/functions/subscription", {
+      const { status } = await fetch("/.netlify/functions/subscription", {
         method: "POST",
         headers: {
           "content-type": "application/json"
@@ -430,8 +426,35 @@ export default {
           mousse: this.$refs.mousse.toJSON()
         })
       });
-
-      fetch("/contest/inscription-2020.pdf")
+      if (status === 200) {
+        this.$toasted.show("Inscription validée", {
+          className: "font toast-success",
+          position: "top-center",
+          fullWidth: true,
+          fitToScreen: true,
+          action: {
+            text: "X",
+            onClick: (e, toastObject) => {
+              toastObject.goAway(0);
+            }
+          }
+        });
+      } else {
+        this.$toasted.show("Erreur lors de l'inscription", {
+          type: "error",
+          className: "font",
+          position: "top-center",
+          fullWidth: true,
+          fitToScreen: true,
+          action: {
+            text: "X",
+            onClick: (e, toastObject) => {
+              toastObject.goAway(0);
+            }
+          }
+        });
+      }
+      fetch("/contest/inscription-2022.pdf")
         .then(res => res.arrayBuffer())
         .then(pdf => PDFDocument.load(pdf))
         .then(doc => {
@@ -439,11 +462,8 @@ export default {
           const firstPage = pages[0];
           const secondPage = pages[1];
           const { width, height } = firstPage.getSize();
-
           window.console.log(width, height);
-
           firstPage.setFontSize(12);
-
           firstPage.moveTo(0, height);
           firstPage.moveDown(143);
           firstPage.moveRight(143);
@@ -454,9 +474,7 @@ export default {
           firstPage.moveDown(397);
           firstPage.moveRight(514);
           firstPage.drawText(String(this.repas));
-
           secondPage.setFontSize(12);
-
           secondPage.moveTo(0, height);
           secondPage.moveDown(148);
           secondPage.moveRight(159);
@@ -467,7 +485,6 @@ export default {
           secondPage.drawText(this.longueur);
           secondPage.moveDown(14);
           secondPage.drawText(this.assurance1);
-
           secondPage.moveTo(0, height);
           secondPage.moveDown(148 + 14);
           secondPage.moveRight(430);
@@ -476,11 +493,9 @@ export default {
           secondPage.drawText(this.moteur);
           secondPage.moveDown(14);
           secondPage.drawText(this.assurance2);
-
           secondPage.moveTo(0, height);
           secondPage.moveDown(280);
           secondPage.moveRight(430);
-
           for (const [i, security] of this.securities.entries()) {
             if (security) secondPage.drawText("X");
             if (i == 0 || i == 1 || i == 4 || i == 10) secondPage.moveDown(10);
@@ -494,7 +509,7 @@ export default {
           if (this.willDownload)
             window.navigator.msSaveOrOpenBlob(
               blob,
-              "inscription-open-glenan-2020.pdf"
+              "inscription-open-glenan-2022.pdf"
             );
           else {
             const url = URL.createObjectURL(blob);
@@ -504,7 +519,7 @@ export default {
                 if (tab.location.pathname === "/loading.html") {
                   tab.close();
                 }
-              }, 0);
+              }, 500);
             });
           }
         });
@@ -641,6 +656,10 @@ button:disabled {
   color: graytext;
 }
 
+button:active {
+  background: #0185c6;
+}
+
 .members {
   width: 100%;
   max-width: 820px;
@@ -651,6 +670,7 @@ button:disabled {
 .form-error {
   color: red;
   margin: 0;
+  font-size: 11px;
 }
 
 .form-equipage label {
@@ -666,9 +686,7 @@ button:disabled {
   white-space: nowrap;
 }
 
-/*.check-box {
-	width: 25px;
-	height: 25px;
-	color: #f37538;
-}*/
+.toast-success {
+  background: #f37538 !important;
+}
 </style>

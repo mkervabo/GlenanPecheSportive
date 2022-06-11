@@ -108,7 +108,7 @@ export default {
 
 .article-illustration {
   width: 100%;
-  height: 300px;
+  max-height: 300px;
   margin: auto;
   object-fit: contain;
 }

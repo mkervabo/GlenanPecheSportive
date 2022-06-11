@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" version="1.1" creator="HDS Live-28 DELAMORT" >
+    <metadata>
+        <time>2021-06-05T20:27:06Z</time>
+        <depthunits>meters</depthunits>
+        <tempunits>C</tempunits>
+        <sogunits>m/s</sogunits>
+    </metadata>
+    <wpt lon="-4.08266667" lat="47.72033333" >
+        <time>2021-06-12T08:00:00Z</time>
+        <name>WBLUINIER</name>
+        <sym>cross,red</sym>
+    </wpt>
+    <wpt lon="-4.01350000" lat="47.76716667" >
+        <time>2021-06-12T08:00:00Z</time>
+        <name>BIGPIG</name>
+        <sym>cross,red</sym>
+    </wpt>
+    <wpt lon="-3.97983333" lat="47.76716667" >
+        <time>2021-06-12T08:00:00Z</time>
+        <name>EBIGPIG</name>
+        <sym>cross,red</sym>
+    </wpt>
+    <wpt lon="-3.93200000" lat="47.72083333" >
+        <time>2021-06-05T20:24:31Z</time>
+        <name>EMENSKE</name>
+        <sym>cross,red</sym>
+    </wpt>
+    <wpt lon="-3.91150000" lat="47.66083333" >
+        <time>2021-06-05T20:24:31Z</time>
+        <name>LAOUENOU</name>
+        <sym>cross,red</sym>
+    </wpt>
+    <wpt lon="-4.02350000" lat="47.64616667" >
+        <time>2021-06-05T20:24:31Z</time>
+        <name>JUMENT</name>
+        <sym>cross,red</sym>
+    </wpt>
+    <wpt lon="-4.10233333" lat="47.68450000" >
+        <time>2021-06-05T20:24:31Z</time>
+        <name>PERENNES</name>
+        <sym>cross,red</sym>
+    </wpt>
+    <trk>
+        <name>ZoneOpenGlenan</name>
+        <trkseg>
+            <trkpt lon="-4.08266667" lat="47.72033333" >
+                <time>2019-07-05T07:13:57Z</time>
+                <sog>2.98378</sog>
+            </trkpt>
+            <trkpt lon="-4.01350000" lat="47.76716667" >
+                <time>2019-07-05T07:13:57Z</time>
+                <sog>2.98378</sog>
+            </trkpt>
+            <trkpt lon="-3.97983333" lat="47.76716667" >
+                <time>2019-07-05T07:13:59Z</time>
+                <sog>3.08667</sog>
+            </trkpt>
+            <trkpt lon="-3.93200000" lat="47.72083333" >
+                <time>2019-07-05T07:14:03Z</time>
+                <sog>3.65256</sog>
+            </trkpt>
+            <trkpt lon="-3.91150000" lat="47.66083333" >
+                <time>2019-07-05T07:14:05Z</time>
+                <sog>3.60111</sog>
+            </trkpt>
+            <trkpt lon="-4.02350000" lat="47.64616667" >
+                <time>2019-07-05T07:14:06Z</time>
+                <sog>3.75544</sog>
+            </trkpt>
+            <trkpt lon="-4.10233333" lat="47.68450000" >
+                <time>2019-07-05T07:14:10Z</time>
+                <sog>3.704</sog>
+            </trkpt>
+            <trkpt lon="-4.08266667" lat="47.72033333" >
+                <time>2019-07-05T07:13:57Z</time>
+                <sog>2.98378</sog>
+            </trkpt>
+        </trkseg>
+    </trk>
+</gpx>
