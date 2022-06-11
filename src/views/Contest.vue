@@ -5,8 +5,8 @@
       <br />
       <div class="contest-content">
         <p>
-          L'Open se déroulera sur une seule journée du samedi 25 Juin au
-          dimanche 26 Juin 2022. Pour plus d'informations rendez-vous
+          L'Open se déroulera sur deux jours du samedi 25 Juin au dimanche 26
+          Juin 2022. Pour plus d'informations rendez-vous
           <router-link class="link" to="/annonce">ici</router-link> !
         </p>
         <p>
@@ -219,11 +219,11 @@
           il nous paraît INDISPENSABLE de respecter l’ensemble des plaisanciers
           sur zone.
         </p>
-        <!-- <iframe
-          src="https://www.google.com/maps/d/embed?mid=1NgeCOZ7qTJRP2gsQloDksbadrHVfadE&ehbc=2E312F"
+        <iframe
+          src="https://www.google.com/maps/d/embed?mid=11_caE_Tp7kaPTJreQf4sYrOKRq_7BUw&ehbc=2E312F"
           width="100%"
           height="300"
-        ></iframe> -->
+        ></iframe>
         <h2>Samedi 25 juin</h2>
         <p>Marée: basse mer à 9h10, haute mer à 15h26, coeff. 55</p>
         <p>
@@ -249,6 +249,15 @@
           <span class="orange font"
             >C'est la même zone de pêche que les précédentes éditions</span
           >.
+        </p>
+        <p>
+          Points gps de la zone
+          <a
+            class="link2 font"
+            href="/contest/TraceZonePecheOpenGlenan.gpx"
+            download
+            >ici</a
+          >
         </p>
         <p>
           La zone de pêche doit obligatoirement être reportée sur votre traceur.
