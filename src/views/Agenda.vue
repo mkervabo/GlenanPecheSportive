@@ -4,7 +4,7 @@
       <AgendaElem event="Open des Glénan" date="25/06/2022 au 26/06/2022">
         <p>
           La compétition se déroulera sur deux jours du Samedi 25 Juin au
-          dimanche 26 Juin 2021.
+          dimanche 26 Juin 2022.
         </p>
         <div class="agenda-article">
           <img class="agenda_img" src="../assets/logo-10-ans.jpg" />

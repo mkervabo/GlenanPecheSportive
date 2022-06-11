@@ -30,7 +30,7 @@
           <img class="article-img" src="../assets/logo.png" />
           <p class="event-description">
             La compétition se déroulera sur deux jours du Samedi 25 Juin au
-            dimanche 26 Juin 2021.
+            dimanche 26 Juin 2022.
           </p>
           <p class="event-description">
             Pour voir les autres evenements a venir rendez-vous sur cette

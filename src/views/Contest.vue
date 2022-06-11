@@ -6,7 +6,7 @@
       <div class="contest-content">
         <p>
           L'Open se déroulera sur une seule journée du samedi 25 Juin au
-          dimanche 26 Juin 2021. Pour plus d'informations rendez-vous
+          dimanche 26 Juin 2022. Pour plus d'informations rendez-vous
           <router-link class="link" to="/annonce">ici</router-link> !
         </p>
         <p>
@@ -219,7 +219,11 @@
           il nous paraît INDISPENSABLE de respecter l’ensemble des plaisanciers
           sur zone.
         </p>
-
+        <!-- <iframe
+          src="https://www.google.com/maps/d/embed?mid=1NgeCOZ7qTJRP2gsQloDksbadrHVfadE&ehbc=2E312F"
+          width="100%"
+          height="300"
+        ></iframe> -->
         <h2>Samedi 25 juin</h2>
         <p>Marée: basse mer à 9h10, haute mer à 15h26, coeff. 55</p>
         <p>
@@ -254,7 +258,7 @@
         <p>
           <span class="font">A 17h00:</span> fin de 1ère manche, pointage visuel
           en sortie de zone obligatoire pour
-          <span class="font">Atous les équipages</span> (possibilité d'y mesurer
+          <span class="font">tous les équipages</span> (possibilité d'y mesurer
           des poissons) et retour immédiat sur PORT LA FORÊT.
           <span class="font">Important:</span> s'agissant d'une compétition en
           no-kill intégral, tous les poissons pêchés doivent être relâchés
