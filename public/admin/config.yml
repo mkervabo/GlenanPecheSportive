@@ -24,7 +24,7 @@ collections:
       - label: "Couleur fond"
         name: "color"
         widget: "select"
-        default: "white"
+        default: "theme-white"
         options: 
           - {label: "bleu foncé", value: "theme-dark-blue"}
           - {label: "noir", value: "theme-black"} 
@@ -81,6 +81,7 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
+      - {label: "Nom", name: "name", widget: "string"}
       - {label: "Role", name: "role", widget: "string", required: false}
       - label: "Couleur"
         name: "color"
@@ -89,7 +90,6 @@ collections:
         options: 
           - {label: "bleu", value: "blue"}
           - {label: "orange", value: "orange"}
-      - {label: "Nom", name: "name", widget: "string"}
   - name: "gallery"
     label: "Galerie"
     format: json

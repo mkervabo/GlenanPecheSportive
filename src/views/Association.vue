@@ -6,8 +6,8 @@
         <p>Présentation du bureau</p>
         <br />
         <p v-for="(member, i) in members" :key="i">
-          <span class="font" :class="member.color">{{ member.role }} </span
-          >{{ member.name }}
+          <span class="font" :class="member.color">{{ member.name }}: </span
+          >{{ member.role }}
         </p>
       </div>
     </div>
