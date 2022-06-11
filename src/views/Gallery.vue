@@ -24,7 +24,7 @@
 import ImgGallery from "../components/ImgGallery";
 import ImgGallery2 from "../components/ImgGallery2";
 
-const r = require.context("../text", true, /\.json$/);
+const r = require.context("../gallery", true, /\.json$/);
 const imgsGallery = r.keys().map(file => r(file));
 
 export default {
