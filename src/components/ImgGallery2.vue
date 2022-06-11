@@ -27,5 +27,6 @@ export default {
 .img-gallery-vue {
   max-width: 90vw;
   max-height: 90vh;
+  image-orientation: none;
 }
 </style>
