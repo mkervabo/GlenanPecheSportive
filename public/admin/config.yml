@@ -1,0 +1,101 @@
+locale: fr
+
+backend:
+  name: git-gateway
+  branch: netlifyCMS # Branch to update (optional; defaults to master)
+  squash_merges: true
+
+# This line should *not* be indented
+publish_mode: editorial_workflow
+
+# These lines should *not* be indented
+media_folder: "public/images/uploads" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+
+
+collections:
+  - name: "articles" # Used in routes, e.g., /admin/collections/blog
+    label: "Articles" # Used in the UI
+    format: json
+    folder: "src/text" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - label: "Couleur fond"
+        name: "color"
+        widget: "select"
+        default: "theme-white"
+        options: 
+          - {label: "bleu foncé", value: "theme-dark-blue"}
+          - {label: "noir", value: "theme-black"} 
+          - {label: "blanc", value: "theme-white"}
+      - label: "Icone"
+        name: "icon"
+        widget: "select"
+        required: false
+        default: "exclamation-circle"
+        options:
+          - {label: "poisson", value: "fish"}
+          - {label: "important", value: "exclamation-circle"} 
+          - {label: "nuage", value: "cloud"}
+      - {label: "Titre", name: "title", widget: "string"}
+      - {label: "Date", name: "startDate", widget: "datetime", default: '', required: false}
+      - {label: "Date de fin", name: "endDate", widget: "datetime", default: '', required: false}
+      - {label: "Image", name: "thumbnail", widget: "image", required: false}
+      - {label: "Corps", name: "body", widget: "markdown", required: false}
+  - name: caroussel
+    label: "Caroussel" # Used in the UI
+    format: json
+    folder: "src/caroussel" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields: # The fields for each document, usually in front matter
+      - {label: "Titre", name: "title", widget: "string"}
+      - {label: "Image", name: "img", widget: "image"}
+  - name: "agenda" # Used in routes, e.g., /admin/collections/blog
+    label: "Agenda" # Used in the UI
+    format: json
+    folder: "src/agenda" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Evenement", name: "title", widget: "string"}
+      - {label: "Date", name: "startDate", widget: "datetime", default: '', required: false}
+      - {label: "Date de fin", name: "endDate", widget: "datetime", default: '', required: false}
+      - {label: "Corps", name: "body", widget: "markdown", required: false}
+      - {label: "Image", name: "thumbnail", widget: "image", required: false}
+  - name: "sponsors"
+    label: "Partenaire"
+    format: json
+    folder: "src/sponsors"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Nom", name: "name", widget: "string"}
+      - {label: "Site", name: "link", widget: "string"}
+      - {label: "Logo", name: "logo", widget: "image"}
+  - name: "association"
+    label: "Association"
+    format: json
+    folder: "src/association"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Nom", name: "name", widget: "string"}
+      - {label: "Role", name: "role", widget: "string", required: false}
+      - label: "Couleur"
+        name: "color"
+        widget: "select"
+        default: "blue"
+        options: 
+          - {label: "bleu", value: "blue"}
+          - {label: "orange", value: "orange"}
+  - name: "gallery"
+    label: "Galerie"
+    format: json
+    folder: "src/gallery"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Titre", name: "title", widget: "string"}
+      - {label: "Image", name: "img", widget: "image"}

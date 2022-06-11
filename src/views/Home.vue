@@ -2,85 +2,38 @@
   <main>
     <div class="fond">
       <div class="articles">
-        <div class="next-event">
+        <div
+          v-for="article in articles"
+          :key="article.title"
+          :class="article.color"
+        >
           <fa-icon
-            :icon="['fas', 'exclamation-circle']"
-            class="article-icon orange"
+            v-if="article.icon"
+            :icon="['fas', article.icon]"
+            class="article-icon"
           ></fa-icon>
-          <div class="orange event-name">Important</div>
-          <p class="event-description">
-            Voici la liste des inscrits de l’open des Glénan 2022.<br />
-            Si le nom de votre équipe n’apparaît pas dans cette liste c’est sans
-            doute 🤔: <br />
-            Que votre dossier est incomplet <br />
-            Ou pas encore arrivé par voie postale.<br />
-            En cas de doute contactez-nous<br />
-            A bientôt sur l’eau 😉<br />
-            <a class="link2" href="/annonce">lire la suite ...</a>
-          </p>
-          <img class="article-illustration" src="../assets/logo-10-ans.jpg" />
-        </div>
-        <div class="meteo">
-          <fa-icon
-            :icon="['fas', 'exclamation-circle']"
-            class="article-icon dark-blue"
-          ></fa-icon>
-          <div class="dark-blue event-name">Agenda</div>
-          <p class="date orange">25/06/2022 au 26/06/2022</p>
-          <img class="article-img" src="../assets/logo.png" />
-          <p class="event-description">
-            La compétition se déroulera sur deux jours du Samedi 25 Juin au
-            dimanche 26 Juin 2022.
-          </p>
-          <p class="event-description">
-            Pour voir les autres evenements a venir rendez-vous sur cette
-            <router-link class="link2" to="/agenda">page</router-link>
-          </p>
-          <p class="event-description">
-            Pour etre tenu au courant suivez nous sur
-            <a class="link" href="https://www.facebook.com/glenanpechesportive/"
-              >facebook</a
+          <h2>{{ article.title }}</h2>
+          <div v-if="article.startDate">
+            <span class="date">{{ formatDate(article.startDate) }}</span>
+            <span class="date" v-if="article.endDate">
+              au {{ formatDate(article.endDate) }}</span
             >
-          </p>
-        </div>
-        <div class="contest">
-          <fa-icon :icon="['fas', 'fish']" class="article-icon white"></fa-icon>
-          <h2 class="contest-title white">Open des Glénan</h2>
-          <img class="article-img" src="../assets/logo-10-ans.jpg" />
-          <p class="contest-description">
-            C'est une compétition de pêche au bar No Kill.
-          </p>
-          <p class="contest-description">
-            Qui se déroule sur deux jours. La base à terre se trouve à Port la
-            Forêt(29) et le compétition se déroule sur l'archipel des Glénan.
-          </p>
-          <p class="contest-description">
-            Carte de la zone
-            <a class="link2" href="/contest/Carte-zone-de-pêche.gif">ici</a
-            >.<br />
-            Points gps de la zone
-            <a
-              class="link2"
-              href="/contest/TraceZonePecheOpenGlenan.gpx"
-              download
-              >ici</a
-            >.
-          </p>
-          <p class="event-description">
-            <router-link
-              to="/agenda"
-              class="other-event event-description link2"
-              >Pour les évenements à venir c'est ici !</router-link
-            >
-          </p>
-          <p class="event-description">
-            Et pour avoir les infos en direct suivez nous sur notre page
-            <a
-              class="link2"
-              href="https://www.facebook.com/glenanpechesportive/"
-              >facebook</a
-            >.
-          </p>
+          </div>
+          <img
+            v-if="article.thumbnail && article.body"
+            class="article-img"
+            :src="article.thumbnail"
+          />
+          <img
+            v-if="article.thumbnail && !article.body"
+            class="article-illustration"
+            :src="article.thumbnail"
+          />
+          <div
+            v-if="article.body"
+            v-html="markdown(article.body)"
+            class="body"
+          ></div>
         </div>
         <router-link to="gallery" class="gallery">
           <div class="gallery-filter">
@@ -89,30 +42,13 @@
             </h2>
           </div>
         </router-link>
-        <div class="meteo">
-          <fa-icon :icon="['fas', 'cloud']" class="article-icon blue"></fa-icon>
-          <h2 class="meteo-title blue">Météo des Glénan</h2>
-          <p class="meteo-info">
-            Pour avoir plus d'infos sur les horaires de marées rendez-vous
-            <a
-              class="link"
-              href="https://mareespeche.com/fr/bretagne-atlantique/concarneau"
-              >ici</a
-            >.
-          </p>
-          <p class="meteo-info">
-            Pour avoir une vision en direct de la météo sur l'archipel ce sera
-            <a class="link" href="https://data.diabox.com/?id=106&view=webcam"
-              >par là</a
-            >.
-          </p>
-        </div>
       </div>
     </div>
   </main>
 </template>
-
 <script>
+import marked from "marked";
+import { DateTime } from "luxon";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faFish,
@@ -124,7 +60,24 @@ library.add(faFish);
 library.add(faExclamationCircle);
 library.add(faCloud);
 
-export default {};
+const r = require.context("../text", true, /\.json$/);
+const articles = r.keys().map(file => r(file));
+
+export default {
+  computed: {
+    articles() {
+      return articles;
+    }
+  },
+  methods: {
+    markdown(input) {
+      return marked(input, { sanitize: true });
+    },
+    formatDate(input) {
+      return DateTime.fromISO(input).toFormat("dd LLL yyyy");
+    }
+  }
+};
 </script>
 
 <style>
@@ -146,11 +99,6 @@ export default {};
   margin: 10px;
 }
 
-.article-icon {
-  font-size: 40px;
-  margin: 10px;
-}
-
 .article-img {
   width: 100%;
   height: 80px;
@@ -165,7 +113,7 @@ export default {};
   object-fit: contain;
 }
 
-.next-event {
+.theme-black {
   padding: 10px;
   display: flex;
   flex-wrap: wrap;
@@ -174,21 +122,42 @@ export default {};
   width: 350px;
 }
 
-.event-name {
+.theme-black > .article-icon {
+  font-size: 40px;
+  margin: 10px;
+  color: #f37538;
+}
+
+.theme-black > h2 {
   font: caption;
   font-weight: bold;
   font-size: 30px;
   margin: 10px;
+  color: #f37538;
 }
 
-.event-description {
+.theme-black > div > .date {
+  font: caption;
+  font-weight: bold;
+  color: #0185c6;
+}
+
+.theme-black > div > .date:first-child {
+  padding-left: 80px;
+}
+
+.theme-black > .body {
   font: caption;
   font-size: 15px;
   margin: 10px;
   text-align: justify;
 }
 
-.meteo {
+.theme-black > .body > p > a {
+  color: #f37538;
+}
+
+.theme-white {
   padding: 10px;
   display: flex;
   flex-wrap: wrap;
@@ -197,18 +166,39 @@ export default {};
   width: 350px;
 }
 
-.meteo-title {
+.theme-white > .article-icon {
+  font-size: 40px;
+  margin: 10px;
+  color: #0185c6;
+}
+
+.theme-white > h2 {
   font: caption;
   font-weight: bold;
   font-size: 30px;
   margin: 10px;
+  color: #0185c6;
 }
 
-.meteo-info {
+.theme-white > div > .date {
+  font: caption;
+  font-weight: bold;
+  color: #f37538;
+}
+
+.theme-white > div > .date:first-child {
+  padding-left: 80px;
+}
+
+.theme-white > .body {
   font: caption;
   margin: 10px;
   text-align: justify;
   font-size: 15px;
+}
+
+.theme-white > .body > p > a {
+  color: #65aee2;
 }
 
 .gallery {
@@ -239,7 +229,7 @@ export default {};
   font-size: 50px;
 }
 
-.contest {
+.theme-dark-blue {
   padding: 10px;
   display: flex;
   flex-wrap: wrap;
@@ -248,27 +238,38 @@ export default {};
   width: 350px;
 }
 
-.contest-title {
+.theme-dark-blue > .article-icon {
+  font-size: 40px;
+  margin: 10px;
+  color: #f2f2f2;
+}
+
+.theme-dark-blue > h2 {
   font: caption;
   font-weight: bold;
   font-size: 30px;
   margin: 10px;
+  color: #f2f2f2;
 }
 
-.contest-description {
+.theme-dark-blue > div > .date {
+  font: caption;
+  font-weight: bold;
+  color: #3a3a3a;
+}
+
+.theme-dark-blue > div > .date:first-child {
+  padding-left: 80px;
+}
+
+.theme-dark-blue > .body {
   font: caption;
   font-size: 15px;
   margin: 10px;
   text-align: justify;
 }
 
-.link {
-  color: #65aee2;
-}
-
-.date {
-  padding-left: 80px;
-  font: caption;
-  font-weight: bold;
+.theme-dark-blue > .body > p > a {
+  color: #f37538;
 }
 </style>

@@ -1,25 +1,41 @@
 <template>
   <main id="agenda">
     <div class="body">
-      <AgendaElem event="Open des Glénan" date="25/06/2022 au 26/06/2022">
-        <p>
-          La compétition se déroulera sur deux jours du Samedi 25 Juin au
-          dimanche 26 Juin 2022.
-        </p>
-        <div class="agenda-article">
-          <img class="agenda_img" src="../assets/logo-10-ans.jpg" />
+      <div v-for="event in articles" :key="event.title" class="agenda-event">
+        <h2 class="font dark-blue agenda-title">{{ event.title }}</h2>
+        <div v-if="event.startDate">
+          <span class="orange date">{{ formatDate(event.startDate) }}</span>
+          <span class="orange date" v-if="event.endDate">
+            au {{ formatDate(event.endDate) }}</span
+          >
         </div>
-      </AgendaElem>
+        <div v-if="event.body" v-html="markdown(event.body)"></div>
+        <img v-if="event.thumbnail" class="agenda_img" :src="event.thumbnail" />
+      </div>
     </div>
   </main>
 </template>
 
 <script>
-import AgendaElem from "../components/AgendaElem";
+import marked from "marked";
+import { DateTime } from "luxon";
+
+const r = require.context("../agenda", true, /\.json$/);
+const articles = r.keys().map(file => r(file));
 
 export default {
-  components: {
-    AgendaElem
+  computed: {
+    articles() {
+      return articles;
+    }
+  },
+  methods: {
+    markdown(input) {
+      return marked(input, { sanitize: true });
+    },
+    formatDate(input) {
+      return DateTime.fromISO(input).toFormat("dd LLL yyyy");
+    }
   }
 };
 </script>
@@ -52,5 +68,24 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.agenda-event {
+  background: #f2f2f2;
+  max-width: 500px;
+  min-height: 60px;
+  margin: 10px;
+  padding: 10px;
+  text-align: justify;
+  font-size: 15px;
+}
+
+.agenda-title {
+  font-size: 18px;
+}
+
+.date {
+  font: caption;
+  font-weight: bold;
 }
 </style>
