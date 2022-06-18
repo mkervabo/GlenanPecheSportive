@@ -24,7 +24,7 @@
         Ci-dessous se trouvent la liste des inscrits pour l'open 2022:
       </p>
     </div> -->
-    <div class="annonce_equipes white" v-if="teams !== null">
+    <!-- <div class="annonce_equipes white" v-if="teams !== null">
       <table>
         <tbody>
           <Equipe
@@ -35,20 +35,64 @@
           />
         </tbody>
       </table>
+    </div> -->
+    <div class="annonce_equipes white">
+      <div class="tab-bar">
+        <div v-on:click="makeActive(0)" v-bind:class="{ active: active[0] }">
+          Teams
+        </div>
+        <div v-on:click="makeActive(1)" v-bind:class="{ active: active[1] }">
+          Score Samedi
+        </div>
+        <div v-on:click="makeActive(2)" v-bind:class="{ active: active[2] }">
+          Classement Samedi
+        </div>
+        <div v-on:click="makeActive(3)" v-bind:class="{ active: active[3] }">
+          Score Dimanche
+        </div>
+        <div v-on:click="makeActive(4)" v-bind:class="{ active: active[4] }">
+          Classement Dimanche
+        </div>
+        <div v-on:click="makeActive(5)" v-bind:class="{ active: active[5] }">
+          Classement final
+        </div>
+      </div>
+      <div class="tab-view">
+        <table v-if="active[0]">
+          <tbody>
+            <Equipe
+              v-for="team in deleteEmpty"
+              :key="team[0]"
+              :number="team[0] + '-'"
+              :name="team[1]"
+            />
+          </tbody>
+        </table>
+        <ScoreTab v-if="active[1]" :range="0" />
+        <ResultTab v-if="active[2]" :range="1" />
+        <ScoreTab v-if="active[3]" :range="2" />
+        <ResultTab v-if="active[4]" :range="3" />
+        <ResultTab v-if="active[5]" :range="4" />
+      </div>
     </div>
-    <img v-else src="/loading.svg" />
+    <!-- <img v-else src="/loading.svg" /> -->
   </main>
 </template>
 
 <script>
 import Equipe from "../components/Equipe";
+import ResultTab from "../components/ResultTab";
+import ScoreTab from "../components/ScoreTab";
 export default {
   components: {
-    Equipe
+    Equipe,
+    ResultTab,
+    ScoreTab
   },
   data() {
     return {
-      teams: []
+      teams: [],
+      active: [true, false, false, false, false, false]
     };
   },
   mounted() {
@@ -64,12 +108,12 @@ export default {
       window.console.log(this.teams);
       return this.teams.filter(team => team[1] != null).slice(1);
     }
-    //   sortTeams() {
-    //     window.console.log(this.teams);
-    //     return this.teams.slice(0).sort(function(a, b) {
-    //       return parseInt(a[1], 10) < parseInt(b[1], 10) ? 1 : -1;
-    //     });
-    //   }
+  },
+  methods: {
+    makeActive(range) {
+      this.active = [false, false, false, false, false, false];
+      this.active[range] = true;
+    }
   }
 };
 </script>
@@ -98,12 +142,47 @@ export default {
 }
 .annonce_equipes {
   width: 100%;
+  min-height: 600px;
   max-width: 900px;
   padding: 10px;
   margin: 10px auto;
   background: #3a3a3a;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.tab-bar {
+  width: 100%;
+  display: flex;
+}
+
+.tab-view {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 5px;
+  border-top: solid 1px;
+  width: 100%;
+}
+
+.tab-bar > div {
+  width: 100%;
+  border-right: solid 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tab-bar > div:last-child {
+  border-right: none;
+}
+
+.tab-bar > div:hover {
+  background: #4b4b4b;
+}
+
+.active {
+  background: #4b4b4b;
 }
 </style>
