@@ -42,13 +42,13 @@
           Teams
         </div>
         <div v-on:click="makeActive(1)" v-bind:class="{ active: active[1] }">
-          Score Samedi
+          Poissons Samedi
         </div>
         <div v-on:click="makeActive(2)" v-bind:class="{ active: active[2] }">
           Classement Samedi
         </div>
         <div v-on:click="makeActive(3)" v-bind:class="{ active: active[3] }">
-          Score Dimanche
+          Poissons Dimanche
         </div>
         <div v-on:click="makeActive(4)" v-bind:class="{ active: active[4] }">
           Classement Dimanche

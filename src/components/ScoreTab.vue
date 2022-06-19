@@ -48,12 +48,16 @@ export default {
       );
       return result;
     }
-    //   sortTeams() {
-    //     window.console.log(this.teams);
-    //     return this.teams.slice(0).sort(function(a, b) {
-    //       return parseInt(a[1], 10) < parseInt(b[1], 10) ? 1 : -1;
-    //     });
-    //   }
   }
 };
 </script>
+
+<style scoped>
+table {
+  width: 100%;
+}
+
+tbody {
+  width: 100%;
+}
+</style>

@@ -25,6 +25,10 @@ export default {
   min-width: 50px;
 }
 
+.equipe {
+  width: 100%;
+}
+
 .equipe_number {
   /* border: 1px solid #f2f2f2; */
   color: #65aee2;

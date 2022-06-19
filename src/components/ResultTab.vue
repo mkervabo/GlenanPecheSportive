@@ -2,12 +2,18 @@
   <table v-if="result">
     <tbody>
       <ResultCase
-        v-for="score in sortResult"
-        :key="score[0]"
-        :number="score[0] + '-'"
+        number="n°"
+        name="nom d'equipe"
+        total="Résultat"
+        rank="Classement"
+      />
+      <ResultCase
+        v-for="(score, index) in sortResult"
+        :key="index"
+        :number="score[0]"
         :name="score[1]"
         :total="score[2]"
-        :rank="score[3]"
+        :rank="index + 1"
       />
     </tbody>
   </table>
@@ -46,10 +52,20 @@ export default {
       return result;
     },
     sortResult() {
-      return this.deleteEmpty.slice(0).sort(function(a, b) {
-        return parseInt(a[2], 10) < parseInt(b[2], 10) ? -1 : 1;
+      return this.deleteEmpty.slice(1).sort(function(a, b) {
+        return parseInt(a[2], 10) <= parseInt(b[2], 10) ? 1 : -1;
       });
     }
   }
 };
 </script>
+
+<style scoped>
+table {
+  width: 100%;
+}
+
+tbody {
+  width: 100%;
+}
+</style>
