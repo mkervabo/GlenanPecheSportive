@@ -18,47 +18,21 @@
         <a class="link" href="mailto:infos@glenanpechesportive.fr">ici</a>.
       </p>
     </div>
-    <!-- <div class="annonce_info white" id="equipes">
-      <h2 class="subscription-title orange">Classement</h2>
-      <p class="annonce-content dark-olive">
-        Ci-dessous se trouvent la liste des inscrits pour l'open 2022:
-      </p>
-    </div> -->
-    <!-- <div class="annonce_equipes white" v-if="teams !== null">
-      <table>
-        <tbody>
-          <Equipe
-            v-for="team in deleteEmpty"
-            :key="team[0]"
-            :number="team[0] + '-'"
-            :name="team[1]"
-          />
-        </tbody>
-      </table>
-    </div> -->
     <div class="annonce_equipes white">
       <div class="tab-bar">
-        <div v-on:click="makeActive(0)" v-bind:class="{ active: active[0] }">
-          Teams
-        </div>
-        <div v-on:click="makeActive(1)" v-bind:class="{ active: active[1] }">
-          Poissons Samedi
-        </div>
-        <div v-on:click="makeActive(2)" v-bind:class="{ active: active[2] }">
-          Classement Samedi
-        </div>
-        <div v-on:click="makeActive(3)" v-bind:class="{ active: active[3] }">
-          Poissons Dimanche
-        </div>
-        <div v-on:click="makeActive(4)" v-bind:class="{ active: active[4] }">
-          Classement Dimanche
-        </div>
-        <div v-on:click="makeActive(5)" v-bind:class="{ active: active[5] }">
-          Classement final
-        </div>
+        <ul>
+          <li
+            v-for="(tabName, index) in tabBar"
+            :key="index"
+            v-on:click="makeActive(index)"
+            v-bind:class="{ active: active[index] }"
+          >
+            {{ tabName }}
+          </li>
+        </ul>
       </div>
       <div class="tab-view">
-        <table v-if="active[0]">
+        <table :key="0" v-if="active[0]">
           <tbody>
             <Equipe
               v-for="team in deleteEmpty"
@@ -68,11 +42,11 @@
             />
           </tbody>
         </table>
-        <ScoreTab v-if="active[1]" :range="0" />
-        <ResultTab v-if="active[2]" :range="1" />
-        <ScoreTab v-if="active[3]" :range="2" />
-        <ResultTab v-if="active[4]" :range="3" />
-        <ResultTab v-if="active[5]" :range="4" />
+        <ScoreTab :key="1" v-if="active[1]" :range="0" />
+        <ResultTab :key="2" v-if="active[2]" :range="1" />
+        <ScoreTab :key="3" v-if="active[3]" :range="2" />
+        <ResultTab :key="4" v-if="active[4]" :range="3" />
+        <ResultTab :key="5" v-if="active[5]" :range="4" />
       </div>
     </div>
     <!-- <img v-else src="/loading.svg" /> -->
@@ -92,7 +66,15 @@ export default {
   data() {
     return {
       teams: [],
-      active: [true, false, false, false, false, false]
+      active: [true, false, false, false, false, false],
+      tabBar: [
+        "Teams",
+        "Poissons Samedi",
+        "Classement Samedi",
+        "Poissons Dimanche",
+        "Classement Dimanche",
+        "Classement final"
+      ]
     };
   },
   mounted() {
@@ -112,7 +94,7 @@ export default {
   methods: {
     makeActive(range) {
       this.active = [false, false, false, false, false, false];
-      this.active[range] = true;
+      this.$set(this.active, range, true);
     }
   }
 };
@@ -141,7 +123,7 @@ export default {
   text-align: left;
 }
 .annonce_equipes {
-  width: 100%;
+  max-width: 100%;
   min-height: 600px;
   max-width: 900px;
   padding: 10px;
@@ -152,37 +134,45 @@ export default {
   align-items: center; */
 }
 
-.tab-bar {
+.tab-bar > ul {
   width: 100%;
   display: flex;
+  margin: 0;
+  padding: 0;
+  overflow-x: scroll;
 }
 
 .tab-view {
-  display: flex;
+  overflow-x: scroll;
   justify-content: center;
   align-items: center;
   margin-top: 5px;
   border-top: solid 1px;
-  width: 100%;
+  max-width: 100%;
 }
 
-.tab-bar > div {
-  width: 100%;
+.tab-bar > ul > li {
+  margin: 0;
+  min-width: 150px;
   border-right: solid 1px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.tab-bar > div:last-child {
+.tab-bar > ul > li:last-child {
   border-right: none;
 }
 
-.tab-bar > div:hover {
+.tab-bar > ul > li:hover {
   background: #4b4b4b;
 }
 
 .active {
   background: #4b4b4b;
+}
+
+.phone_tab_button {
+  display: none;
 }
 </style>

@@ -12,7 +12,7 @@ const sheets = google.sheets({ version: "v4", auth });
 const ranges = [
   "1er Manche site!A:J",
   "resultat samedi!C:F",
-  `2ème Manche site!A:J`,
+  "2ème Manche site!A:J",
   "resultat dimanche!C:F",
   "resultat final!A:F"
 ];
