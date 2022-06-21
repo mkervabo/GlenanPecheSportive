@@ -29,11 +29,11 @@ export default {
   width: 100%;
 }
 
-.equipe_number {
+.equipe > td {
   /* border: 1px solid #f2f2f2; */
   color: #65aee2;
 }
-.equipe:nth-child(2n) .equipe_number {
+.equipe:nth-child(2n) > td {
   color: #f37538;
 }
 .equipe_name {

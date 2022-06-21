@@ -22,17 +22,17 @@
       <div class="tab-bar">
         <ul>
           <li
-            v-for="(tabName, index) in tabBar"
-            :key="index"
-            v-on:click="makeActive(index)"
-            v-bind:class="{ active: active[index] }"
+            v-for="tab in tabBar.filter(tab => tab.date < new Date())"
+            :key="tab.name"
+            v-on:click="makeActive(tab)"
+            v-bind:class="{ active: tab.active }"
           >
-            {{ tabName }}
+            <span>{{ tab.name }}</span>
           </li>
         </ul>
       </div>
       <div class="tab-view">
-        <table :key="0" v-if="active[0]">
+        <table :key="0" v-if="tabBar[0].active">
           <tbody>
             <Equipe
               v-for="team in deleteEmpty"
@@ -42,11 +42,11 @@
             />
           </tbody>
         </table>
-        <ScoreTab :key="1" v-if="active[1]" :range="0" />
-        <ResultTab :key="2" v-if="active[2]" :range="1" />
-        <ScoreTab :key="3" v-if="active[3]" :range="2" />
-        <ResultTab :key="4" v-if="active[4]" :range="3" />
-        <ResultTab :key="5" v-if="active[5]" :range="4" />
+        <ScoreTab :key="1" v-if="tabBar[1].active" :range="0" />
+        <ResultTab :key="2" v-if="tabBar[2].active" :range="1" />
+        <ScoreTab :key="3" v-if="tabBar[3].active" :range="2" />
+        <ResultTab :key="4" v-if="tabBar[4].active" :range="3" />
+        <ResultTab :key="5" v-if="tabBar[5].active" :range="4" />
       </div>
     </div>
     <!-- <img v-else src="/loading.svg" /> -->
@@ -66,14 +66,33 @@ export default {
   data() {
     return {
       teams: [],
-      active: [true, false, false, false, false, false],
       tabBar: [
-        "Teams",
-        "Poissons Samedi",
-        "Classement Samedi",
-        "Poissons Dimanche",
-        "Classement Dimanche",
-        "Classement final"
+        { name: "Teams", date: new Date("0"), active: true },
+        {
+          name: "Poissons Samedi",
+          date: new Date("June 25, 2022 00:00:00"),
+          active: false
+        },
+        {
+          name: "Classement Samedi",
+          date: new Date("June 25, 2022 19:30:00"),
+          active: false
+        },
+        {
+          name: "Poissons Dimanche",
+          date: new Date("June 26, 2022 00:00:00"),
+          active: false
+        },
+        {
+          name: "Classement Dimanche",
+          date: new Date("June 26, 2022 17:00:00"),
+          active: false
+        },
+        {
+          name: "Classement final",
+          date: new Date("June 26, 2022 17:30:00"),
+          active: false
+        }
       ]
     };
   },
@@ -92,9 +111,11 @@ export default {
     }
   },
   methods: {
-    makeActive(range) {
-      this.active = [false, false, false, false, false, false];
-      this.$set(this.active, range, true);
+    makeActive(newActive) {
+      for (const tab of this.tabBar) {
+        tab.active = false;
+      }
+      newActive.active = true;
     }
   }
 };
@@ -136,6 +157,7 @@ export default {
 
 .tab-bar > ul {
   width: 100%;
+  height: 50px;
   display: flex;
   margin: 0;
   padding: 0;
@@ -152,19 +174,24 @@ export default {
 }
 
 .tab-bar > ul > li {
+  list-style: none;
+}
+
+.tab-bar > ul > li > span {
   margin: 0;
   min-width: 150px;
+  height: 100%;
   border-right: solid 1px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.tab-bar > ul > li:last-child {
+.tab-bar > ul > li:last-child > span {
   border-right: none;
 }
 
-.tab-bar > ul > li:hover {
+.tab-bar > ul > li:hover > span {
   background: #4b4b4b;
 }
 
