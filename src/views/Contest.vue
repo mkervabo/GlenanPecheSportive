@@ -16,6 +16,28 @@
       <br />
       <h2 class="contest-title orange">Classement</h2>
       <div
+        v-on:click="contest21 = !contest21"
+        class="contest-content link cursor"
+      >
+        Classement 2021
+      </div>
+      <div v-show="contest21" class="link2">
+        <p class="white">
+          Cliquez ci-dessous pour consulter les résultats des manches et le
+          classement général de l'open des Glénan 2021.
+        </p>
+        <a
+          class="link2"
+          href="/contest/classement/2021/classement_1er_manche.pdf"
+          >1ere manche Open des Glénan 2021, samedi 12 juin</a
+        >
+        <br />
+        <a class="link2" href="/contest/classement/2021/classement_general.pdf"
+          >Classement général des équipes et des équipages Open des Glénan
+          2021</a
+        >
+      </div>
+      <div
         v-on:click="contest18 = !contest18"
         class="contest-content link cursor"
       >
@@ -469,6 +491,7 @@
 export default {
   data() {
     return {
+      contest21: false,
       contest18: false,
       contest17: false,
       contest16: false,
