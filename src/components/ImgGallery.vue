@@ -16,6 +16,5 @@ export default {
   margin: 10px;
   z-index: 0;
   cursor: pointer;
-  image-orientation: none;
 }
 </style>
