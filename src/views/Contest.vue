@@ -16,6 +16,28 @@
       <br />
       <h2 class="contest-title orange">Classement</h2>
       <div
+        v-on:click="contest21 = !contest21"
+        class="contest-content link cursor"
+      >
+        Classement 2021
+      </div>
+      <div v-show="contest21" class="link2">
+        <p class="white">
+          Cliquez ci-dessous pour consulter les résultats des manches et le
+          classement général de l'open des Glénan 2021.
+        </p>
+        <a
+          class="link2"
+          href="/contest/classement/2021/classement_1er_manche.pdf"
+          >1ere manche Open des Glénan 2021, samedi 12 juin</a
+        >
+        <br />
+        <a class="link2" href="/contest/classement/2021/classement_general.pdf"
+          >Classement général des équipes et des équipages Open des Glénan
+          2021</a
+        >
+      </div>
+      <div
         v-on:click="contest18 = !contest18"
         class="contest-content link cursor"
       >
@@ -169,6 +191,148 @@
           href="/contest/classement/2015/Classement-general-Barracuda.pdf"
           >Classement général Barracuda Concarneau 2015</a
         >
+      </div>
+    </div>
+    <div class="contest-article contest-info">
+      <h2 class="contest-title dark-blue">Planning</h2>
+      <br />
+      <div class="contest-content">
+        <p>
+          Bonjour à tous les compétiteurs, Cette page va évoluer, merci de la
+          consulter à quelques jours de l’Open des Glénan 2022. Petite précision
+          l'organisation se réserve le droit de modifier les horaires des
+          manches en fonction des derniers bulletins météo, que vous pouvez
+          consulter sur<span class="orange">
+            <a href="https://www.windguru.cz/48469" class="link2 font">
+              Windguru</a
+            >
+            ou sur
+            <a
+              href="https://fr.windfinder.com/forecast/iles_de_glenan_le_loc_h"
+              class="link2 font"
+              >Windfinder</a
+            ></span
+          >
+        </p>
+        <p>
+          La présence est obligatoire lors des briefings. Voici les informations
+          pratiques et les instructions pour cette compétition.
+        </p>
+        <p>
+          <span class="font">En cas d’arrivée avant le vendredi 24/06</span>,
+          Vous pourrez mettre à l’eau à la cale sud de Port la Forêt.Mais vous
+          n'aurez pas accès au parking dédié à notre organisation.
+        </p>
+        <iframe
+          src="https://www.google.com/maps/d/embed?mid=11_caE_Tp7kaPTJreQf4sYrOKRq_7BUw&ehbc=2E312F"
+          width="100%"
+          height="300"
+        ></iframe>
+        <p class="font">
+          Arrivée à Port la Forêt le vendredi 24/06:
+        </p>
+        <p>
+          <span class="font">La cale sud de mise à l’eau</span> sera disponible
+          le vendredi. Le bateau viendra s’amarrer au ponton de la base à terre,
+          et la remorque sera garée sur un parking dédié tout proche, un
+          fléchage est prévu pour ce parking.
+        </p>
+        <br />
+        <p>
+          <span class="font">Important:</span> Prévoir 2 bouts d'amarrage de 25m
+          environ (avant et arrière), et des pare-battages. Les bateaux seront
+          amarrés à couple sur plusieurs largeurs, et les conditions météo
+          imposent de solides amarrages.
+        </p>
+        <p>
+          <span class="font"
+            >Les dossiers avec tous les documents indispensables</span
+          >
+          à la compétition seront à retirer chez<span class="blue">
+            CN DIFFUSION</span
+          >
+          le vendredi 24, à partir de 10h00 jusqu’à 18h00. Et après sur notre
+          base a terre.Il est demandé que tous les dossiers soient retirés le
+          vendredi, si vous ne pouvez pas venir le
+          <span class="font">vendredi</span> arrangez vous avec un autre
+          compétiteur qui le récupérera pour vous.
+        </p>
+        <p>
+          <span class="font">Pêche:</span> s'agissant d'une compétition en
+          no-kill intégral, tous les poissons pêchés doivent être relâchés
+          vivants, quelque soit l'espèce. Les viviers des compétiteurs pourront
+          être inspectés de façon aléatoire à la fin de chaque journée de pêche
+          par un commissaire de l'organisation, en lien avec la réglementation
+          qui nous l'impose.
+        </p>
+        <p>
+          Les fichiers informatiques avec les points délimitant la zone de pêche
+          sont à installer sur vos appareils.gpx
+        </p>
+        <p>
+          Points gps de la zone
+          <a
+            class="link2 font"
+            href="/contest/TraceZonePecheOpenGlenan.gpx"
+            download
+            >ici</a
+          >
+        </p>
+        <p>
+          <span class="font">Carburant:</span> la station de carburant du port
+          de plaisance de Port la Forêt distribue du SP95
+        </p>
+
+        <h2>1er jour de compétition samedi 25/06</h2>
+
+        <p>Veille VHF obligatoire pendant la compétition, le canal 77</p>
+        <p class="font">Points d’attention pour les équipes:</p>
+        <p>
+          Au
+          <span class="font"
+            >briefing de 6h30, la présence d’au moins 1 membre de chaque équipe
+            est obligatoire</span
+          >, un appel sera fait et une feuille d’émargement sera à signer.
+        </p>
+        <p>
+          <span class="font">En fin de manche (17h00)</span>, pointage visuel
+          obligatoire en mer sur la zone de sortie à 18h00 max (même zone que
+          zone de départ au nord de Penfret) de tous les bateaux auprès du
+          bateau commissaire qui sera là. Il sera possible de mesurer des
+          poissons en même temps.
+        </p>
+
+        <h2>2ème jour de compétition dimanche 26/06</h2>
+
+        <p class="font">Points d’attention pour les équipes:</p>
+        <p>
+          Au
+          <span class="font"
+            >briefing de 6h30, la présence d’au moins 1 membre de chaque équipe
+            est obligatoire</span
+          >, un appel sera fait et une feuille d’émargement sera à signer. Les
+          paniers piquenique seront remis à ce moment-là.
+        </p>
+        <p>
+          <span class="font">En fin de manche à 15h00 maxi</span>, pointage
+          visuel obligatoire sur la zone de sortie (même zone que zone de
+          départ) de tous les bateaux auprès du bateau commissaire qui sera là.
+          Il sera possible de mesurer des poissons en même temps.
+        </p>
+        <p>
+          Au retour à Port la Forêt ,merci de sortir vos bateaux avant la remise
+          des prix.Vous pourrez vous garer sur le parking remorques.
+        </p>
+        <p>
+          Merci à chacun de bien respecter ces consignes,
+          <span class="font"
+            >c’est important pour la sécurité des personnes</span
+          >, et pour que
+          <span class="font">cette compétition soit un plaisir</span> pour tout
+          le monde.
+        </p>
+
+        <p>Au plaisir de vous rencontrer bientôt, L’équipe GPS</p>
       </div>
     </div>
     <div class="contest-article contest-info">
@@ -329,6 +493,7 @@
 export default {
   data() {
     return {
+      contest21: false,
       contest18: false,
       contest17: false,
       contest16: false,
