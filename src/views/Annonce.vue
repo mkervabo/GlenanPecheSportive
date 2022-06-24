@@ -18,6 +18,13 @@
         <a class="link" href="mailto:infos@glenanpechesportive.fr">ici</a>.
       </p>
     </div>
+    <div class="annonce_info white" id="equipes">
+      <h2 class="subscription-title orange">Classement</h2>
+      <p class="annonce-content dark-olive">
+        Ci-dessous se trouvent les résultats en continu de la compétition. Ils
+        seront mis à jour régulièrement au cours du weekend.
+      </p>
+    </div>
     <div class="annonce_equipes white">
       <div class="tab-bar">
         <ul>
