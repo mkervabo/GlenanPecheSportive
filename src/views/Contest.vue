@@ -223,11 +223,13 @@
           Vous pourrez mettre à l’eau à la cale sud de Port la Forêt.Mais vous
           n'aurez pas accès au parking dédié à notre organisation.
         </p>
+        <iframe
+          src="https://www.google.com/maps/d/embed?mid=11_caE_Tp7kaPTJreQf4sYrOKRq_7BUw&ehbc=2E312F"
+          width="100%"
+          height="300"
+        ></iframe>
         <p class="font">
           Arrivée à Port la Forêt le vendredi 24/06:
-          <a class="link2 font" href="/contest/plan-du-site.pdf">
-            plan du site</a
-          >
         </p>
         <p>
           <span class="font">La cale sud de mise à l’eau</span> sera disponible
