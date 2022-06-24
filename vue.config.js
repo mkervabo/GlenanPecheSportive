@@ -2,7 +2,7 @@ module.exports = {
   devServer: {
     proxy: {
       "^/.netlify": {
-        target: "https://deploy-preview-43--glenanpechesportive.netlify.app"
+        target: "http://localhost:34567"
       }
     }
   }

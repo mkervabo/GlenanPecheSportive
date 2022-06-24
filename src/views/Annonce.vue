@@ -18,37 +18,82 @@
         <a class="link" href="mailto:infos@glenanpechesportive.fr">ici</a>.
       </p>
     </div>
-    <!-- <div class="annonce_info white" id="equipes">
-      <h2 class="subscription-title orange">Classement</h2>
-      <p class="annonce-content dark-olive">
-        Ci-dessous se trouvent la liste des inscrits pour l'open 2022:
-      </p>
-    </div> -->
-    <div class="annonce_equipes white" v-if="teams !== null">
-      <table>
-        <tbody>
-          <Equipe
-            v-for="team in deleteEmpty"
-            :key="team[0]"
-            :number="team[0] + '-'"
-            :name="team[1]"
-          />
-        </tbody>
-      </table>
+    <div class="annonce_equipes white">
+      <div class="tab-bar">
+        <ul>
+          <li
+            v-for="tab in tabBar.filter(tab => tab.date < new Date())"
+            :key="tab.name"
+            v-on:click="makeActive(tab)"
+            v-bind:class="{ active: tab.active }"
+          >
+            <span>{{ tab.name }}</span>
+          </li>
+        </ul>
+      </div>
+      <div class="tab-view">
+        <table :key="0" v-if="tabBar[0].active">
+          <tbody>
+            <Equipe
+              v-for="team in deleteEmpty"
+              :key="team[0]"
+              :number="team[0] + '-'"
+              :name="team[1]"
+            />
+          </tbody>
+        </table>
+        <ScoreTab :key="1" v-if="tabBar[1].active" :range="0" />
+        <ResultTab :key="2" v-if="tabBar[2].active" :range="1" />
+        <ScoreTab :key="3" v-if="tabBar[3].active" :range="2" />
+        <ResultTab :key="4" v-if="tabBar[4].active" :range="3" />
+        <ResultTab :key="5" v-if="tabBar[5].active" :range="4" />
+      </div>
     </div>
-    <img v-else src="/loading.svg" />
+    <!-- <img v-else src="/loading.svg" /> -->
   </main>
 </template>
 
 <script>
 import Equipe from "../components/Equipe";
+import ResultTab from "../components/ResultTab";
+import ScoreTab from "../components/ScoreTab";
 export default {
   components: {
-    Equipe
+    Equipe,
+    ResultTab,
+    ScoreTab
   },
   data() {
     return {
-      teams: []
+      teams: [],
+      tabBar: [
+        { name: "Teams", date: new Date("0"), active: true },
+        {
+          name: "Poissons Samedi",
+          date: new Date("June 25, 2022 00:00:00"),
+          active: false
+        },
+        {
+          name: "Classement Samedi",
+          date: new Date("June 25, 2022 19:30:00"),
+          active: false
+        },
+        {
+          name: "Poissons Dimanche",
+          date: new Date("June 26, 2022 00:00:00"),
+          active: false
+        },
+        {
+          name: "Classement Dimanche",
+          date: new Date("June 26, 2022 17:00:00"),
+          active: false
+        },
+        {
+          name: "Classement final",
+          date: new Date("June 26, 2022 17:30:00"),
+          active: false
+        }
+      ]
     };
   },
   mounted() {
@@ -64,12 +109,14 @@ export default {
       window.console.log(this.teams);
       return this.teams.filter(team => team[1] != null).slice(1);
     }
-    //   sortTeams() {
-    //     window.console.log(this.teams);
-    //     return this.teams.slice(0).sort(function(a, b) {
-    //       return parseInt(a[1], 10) < parseInt(b[1], 10) ? 1 : -1;
-    //     });
-    //   }
+  },
+  methods: {
+    makeActive(newActive) {
+      for (const tab of this.tabBar) {
+        tab.active = false;
+      }
+      newActive.active = true;
+    }
   }
 };
 </script>
@@ -97,13 +144,62 @@ export default {
   text-align: left;
 }
 .annonce_equipes {
-  width: 100%;
+  max-width: 100%;
+  min-height: 600px;
   max-width: 900px;
   padding: 10px;
   margin: 10px auto;
   background: #3a3a3a;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.tab-bar > ul {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  overflow-x: scroll;
+}
+
+.tab-view {
+  overflow-x: scroll;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  border-top: solid 1px;
+  max-width: 100%;
+}
+
+.tab-bar > ul > li {
+  list-style: none;
+}
+
+.tab-bar > ul > li > span {
+  margin: 0;
+  min-width: 150px;
+  height: 100%;
+  border-right: solid 1px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.tab-bar > ul > li:last-child > span {
+  border-right: none;
+}
+
+.tab-bar > ul > li:hover > span {
+  background: #4b4b4b;
+}
+
+.active {
+  background: #4b4b4b;
+}
+
+.phone_tab_button {
+  display: none;
 }
 </style>
