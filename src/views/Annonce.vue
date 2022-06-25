@@ -75,7 +75,7 @@ export default {
         },
         {
           name: "Classement Samedi",
-          date: new Date("June 25, 2022 19:30:00"),
+          date: new Date("June 25, 2022 22:00:00"),
           active: false
         },
         {
@@ -85,12 +85,12 @@ export default {
         },
         {
           name: "Classement Dimanche",
-          date: new Date("June 26, 2022 17:00:00"),
+          date: new Date("June 26, 2022 21:00:00"),
           active: false
         },
         {
           name: "Classement final",
-          date: new Date("June 26, 2022 17:30:00"),
+          date: new Date("June 26, 2022 21:30:00"),
           active: false
         }
       ]
