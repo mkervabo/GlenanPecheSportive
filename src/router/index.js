@@ -8,6 +8,7 @@ import Agenda from "../views/Agenda.vue";
 import Gallery from "../views/Gallery.vue";
 import Annonce from "../views/Annonce.vue";
 import Error404 from "../views/404.vue";
+import Subscription from "../views/Subscription.vue";
 
 Vue.use(VueRouter);
 
@@ -61,6 +62,11 @@ const routes = [
       title: "Partenaires",
       image: require("../assets/navbar/Penfret.svg")
     }
+  },
+  {
+    path: "/subscription",
+    name: "subscription",
+    component: Subscription
   },
   {
     path: "/annonce",

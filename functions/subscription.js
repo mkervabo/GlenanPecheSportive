@@ -18,16 +18,19 @@ exports.handler = async event => {
 
   await sheets.spreadsheets.values.append({
     spreadsheetId: "140_Q_ZUeG7TfmV5_yfShMWMUvGZ_F1ue8dKF7w3d2v0",
-    range: "Inscription2022!A1",
+    range: "Inscription2023!A1",
     valueInputOption: "RAW",
     requestBody: {
       values: [
         [
           body.equipage,
+          body.bateau,
           `${body.patron.nom} ${body.patron.prenom}`,
           `${body.mousse.nom} ${body.mousse.prenom}`,
-          `${body.patron.email}\n${body.patron.portable}\n${body.patron.fixe}`,
-          `${body.mousse.email}\n${body.mousse.portable}\n${body.mousse.fixe}`,
+          `${body.patron.email}`,
+          `${body.patron.portable}\n${body.patron.fixe}`,
+          `${body.mousse.email}`,
+          `${body.mousse.portable}\n${body.mousse.fixe}`,
           `site`,
           `${140 + body.repas * 25}`,
           `${body.repas}`,
