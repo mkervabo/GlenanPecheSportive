@@ -350,7 +350,7 @@
           <p class="contest-content">
             Si vous rencontrez des problèmes pour remplir l'inscription vous
             pouvez toujours
-            <a class="link" href="/contest/inscription-2022.pdf"
+            <a class="link" href="/contest/inscription-2023.pdf"
               >télécharger un bulletin vierge</a
             >
             et le remplir comme avant.
@@ -454,7 +454,7 @@ export default {
           }
         });
       }
-      fetch("/contest/inscription-2022.pdf")
+      fetch("/contest/inscription-2023.pdf")
         .then(res => res.arrayBuffer())
         .then(pdf => PDFDocument.load(pdf))
         .then(doc => {
@@ -471,36 +471,35 @@ export default {
           this.drawIdForm(firstPage, this.$refs.patron, 0);
           this.drawIdForm(firstPage, this.$refs.mousse, 360 - 173);
           firstPage.moveTo(0, height);
-          firstPage.moveDown(397);
-          firstPage.moveRight(514);
+          firstPage.moveDown(415);
+          firstPage.moveRight(200);
           firstPage.drawText(String(this.repas));
           secondPage.setFontSize(12);
           secondPage.moveTo(0, height);
-          secondPage.moveDown(148);
-          secondPage.moveRight(159);
+          secondPage.moveDown(160);
+          secondPage.moveRight(180);
           secondPage.drawText(this.equipage);
-          secondPage.moveDown(14);
+          secondPage.moveDown(20);
           secondPage.drawText(this.bateau);
-          secondPage.moveDown(14);
-          secondPage.drawText(this.longueur);
-          secondPage.moveDown(14);
-          secondPage.drawText(this.assurance1);
-          secondPage.moveTo(0, height);
-          secondPage.moveDown(148 + 14);
-          secondPage.moveRight(430);
+          secondPage.moveDown(20);
           secondPage.drawText(this.immatriculation);
-          secondPage.moveDown(14);
+          secondPage.moveDown(20);
+          secondPage.drawText(this.longueur);
+          secondPage.moveTo(0, height);
+          secondPage.moveDown(160 + 20);
+          secondPage.moveRight(425);
           secondPage.drawText(this.moteur);
-          secondPage.moveDown(14);
+          secondPage.moveDown(20);
+          secondPage.drawText(this.assurance1);
+          secondPage.moveDown(20);
           secondPage.drawText(this.assurance2);
           secondPage.moveTo(0, height);
-          secondPage.moveDown(280);
-          secondPage.moveRight(430);
+          secondPage.moveDown(335);
+          secondPage.moveRight(470);
           for (const [i, security] of this.securities.entries()) {
             if (security) secondPage.drawText("X");
-            if (i == 0 || i == 1 || i == 4 || i == 10) secondPage.moveDown(10);
-            if (i == 11) secondPage.moveDown(12);
-            secondPage.moveDown(12.2);
+            if (i == 1 || i == 4 || i == 11) secondPage.moveDown(10);
+            secondPage.moveDown(14.7);
           }
           return doc.save();
         })
@@ -526,8 +525,8 @@ export default {
     },
     drawIdForm(page, idForm, offset) {
       page.moveTo(0, page.getSize().height);
-      page.moveDown(159);
-      page.moveRight(173 + offset);
+      page.moveDown(161);
+      page.moveRight(180 + offset);
       for (const [i, value] of idForm.toArray().entries()) {
         page.moveDown(19);
         if (i >= 8) page.moveDown(3);
