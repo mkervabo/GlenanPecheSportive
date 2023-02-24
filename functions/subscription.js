@@ -24,7 +24,7 @@ exports.handler = async event => {
       values: [
         [
           body.equipage,
-          body.bateau,
+
           `${body.patron.nom} ${body.patron.prenom}`,
           `${body.mousse.nom} ${body.mousse.prenom}`,
           `${body.patron.email}`,
@@ -40,6 +40,7 @@ exports.handler = async event => {
           (body.mousse.minor ? "JUNIOR " : "") +
             ["", "MIXTE", "FEMININE"][womenNum],
           `${womenNum}`,
+          body.bateau,
           body.moteur,
           body.longueur,
           body.immatriculation,

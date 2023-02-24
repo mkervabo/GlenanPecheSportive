@@ -6,6 +6,13 @@
         Les pré-inscriptions sont ouvertes !
       </p>
       <p class="rules-content dark-olive">
+        Il est indispensable de lire le reglement avant votre incription vous
+        pouvez le trouver
+        <a class="link" href="/contest/Réglement-open-des-Glénan-2023.pdf"
+          >ici</a
+        >
+      </p>
+      <p class="rules-content dark-olive">
         Pour toute question nous ne répondrons que sur notre
         <a class="link" href="https://www.facebook.com/glenanpechesportive/"
           >facebook</a
@@ -30,10 +37,10 @@
           </span>
           <p class="contest-content">
             Le règlement est par
-            <a class="link" href="/contest/Réglement-open-des-Glénan-2022.pdf"
+            <a class="link" href="/contest/Réglement-open-des-Glénan-2023.pdf"
               >là</a
             >
-            ! Il est important de le lire !
+            ! <span class="font orange">Il est indispensable de le lire !</span>
           </p>
           <p class="contest-content">
             Pour plus d'informations ou en cas de problèmes lors de votre
