@@ -1,6 +1,10 @@
 <template>
   <main id="#subscription">
-    <div class="subscription-important">
+    <Error v-if="new Date(Date.UTC(2023, 2, 26, 11, 0, 0)) > new Date()" />
+    <div
+      class="subscription-important"
+      v-if="new Date(Date.UTC(2023, 2, 26, 11, 0, 0)) < new Date()"
+    >
       <h2 class="subscription-title orange">A lire</h2>
       <p class="rules-content dark-olive">
         Les pré-inscriptions sont ouvertes !
@@ -26,7 +30,10 @@
         Merci de votre compréhension.
       </p>
     </div>
-    <div class="subscription-part">
+    <div
+      class="subscription-part"
+      v-if="new Date(Date.UTC(2023, 2, 26, 11, 0, 0)) < new Date()"
+    >
       <div class="rules important">
         <h2 class="subscription-title dark-blue">Important</h2>
         <div class="rules-content dark-olive">
@@ -90,7 +97,10 @@
         </div>
       </div>
     </div>
-    <div class="subscription-part">
+    <div
+      class="subscription-part"
+      v-if="new Date(Date.UTC(2023, 2, 26, 11, 0, 0)) < new Date()"
+    >
       <div class="form securite">
         <h2 class="subscription-title orange">Équipement obligatoire</h2>
         <div>
@@ -371,10 +381,12 @@
 <script>
 import IdForm from "../components/IdForm";
 import { PDFDocument } from "pdf-lib";
+import Error from "../views/404";
 
 export default {
   components: {
-    IdForm
+    IdForm,
+    Error
   },
   data() {
     return {
