@@ -5,16 +5,42 @@
       <br />
       <div class="contest-content">
         <p>
-          L'Open se déroulera sur deux jours du samedi 25 Juin au dimanche 26
-          Juin 2022. Pour plus d'informations rendez-vous
+          L'Open se déroulera sur deux jours du samedi 24 Juin au dimanche 25
+          Juin 2023. Pour plus d'informations rendez-vous
           <router-link class="link2" to="/annonce">ici</router-link> !
         </p>
         <p>
-          Les pré-inscriptions sont fermées.
+          Les pré-inscriptions sont ouverte !
         </p>
       </div>
       <br />
       <h2 class="contest-title orange">Classement</h2>
+      <div
+        v-on:click="contest22 = !contest22"
+        class="contest-content link cursor"
+      >
+        Classement 2022
+      </div>
+      <div v-show="contest22" class="link2">
+        <p class="white">
+          Cliquez ci-dessous pour consulter les résultats des manches et le
+          classement général de l'open des Glénan 2022.
+        </p>
+        <a class="link2" href="/contest/classement/2022/1er_manche_2022.pdf"
+          >1ere manche Open des Glénan 2022, samedi 24 juin</a
+        >
+        <br />
+        <a class="link2" href="/contest/classement/2022/2eme_manche_2022.pdf"
+          >2eme manche Open des Glénan 2022, dimanche 25 juin</a
+        >
+        <br />
+        <a
+          class="link2"
+          href="/contest/classement/2022/Classement_general_2022.pdf"
+          >Classement général des équipes et des équipages Open des Glénan
+          2022</a
+        >
+      </div>
       <div
         v-on:click="contest21 = !contest21"
         class="contest-content link cursor"
@@ -193,7 +219,7 @@
         >
       </div>
     </div>
-    <div class="contest-article contest-info">
+    <!-- <div class="contest-article contest-info">
       <h2 class="contest-title dark-blue">Planning</h2>
       <br />
       <div class="contest-content">
@@ -484,8 +510,8 @@
           Présence de tous les équipages indispensable, beaucoup de lots de
           grande valeur seront remis par tirage au sort !
         </p>
-      </div>
-    </div>
+      </div> 
+    </div>-->
   </div>
 </template>
 
@@ -493,6 +519,7 @@
 export default {
   data() {
     return {
+      contest22: false,
       contest21: false,
       contest18: false,
       contest17: false,

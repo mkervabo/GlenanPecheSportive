@@ -3,14 +3,14 @@
     <div class="annonce_info">
       <h2 class="subscription-title orange">A lire</h2>
       <p class="annonce-content dark-olive">
-        Voici la liste des inscrits de l’open des Glénan 2022.<br />
-        Si le nom de votre équipe n’apparaît pas dans cette liste c’est sans
-        doute 🤔: <br />
-        Que votre dossier est incomplet <br />
-        Ou pas encore arrivé par voie postale.<br />
-        En cas de doute contactez-nous<br />
-        A bientôt sur l’eau 😉<br />
-        Pour toute question nous ne répondrons que sur
+        Les inscriptions 2023 sont ouvertes par
+        <a class="link" href="/subscription">ici</a>!
+        <br />
+        <br />
+        Pour les photos d’identités pas de panique 😟 un selfie convient 😉
+        <br />
+        Vous pouvez l’envoyer par mail à l’adresse indiquée sur le bulletin
+        d’inscription. Pour toute question nous ne répondrons que sur
         <a class="link" href="https://www.facebook.com/glenanpechesportive/"
           >facebook</a
         >
@@ -18,7 +18,7 @@
         <a class="link" href="mailto:infos@glenanpechesportive.fr">ici</a>.
       </p>
     </div>
-    <div class="annonce_equipes white">
+    <!-- <div class="annonce_equipes white">
       <div class="tab-bar">
         <ul>
           <li
@@ -48,20 +48,20 @@
         <ResultTab :key="4" v-if="tabBar[4].active" :range="3" />
         <ResultTab :key="5" v-if="tabBar[5].active" :range="4" />
       </div>
-    </div>
+    </div> -->
     <!-- <img v-else src="/loading.svg" /> -->
   </main>
 </template>
 
 <script>
-import Equipe from "../components/Equipe";
-import ResultTab from "../components/ResultTab";
-import ScoreTab from "../components/ScoreTab";
+// import Equipe from "../components/Equipe";
+// import ResultTab from "../components/ResultTab";
+// import ScoreTab from "../components/ScoreTab";
 export default {
   components: {
-    Equipe,
-    ResultTab,
-    ScoreTab
+    // Equipe,
+    // ResultTab,
+    // ScoreTab
   },
   data() {
     return {
