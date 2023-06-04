@@ -23,8 +23,8 @@ const routes = [
     name: "association",
     component: Association,
     meta: {
-      title: "Association",
-      image: require("../assets/navbar/Drenec.svg")
+      title: "Qui sommes nous ?",
+      image: require("../assets/navbar/Guiautec.svg")
     }
   },
   {
@@ -33,7 +33,7 @@ const routes = [
     component: Contest,
     meta: {
       title: "Competition",
-      image: require("../assets/navbar/Guiautec.svg")
+      image: require("../assets/navbar/Loc_h.svg")
     }
   },
   {
@@ -42,7 +42,7 @@ const routes = [
     component: Agenda,
     meta: {
       title: "Agenda",
-      image: require("../assets/navbar/Loc_h.svg")
+      image: require("../assets/navbar/Drenec.svg")
     }
   },
   {

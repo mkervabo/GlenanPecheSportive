@@ -49,6 +49,10 @@ nav > ul {
   margin: 0;
   list-style-type: none;
 }
+nav > li {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .header_button {
   font: caption;
@@ -56,7 +60,7 @@ nav > ul {
   font-weight: bold;
   height: 100px;
   width: 100px;
-  line-height: 100px;
+  /* line-height: 100px; */
   margin: 0 10px;
   color: #f37538;
   z-index: 1;
@@ -64,6 +68,9 @@ nav > ul {
   background-size: contain;
   background-repeat: no-repeat;
   text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header_button:hover {
