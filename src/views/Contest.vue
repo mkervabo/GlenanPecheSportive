@@ -219,13 +219,13 @@
         >
       </div>
     </div>
-    <!-- <div class="contest-article contest-info">
+    <div class="contest-article contest-info">
       <h2 class="contest-title dark-blue">Planning</h2>
       <br />
       <div class="contest-content">
         <p>
           Bonjour à tous les compétiteurs, Cette page va évoluer, merci de la
-          consulter à quelques jours de l’Open des Glénan 2022. Petite précision
+          consulter à quelques jours de l’Open des Glénan 2023. Petite précision
           l'organisation se réserve le droit de modifier les horaires des
           manches en fonction des derniers bulletins météo, que vous pouvez
           consulter sur<span class="orange">
@@ -245,7 +245,7 @@
           pratiques et les instructions pour cette compétition.
         </p>
         <p>
-          <span class="font">En cas d’arrivée avant le vendredi 24/06</span>,
+          <span class="font">En cas d’arrivée avant le vendredi 23/06</span>,
           Vous pourrez mettre à l’eau à la cale sud de Port la Forêt.Mais vous
           n'aurez pas accès au parking dédié à notre organisation.
         </p>
@@ -255,7 +255,7 @@
           height="300"
         ></iframe>
         <p class="font">
-          Arrivée à Port la Forêt le vendredi 24/06:
+          Arrivée à Port la Forêt le vendredi 23/06:
         </p>
         <p>
           <span class="font">La cale sud de mise à l’eau</span> sera disponible
@@ -265,10 +265,11 @@
         </p>
         <br />
         <p>
-          <span class="font">Important:</span> Prévoir 2 bouts d'amarrage de 25m
-          environ (avant et arrière), et des pare-battages. Les bateaux seront
-          amarrés à couple sur plusieurs largeurs, et les conditions météo
-          imposent de solides amarrages.
+          <span class="font">Important:</span>
+          <span class="orange">Prévoir 2 bouts d'amarrage de 25m environ</span>
+          (avant et arrière), et des pare-battages. Les bateaux seront amarrés à
+          couple sur plusieurs largeurs, et les conditions météo imposent de
+          solides amarrages.
         </p>
         <p>
           <span class="font"
@@ -293,15 +294,12 @@
         </p>
         <p>
           Les fichiers informatiques avec les points délimitant la zone de pêche
-          sont à installer sur vos appareils.gpx
-        </p>
-        <p>
-          Points gps de la zone
+          sont à installer sur vos appareils
           <a
             class="link2 font"
             href="/contest/TraceZonePecheOpenGlenan.gpx"
             download
-            >ici</a
+            >.gpx</a
           >
         </p>
         <p>
@@ -309,9 +307,12 @@
           de plaisance de Port la Forêt distribue du SP95
         </p>
 
-        <h2>1er jour de compétition samedi 25/06</h2>
+        <h2>1er jour de compétition samedi 24/06</h2>
 
-        <p>Veille VHF obligatoire pendant la compétition, le canal 77</p>
+        <p>
+          Veille VHF obligatoire pendant la compétition, le canal sera
+          communiqué lors du briefing du samedi matin
+        </p>
         <p class="font">Points d’attention pour les équipes:</p>
         <p>
           Au
@@ -322,13 +323,13 @@
         </p>
         <p>
           <span class="font">En fin de manche (17h00)</span>, pointage visuel
-          obligatoire en mer sur la zone de sortie à 18h00 max (même zone que
+          obligatoire en mer sur la zone de sortie à 17h30 max (même zone que
           zone de départ au nord de Penfret) de tous les bateaux auprès du
           bateau commissaire qui sera là. Il sera possible de mesurer des
           poissons en même temps.
         </p>
 
-        <h2>2ème jour de compétition dimanche 26/06</h2>
+        <h2>2ème jour de compétition dimanche 25/06</h2>
 
         <p class="font">Points d’attention pour les équipes:</p>
         <p>
@@ -347,7 +348,7 @@
         </p>
         <p>
           Au retour à Port la Forêt ,merci de sortir vos bateaux avant la remise
-          des prix.Vous pourrez vous garer sur le parking remorques.
+          des prix. Vous pourrez vous garer sur le parking remorques.
         </p>
         <p>
           Merci à chacun de bien respecter ces consignes,
@@ -366,12 +367,13 @@
       <br />
       <div class="contest-content">
         <p>
-          Téléchargez le règlement 2022
+          <!-- Téléchargez le règlement 2022
           <a
             href="/contest/Réglement-open-des-Glénan-2022.pdf"
             class="link2 font"
             >en cliquant ici</a
-          >
+          > -->
+          Le réglement arrive prochainement
         </p>
         <p>
           Instructions importantes pour tous les compétiteurs:
@@ -379,7 +381,7 @@
             >cliquez ici à quelques jours de la compétition !</a
           >
         </p>
-        <h2>Vendredi 24 juin</h2>
+        <h2>Vendredi 23 juin</h2>
         <p>
           <span class="font">A partir de 10h:</span> chez notre partenaire
           <span class="blue"> CN DIFFUSION PORT LA FORET</span>, remise du
@@ -390,7 +392,7 @@
         <p>
           La cale sud de mise à l'eau sera disponible.
           <span class="blue"
-            >Il sera interdit de se garer sur le site de la cale ,un parking
+            >Il sera interdit de se garer sur le site de la cale, un parking
             dédié sera prévu.</span
           >
         </p>
@@ -414,10 +416,10 @@
           width="100%"
           height="300"
         ></iframe>
-        <h2>Samedi 25 juin</h2>
-        <p>Marée: basse mer à 9h10, haute mer à 15h26, coeff. 55</p>
+        <h2>Samedi 24 juin</h2>
+        <p>Marée:haute mer à 8h18,basse mer à 15h36, coeff. 53</p>
         <p>
-          <span class="font">A partir de 5h45:</span> petit déjeuner au village
+          <span class="font">A partir de 6h00:</span> petit déjeuner au village
           pêche.
         </p>
         <p>
@@ -426,6 +428,10 @@
           <span class="blue"
             >Présence obligatoire d'au moins un membre d'équipage.</span
           >
+        </p>
+        <p>
+          <span class="font">A 6h45:</span> :Émargement et remise des paniers
+          repas.
         </p>
         <p>
           <span class="font">A 7h:</span> départ des pontons pour se rendre en
@@ -469,16 +475,16 @@
           manche, et pot offert par GPS au village pêche.
         </p>
         <p>
-          <span class="font">A partir de 20h30:</span> copieux repas des
+          <span class="font">A partir de 20h00:</span> copieux repas des
           équipages au village pêche (langoustines, cochon grillé gratin
           dauphinois, tarte aux fraises). Concert live pour clôturer cette
           journée.
         </p>
 
-        <h2>Dimanche 26 juin</h2>
-        <p>Marée: basse mer à 9H57, haute mer à 16H04, coeff. 59</p>
+        <h2>Dimanche 25 juin</h2>
+        <p>Marée:haute mer à 10h06,basse mer à 16h24, coeff. 47</p>
         <p>
-          <span class="font">A partir de 5h45:</span> petit déjeuner au village
+          <span class="font">A partir de 6h00:</span> petit déjeuner au village
           pêche.
         </p>
         <p>
@@ -487,6 +493,10 @@
           <span class="blue"
             >Présence obligatoire d'au moins un membre d'équipage.</span
           >
+        </p>
+        <p>
+          <span class="font">A 6h45:</span> :Émargement et remise des paniers
+          repas.
         </p>
         <p>
           <span class="font">A 7h:</span> départ des pontons pour se rendre en
@@ -510,8 +520,8 @@
           Présence de tous les équipages indispensable, beaucoup de lots de
           grande valeur seront remis par tirage au sort !
         </p>
-      </div> 
-    </div>-->
+      </div>
+    </div>
   </div>
 </template>
 
