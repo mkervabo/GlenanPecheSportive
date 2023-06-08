@@ -367,13 +367,12 @@
       <br />
       <div class="contest-content">
         <p>
-          <!-- Téléchargez le règlement 2022
+          Téléchargez le règlement 2023
           <a
-            href="/contest/Réglement-open-des-Glénan-2022.pdf"
+            href="/contest/Réglement-open-des-Glénan-2023.pdf"
             class="link2 font"
             >en cliquant ici</a
-          > -->
-          Le réglement arrive prochainement
+          >
         </p>
         <p>
           Instructions importantes pour tous les compétiteurs:
