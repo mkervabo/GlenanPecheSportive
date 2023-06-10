@@ -473,6 +473,7 @@
           <span class="font">A 19h:</span> affichage des résultats de la 1ère
           manche, et pot offert par GPS au village pêche.
         </p>
+        <p><span class="font">A 19h30:</span> fermeture de la buvette.</p>
         <p>
           <span class="font">A partir de 20h00:</span> copieux repas des
           équipages au village pêche (langoustines, cochon grillé gratin
