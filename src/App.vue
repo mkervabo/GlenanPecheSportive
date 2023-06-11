@@ -13,7 +13,7 @@
           class="icone dark-blue"
         ></fa-icon>
       </a>
-      <a href="mailto:infos@glenanpechesportive.fr">
+      <a href="mailto:infos@glenanpechesportive.bzh">
         <fa-icon
           :icon="['fas', 'envelope-square']"
           class="icone white"
@@ -41,6 +41,7 @@
           :style="sponsor.whitebackground && 'background: white;'"
         />
       </a>
+      <a class="link2 legal" href="/legal">Mention Legal</a>
     </footer>
   </div>
 </template>
@@ -187,5 +188,14 @@ footer {
 
 a {
   text-decoration: none;
+}
+
+.legal {
+  position: relative;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
