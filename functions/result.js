@@ -10,11 +10,11 @@ auth.setCredentials({ refresh_token: process.env.GOOGLE_REFRESH });
 
 const sheets = google.sheets({ version: "v4", auth });
 const ranges = [
-  "1er Manche site!A:J",
-  "resultat samedi!C:F",
-  "2ème Manche site!A:J",
-  "resultat dimanche!C:F",
-  "resultat final!A:F"
+  "2023 1er Manche site!A:J",
+  "2023 resultat samedi!C:F",
+  "2023 2 Manche site!A:J",
+  "2023 resultat dimanche!C:F",
+  "2023 resultat final!A:F"
 ];
 exports.handler = async event => {
   const { data } = await sheets.spreadsheets.values.get({

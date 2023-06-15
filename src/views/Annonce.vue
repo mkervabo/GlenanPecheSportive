@@ -3,7 +3,7 @@
     <div class="annonce_info">
       <h2 class="subscription-title orange">A lire</h2>
       <p class="annonce-content dark-olive">
-        Les inscriptions 2023 sont ouvertes par
+        <!-- Les inscriptions 2023 sont ouvertes par
         <a class="link" href="/subscription">ici</a>!
         <br />
         <br />
@@ -15,10 +15,12 @@
           >facebook</a
         >
         en mp ou sur notre mail que vous trouverez
-        <a class="link" href="mailto:infos@glenanpechesportive.fr">ici</a>.
+        <a class="link" href="mailto:infos@glenanpechesportive.fr">ici</a>. -->
+        Les résultat et la liste des poissons pêchés sera mit jour régulièrement
+        au moment de la compétition.
       </p>
     </div>
-    <!-- <div class="annonce_equipes white">
+    <div class="annonce_equipes white">
       <div class="tab-bar">
         <ul>
           <li
@@ -48,49 +50,49 @@
         <ResultTab :key="4" v-if="tabBar[4].active" :range="3" />
         <ResultTab :key="5" v-if="tabBar[5].active" :range="4" />
       </div>
-    </div> -->
+    </div>
     <!-- <img v-else src="/loading.svg" /> -->
   </main>
 </template>
 
 <script>
-// import Equipe from "../components/Equipe";
-// import ResultTab from "../components/ResultTab";
-// import ScoreTab from "../components/ScoreTab";
+import Equipe from "../components/Equipe";
+import ResultTab from "../components/ResultTab";
+import ScoreTab from "../components/ScoreTab";
 export default {
   components: {
-    // Equipe,
-    // ResultTab,
-    // ScoreTab
+    Equipe,
+    ResultTab,
+    ScoreTab
   },
   data() {
     return {
       teams: [],
       tabBar: [
-        { name: "Teams", date: new Date("0"), active: true },
+        { name: "Equipe", date: new Date("0"), active: true },
         {
           name: "Poissons Samedi",
-          date: new Date("June 25, 2022 00:00:00"),
+          date: new Date("June 24, 2023 00:00:00 GMT+02:00"),
           active: false
         },
         {
           name: "Classement Samedi",
-          date: new Date("June 25, 2022 22:00:00"),
+          date: new Date("June 24, 2023 22:00:00 GMT+02:00"),
           active: false
         },
         {
           name: "Poissons Dimanche",
-          date: new Date("June 26, 2022 00:00:00"),
+          date: new Date("June 25, 2023 00:00:00 GMT+02:00"),
           active: false
         },
         {
           name: "Classement Dimanche",
-          date: new Date("June 26, 2022 21:00:00"),
+          date: new Date("June 25, 2023 21:00:00 GMT+02:00"),
           active: false
         },
         {
           name: "Classement final",
-          date: new Date("June 26, 2022 21:30:00"),
+          date: new Date("June 25, 2023 21:30:00 GMT+02:00"),
           active: false
         }
       ]

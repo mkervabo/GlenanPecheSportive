@@ -278,7 +278,7 @@
           à la compétition seront à retirer chez<span class="blue">
             CN DIFFUSION</span
           >
-          le vendredi 24, à partir de 10h00 jusqu’à 18h00. Et après sur notre
+          le vendredi 23, à partir de 10h00 jusqu’à 18h00. Et après sur notre
           base a terre.Il est demandé que tous les dossiers soient retirés le
           vendredi, si vous ne pouvez pas venir le
           <span class="font">vendredi</span> arrangez vous avec un autre
