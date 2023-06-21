@@ -99,3 +99,14 @@ collections:
     fields:
       - {label: "Titre", name: "title", widget: "string"}
       - {label: "Image", name: "img", widget: "image"}
+  - name: "press"
+    label: "Press"
+    format: json
+    folder: "src/press"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Titre", name: "title", widget: "string"}
+      - {label: "Paragraph", name: "content", widget: "string"}
+      - {label: "Lien", name: "link", widget: "string"}
+      - {label: "Image", name: "img", widget: "image"}

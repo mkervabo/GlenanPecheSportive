@@ -51,7 +51,7 @@ const routes = [
     name: "gallery",
     component: Gallery,
     meta: {
-      title: "Galerie",
+      title: "Média",
       image: require("../assets/navbar/Saint_Nicolas.svg")
     }
   },
