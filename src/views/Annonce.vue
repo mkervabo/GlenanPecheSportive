@@ -77,7 +77,7 @@ export default {
         },
         {
           name: "Classement Samedi",
-          date: new Date("June 25, 2023 22:00:00 GMT+02:00"),
+          date: new Date("June 24, 2023 22:00:00 GMT+02:00"),
           active: false
         },
         {
