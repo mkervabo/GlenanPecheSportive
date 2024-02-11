@@ -107,6 +107,19 @@
           </label>
         </div>
       </fieldset>
+      <fieldset class="section">
+        <label
+          >Petit déjeuné
+          <input type="checkbox" v-model="dej" checked />
+        </label>
+      </fieldset>
+      <fieldset class="section"></fieldset>
+      <fieldset class="section">
+        <label
+          >Repas du Samedi soir
+          <input type="checkbox" v-model="diner" checked />
+        </label>
+      </fieldset>
     </div>
   </div>
 </template>
@@ -126,7 +139,9 @@ export default {
       portable: "",
       fixe: "",
       email: "",
-      t_shirt: ""
+      t_shirt: "",
+      dej: true,
+      diner: true
     };
   },
   props: ["captain"],
@@ -162,7 +177,9 @@ export default {
         this.fixe,
         this.portable,
         this.email,
-        this.t_shirt
+        this.t_shirt,
+        this.dej,
+        this.diner
       ];
     },
     toJSON() {
@@ -178,7 +195,9 @@ export default {
         fixe: this.fixe,
         portable: this.portable,
         email: this.email,
-        t_shirt: this.t_shirt
+        t_shirt: this.t_shirt,
+        dej: this.dej,
+        diner: this.diner
       };
     }
   }

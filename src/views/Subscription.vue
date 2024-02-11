@@ -54,7 +54,7 @@
             Les attestations d'assurance responsabilité civile des équipiers et
             du bateau,
             <span class="font">et</span> la fiche sécurité dûment remplie et
-            signée. Ansi qu'une photo d'identité de chaque membre d'équipage
+            signée.
           </p>
           <p>
             <span class="font">140€ par bateau</span> (prix pour les deux
@@ -357,7 +357,7 @@
           <p class="contest-content">
             Si vous rencontrez des problèmes pour remplir l'inscription vous
             pouvez toujours
-            <a class="link" href="/contest/inscription-2023.pdf"
+            <a class="link" href="/contest/inscription-2024.pdf"
               >télécharger un bulletin vierge</a
             >
             et le remplir comme avant.
@@ -461,7 +461,7 @@ export default {
           }
         });
       }
-      fetch("/contest/inscription-2023.pdf")
+      fetch("/contest/inscription-2024.pdf")
         .then(res => res.arrayBuffer())
         .then(pdf => PDFDocument.load(pdf))
         .then(doc => {
@@ -476,14 +476,14 @@ export default {
           firstPage.moveRight(143);
           firstPage.drawText(this.equipage);
           this.drawIdForm(firstPage, this.$refs.patron, 0);
-          this.drawIdForm(firstPage, this.$refs.mousse, 360 - 173);
+          this.drawIdForm(firstPage, this.$refs.mousse, 360 - 175);
           firstPage.moveTo(0, height);
-          firstPage.moveDown(415);
+          firstPage.moveDown(455);
           firstPage.moveRight(200);
           firstPage.drawText(String(this.repas));
           secondPage.setFontSize(12);
           secondPage.moveTo(0, height);
-          secondPage.moveDown(160);
+          secondPage.moveDown(150);
           secondPage.moveRight(180);
           secondPage.drawText(this.equipage);
           secondPage.moveDown(20);
@@ -493,7 +493,7 @@ export default {
           secondPage.moveDown(20);
           secondPage.drawText(this.longueur);
           secondPage.moveTo(0, height);
-          secondPage.moveDown(160 + 20);
+          secondPage.moveDown(150 + 20);
           secondPage.moveRight(425);
           secondPage.drawText(this.moteur);
           secondPage.moveDown(20);
@@ -506,7 +506,7 @@ export default {
           for (const [i, security] of this.securities.entries()) {
             if (security) secondPage.drawText("X");
             if (i == 1 || i == 4 || i == 11) secondPage.moveDown(10);
-            secondPage.moveDown(14.7);
+            secondPage.moveDown(15.5);
           }
           return doc.save();
         })
@@ -515,7 +515,7 @@ export default {
           if (this.willDownload)
             window.navigator.msSaveOrOpenBlob(
               blob,
-              "inscription-open-glenan-2022.pdf"
+              "inscription-open-glenan-2024.pdf"
             );
           else {
             const url = URL.createObjectURL(blob);
@@ -535,9 +535,17 @@ export default {
       page.moveDown(161);
       page.moveRight(180 + offset);
       for (const [i, value] of idForm.toArray().entries()) {
-        page.moveDown(19);
-        if (i >= 8) page.moveDown(3);
-        page.drawText(value || "");
+        if (i === 10 || i == 11) {
+          page.moveDown(14);
+          const newoffset = value ? 93 : 123;
+          page.moveRight(newoffset);
+          page.drawText("x");
+          page.moveRight(-newoffset);
+        } else {
+          page.moveDown(21);
+          page.drawText(value || "");
+          window.console.log(i, value);
+        }
       }
     }
   }

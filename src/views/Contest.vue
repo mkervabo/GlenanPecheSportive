@@ -5,8 +5,8 @@
       <br />
       <div class="contest-content">
         <p>
-          L'Open se déroulera sur deux jours du samedi 24 Juin au dimanche 25
-          Juin 2023. Pour plus d'informations rendez-vous
+          L'Open se déroulera sur deux jours du samedi 22 Juin au dimanche 23
+          Juin 2024. Pour plus d'informations rendez-vous
           <router-link class="link2" to="/annonce">ici</router-link> !
         </p>
         <p>

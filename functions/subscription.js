@@ -18,7 +18,7 @@ exports.handler = async event => {
 
   await sheets.spreadsheets.values.append({
     spreadsheetId: "140_Q_ZUeG7TfmV5_yfShMWMUvGZ_F1ue8dKF7w3d2v0",
-    range: "Inscription2023!A1",
+    range: "Inscription2024!A1",
     valueInputOption: "RAW",
     requestBody: {
       values: [
