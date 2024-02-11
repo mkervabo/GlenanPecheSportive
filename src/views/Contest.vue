@@ -6,11 +6,12 @@
       <div class="contest-content">
         <p>
           L'Open se déroulera sur deux jours du samedi 22 Juin au dimanche 23
-          Juin 2024. Pour plus d'informations rendez-vous
-          <router-link class="link2" to="/annonce">ici</router-link> !
+          <!-- Juin 2024. Pour plus d'informations rendez-vous
+          <router-link class="link2" to="/annonce">ici</router-link> ! -->
         </p>
         <p>
-          Les pré-inscriptions sont ouverte !
+          Les pré-inscriptions sont ouverte ! Rendez-vous
+          <a class="link2" href="/subscription">ici</a> !
         </p>
       </div>
       <br />
@@ -219,7 +220,7 @@
         >
       </div>
     </div>
-    <div class="contest-article contest-info">
+    <!-- <div class="contest-article contest-info">
       <h2 class="contest-title dark-blue">Planning</h2>
       <br />
       <div class="contest-content">
@@ -521,7 +522,7 @@
           grande valeur seront remis par tirage au sort !
         </p>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 

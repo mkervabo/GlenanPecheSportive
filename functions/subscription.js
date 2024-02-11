@@ -36,7 +36,7 @@ exports.handler = async event => {
           `${body.mousse.postal}`,
           `${body.mousse.ville}`,
           `site`,
-          `${140 + body.repas * 25}`,
+          `${180 + body.repas * 25}`,
           `${body.repas}`,
           "",
           body.patron.t_shirt,

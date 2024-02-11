@@ -5,13 +5,13 @@
       <p class="rules-content dark-olive">
         Les pré-inscriptions sont ouvertes !
       </p>
-      <p class="rules-content dark-olive">
+      <!-- <p class="rules-content dark-olive">
         Il est indispensable de lire le reglement avant votre incription vous
         pouvez le trouver
         <a class="link" href="/contest/Réglement-open-des-Glénan-2023.pdf"
           >ici</a
         >
-      </p>
+      </p> -->
       <p class="rules-content dark-olive">
         Pour toute question nous ne répondrons que sur notre
         <a class="link" href="https://www.facebook.com/glenanpechesportive/"
@@ -35,12 +35,17 @@
             validée une fois le formulaire imprimé et posté.<br />
             Minimum requis pour s'inscrire 50ch et 5m.
           </span>
-          <p class="contest-content">
+          <!-- <p class="contest-content">
             Le règlement est par
             <a class="link" href="/contest/Réglement-open-des-Glénan-2023.pdf"
               >là</a
             >
             ! <span class="font orange">Il est indispensable de le lire !</span>
+          </p> -->
+          <p>
+            <span class="font orange"
+              >Le règlement sera disponible bientôt !</span
+            >
           </p>
           <p class="contest-content">
             Pour plus d'informations ou en cas de problèmes lors de votre
@@ -57,15 +62,18 @@
             signée.
           </p>
           <p>
-            <span class="font">140€ par bateau</span> (prix pour les deux
+            <span class="font">180€ par bateau</span> (prix pour les deux
             équipiers pour l’ensemble de la compétition) comprenant aussi les
             petits déjeuners et paniers repas du samedi et dimanche midi, ainsi
-            qu’un repas à Port la Forêt le samedi soir pour les équipages. Il
-            est possible de réserver des
+            qu’un repas le samedi soir pour les équipages. Il est possible de
+            réserver des
             <span class="font">
-              diners supplémentaires le samedi soir pour les accompagnants, 25€
+              dîners supplémentaires le samedi soir pour les accompagnants, 25€
               par personne
             </span>
+            <span class="font orange"
+              >pas possible le jour de la compétition.</span
+            >
           </p>
           <br />
           <div>
@@ -76,7 +84,7 @@
           </div>
           <br />
           <span class="subscription-title2 orange">Total:</span>
-          {{ 140 + repas * 25 }}€
+          {{ 180 + repas * 25 }}€
         </div>
       </div>
       <div class="members">
@@ -422,7 +430,7 @@ export default {
         },
         body: JSON.stringify({
           repas: this.repas,
-          equipage: this.equipage,
+          equipage: this.equipage.toUpperCase(),
           bateau: this.bateau,
           longueur: this.longueur,
           immatriculation: this.immatriculation,
@@ -485,7 +493,7 @@ export default {
           secondPage.moveTo(0, height);
           secondPage.moveDown(150);
           secondPage.moveRight(180);
-          secondPage.drawText(this.equipage);
+          secondPage.drawText(this.equipage.toUpperCase());
           secondPage.moveDown(20);
           secondPage.drawText(this.bateau);
           secondPage.moveDown(20);

@@ -109,14 +109,14 @@
       </fieldset>
       <fieldset class="section">
         <label
-          >Petit déjeuné
+          ><span class="font">Participe aux</span> petits déjeuners
           <input type="checkbox" v-model="dej" checked />
         </label>
       </fieldset>
       <fieldset class="section"></fieldset>
       <fieldset class="section">
         <label
-          >Repas du Samedi soir
+          ><span class="font">Participe au</span> repas du Samedi soir
           <input type="checkbox" v-model="diner" checked />
         </label>
       </fieldset>
@@ -168,8 +168,8 @@ export default {
   methods: {
     toArray() {
       return [
-        this.nom,
-        this.prenom,
+        this.nom.toUpperCase(),
+        this.prenom.toUpperCase(),
         this.adresse,
         this.postal,
         this.ville,
@@ -186,8 +186,8 @@ export default {
       return {
         kind: this.kind,
         minor: this.minor,
-        nom: this.nom,
-        prenom: this.prenom,
+        nom: this.nom.toUpperCase(),
+        prenom: this.prenom.toUpperCase(),
         adresse: this.adresse,
         postal: this.postal,
         ville: this.ville,
