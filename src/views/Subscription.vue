@@ -544,7 +544,6 @@ export default {
         } else {
           page.moveDown(21);
           page.drawText(value || "");
-          window.console.log(i, value);
         }
       }
     }
