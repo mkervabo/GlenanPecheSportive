@@ -4,14 +4,14 @@
       <h2 class="contest-title orange">A savoir</h2>
       <br />
       <div class="contest-content">
-        <p>
+        <!-- <p>
           L'Open se déroulera sur deux jours du samedi 24 Juin au dimanche 25
           Juin 2023. Pour plus d'informations rendez-vous
           <router-link class="link2" to="/annonce">ici</router-link> !
         </p>
         <p>
           Les pré-inscriptions sont ouverte !
-        </p>
+        </p> -->
       </div>
       <br />
       <h2 class="contest-title orange">Classement</h2>
@@ -219,7 +219,7 @@
         >
       </div>
     </div>
-    <div class="contest-article contest-info">
+    <!-- <div class="contest-article contest-info">
       <h2 class="contest-title dark-blue">Planning</h2>
       <br />
       <div class="contest-content">
@@ -521,7 +521,7 @@
           grande valeur seront remis par tirage au sort !
         </p>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
