@@ -107,6 +107,19 @@
           </label>
         </div>
       </fieldset>
+      <fieldset class="section">
+        <label
+          ><span class="font">Participe aux</span> petits déjeuners
+          <input type="checkbox" v-model="dej" checked />
+        </label>
+      </fieldset>
+      <fieldset class="section"></fieldset>
+      <fieldset class="section">
+        <label
+          ><span class="font">Participe au</span> repas du Samedi soir
+          <input type="checkbox" v-model="diner" checked />
+        </label>
+      </fieldset>
     </div>
   </div>
 </template>
@@ -126,7 +139,9 @@ export default {
       portable: "",
       fixe: "",
       email: "",
-      t_shirt: ""
+      t_shirt: "",
+      dej: true,
+      diner: true
     };
   },
   props: ["captain"],
@@ -153,8 +168,8 @@ export default {
   methods: {
     toArray() {
       return [
-        this.nom,
-        this.prenom,
+        this.nom.toUpperCase(),
+        this.prenom.toUpperCase(),
         this.adresse,
         this.postal,
         this.ville,
@@ -162,15 +177,17 @@ export default {
         this.fixe,
         this.portable,
         this.email,
-        this.t_shirt
+        this.t_shirt,
+        this.dej,
+        this.diner
       ];
     },
     toJSON() {
       return {
         kind: this.kind,
         minor: this.minor,
-        nom: this.nom,
-        prenom: this.prenom,
+        nom: this.nom.toUpperCase(),
+        prenom: this.prenom.toUpperCase(),
         adresse: this.adresse,
         postal: this.postal,
         ville: this.ville,
@@ -178,7 +195,9 @@ export default {
         fixe: this.fixe,
         portable: this.portable,
         email: this.email,
-        t_shirt: this.t_shirt
+        t_shirt: this.t_shirt,
+        dej: this.dej,
+        diner: this.diner
       };
     }
   }

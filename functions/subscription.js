@@ -18,7 +18,7 @@ exports.handler = async event => {
 
   await sheets.spreadsheets.values.append({
     spreadsheetId: "140_Q_ZUeG7TfmV5_yfShMWMUvGZ_F1ue8dKF7w3d2v0",
-    range: "Inscription2023!A1",
+    range: "Inscription2024!A1",
     valueInputOption: "RAW",
     requestBody: {
       values: [
@@ -29,14 +29,22 @@ exports.handler = async event => {
           `${body.mousse.nom} ${body.mousse.prenom}`,
           `${body.patron.email}`,
           `${body.patron.portable}\n${body.patron.fixe}`,
+          `${body.patron.postal}`,
+          `${body.patron.ville}`,
           `${body.mousse.email}`,
           `${body.mousse.portable}\n${body.mousse.fixe}`,
+          `${body.mousse.postal}`,
+          `${body.mousse.ville}`,
           `site`,
-          `${140 + body.repas * 25}`,
+          `${180 + body.repas * 25}`,
           `${body.repas}`,
           "",
           body.patron.t_shirt,
           body.mousse.t_shirt,
+          body.patron.diner ? 1 : 0,
+          body.mousse.diner ? 1 : 0,
+          body.patron.dej ? 1 : 0,
+          body.mousse.dej ? 1 : 0,
           (body.mousse.minor ? "JUNIOR " : "") +
             ["", "MIXTE", "FEMININE"][womenNum],
           `${womenNum}`,
