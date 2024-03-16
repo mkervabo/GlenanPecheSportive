@@ -5,13 +5,13 @@
       <p class="rules-content dark-olive">
         Les pré-inscriptions sont ouvertes !
       </p>
-      <!-- <p class="rules-content dark-olive">
+      <p class="rules-content dark-olive">
         Il est indispensable de lire le reglement avant votre incription vous
         pouvez le trouver
-        <a class="link" href="/contest/Réglement-open-des-Glénan-2023.pdf"
+        <a class="link" href="/contest/reglement-open-des-Glenan-2024.pdf"
           >ici</a
         >
-      </p> -->
+      </p>
       <p class="rules-content dark-olive">
         Pour toute question nous ne répondrons que sur notre
         <a class="link" href="https://www.facebook.com/glenanpechesportive/"
@@ -35,18 +35,18 @@
             validée une fois le formulaire imprimé et posté.<br />
             Minimum requis pour s'inscrire 50ch et 5m.
           </span>
-          <!-- <p class="contest-content">
+          <p class="contest-content">
             Le règlement est par
-            <a class="link" href="/contest/Réglement-open-des-Glénan-2023.pdf"
+            <a class="link" href="/contest/reglement-open-des-Glenan-2024.pdf"
               >là</a
             >
             ! <span class="font orange">Il est indispensable de le lire !</span>
-          </p> -->
-          <p>
+          </p>
+          <!-- <p>
             <span class="font orange"
               >Le règlement sera disponible bientôt !</span
             >
-          </p>
+          </p> -->
           <p class="contest-content">
             Pour plus d'informations ou en cas de problèmes lors de votre
             inscription vous pouvez nous contacter sur cet email:
