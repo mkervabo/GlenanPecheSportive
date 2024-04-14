@@ -110,3 +110,23 @@ collections:
       - {label: "Paragraph", name: "content", widget: "string"}
       - {label: "Lien", name: "link", widget: "string"}
       - {label: "Image", name: "img", widget: "image"}
+  - name: "press-space"
+    label: "Press-space"
+    format: json
+    folder: "src/press-space"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Titre", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "PDF", name: "pdf", widget: "file"}
+  - name: "press-gallery"
+    label: "Press-gallery"
+    format: json
+    folder: "src/press-gallery"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Titre", name: "title", widget: "string"}
+      - {label: "Vignette", name: "vignette", widget: "image"}
+      - {label: "Image", name: "img", widget: "image"}

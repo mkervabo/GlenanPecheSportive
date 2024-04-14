@@ -10,6 +10,7 @@ import Annonce from "../views/Annonce.vue";
 import Error404 from "../views/404.vue";
 import Subscription from "../views/Subscription.vue";
 import Legal from "../views/Legal.vue";
+import Press from "../views/Press.vue";
 
 Vue.use(VueRouter);
 
@@ -68,6 +69,11 @@ const routes = [
     path: "/subscription",
     name: "subscription",
     component: Subscription
+  },
+  {
+    path: "/press",
+    name: "press",
+    component: Press
   },
   {
     path: "/annonce",
