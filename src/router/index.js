@@ -66,14 +66,18 @@ const routes = [
     }
   },
   {
+    path: "/press",
+    name: "press",
+    component: Press,
+    meta: {
+      title: "Espace Presse",
+      image: require("../assets/navbar/Guignenec.svg")
+    }
+  },
+  {
     path: "/subscription",
     name: "subscription",
     component: Subscription
-  },
-  {
-    path: "/press",
-    name: "press",
-    component: Press
   },
   {
     path: "/annonce",

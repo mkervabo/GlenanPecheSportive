@@ -1,19 +1,31 @@
 <template>
-  <div>
-    <div v-for="event in articles" :key="event.title" class="agenda-event">
-      <h2 class="font dark-blue agenda-title">{{ file.title }}</h2>
-      <div v-if="file.date">
-        <span class="orange date">{{ formatDate(file.date) }}</span>
-      </div>
-      <span>download</span>
+  <div class="agenda-event press-file">
+    <h2 class="font dark-blue agenda-title">{{ file.title }}</h2>
+    <div v-if="file.date">
+      <span class="orange date">{{ formatDate(file.date) }}</span>
     </div>
+    <p>
+      <span>{{ file.type }}</span>
+    </p>
+    <p><a class="link" :href="file.pdf" target="_blank">Ouvrir PDF</a></p>
   </div>
 </template>
 
 <script>
+import { DateTime } from "luxon";
+
 export default {
-  props: ["file"]
+  props: ["file"],
+  methods: {
+    formatDate(input) {
+      return DateTime.fromISO(input).toFormat("dd LLL yyyy");
+    }
+  }
 };
 </script>
 
-<style></style>
+<style>
+.press-file {
+  width: 100%;
+}
+</style>
