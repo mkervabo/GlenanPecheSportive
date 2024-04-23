@@ -74,7 +74,9 @@ export default {
       return marked(input, { sanitize: true });
     },
     formatDate(input) {
-      return DateTime.fromISO(input).toFormat("dd LLL yyyy");
+      return DateTime.fromISO(input)
+        .setLocale("fr")
+        .toFormat("dd LLL yyyy");
     }
   }
 };

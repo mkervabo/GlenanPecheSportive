@@ -6,14 +6,14 @@
         class="dark-blue pointer"
         v-bind:class="{ orange: press }"
       >
-        <span>Dossier et Communiqué</span>
+        <span>Dossiers et Communiqués</span>
       </div>
       <div
         v-on:click="press = false"
         class="dark-blue pointer"
         v-bind:class="{ orange: !press }"
       >
-        <span>Image libre de droit</span>
+        <span>Images libres de droit</span>
       </div>
     </div>
     <div class="press-info">
@@ -22,8 +22,8 @@
         de l’association Glénan Pêche Sportive ainsi que des photos.
       </p>
       <p v-else>
-        Photos disponibles pour des articles de presse. Téléchargez les versions
-        haute définition en cliquant sur les vignettes.
+        Photos de l'édition 2023 disponibles pour des articles de presse.
+        Téléchargez les versions haute définition en cliquant sur les vignettes.
         <br />
         Merci d’indiquer la source : « Glénan Pêche Sportive »
       </p>
