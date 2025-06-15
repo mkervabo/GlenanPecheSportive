@@ -500,11 +500,11 @@ export default {
           secondPage.moveDown(20);
           secondPage.drawText(this.assurance2);
           secondPage.moveTo(0, height);
-          secondPage.moveDown(335);
+          secondPage.moveDown(325);
           secondPage.moveRight(470);
           for (const [i, security] of this.securities.entries()) {
             if (security) secondPage.drawText("X");
-            if (i == 1 || i == 4 || i == 11) secondPage.moveDown(10);
+            if (i == 1 || i == 4 || i == 11) secondPage.moveDown(6);
             secondPage.moveDown(15.5);
           }
           return doc.save();
@@ -534,7 +534,7 @@ export default {
       page.moveDown(161);
       page.moveRight(180 + offset);
       for (const [i, value] of idForm.toArray().entries()) {
-        window.console.log(value);
+        window.console.log(typeof value, i);
         if (i === 10 || i == 11) {
           page.moveDown(14);
           const newoffset = value ? 93 : 123;
@@ -542,8 +542,8 @@ export default {
           page.drawText("x");
           page.moveRight(-newoffset);
         } else {
-          page.moveDown(21);
-          page.drawText(value || "");
+          page.moveDown(20);
+          if (typeof value == "string") page.drawText(value || "");
         }
       }
     }
