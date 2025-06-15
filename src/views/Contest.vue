@@ -4,13 +4,12 @@
       <h2 class="contest-title orange">A savoir</h2>
       <br />
       <div class="contest-content">
-        <!--<p>
-          L'Open se déroulera sur deux jours du samedi 22 Juin au dimanche 23
-          Juin 2024.
-          Pour plus d'informations rendez-vous
-          <router-link class="link2" to="/annonce">ici</router-link> ! 
-        </p>
         <p>
+          L'Open des Glénan revient pour une édition "LIGHT" le Samedi 30 Août
+          2025.
+          <!-- <router-link class="link2" to="/annonce">ici</router-link> !  -->
+        </p>
+        <!--<p>
           Les pré-inscriptions sont ouverte ! Rendez-vous
           <a class="link2" href="/subscription">ici</a> !
         </p>-->
