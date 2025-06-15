@@ -534,6 +534,7 @@ export default {
       page.moveDown(161);
       page.moveRight(180 + offset);
       for (const [i, value] of idForm.toArray().entries()) {
+        window.console.log(value);
         if (i === 10 || i == 11) {
           page.moveDown(14);
           const newoffset = value ? 93 : 123;

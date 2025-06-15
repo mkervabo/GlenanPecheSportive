@@ -196,7 +196,6 @@ export default {
         portable: this.portable,
         email: this.email,
         // t_shirt: this.t_shirt,
-        dej: this.dej,
         diner: this.diner
       };
     }
