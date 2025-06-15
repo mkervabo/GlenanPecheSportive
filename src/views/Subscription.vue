@@ -62,29 +62,20 @@
             signée.
           </p>
           <p>
-            <span class="font">180€ par bateau</span> (prix pour les deux
+            <span class="font">70€ par bateau</span> (prix pour les deux
             équipiers pour l’ensemble de la compétition) comprenant aussi les
-            petits déjeuners et paniers repas du samedi et dimanche midi, ainsi
-            qu’un repas le samedi soir pour les équipages. Il est possible de
-            réserver des
-            <span class="font">
-              dîners supplémentaires le samedi soir pour les accompagnants, 25€
-              par personne
-            </span>
-            <span class="font orange"
-              >pas possible le jour de la compétition.</span
-            >
+            paniers repas du samedi.
           </p>
           <br />
-          <div>
+          <!-- <div>
             <label class="dark-olive"
               >Nombres de repas suplémentaire
               <input class="repas" v-model="repas" autocomplete="off" />
             </label>
-          </div>
+          </div> -->
           <br />
           <span class="subscription-title2 orange">Total:</span>
-          {{ 180 + repas * 25 }}€
+          {{ 70 }}€
         </div>
       </div>
       <div class="members">
@@ -365,7 +356,7 @@
           <p class="contest-content">
             Si vous rencontrez des problèmes pour remplir l'inscription vous
             pouvez toujours
-            <a class="link" href="/contest/inscription-2024.pdf"
+            <a class="link" href="/contest/inscription-2025.pdf"
               >télécharger un bulletin vierge</a
             >
             et le remplir comme avant.
@@ -469,7 +460,7 @@ export default {
           }
         });
       }
-      fetch("/contest/inscription-2024.pdf")
+      fetch("/contest/inscription-2025.pdf")
         .then(res => res.arrayBuffer())
         .then(pdf => PDFDocument.load(pdf))
         .then(doc => {
