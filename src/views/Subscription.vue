@@ -8,7 +8,7 @@
       <p class="rules-content dark-olive">
         Il est indispensable de lire le reglement avant votre incription vous
         pouvez le trouver
-        <a class="link" href="/contest/reglement-open-des-Glenan-2024.pdf"
+        <a class="link" href="/contest/reglement-open-des-Glenan-2025.pdf"
           >ici</a
         >
       </p>
@@ -37,7 +37,7 @@
           </span>
           <p class="contest-content">
             Le règlement est par
-            <a class="link" href="/contest/reglement-open-des-Glenan-2024.pdf"
+            <a class="link" href="/contest/reglement-open-des-Glenan-2025.pdf"
               >là</a
             >
             ! <span class="font orange">Il est indispensable de le lire !</span>
