@@ -90,7 +90,7 @@
           </label>
         </div>
       </fieldset>
-      <fieldset class="section">
+      <!-- <fieldset class="section">
         <div class="label-form">
           <label
             >Taille T-shirt:
@@ -106,20 +106,20 @@
             </select>
           </label>
         </div>
-      </fieldset>
-      <fieldset class="section">
+      </fieldset> -->
+      <!-- <fieldset class="section">
         <label
           ><span class="font">Participe aux</span> petits déjeuners
           <input type="checkbox" v-model="dej" checked />
         </label>
-      </fieldset>
+      </fieldset> -->
       <fieldset class="section"></fieldset>
-      <fieldset class="section">
+      <!-- <fieldset class="section">
         <label
           ><span class="font">Participe au</span> repas du Samedi soir
           <input type="checkbox" v-model="diner" checked />
         </label>
-      </fieldset>
+      </fieldset> -->
     </div>
   </div>
 </template>
@@ -160,7 +160,7 @@ export default {
         this.ville &&
         (this.portable || this.fixe) &&
         this.email &&
-        this.t_shirt &&
+        // this.t_shirt &&
         this.mailOk
       );
     }
@@ -177,7 +177,7 @@ export default {
         this.fixe,
         this.portable,
         this.email,
-        this.t_shirt,
+        // this.t_shirt,
         this.dej,
         this.diner
       ];
@@ -195,8 +195,7 @@ export default {
         fixe: this.fixe,
         portable: this.portable,
         email: this.email,
-        t_shirt: this.t_shirt,
-        dej: this.dej,
+        // t_shirt: this.t_shirt,
         diner: this.diner
       };
     }

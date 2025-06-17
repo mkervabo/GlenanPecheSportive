@@ -8,7 +8,7 @@
       <p class="rules-content dark-olive">
         Il est indispensable de lire le reglement avant votre incription vous
         pouvez le trouver
-        <a class="link" href="/contest/reglement-open-des-Glenan-2024.pdf"
+        <a class="link" href="/contest/reglement-open-des-Glenan-2025.pdf"
           >ici</a
         >
       </p>
@@ -37,7 +37,7 @@
           </span>
           <p class="contest-content">
             Le règlement est par
-            <a class="link" href="/contest/reglement-open-des-Glenan-2024.pdf"
+            <a class="link" href="/contest/reglement-open-des-Glenan-2025.pdf"
               >là</a
             >
             ! <span class="font orange">Il est indispensable de le lire !</span>
@@ -62,29 +62,20 @@
             signée.
           </p>
           <p>
-            <span class="font">180€ par bateau</span> (prix pour les deux
+            <span class="font">70€ par bateau</span> (prix pour les deux
             équipiers pour l’ensemble de la compétition) comprenant aussi les
-            petits déjeuners et paniers repas du samedi et dimanche midi, ainsi
-            qu’un repas le samedi soir pour les équipages. Il est possible de
-            réserver des
-            <span class="font">
-              dîners supplémentaires le samedi soir pour les accompagnants, 25€
-              par personne
-            </span>
-            <span class="font orange"
-              >pas possible le jour de la compétition.</span
-            >
+            paniers repas du samedi.
           </p>
           <br />
-          <div>
+          <!-- <div>
             <label class="dark-olive"
               >Nombres de repas suplémentaire
               <input class="repas" v-model="repas" autocomplete="off" />
             </label>
-          </div>
+          </div> -->
           <br />
           <span class="subscription-title2 orange">Total:</span>
-          {{ 180 + repas * 25 }}€
+          {{ 70 }}€
         </div>
       </div>
       <div class="members">
@@ -365,7 +356,7 @@
           <p class="contest-content">
             Si vous rencontrez des problèmes pour remplir l'inscription vous
             pouvez toujours
-            <a class="link" href="/contest/inscription-2024.pdf"
+            <a class="link" href="/contest/inscription-2025.pdf"
               >télécharger un bulletin vierge</a
             >
             et le remplir comme avant.
@@ -469,7 +460,7 @@ export default {
           }
         });
       }
-      fetch("/contest/inscription-2024.pdf")
+      fetch("/contest/inscription-2025.pdf")
         .then(res => res.arrayBuffer())
         .then(pdf => PDFDocument.load(pdf))
         .then(doc => {
@@ -509,11 +500,11 @@ export default {
           secondPage.moveDown(20);
           secondPage.drawText(this.assurance2);
           secondPage.moveTo(0, height);
-          secondPage.moveDown(335);
+          secondPage.moveDown(325);
           secondPage.moveRight(470);
           for (const [i, security] of this.securities.entries()) {
             if (security) secondPage.drawText("X");
-            if (i == 1 || i == 4 || i == 11) secondPage.moveDown(10);
+            if (i == 1 || i == 4 || i == 11) secondPage.moveDown(6);
             secondPage.moveDown(15.5);
           }
           return doc.save();
@@ -543,6 +534,7 @@ export default {
       page.moveDown(161);
       page.moveRight(180 + offset);
       for (const [i, value] of idForm.toArray().entries()) {
+        window.console.log(typeof value, i);
         if (i === 10 || i == 11) {
           page.moveDown(14);
           const newoffset = value ? 93 : 123;
@@ -550,8 +542,8 @@ export default {
           page.drawText("x");
           page.moveRight(-newoffset);
         } else {
-          page.moveDown(21);
-          page.drawText(value || "");
+          page.moveDown(20);
+          if (typeof value == "string") page.drawText(value || "");
         }
       }
     }
