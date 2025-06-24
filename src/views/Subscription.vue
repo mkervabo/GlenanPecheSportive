@@ -11,6 +11,7 @@
         <a class="link" href="/contest/reglement-open-des-Glenan-2025.pdf"
           >ici</a
         >
+        (mis à jour le 24/07/2025)
       </p>
       <p class="rules-content dark-olive">
         Pour toute question nous ne répondrons que sur notre
@@ -39,8 +40,8 @@
             Le règlement est par
             <a class="link" href="/contest/reglement-open-des-Glenan-2025.pdf"
               >là</a
-            >
-            ! <span class="font orange">Il est indispensable de le lire !</span>
+            >(mis à jour le 24/07/2025) !
+            <span class="font orange">Il est indispensable de le lire !</span>
           </p>
           <!-- <p>
             <span class="font orange"
