@@ -44,11 +44,11 @@
             />
           </tbody>
         </table>
-        <ScoreTab :key="1" v-if="tabBar[1].active" :range="0" />
-        <ResultTab :key="2" v-if="tabBar[2].active" :range="1" />
+        <!-- <ScoreTab :key="1" v-if="tabBar[1].active" :range="0" /> -->
+        <!-- <ResultTab :key="2" v-if="tabBar[2].active" :range="1" />
         <ScoreTab :key="3" v-if="tabBar[3].active" :range="2" />
         <ResultTab :key="4" v-if="tabBar[4].active" :range="3" />
-        <ResultTab :key="5" v-if="tabBar[5].active" :range="4" />
+        <ResultTab :key="5" v-if="tabBar[5].active" :range="4" /> -->
       </div>
     </div>
     <!-- <img v-else src="/loading.svg" /> -->
@@ -57,44 +57,44 @@
 
 <script>
 import Equipe from "../components/Equipe";
-import ResultTab from "../components/ResultTab";
-import ScoreTab from "../components/ScoreTab";
+// import ResultTab from "../components/ResultTab";
+// import ScoreTab from "../components/ScoreTab";
 export default {
   components: {
-    Equipe,
-    ResultTab,
-    ScoreTab
+    Equipe
+    // ResultTab,
+    // ScoreTab
   },
   data() {
     return {
       teams: [],
       tabBar: [
-        { name: "Equipe", date: new Date("0"), active: true },
-        {
-          name: "Poissons Samedi",
-          date: new Date("June 24, 2023 00:00:00 GMT+02:00"),
-          active: false
-        },
-        {
-          name: "Classement Samedi",
-          date: new Date("June 24, 2023 00:00:00 GMT+02:00"),
-          active: false
-        },
-        {
-          name: "Poissons Dimanche",
-          date: new Date("June 25, 2023 00:00:00 GMT+02:00"),
-          active: false
-        },
-        {
-          name: "Classement Dimanche",
-          date: new Date("June 25, 2023 21:00:00 GMT+02:00"),
-          active: false
-        },
-        {
-          name: "Classement final",
-          date: new Date("June 25, 2023 21:30:00 GMT+02:00"),
-          active: false
-        }
+        { name: "Equipe", date: new Date("0"), active: true }
+        // {
+        //   name: "Poissons Samedi",
+        //   date: new Date("June 24, 2023 00:00:00 GMT+02:00"),
+        //   active: false
+        // },
+        // {
+        //   name: "Classement Samedi",
+        //   date: new Date("June 24, 2023 00:00:00 GMT+02:00"),
+        //   active: false
+        // },
+        // {
+        //   name: "Poissons Dimanche",
+        //   date: new Date("June 25, 2023 00:00:00 GMT+02:00"),
+        //   active: false
+        // },
+        // {
+        //   name: "Classement Dimanche",
+        //   date: new Date("June 25, 2023 21:00:00 GMT+02:00"),
+        //   active: false
+        // },
+        // {
+        //   name: "Classement final",
+        //   date: new Date("June 25, 2023 21:30:00 GMT+02:00"),
+        //   active: false
+        // }
       ]
     };
   },
