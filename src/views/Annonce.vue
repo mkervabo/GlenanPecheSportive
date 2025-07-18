@@ -3,21 +3,21 @@
     <div class="annonce_info">
       <h2 class="subscription-title orange">A lire</h2>
       <p class="annonce-content dark-olive">
-        <!-- Les inscriptions 2023 sont ouvertes par
-        <a class="link" href="/subscription">ici</a>!
-        <br />
-        <br />
-        Pour les photos d’identités pas de panique 😟 un selfie convient 😉
-        <br />
-        Vous pouvez l’envoyer par mail à l’adresse indiquée sur le bulletin
-        d’inscription. Pour toute question nous ne répondrons que sur
-        <a class="link" href="https://www.facebook.com/glenanpechesportive/"
-          >facebook</a
-        >
-        en mp ou sur notre mail que vous trouverez
-        <a class="link" href="mailto:infos@glenanpechesportive.fr">ici</a>. -->
-        Les résultat et la liste des poissons pêchés sera mit jour régulièrement
-        au moment de la compétition.
+        Les inscriptions à l’Open des Glénan 2025 sont désormais closes.<br />
+        Merci à toutes les équipes qui se sont inscrites dans les délais !<br /><br />
+
+        Vous trouverez ci-dessous la liste officielle des équipages inscrits.<br />
+        Chaque équipe recevra prochainement un e‑mail de confirmation avec les
+        dernières informations pratiques.<br /><br />
+
+        📍 Rappel : le briefing obligatoire aura lieu le vendredi 29 août à 19h
+        à Concarneau.<br /><br />
+
+        👉 Pour toute question ou modification, merci de nous contacter via les
+        coordonnées figurant dans le règlement.<br /><br />
+
+        🎣 Bonne préparation à tous,<br />
+        L’équipe Glénan Pêche Sportive
       </p>
     </div>
     <div class="annonce_equipes white">
@@ -132,12 +132,14 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .annonce-content {
   font: caption;
   margin-left: 10px;
   margin-right: 10px;
   text-align: justify;
 }
+
 .annonce_info {
   max-width: 900px;
   padding: 10px;
@@ -145,6 +147,7 @@ export default {
   background: #f2f2f2;
   text-align: left;
 }
+
 .annonce_equipes {
   max-width: 100%;
   min-height: 600px;
