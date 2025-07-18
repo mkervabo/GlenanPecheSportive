@@ -4,17 +4,18 @@
       <h2 class="subscription-title orange">A lire</h2>
       <p class="annonce-content dark-olive">
         Les inscriptions à l’Open des Glénan 2025 sont désormais closes.<br />
-        Merci à toutes les équipes qui se sont inscrites dans les délais !<br /><br />
+        Merci à toutes les équipes qui se sont inscrites !<br /><br />
 
         Vous trouverez ci-dessous la liste officielle des équipages inscrits.<br />
-        Chaque équipe recevra prochainement un e‑mail de confirmation avec les
-        dernières informations pratiques.<br /><br />
 
         📍 Rappel : le briefing obligatoire aura lieu le vendredi 29 août à 19h
         à Concarneau.<br /><br />
 
         👉 Pour toute question ou modification, merci de nous contacter via les
-        coordonnées figurant dans le règlement.<br /><br />
+        coordonnées figurant dans le
+        <a class="link" href="/contest/reglement-open-des-Glenan-2025.pdf"
+          >règlement</a
+        >.<br /><br />
 
         🎣 Bonne préparation à tous,<br />
         L’équipe Glénan Pêche Sportive
