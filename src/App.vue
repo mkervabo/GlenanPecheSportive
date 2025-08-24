@@ -26,7 +26,7 @@
     </div>
     <header class="intro">
       <router-link to="/">
-        <img class="logo" src="./assets/logo.png" />
+        <img class="logo" src="./assets/Logo2025.png" />
       </router-link>
       <Caroussel />
       <NavBar />
